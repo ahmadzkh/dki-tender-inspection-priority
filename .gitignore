@@ -24,6 +24,7 @@ coverage/
 *.log
 *.tmp
 *.temp
+.hermes-*/
 .cache/
 tmp/
 temp/
