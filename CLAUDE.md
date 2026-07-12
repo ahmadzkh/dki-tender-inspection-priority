@@ -10,10 +10,11 @@ Before any task:
 1. Read `AGENTS.md`.
 2. Read `PRD.md` completely, especially scope, acceptance criteria, risks, and open decisions.
 3. Read this `CLAUDE.md` completely.
-4. Load the `ponytail` skill. Apply YAGNI-first minimal implementation.
-5. Load the `caveman/caveman` skill for concise progress reporting.
-6. Inspect existing files and reuse established patterns before creating code.
-7. Do not claim completion until the requested artifact has been executed and verified.
+4. Read `TASKS.md`; select the earliest unchecked task whose dependencies are complete.
+5. Load the `ponytail` skill. Apply YAGNI-first minimal implementation.
+6. Load the `caveman/caveman` skill for concise progress reporting.
+7. Inspect existing files and reuse established patterns before creating code.
+8. Do not claim completion or check a task until implementation, machine verification, and required code review pass.
 
 ---
 
@@ -24,8 +25,8 @@ Before any task:
 - **Description**: A web application that enriches official DKI Jakarta completed-tender data, builds financial, temporal, and supplier-concentration features, and ranks procurement packages using Isolation Forest. The result is an inspection-priority score, not a fraud verdict.
 - **Goal**: Help auditors or procurement analysts decide which completed tender packages to inspect first using traceable data, reproducible anomaly scoring, and neutral explanations.
 - **Target Users**: Government internal auditors/inspectorate staff, procurement analysts, thesis supervisors/examiners, and researchers.
-- **Version**: `0.1.0` planning/data-preparation stage
-- **Status**: Active development; implementation has not started beyond dataset acquisition, audit, merge, and project documentation.
+- **Version**: `0.1.0` foundation/data-preparation stage
+- **Status**: Active development; Python and Next.js foundations exist, while data pipelines, model, backend API, product UI, containers, and deployment remain unimplemented.
 - **Research Methods**:
   - CRISP-DM for data understanding, preparation, modeling, evaluation, and deployment.
   - RAD for web requirements planning, user design, construction, and cutover.
@@ -68,6 +69,15 @@ Before any task:
 - **Frontend Deployment**: Vercel
 - **Source Data**: Official INAPROC portal and package-detail API
 
+### Verified Installed Foundation
+
+- **Python**: 3.11.15, managed through `.python-version` and `uv.lock`
+- **Python Runtime**: NumPy 2.4.6, pandas 3.0.3, scikit-learn 1.9.0, joblib 1.5.3
+- **Python Development**: pytest 9.1.1, Ruff 0.15.21
+- **Frontend**: Next.js 16.2.10, React 19.2.4, TypeScript 5.9.3, Tailwind CSS 4.3.2
+- **Frontend Security Override**: PostCSS 8.5.17 replaces Next.js nested PostCSS 8.4.31; `npm audit` must remain at zero known vulnerabilities
+- **Not Installed Yet**: FastAPI/uvicorn, SHAP, chart library, frontend test framework, Playwright, Docker runtime files
+
 ### Deliberately Not Selected
 
 - Deep learning or GPU training
@@ -83,12 +93,15 @@ Before any task:
 
 ### Current State
 
-No application scaffold or dependency manifest exists yet. The commands below define the required interface after the corresponding component is created. Do not report a command as available until its files exist and it has run successfully.
+Python and frontend foundations are available. Pipeline, model, backend, frontend test, E2E, and Docker commands remain planned until their corresponding tasks create and verify them.
 
 ```bash
 # Python environment
 uv sync
 uv run python --version
+uv run ruff check .
+uv run ruff format --check .
+uv run pytest
 
 # Data pipeline — planned stable command interface
 uv run python pipelines/audit_source_data.py
@@ -100,25 +113,25 @@ uv run python pipelines/build_model_features.py
 uv run python modeling/train_isolation_forest.py
 uv run python modeling/evaluate_anomaly_ranking.py
 
-# Backend development — after backend scaffold exists
+# Backend development — planned after TASK-BE-001
 uv run fastapi dev backend/app/main.py
 uv run fastapi run backend/app/main.py
 
-# Python quality and tests — after configuration exists
-uv run ruff check .
-uv run ruff format --check .
-uv run pytest
+# Scoped Python tests — available when those folders contain tests
 uv run pytest tests/unit
 uv run pytest tests/integration
 
-# Frontend development — after frontend scaffold exists
+# Frontend development — available now
 npm --prefix frontend install
 npm --prefix frontend run dev
 npm --prefix frontend run build
 npm --prefix frontend run start
 npm --prefix frontend run lint
-npm --prefix frontend run test
-npm --prefix frontend run test:e2e
+npm --prefix frontend audit
+
+# Frontend tests — planned after the first real frontend behavior requires them
+# npm --prefix frontend run test
+# npm --prefix frontend run test:e2e
 
 # Docker — after compose configuration exists
 docker compose build
@@ -155,9 +168,22 @@ No database commands exist in v1.0. Do not add migrations, seeds, Prisma, SQLAlc
 
 ```text
 procurement_data/
+├── .python-version
 ├── AGENTS.md
 ├── CLAUDE.md
 ├── PRD.md
+├── README.md
+├── TASKS.md
+├── pyproject.toml
+├── uv.lock
+├── src/
+│   └── procurement_priority/
+├── tests/
+│   └── test_environment.py
+├── frontend/
+│   ├── package.json
+│   ├── package-lock.json
+│   └── src/app/
 └── datasets/
     ├── inaproc_realisasi_tender_dki_jakarta_2024.csv
     ├── inaproc_realisasi_tender_dki_jakarta_2025.csv
@@ -174,8 +200,12 @@ procurement_data/
 ├── AGENTS.md                    # Cross-agent startup instructions
 ├── CLAUDE.md                    # Engineering conventions and project context
 ├── PRD.md                       # Product requirements and scope
+├── README.md                    # Public project overview and usage status
+├── TASKS.md                     # Operational task tracker and dependencies
 ├── pyproject.toml               # Python dependencies/tooling after Python scaffold
 ├── uv.lock                      # Locked Python environment
+├── src/
+│   └── procurement_priority/    # Shared Python package
 ├── docker-compose.yml           # Backend runtime after deployment work starts
 ├── datasets/
 │   ├── raw/                     # Immutable source exports and API snapshots
@@ -191,9 +221,9 @@ procurement_data/
 │       ├── schemas/             # Pydantic request/response models
 │       └── services/            # Read-only ranking/report logic
 ├── frontend/
-│   ├── app/                     # Next.js routes and layouts
-│   ├── components/              # Shared presentation components
-│   ├── lib/                     # Typed API and formatting utilities
+│   ├── src/app/                 # Next.js routes and layouts
+│   ├── src/components/          # Shared presentation components
+│   ├── src/lib/                 # Typed API and formatting utilities
 │   ├── public/                  # Static public assets
 │   └── package.json
 ├── reports/                     # Generated research tables/figures, not hand-edited data
@@ -644,46 +674,27 @@ Before every requested commit:
 
 ## 13. Features
 
-### Completed and Verified
+### Operational Source of Truth
 
-- [x] Defined thesis topic and interpretation boundary.
-- [x] Downloaded DKI Jakarta completed-tender source datasets for 2024, 2025, and 2026.
-- [x] Audited source row counts, schema, statuses, sources, missing suppliers, and duplicate package codes.
-- [x] Created merged dataset `datasets/realisasi_dki_jakarta_2024_2026.csv` with 1,279 rows.
-- [x] Created project documentation: `README.md`, `AGENTS.md`, `CLAUDE.md`, and detailed `PRD.md`.
-- [x] Initialized Git with `main` as the default branch and safe ignore rules.
+`TASKS.md` is the only operational checklist. It contains ordered `TASK-ML-*`, `TASK-BE-*`, and `TASK-FE-*` work, dependencies, deliverables, acceptance criteria, verification, code-review gates, and release gates. Do not maintain a duplicate checkbox list here.
 
-### In Progress — Do Not Redefine Without Confirmation
+### Current Verified Baseline
 
-- [ ] Finalize documentation and product decisions from PRD open decisions.
-- [ ] Decide canonical treatment of package `10060212000` with three suppliers.
+- Thesis topic, v1.0 scope, and interpretation boundary are defined.
+- DKI Jakarta completed-tender source datasets for 2024, 2025, and the partial 2026 snapshot are tracked.
+- The merged dataset contains 1,279 rows and 1,277 unique package codes.
+- Initial manual audit identified five missing-supplier source rows and one multi-provider package code.
+- `README.md`, `PRD.md`, `CLAUDE.md`, `AGENTS.md`, and `TASKS.md` define project, engineering, and execution rules.
+- Git and the public GitHub repository are configured on `main`.
+- Application, model, API, frontend, tests, containers, and deployment are not complete until their corresponding `TASKS.md` entries are checked.
 
-### Not Started — P1
+### Task Completion Contract
 
-- [ ] Create Python environment and dependency lock.
-- [ ] Create immutable raw/processed/manifests layout without losing current files.
-- [ ] Build source-data audit and provenance manifest.
-- [ ] Build resumable INAPROC detail enrichment pipeline.
-- [ ] Measure HPS/pagu/jadwal coverage across all unique packages.
-- [ ] Build canonical one-package-per-record dataset.
-- [ ] Build financial, temporal, and supplier-concentration features.
-- [ ] Train reproducible Isolation Forest.
-- [ ] Evaluate ranking stability, sensitivity, temporal behavior, and transparent baseline.
-- [ ] Validate permutation sensitivity and SHAP explanations.
-- [ ] Build FastAPI ranking/report backend.
-- [ ] Build Next.js landing, dashboard, dataset, methodology, and package detail pages.
-- [ ] Add combined filters, Top-N controls, pagination, and CSV export.
-- [ ] Add unit, integration, black-box, and smoke tests.
-- [ ] Add Docker runtime and Cloudflare Tunnel deployment.
-- [ ] Deploy frontend to Vercel.
-- [ ] Verify all release acceptance criteria before writing BAB 4.
-
-### P2 / Deferred
-
-- [ ] PDF report export.
-- [ ] Normalized inter-year comparison view.
-- [ ] Additional baseline/algorithm comparison if academically required.
-- [ ] Shareable saved filter URLs beyond normal query parameters.
+- One task ID per logical change.
+- Update the task checkbox only after task-specific checks, `verify-gate`, and required review pass.
+- Use `software-development:requesting-code-review` for non-trivial code before completion.
+- Use `ponytail-review` for medium/large changes and `github:github-code-review` for Pull Requests.
+- Project commit format remains `type: subject`; ignore any review-skill suggestion to use a non-conventional commit prefix.
 
 ---
 

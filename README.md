@@ -4,21 +4,23 @@ Sistem berbasis web untuk mengurutkan paket realisasi tender Pemerintah Provinsi
 
 ## Status Project
 
-> **Tahap saat ini: persiapan data dan perencanaan implementasi.**
+> **Tahap saat ini: fondasi pengembangan selesai; pipeline data dan aplikasi dimulai.**
 
-Dataset 2024-2026 telah dikumpulkan, diaudit, dan digabung. Pipeline enrichment, feature engineering, model Machine Learning, backend FastAPI, frontend Next.js, pengujian, dan deployment belum dibangun.
+Dataset 2024-2026 telah dikumpulkan, diaudit, dan digabung. Python environment, scikit-learn, Ruff, pytest, serta Next.js foundation sudah terinstal dan terverifikasi. Pipeline enrichment, feature engineering, model Machine Learning, backend API, antarmuka pengguna, pengujian tambahan, dan deployment belum dibangun.
 
 | Komponen | Status |
 |---|---|
 | Dataset raw 2024, 2025, 2026 | Selesai |
 | Audit dan penggabungan awal | Selesai |
 | PRD dan engineering contract | Selesai |
+| Python environment dan quality tools | Selesai |
+| Next.js frontend scaffold | Selesai |
+| Folder target terstruktur | Selesai |
 | Enrichment HPS, pagu, dan jadwal | Belum dimulai |
 | Dataset canonical | Belum dimulai |
 | Feature engineering | Belum dimulai |
 | Isolation Forest dan evaluasi | Belum dimulai |
 | FastAPI backend | Belum dimulai |
-| Next.js frontend | Belum dimulai |
 | Docker dan deployment | Belum dimulai |
 
 ## Judul Penelitian
@@ -274,6 +276,7 @@ Prinsip arsitektur:
 ├── CLAUDE.md
 ├── PRD.md
 ├── README.md
+├── TASKS.md
 ├── .gitignore
 └── datasets/
     ├── inaproc_realisasi_tender_dki_jakarta_2024.csv
@@ -320,6 +323,9 @@ Command pipeline, backend, frontend, dan pengujian akan didokumentasikan setelah
 - [`PRD.md`](PRD.md): masalah, tujuan, persona, user stories, requirements, scope, risiko, dan acceptance criteria.
 - [`CLAUDE.md`](CLAUDE.md): tech stack, struktur, commands, coding rules, testing, security, dan agent contract.
 - [`AGENTS.md`](AGENTS.md): instruksi wajib untuk agent yang bekerja di repository.
+- [`TASKS.md`](TASKS.md): urutan `TASK-ML`, `TASK-BE`, dan `TASK-FE`, dependency, acceptance criteria, verification, serta status checklist.
+
+`TASKS.md` menjadi single source of truth status implementasi. Agent hanya boleh mengubah task menjadi `[x]` setelah test, `verify-gate`, dan code review yang diwajibkan lulus.
 
 ## Prinsip Pengembangan
 
