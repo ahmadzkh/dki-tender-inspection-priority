@@ -66,8 +66,8 @@ Commit dan push hanya dilakukan ketika diminta pengguna. Verifikasi remote setel
 
 ## Dataset Guardrails
 
-- Merged input saat ini: `datasets/realisasi_dki_jakarta_2024_2026.csv` dengan 1.279 baris dan 14 kolom.
-- Raw per tahun: `datasets/inaproc_realisasi_tender_dki_jakarta_{tahun}.csv`.
+- Merged input saat ini: `datasets/raw/realisasi_dki_jakarta_2024_2026.csv` dengan 1.279 baris dan 14 kolom.
+- Raw per tahun: `datasets/raw/inaproc_realisasi_tender_dki_jakarta_{tahun}.csv`.
 - Jangan menimpa atau membersihkan raw data secara in-place.
 - `kode_paket` wajib diperlakukan sebagai string.
 - Tahun 2026 adalah snapshot parsial per Juli 2026, bukan tahun penuh.

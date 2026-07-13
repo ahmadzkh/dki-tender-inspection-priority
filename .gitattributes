@@ -1,0 +1,3 @@
+# Preserve immutable source datasets byte-for-byte across platforms.
+datasets/raw/*.csv binary
+datasets/raw/**/*.csv binary

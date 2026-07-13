@@ -1,0 +1,153 @@
+{
+  "manifest_version": 1,
+  "generated_at": "2026-07-13T07:14:48+07:00",
+  "row_count_definition": "CSV data records excluding the header row",
+  "dataset_scope": {
+    "institution_type": "Provinsi",
+    "institution": "Provinsi DKI Jakarta",
+    "source_transaction": "Tender",
+    "package_status": "SELESAI",
+    "source_years": [
+      2024,
+      2025,
+      2026
+    ],
+    "observation_note": "2026 is a partial snapshot as of July 2026"
+  },
+  "files": [
+    {
+      "path": "datasets/raw/inaproc_realisasi_tender_dki_jakarta_2024.csv",
+      "role": "annual_source",
+      "source_years": [
+        2024
+      ],
+      "provenance": {
+        "publisher": "INAPROC/LKPP",
+        "source_url": "https://data.inaproc.id/realisasi",
+        "acquisition_method": "Manual CSV download using the documented dataset filters",
+        "original_repository_path": "datasets/inaproc_realisasi_tender_dki_jakarta_2024.csv"
+      },
+      "sha256": "54d3e460d27e8845424ddf49b485c2f284bfbc73e8b9fce532be5ebad3e093e6",
+      "byte_size": 91705,
+      "row_count": 312,
+      "schema": [
+        "nama_instansi",
+        "nama_satuan_kerja",
+        "kode_paket",
+        "kode_rup",
+        "tahun_anggaran",
+        "sumber_transaksi",
+        "sumber_dana",
+        "nama_penyedia",
+        "metode_pengadaan",
+        "jenis_pengadaan",
+        "nama_paket",
+        "status_paket",
+        "total_nilai",
+        "nilai_pdn"
+      ]
+    },
+    {
+      "path": "datasets/raw/inaproc_realisasi_tender_dki_jakarta_2025.csv",
+      "role": "annual_source",
+      "source_years": [
+        2025
+      ],
+      "provenance": {
+        "publisher": "INAPROC/LKPP",
+        "source_url": "https://data.inaproc.id/realisasi",
+        "acquisition_method": "Manual CSV download using the documented dataset filters",
+        "original_repository_path": "datasets/inaproc_realisasi_tender_dki_jakarta_2025.csv"
+      },
+      "sha256": "4e42bb9d44db61f0c972cb816aca5470d98488c6c9e96d02163090f901406495",
+      "byte_size": 160934,
+      "row_count": 529,
+      "schema": [
+        "nama_instansi",
+        "nama_satuan_kerja",
+        "kode_paket",
+        "kode_rup",
+        "tahun_anggaran",
+        "sumber_transaksi",
+        "sumber_dana",
+        "nama_penyedia",
+        "metode_pengadaan",
+        "jenis_pengadaan",
+        "nama_paket",
+        "status_paket",
+        "total_nilai",
+        "nilai_pdn"
+      ]
+    },
+    {
+      "path": "datasets/raw/inaproc_realisasi_tender_dki_jakarta_2026.csv",
+      "role": "annual_source",
+      "source_years": [
+        2026
+      ],
+      "provenance": {
+        "publisher": "INAPROC/LKPP",
+        "source_url": "https://data.inaproc.id/realisasi",
+        "acquisition_method": "Manual CSV download using the documented dataset filters",
+        "original_repository_path": "datasets/inaproc_realisasi_tender_dki_jakarta_2026.csv"
+      },
+      "sha256": "ecfd28d5344f3432a66f4e2d748ce1c00ed1183f1b7a5602fa71090239dd69aa",
+      "byte_size": 140861,
+      "row_count": 443,
+      "schema": [
+        "nama_instansi",
+        "nama_satuan_kerja",
+        "kode_paket",
+        "kode_rup",
+        "tahun_anggaran",
+        "sumber_transaksi",
+        "sumber_dana",
+        "nama_penyedia",
+        "metode_pengadaan",
+        "jenis_pengadaan",
+        "nama_paket",
+        "status_paket",
+        "total_nilai",
+        "nilai_pdn"
+      ]
+    },
+    {
+      "path": "datasets/raw/realisasi_dki_jakarta_2024_2026.csv",
+      "role": "preexisting_merged_input",
+      "source_years": [
+        2024,
+        2025,
+        2026
+      ],
+      "provenance": {
+        "publisher": "Project-local merge of INAPROC/LKPP annual source files",
+        "source_files": [
+          "datasets/raw/inaproc_realisasi_tender_dki_jakarta_2024.csv",
+          "datasets/raw/inaproc_realisasi_tender_dki_jakarta_2025.csv",
+          "datasets/raw/inaproc_realisasi_tender_dki_jakarta_2026.csv"
+        ],
+        "transformation_note": "Existing input predating the reproducible audit pipeline; it contains 1,279 rows and excludes five 2026 rows with missing supplier names",
+        "original_repository_path": "datasets/realisasi_dki_jakarta_2024_2026.csv"
+      },
+      "sha256": "621daeb23964d6a662ca3a04d0189ad87ba8784039ca773449f91a6d5cfec2e8",
+      "byte_size": 391701,
+      "row_count": 1279,
+      "schema": [
+        "nama_instansi",
+        "nama_satuan_kerja",
+        "kode_paket",
+        "kode_rup",
+        "tahun_anggaran",
+        "sumber_transaksi",
+        "sumber_dana",
+        "nama_penyedia",
+        "metode_pengadaan",
+        "jenis_pengadaan",
+        "nama_paket",
+        "status_paket",
+        "total_nilai",
+        "nilai_pdn"
+      ]
+    }
+  ]
+}

@@ -84,7 +84,7 @@ Filter pengunduhan:
 Dataset utama:
 
 ```text
-datasets/realisasi_dki_jakarta_2024_2026.csv
+datasets/raw/realisasi_dki_jakarta_2024_2026.csv
 ```
 
 | Item | Nilai |
@@ -278,11 +278,17 @@ Prinsip arsitektur:
 ├── README.md
 ├── TASKS.md
 ├── .gitignore
+├── pipelines/
+│   └── verify_source_manifest.py
 └── datasets/
-    ├── inaproc_realisasi_tender_dki_jakarta_2024.csv
-    ├── inaproc_realisasi_tender_dki_jakarta_2025.csv
-    ├── inaproc_realisasi_tender_dki_jakarta_2026.csv
-    └── realisasi_dki_jakarta_2024_2026.csv
+    ├── manifests/
+    │   └── source_manifest.json
+    ├── processed/
+    └── raw/
+        ├── inaproc_realisasi_tender_dki_jakarta_2024.csv
+        ├── inaproc_realisasi_tender_dki_jakarta_2025.csv
+        ├── inaproc_realisasi_tender_dki_jakarta_2026.csv
+        └── realisasi_dki_jakarta_2024_2026.csv
 ```
 
 Struktur aplikasi akan dibuat bertahap saat file pertamanya diperlukan. Rancangan target tercantum dalam [`CLAUDE.md`](CLAUDE.md).

@@ -76,7 +76,7 @@ Pencarian `/find-skills` menemukan `obra/superpowers@requesting-code-review` seb
 - **Acceptance:** dependency runtime dan development dipisahkan; Python 3.11+ terkunci; `uv sync`, Ruff, dan pytest dapat dijalankan dari root.
 - **Verification:** `uv sync`, `uv run ruff check .`, dan `uv run pytest` exit 0; test awal boleh berupa smoke test environment.
 
-### [ ] TASK-ML-002 - Establish immutable dataset layout and source manifest
+### [x] TASK-ML-002 - Establish immutable dataset layout and source manifest
 
 - **Depends on:** `TASK-ML-001`.
 - **Goal:** memisahkan raw, processed, manifest, dan report tanpa kehilangan file sumber.

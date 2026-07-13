@@ -34,7 +34,7 @@ Before any task:
 
 ### Current Verified Data State
 
-- Main merged input: `datasets/realisasi_dki_jakarta_2024_2026.csv`
+- Main merged input: `datasets/raw/realisasi_dki_jakarta_2024_2026.csv`
 - Rows: 1,279
 - Source columns: 14
 - Unique package codes: 1,277
