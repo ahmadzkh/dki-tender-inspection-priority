@@ -4,14 +4,15 @@ Sistem berbasis web untuk mengurutkan paket realisasi tender Pemerintah Provinsi
 
 ## Status Project
 
-> **Tahap saat ini: fondasi pengembangan selesai; pipeline data dan aplikasi dimulai.**
+> **Tahap saat ini: fondasi pengembangan selesai; integritas dan audit sumber data sudah reproducible.**
 
-Dataset 2024-2026 telah dikumpulkan, diaudit, dan digabung. Python environment, scikit-learn, Ruff, pytest, serta Next.js foundation sudah terinstal dan terverifikasi. Pipeline enrichment, feature engineering, model Machine Learning, backend API, antarmuka pengguna, pengujian tambahan, dan deployment belum dibangun.
+Dataset 2024-2026 telah dikumpulkan, diaudit, dan digabung. Empat CSV sumber disimpan pada layout raw yang immutable serta dicatat dalam manifest SHA-256 yang dapat diverifikasi. Pipeline audit menghasilkan report JSON dan Markdown dari raw sources tanpa memodifikasinya. Enrichment, feature engineering, model Machine Learning, backend API, antarmuka pengguna, pengujian tambahan, dan deployment belum dibangun.
 
 | Komponen | Status |
 |---|---|
 | Dataset raw 2024, 2025, 2026 | Selesai |
 | Audit dan penggabungan awal | Selesai |
+| Audit sumber data reproducible | Selesai |
 | PRD dan engineering contract | Selesai |
 | Python environment dan quality tools | Selesai |
 | Next.js frontend scaffold | Selesai |
@@ -104,6 +105,8 @@ datasets/raw/realisasi_dki_jakarta_2024_2026.csv
 Tahun 2026 merupakan snapshot tahun berjalan per Juli 2026, bukan satu tahun kalender penuh. Total tahun 2026 tidak boleh dibandingkan langsung dengan total tahunan 2024 atau 2025 tanpa penanda dan normalisasi.
 
 Lima baris pada file raw 2026 tidak memiliki nama penyedia dan tidak masuk ke dataset gabungan saat ini. Kode paket `10060212000` muncul tiga kali dengan penyedia berbeda. Perlakuan canonical untuk kasus tersebut harus ditetapkan sebelum feature engineering.
+
+Audit yang dapat dijalankan ulang tersedia pada [`reports/data/source_audit.md`](reports/data/source_audit.md) dan [`reports/data/source_audit.json`](reports/data/source_audit.json). Report membedakan 1.284 baris annual raw dari 1.279 baris merged input agar lima supplier kosong tetap terlihat dalam data-quality trail.
 
 ### Kolom Awal
 
@@ -295,14 +298,21 @@ Struktur aplikasi akan dibuat bertahap saat file pertamanya diperlukan. Rancanga
 
 ## Menjalankan Project
 
-Aplikasi belum memiliki scaffold atau dependency manifest. Belum ada command backend/frontend yang dapat dijalankan. Repository saat ini dapat digunakan untuk membaca dokumentasi dan memeriksa dataset.
+Python environment, source-manifest verifier, source-data audit, dan scaffold frontend sudah tersedia. Backend dan pipeline pemodelan belum tersedia.
 
 ```bash
 git clone https://github.com/ahmadzkh/dki-tender-inspection-priority.git
 cd dki-tender-inspection-priority
+uv sync
+uv run python pipelines/verify_source_manifest.py
+uv run python pipelines/audit_source_data.py
+uv run pytest
+npm --prefix frontend install
+npm --prefix frontend run lint
+npm --prefix frontend run build
 ```
 
-Command pipeline, backend, frontend, dan pengujian akan didokumentasikan setelah implementasinya benar-benar tersedia dan sudah diverifikasi.
+Command enrichment pipeline, model, dan backend akan ditambahkan setelah implementasinya tersedia dan sudah diverifikasi.
 
 ## Roadmap
 
@@ -310,7 +320,8 @@ Command pipeline, backend, frontend, dan pengujian akan didokumentasikan setelah
 - [x] Mengunduh dataset DKI Jakarta 2024-2026.
 - [x] Mengaudit dan menggabungkan dataset awal.
 - [x] Menyusun PRD dan engineering contract.
-- [ ] Membuat manifest sumber dan audit data reproducible.
+- [x] Membuat layout raw immutable dan source manifest terverifikasi.
+- [x] Membangun audit data reproducible.
 - [ ] Membangun enrichment pipeline INAPROC yang resumable.
 - [ ] Mengukur coverage HPS, pagu, dan jadwal.
 - [ ] Membentuk dataset canonical satu paket per record.
@@ -330,6 +341,7 @@ Command pipeline, backend, frontend, dan pengujian akan didokumentasikan setelah
 - [`CLAUDE.md`](CLAUDE.md): tech stack, struktur, commands, coding rules, testing, security, dan agent contract.
 - [`AGENTS.md`](AGENTS.md): instruksi wajib untuk agent yang bekerja di repository.
 - [`TASKS.md`](TASKS.md): urutan `TASK-ML`, `TASK-BE`, dan `TASK-FE`, dependency, acceptance criteria, verification, serta status checklist.
+- [`reports/data/source_audit.md`](reports/data/source_audit.md): ringkasan audit sumber data yang dapat diregenerasi.
 
 `TASKS.md` menjadi single source of truth status implementasi. Agent hanya boleh mengubah task menjadi `[x]` setelah test, `verify-gate`, dan code review yang diwajibkan lulus.
 

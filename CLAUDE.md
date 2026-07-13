@@ -26,7 +26,7 @@ Before any task:
 - **Goal**: Help auditors or procurement analysts decide which completed tender packages to inspect first using traceable data, reproducible anomaly scoring, and neutral explanations.
 - **Target Users**: Government internal auditors/inspectorate staff, procurement analysts, thesis supervisors/examiners, and researchers.
 - **Version**: `0.1.0` foundation/data-preparation stage
-- **Status**: Active development; Python and Next.js foundations exist, while data pipelines, model, backend API, product UI, containers, and deployment remain unimplemented.
+- **Status**: Active development; Python and Next.js foundations plus immutable source-data layout and reproducible source-data audit exist, while enrichment, model, backend API, product UI, containers, and deployment remain unimplemented.
 - **Research Methods**:
   - CRISP-DM for data understanding, preparation, modeling, evaluation, and deployment.
   - RAD for web requirements planning, user design, construction, and cutover.
@@ -93,7 +93,7 @@ Before any task:
 
 ### Current State
 
-Python and frontend foundations are available. Pipeline, model, backend, frontend test, E2E, and Docker commands remain planned until their corresponding tasks create and verify them.
+Python and frontend foundations, source-manifest verification, and source-data audit are available. Enrichment, model, backend, frontend test, E2E, and Docker commands remain planned until their corresponding tasks create and verify them.
 
 ```bash
 # Python environment
@@ -103,8 +103,13 @@ uv run ruff check .
 uv run ruff format --check .
 uv run pytest
 
-# Data pipeline — planned stable command interface
+# Source-data integrity — available now
+uv run python pipelines/verify_source_manifest.py
+
+# Source-data audit — available now
 uv run python pipelines/audit_source_data.py
+
+# Data pipeline — planned stable command interface
 uv run python pipelines/enrich_tender_details.py
 uv run python pipelines/build_canonical_dataset.py
 uv run python pipelines/build_model_features.py
@@ -179,16 +184,29 @@ procurement_data/
 ├── src/
 │   └── procurement_priority/
 ├── tests/
-│   └── test_environment.py
+│   ├── test_audit_source_data.py
+│   ├── test_environment.py
+│   └── test_source_manifest.py
 ├── frontend/
 │   ├── package.json
 │   ├── package-lock.json
 │   └── src/app/
+├── pipelines/
+│   ├── audit_source_data.py
+│   └── verify_source_manifest.py
+├── reports/
+│   └── data/
+│       ├── source_audit.json
+│       └── source_audit.md
 └── datasets/
-    ├── inaproc_realisasi_tender_dki_jakarta_2024.csv
-    ├── inaproc_realisasi_tender_dki_jakarta_2025.csv
-    ├── inaproc_realisasi_tender_dki_jakarta_2026.csv
-    └── realisasi_dki_jakarta_2024_2026.csv
+    ├── manifests/
+    │   └── source_manifest.json
+    ├── processed/
+    └── raw/
+        ├── inaproc_realisasi_tender_dki_jakarta_2024.csv
+        ├── inaproc_realisasi_tender_dki_jakarta_2025.csv
+        ├── inaproc_realisasi_tender_dki_jakarta_2026.csv
+        └── realisasi_dki_jakarta_2024_2026.csv
 ```
 
 ### Approved Target Structure
