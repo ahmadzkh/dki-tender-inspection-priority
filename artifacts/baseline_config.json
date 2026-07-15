@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "method": "robust_zscore_topk_mean",
+  "feature_matrix": "datasets/processed/model_features.csv",
+  "feature_matrix_sha256": "21531506de73cc96c24529497a2d3fd5d609461cbd33e62ca1c32529db0e4bdd",
+  "split_manifest": "datasets/manifests/model_split.json",
+  "split_manifest_sha256": "197815d63eccf00dd4112eb9c3cf66f37793fa7f226cd990f802e00ae3f81ed8",
+  "output_csv": "artifacts/baseline_ranking.csv",
+  "feature_columns": [
+    "year_value",
+    "partial_snapshot_year_flag",
+    "procurement_method_code",
+    "procurement_type_code",
+    "log_contract_value",
+    "log_hps",
+    "log_pagu",
+    "contract_to_hps_ratio",
+    "hps_to_pagu_ratio",
+    "savings_to_hps_ratio",
+    "pdn_to_contract_ratio",
+    "tender_duration_days",
+    "bid_submission_duration_days",
+    "evaluation_duration_days",
+    "schedule_invalid_timestamp_count",
+    "supplier_prior_package_count_year",
+    "supplier_prior_work_unit_package_count_year",
+    "supplier_prior_contract_share_year",
+    "supplier_prior_work_unit_contract_share_year",
+    "work_unit_supplier_hhi_prior_package_count_year"
+  ],
+  "top_k": 5,
+  "score_direction": "higher score means higher inspection priority",
+  "train_row_count": 838,
+  "evaluation_row_count": 438,
+  "feature_statistics": {
+    "year_value": {
+      "median": 2025.0,
+      "scale": 1.0
+    },
+    "partial_snapshot_year_flag": {
+      "median": 0.0,
+      "scale": 1.0
+    },
+    "procurement_method_code": {
+      "median": 1.0,
+      "scale": 1.0
+    },
+    "procurement_type_code": {
+      "median": 1.0,
+      "scale": 1.0
+    },
+    "log_contract_value": {
+      "median": 20.35586055825,
+      "scale": 1.4383039635751516
+    },
+    "log_hps": {
+      "median": 20.47123347595,
+      "scale": 1.5059702725034096
+    },
+    "log_pagu": {
+      "median": 20.5168023971,
+      "scale": 1.5389993522750727
+    },
+    "contract_to_hps_ratio": {
+      "median": 0.93951959995,
+      "scale": 0.07492751693027999
+    },
+    "hps_to_pagu_ratio": {
+      "median": 0.99731167035,
+      "scale": 0.003985717539089982
+    },
+    "savings_to_hps_ratio": {
+      "median": 0.06048040005,
+      "scale": 0.07492751693027999
+    },
+    "pdn_to_contract_ratio": {
+      "median": 1.0,
+      "scale": 1.0
+    },
+    "tender_duration_days": {
+      "median": 46.9166666667,
+      "scale": 13.621387499925863
+    },
+    "bid_submission_duration_days": {
+      "median": 4.1215277778,
+      "scale": 1.30242291663372
+    },
+    "evaluation_duration_days": {
+      "median": 14.4944444444,
+      "scale": 9.322877083267437
+    },
+    "schedule_invalid_timestamp_count": {
+      "median": 0.0,
+      "scale": 1.0
+    },
+    "supplier_prior_package_count_year": {
+      "median": 0.0,
+      "scale": 1.0
+    },
+    "supplier_prior_work_unit_package_count_year": {
+      "median": 0.0,
+      "scale": 1.0
+    },
+    "supplier_prior_contract_share_year": {
+      "median": 0.0,
+      "scale": 4.38248e-05
+    },
+    "supplier_prior_work_unit_contract_share_year": {
+      "median": 0.0,
+      "scale": 0.0001143456
+    },
+    "work_unit_supplier_hhi_prior_package_count_year": {
+      "median": 0.1666666667,
+      "scale": 0.24709999990115997
+    }
+  },
+  "limitations": [
+    "Uses independent per-feature robust deviations; it does not learn multivariate interactions.",
+    "Calibrated on 2024-2025 train rows; 2026 remains a partial snapshot.",
+    "Ranking is a transparent comparator for inspection priority, not a violation label."
+  ]
+}

@@ -4,9 +4,9 @@ Sistem berbasis web untuk mengurutkan paket realisasi tender Pemerintah Provinsi
 
 ## Status Project
 
-> **Tahap saat ini: split temporal selesai; baseline dan modeling berikutnya.**
+> **Tahap saat ini: baseline transparan selesai; Isolation Forest berikutnya.**
 
-Dataset 2024-2026 telah dikumpulkan, diaudit, digabung, diperkaya, dicanonicalkan menjadi satu record per `kode_paket`, dianalisis melalui EDA reproducible, ditransformasi menjadi feature matrix leakage-safe, dan dibagi dengan split temporal. Empat CSV sumber disimpan pada layout raw yang immutable serta dicatat dalam manifest SHA-256 yang dapat diverifikasi. Pipeline audit dan enrichment menghasilkan report JSON/Markdown dari raw sources tanpa memodifikasinya. Full enrichment INAPROC sudah dijalankan untuk 1.277 kode paket unik dengan coverage 100%, lalu pipeline canonical menghasilkan 1.277 paket unik dan menandai satu paket multi-provider sebagai tidak eligible untuk fitur model. EDA menghasilkan ringkasan distribusi nilai, missingness, outlier univariat, kategori, konsentrasi penyedia/satuan kerja, dan catatan snapshot parsial 2026. Feature engineering menghasilkan 1.276 baris eligible dengan 20 fitur eksplisit. Split temporal memakai 838 record 2024-2025 untuk training dan 438 record snapshot 2026 untuk evaluation. Baseline, model Machine Learning, backend API, antarmuka pengguna, pengujian tambahan, dan deployment belum dibangun.
+Dataset 2024-2026 telah dikumpulkan, diaudit, digabung, diperkaya, dicanonicalkan menjadi satu record per `kode_paket`, dianalisis melalui EDA reproducible, ditransformasi menjadi feature matrix leakage-safe, dibagi dengan split temporal, dan diberi baseline ranking transparan. Empat CSV sumber disimpan pada layout raw yang immutable serta dicatat dalam manifest SHA-256 yang dapat diverifikasi. Pipeline audit dan enrichment menghasilkan report JSON/Markdown dari raw sources tanpa memodifikasinya. Full enrichment INAPROC sudah dijalankan untuk 1.277 kode paket unik dengan coverage 100%, lalu pipeline canonical menghasilkan 1.277 paket unik dan menandai satu paket multi-provider sebagai tidak eligible untuk fitur model. EDA menghasilkan ringkasan distribusi nilai, missingness, outlier univariat, kategori, konsentrasi penyedia/satuan kerja, dan catatan snapshot parsial 2026. Feature engineering menghasilkan 1.276 baris eligible dengan 20 fitur eksplisit. Split temporal memakai 838 record 2024-2025 untuk training dan 438 record snapshot 2026 untuk evaluation. Baseline robust z-score menghasilkan ranking deterministik untuk pembanding model. Model Isolation Forest, backend API, antarmuka pengguna, pengujian tambahan, dan deployment belum dibangun.
 
 | Komponen | Status |
 |---|---|
@@ -22,6 +22,7 @@ Dataset 2024-2026 telah dikumpulkan, diaudit, digabung, diperkaya, dicanonicalka
 | EDA dan data-quality analysis | Selesai; report reproducible di `reports/eda/summary.md` |
 | Feature engineering | Selesai; `datasets/processed/model_features.csv` berisi 1.276 baris dan 20 fitur |
 | Split temporal model | Selesai; training 2024-2025 = 838 record, evaluation 2026 snapshot = 438 record |
+| Baseline transparan | Selesai; robust z-score ranking di `artifacts/baseline_ranking.csv` |
 | Isolation Forest dan evaluasi | Belum dimulai |
 | FastAPI backend | Belum dimulai |
 | Docker dan deployment | Belum dimulai |
@@ -117,6 +118,8 @@ EDA reproducible tersedia pada [`reports/eda/summary.md`](reports/eda/summary.md
 Feature matrix tersedia pada `datasets/processed/model_features.csv` dengan schema eksplisit di `artifacts/feature_schema.json`. Pipeline `pipelines/build_model_features.py` membentuk 20 fitur finansial, temporal, kategori, dan agregat prior-year/prior-observation untuk 1.276 record eligible. Fitur agregat penyedia/satuan kerja hanya memakai record sebelumnya dalam tahun yang sama setelah sorting jadwal dan `package_id`, sehingga tidak memakai informasi masa depan.
 
 Split temporal tersedia pada `datasets/manifests/model_split.json` dengan konfigurasi eksperimen di `artifacts/model_experiment_config.json` dan catatan keputusan di [`reports/model/split_decision.md`](reports/model/split_decision.md). Training memakai 838 record eligible dari 2024-2025. Evaluation memakai 438 record eligible dari snapshot 2026 dan tidak diperlakukan sebagai tahun kalender penuh.
+
+Baseline transparan tersedia pada `artifacts/baseline_ranking.csv` dengan konfigurasi di `artifacts/baseline_config.json` dan report di [`reports/model/baseline.md`](reports/model/baseline.md). Baseline memakai median dan skala robust dari train split 2024-2025, lalu memberi skor deviasi fitur. Skor ini adalah pembanding prioritas pemeriksaan, bukan label pelanggaran.
 
 ### Kolom Awal
 
@@ -291,8 +294,12 @@ Prinsip arsitektur:
 ├── TASKS.md
 ├── .gitignore
 ├── artifacts/
+│   ├── baseline_config.json
+│   ├── baseline_ranking.csv
 │   ├── feature_schema.json
 │   └── model_experiment_config.json
+├── modeling/
+│   └── build_baseline_ranking.py
 ├── pipelines/
 │   ├── audit_source_data.py
 │   ├── analyze_tender_data.py
@@ -306,6 +313,7 @@ Prinsip arsitektur:
 │   ├── test_analyze_tender_data.py
 │   ├── test_build_canonical_dataset.py
 │   ├── test_build_model_features.py
+│   ├── test_build_baseline_ranking.py
 │   ├── test_define_model_split.py
 │   └── ...
 ├── reports/
@@ -345,6 +353,7 @@ uv run python pipelines/build_canonical_dataset.py
 uv run python pipelines/analyze_tender_data.py
 uv run python pipelines/build_model_features.py
 uv run python pipelines/define_model_split.py
+uv run python modeling/build_baseline_ranking.py
 uv run pytest
 npm --prefix frontend install
 npm --prefix frontend run lint
@@ -367,6 +376,7 @@ Command training model dan backend akan ditambahkan setelah implementasinya ters
 - [x] Menjalankan EDA dan data-quality analysis.
 - [x] Membangun feature engineering leakage-safe.
 - [x] Menetapkan split temporal training/evaluation.
+- [x] Membangun baseline ranking transparan.
 - [ ] Melatih dan mengevaluasi Isolation Forest.
 - [ ] Memvalidasi feature influence dan explanation.
 - [ ] Membangun FastAPI backend.
@@ -389,6 +399,8 @@ Command training model dan backend akan ditambahkan setelah implementasinya ters
 - `artifacts/feature_schema.json`: urutan fitur, encoder kategori, checksum canonical dataset, dan leakage policy feature matrix.
 - `datasets/manifests/model_split.json`: manifest split temporal 2024-2025 ke snapshot 2026.
 - `reports/model/split_decision.md`: catatan keputusan split temporal dan leakage policy modeling.
+- `artifacts/baseline_ranking.csv`: ranking baseline transparan yang deterministik.
+- `reports/model/baseline.md`: metode, keterbatasan, dan batas interpretasi baseline.
 
 `TASKS.md` menjadi single source of truth status implementasi. Agent hanya boleh mengubah task menjadi `[x]` setelah test, `verify-gate`, dan code review yang diwajibkan lulus.
 

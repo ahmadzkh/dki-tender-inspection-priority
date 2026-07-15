@@ -26,7 +26,7 @@ Before any task:
 - **Goal**: Help auditors or procurement analysts decide which completed tender packages to inspect first using traceable data, reproducible anomaly scoring, and neutral explanations.
 - **Target Users**: Government internal auditors/inspectorate staff, procurement analysts, thesis supervisors/examiners, and researchers.
 - **Version**: `0.1.0` foundation/data-preparation stage
-- **Status**: Active development; Python and Next.js foundations plus immutable source-data layout, reproducible source-data audit, resumable enrichment runner, full enrichment coverage report, one-package-per-record canonical dataset, EDA/data-quality report, leakage-safe feature matrix, and temporal split exist. Baseline, model, backend API, product UI, containers, and deployment are still planned.
+- **Status**: Active development; Python and Next.js foundations plus immutable source-data layout, reproducible source-data audit, resumable enrichment runner, full enrichment coverage report, one-package-per-record canonical dataset, EDA/data-quality report, leakage-safe feature matrix, temporal split, and transparent baseline ranking exist. Isolation Forest, backend API, product UI, containers, and deployment are still planned.
 - **Research Methods**:
   - CRISP-DM for data understanding, preparation, modeling, evaluation, and deployment.
   - RAD for web requirements planning, user design, construction, and cutover.
@@ -45,6 +45,7 @@ Before any task:
 - Five 2026 source rows with missing supplier names were excluded from the current merged file and are documented in the canonical data-quality report.
 - Feature matrix has 1,276 eligible rows and 20 explicit features.
 - Temporal split uses 838 training rows from 2024-2025 and 438 evaluation rows from the 2026 partial snapshot.
+- Transparent baseline ranking scores all 1,276 eligible records with train-split robust z-score statistics.
 
 ---
 
@@ -95,7 +96,7 @@ Before any task:
 
 ### Current State
 
-Python and frontend foundations, source-manifest verification, source-data audit, resumable enrichment runner, full enrichment coverage report, canonical dataset builder, EDA report generator, feature matrix builder, and temporal split generator are available. Model, backend, frontend test, E2E, and Docker commands remain planned until their corresponding tasks create and verify them.
+Python and frontend foundations, source-manifest verification, source-data audit, resumable enrichment runner, full enrichment coverage report, canonical dataset builder, EDA report generator, feature matrix builder, temporal split generator, and transparent baseline builder are available. Isolation Forest, backend, frontend test, E2E, and Docker commands remain planned until their corresponding tasks create and verify them.
 
 ```bash
 # Python environment
@@ -120,6 +121,7 @@ uv run python pipelines/build_canonical_dataset.py
 uv run python pipelines/analyze_tender_data.py
 uv run python pipelines/build_model_features.py
 uv run python pipelines/define_model_split.py
+uv run python modeling/build_baseline_ranking.py
 
 # Model — planned stable command interface
 uv run python modeling/train_isolation_forest.py
@@ -193,6 +195,7 @@ procurement_data/
 ├── tests/
 │   ├── test_audit_source_data.py
 │   ├── test_analyze_tender_data.py
+│   ├── test_build_baseline_ranking.py
 │   ├── test_build_model_features.py
 │   ├── test_build_canonical_dataset.py
 │   ├── test_define_model_split.py
@@ -203,6 +206,8 @@ procurement_data/
 │   ├── package.json
 │   ├── package-lock.json
 │   └── src/app/
+├── modeling/
+│   └── build_baseline_ranking.py
 ├── pipelines/
 │   ├── audit_source_data.py
 │   ├── analyze_tender_data.py
@@ -213,6 +218,8 @@ procurement_data/
 │   ├── report_enrichment_coverage.py
 │   └── verify_source_manifest.py
 ├── artifacts/
+│   ├── baseline_config.json
+│   ├── baseline_ranking.csv
 │   ├── feature_schema.json
 │   └── model_experiment_config.json
 ├── reports/
@@ -229,6 +236,7 @@ procurement_data/
 │   │   ├── figures/
 │   │   └── tables/
 │   └── model/
+│       ├── baseline.md
 │       └── split_decision.md
 └── datasets/
     ├── manifests/

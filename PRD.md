@@ -69,7 +69,7 @@ Tahun 2026 merupakan snapshot tahun berjalan pada waktu pengunduhan, bukan satu 
 
 ## 1.3 Kesenjangan Produk
 
-Artefak enrichment, coverage report, dataset canonical satu-record-per-paket, EDA reproducible, feature matrix leakage-safe, dan split temporal sudah tersedia. Feature matrix berisi 1.276 record eligible dengan 20 fitur eksplisit dan schema versi di `artifacts/feature_schema.json`. Split temporal memakai 838 record 2024-2025 untuk training dan 438 record snapshot 2026 untuk evaluation, dengan satu record canonical tidak eligible tetap tercatat sebagai excluded. Baseline, model Isolation Forest, evaluasi model, backend API, frontend, laporan yang dapat diunduh, pengujian lanjutan, dan deployment belum tersedia.
+Artefak enrichment, coverage report, dataset canonical satu-record-per-paket, EDA reproducible, feature matrix leakage-safe, split temporal, dan baseline ranking transparan sudah tersedia. Feature matrix berisi 1.276 record eligible dengan 20 fitur eksplisit dan schema versi di `artifacts/feature_schema.json`. Split temporal memakai 838 record 2024-2025 untuk training dan 438 record snapshot 2026 untuk evaluation, dengan satu record canonical tidak eligible tetap tercatat sebagai excluded. Baseline robust z-score tersedia sebagai pembanding deterministik, bukan model final. Model Isolation Forest, evaluasi model, backend API, frontend, laporan yang dapat diunduh, pengujian lanjutan, dan deployment belum tersedia.
 
 ## 1.4 Solusi yang Diusulkan
 
@@ -201,6 +201,8 @@ Prioritas: **P1** wajib untuk v1.0, **P2** penting setelah P1 stabil, **P3** nic
 | FR-22 | P1 | Pengaruh fitur dianalisis | Permutation sensitivity menjadi baseline; SHAP digunakan jika hasilnya tervalidasi terhadap output Isolation Forest |
 | FR-23 | P1 | Setiap ranking dapat dijelaskan | Detail Top-N menampilkan kontribusi/penyimpangan fitur, nilai asli, dan konteks pembanding |
 | FR-24 | P2 | Konfigurasi final dibandingkan dengan baseline sederhana | Ranking Isolation Forest dibandingkan dengan minimal satu baseline transparan, misalnya robust z-score multivariat/fitur utama |
+
+> Baseline transparan sementara tersedia pada `artifacts/baseline_ranking.csv` dengan konfigurasi di `artifacts/baseline_config.json` dan report di `reports/model/baseline.md`. Baseline memakai statistik median/skala robust dari train split 2024-2025 dan memberi skor prioritas pembanding pada seluruh record eligible tanpa membuat label pelanggaran.
 
 ## 5.5 Web Dashboard
 

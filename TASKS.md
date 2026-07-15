@@ -142,7 +142,7 @@ Pencarian `/find-skills` menemukan `obra/superpowers@requesting-code-review` seb
 - **Acceptance:** training/evaluation windows, cut-off, eligible records, excluded records, dan leakage policy eksplisit; split dapat direproduksi dari manifest.
 - **Verification:** assertion memastikan record tidak melintasi split secara salah dan fitur historis tidak memakai agregat masa depan.
 
-### [ ] TASK-ML-010 - Implement transparent anomaly-ranking baseline
+### [x] TASK-ML-010 - Implement transparent anomaly-ranking baseline
 
 - **Depends on:** `TASK-ML-009`.
 - **Goal:** menyediakan pembanding yang mudah dijelaskan untuk menilai manfaat Isolation Forest.
