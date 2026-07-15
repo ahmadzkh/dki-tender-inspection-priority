@@ -26,7 +26,7 @@ Before any task:
 - **Goal**: Help auditors or procurement analysts decide which completed tender packages to inspect first using traceable data, reproducible anomaly scoring, and neutral explanations.
 - **Target Users**: Government internal auditors/inspectorate staff, procurement analysts, thesis supervisors/examiners, and researchers.
 - **Version**: `0.1.0` foundation/data-preparation stage
-- **Status**: Active development; Python and Next.js foundations plus immutable source-data layout, reproducible source-data audit, resumable enrichment runner, full enrichment coverage report, one-package-per-record canonical dataset, EDA/data-quality report, leakage-safe feature matrix, temporal split, transparent baseline ranking, reproducible Isolation Forest artifacts, and model evaluation report exist. Explanation validation, backend API, product UI, containers, and deployment are still planned.
+- **Status**: Active development; Python and Next.js foundations plus immutable source-data layout, reproducible source-data audit, resumable enrichment runner, full enrichment coverage report, one-package-per-record canonical dataset, EDA/data-quality report, leakage-safe feature matrix, temporal split, transparent baseline ranking, reproducible Isolation Forest artifacts, model evaluation report, and permutation-sensitivity explanation exist. Backend API, product UI, containers, and deployment are still planned.
 - **Research Methods**:
   - CRISP-DM for data understanding, preparation, modeling, evaluation, and deployment.
   - RAD for web requirements planning, user design, construction, and cutover.
@@ -48,6 +48,7 @@ Before any task:
 - Transparent baseline ranking scores all 1,276 eligible records with train-split robust z-score statistics.
 - Isolation Forest artifact `414f1691d2bccdd9` scores all 1,276 eligible records with CPU-only training on the 2024-2025 train split.
 - Model evaluation report covers seed stability, hyperparameter sensitivity, Top-N overlap, temporal behavior, and baseline comparison; default Top-N is 20.
+- Permutation sensitivity explanation explains Top-20 and Top-50 records with 3 factors each; OD-5 resolved.
 
 ---
 
@@ -98,7 +99,7 @@ Before any task:
 
 ### Current State
 
-Python and frontend foundations, source-manifest verification, source-data audit, resumable enrichment runner, full enrichment coverage report, canonical dataset builder, EDA report generator, feature matrix builder, temporal split generator, transparent baseline builder, Isolation Forest trainer, and model evaluation report generator are available. Backend, frontend test, E2E, and Docker commands remain planned until their corresponding tasks create and verify them.
+Python and frontend foundations, source-manifest verification, source-data audit, resumable enrichment runner, full enrichment coverage report, canonical dataset builder, EDA report generator, feature matrix builder, temporal split generator, transparent baseline builder, Isolation Forest trainer, model evaluation report generator, and explanation report generator are available. Backend, frontend test, E2E, and Docker commands remain planned until their corresponding tasks create and verify them.
 
 ```bash
 # Python environment
@@ -126,6 +127,7 @@ uv run python pipelines/define_model_split.py
 uv run python modeling/build_baseline_ranking.py
 uv run python modeling/train_isolation_forest.py
 uv run python modeling/evaluate_anomaly_ranking.py
+uv run python modeling/explain_anomaly_ranking.py
 
 # Backend development — planned after TASK-BE-001
 uv run fastapi dev backend/app/main.py
@@ -954,3 +956,7 @@ Authentication is out of scope. These placeholders remain documented because the
 ---
 
 _This file remains a living engineering contract. Update it only when code, dependencies, commands, architecture, or verified project status changes. Product scope changes belong in `PRD.md` first._
+│   ├── explain_anomaly_ranking.py
+│   ├── test_explain_anomaly_ranking.py
+│       ├── explanation.json
+│       ├── explanation.md

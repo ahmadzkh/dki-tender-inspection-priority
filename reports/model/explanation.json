@@ -1,0 +1,4651 @@
+{
+  "schema_version": 1,
+  "artifact_versions": {
+    "model_version": "414f1691d2bccdd9",
+    "model_config_sha256": "cb893841923de0742f09af9a15d6f45269460e7b7572d52c67f531a1acd4979e",
+    "feature_matrix_sha256": "21531506de73cc96c24529497a2d3fd5d609461cbd33e62ca1c32529db0e4bdd"
+  },
+  "method": "permutation_importance",
+  "shap_available": false,
+  "shap_message": "shap not installed; using permutation sensitivity fallback",
+  "n_permutations": 10,
+  "addressed_decisions": [
+    "OD-5"
+  ],
+  "od5_decision": "Permutation sensitivity is the primary explanation method; SHAP not viable",
+  "global_importance": [
+    {
+      "feature": "procurement_type_code",
+      "base_mean_score": -0.434284,
+      "permuted_mean_score": -0.441601,
+      "impact": -0.007317,
+      "absolute_impact": 0.007317
+    },
+    {
+      "feature": "procurement_method_code",
+      "base_mean_score": -0.434284,
+      "permuted_mean_score": -0.439902,
+      "impact": -0.005618,
+      "absolute_impact": 0.005618
+    },
+    {
+      "feature": "log_hps",
+      "base_mean_score": -0.434284,
+      "permuted_mean_score": -0.439817,
+      "impact": -0.005533,
+      "absolute_impact": 0.005533
+    },
+    {
+      "feature": "log_pagu",
+      "base_mean_score": -0.434284,
+      "permuted_mean_score": -0.438604,
+      "impact": -0.004319,
+      "absolute_impact": 0.004319
+    },
+    {
+      "feature": "log_contract_value",
+      "base_mean_score": -0.434284,
+      "permuted_mean_score": -0.438198,
+      "impact": -0.003913,
+      "absolute_impact": 0.003913
+    },
+    {
+      "feature": "tender_duration_days",
+      "base_mean_score": -0.434284,
+      "permuted_mean_score": -0.43703,
+      "impact": -0.002745,
+      "absolute_impact": 0.002745
+    },
+    {
+      "feature": "contract_to_hps_ratio",
+      "base_mean_score": -0.434284,
+      "permuted_mean_score": -0.436745,
+      "impact": -0.002461,
+      "absolute_impact": 0.002461
+    },
+    {
+      "feature": "savings_to_hps_ratio",
+      "base_mean_score": -0.434284,
+      "permuted_mean_score": -0.436679,
+      "impact": -0.002395,
+      "absolute_impact": 0.002395
+    },
+    {
+      "feature": "evaluation_duration_days",
+      "base_mean_score": -0.434284,
+      "permuted_mean_score": -0.436487,
+      "impact": -0.002202,
+      "absolute_impact": 0.002202
+    },
+    {
+      "feature": "supplier_prior_contract_share_year",
+      "base_mean_score": -0.434284,
+      "permuted_mean_score": -0.435232,
+      "impact": -0.000948,
+      "absolute_impact": 0.000948
+    },
+    {
+      "feature": "supplier_prior_package_count_year",
+      "base_mean_score": -0.434284,
+      "permuted_mean_score": -0.435227,
+      "impact": -0.000943,
+      "absolute_impact": 0.000943
+    },
+    {
+      "feature": "bid_submission_duration_days",
+      "base_mean_score": -0.434284,
+      "permuted_mean_score": -0.43513,
+      "impact": -0.000845,
+      "absolute_impact": 0.000845
+    },
+    {
+      "feature": "work_unit_supplier_hhi_prior_package_count_year",
+      "base_mean_score": -0.434284,
+      "permuted_mean_score": -0.434682,
+      "impact": -0.000398,
+      "absolute_impact": 0.000398
+    },
+    {
+      "feature": "supplier_prior_work_unit_package_count_year",
+      "base_mean_score": -0.434284,
+      "permuted_mean_score": -0.434657,
+      "impact": -0.000373,
+      "absolute_impact": 0.000373
+    },
+    {
+      "feature": "year_value",
+      "base_mean_score": -0.434284,
+      "permuted_mean_score": -0.434523,
+      "impact": -0.000238,
+      "absolute_impact": 0.000238
+    },
+    {
+      "feature": "hps_to_pagu_ratio",
+      "base_mean_score": -0.434284,
+      "permuted_mean_score": -0.434449,
+      "impact": -0.000164,
+      "absolute_impact": 0.000164
+    },
+    {
+      "feature": "supplier_prior_work_unit_contract_share_year",
+      "base_mean_score": -0.434284,
+      "permuted_mean_score": -0.434393,
+      "impact": -0.000108,
+      "absolute_impact": 0.000108
+    },
+    {
+      "feature": "partial_snapshot_year_flag",
+      "base_mean_score": -0.434284,
+      "permuted_mean_score": -0.434284,
+      "impact": 0.0,
+      "absolute_impact": 0.0
+    },
+    {
+      "feature": "pdn_to_contract_ratio",
+      "base_mean_score": -0.434284,
+      "permuted_mean_score": -0.434284,
+      "impact": 0.0,
+      "absolute_impact": 0.0
+    },
+    {
+      "feature": "schedule_invalid_timestamp_count",
+      "base_mean_score": -0.434284,
+      "permuted_mean_score": -0.434284,
+      "impact": 0.0,
+      "absolute_impact": 0.0
+    }
+  ],
+  "per_record": {
+    "20": [
+      {
+        "package_id": "57740127",
+        "rank": 1,
+        "anomaly_score": 0.682397,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.4773,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.8049,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 21.807819,
+            "formatted_value": "Rp2,958,116,701",
+            "percentile": 0.8127,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10087308000",
+        "rank": 2,
+        "anomaly_score": 0.653319,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.093064,
+            "formatted_value": "Rp214,819,411,992",
+            "percentile": 0.9859,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10032258000",
+        "rank": 3,
+        "anomaly_score": 0.646017,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 5.0,
+            "formatted_value": "5.000000",
+            "percentile": 0.8503,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 22.526779,
+            "formatted_value": "Rp6,070,936,088",
+            "percentile": 0.8715,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10087340000",
+        "rank": 4,
+        "anomaly_score": 0.641391,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 25.98906,
+            "formatted_value": "Rp193,599,911,701",
+            "percentile": 0.9828,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "59676127",
+        "rank": 5,
+        "anomaly_score": 0.640945,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.336139,
+            "formatted_value": "Rp273,930,132,187",
+            "percentile": 0.9898,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "57655127",
+        "rank": 6,
+        "anomaly_score": 0.640239,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.4773,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.8049,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 21.97891,
+            "formatted_value": "Rp3,510,097,501",
+            "percentile": 0.8299,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "59863127",
+        "rank": 7,
+        "anomaly_score": 0.636994,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 5.0,
+            "formatted_value": "5.000000",
+            "percentile": 0.8503,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 22.838252,
+            "formatted_value": "Rp8,289,470,844",
+            "percentile": 0.8942,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10097213000",
+        "rank": 8,
+        "anomaly_score": 0.635424,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.803633,
+            "formatted_value": "Rp437,189,859,985",
+            "percentile": 0.9976,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10011478000",
+        "rank": 9,
+        "anomaly_score": 0.628404,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.4773,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.8049,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 23.486296,
+            "formatted_value": "Rp15,847,784,000",
+            "percentile": 0.9263,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10132051000",
+        "rank": 10,
+        "anomaly_score": 0.625676,
+        "split": "evaluation",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 5.0,
+            "formatted_value": "5.000000",
+            "percentile": 0.8503,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 22.802382,
+            "formatted_value": "Rp7,997,398,196",
+            "percentile": 0.8895,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10086485000",
+        "rank": 11,
+        "anomaly_score": 0.622252,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.032492,
+            "formatted_value": "Rp202,193,716,726",
+            "percentile": 0.9835,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "57898127",
+        "rank": 12,
+        "anomaly_score": 0.622034,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 7.0,
+            "formatted_value": "7.000000",
+            "percentile": 0.9976,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 27.893385,
+            "formatted_value": "Rp1,299,999,105,215",
+            "percentile": 1.0,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10065358000",
+        "rank": 13,
+        "anomaly_score": 0.609127,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 25.465597,
+            "formatted_value": "Rp114,701,234,112",
+            "percentile": 0.9765,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10086518000",
+        "rank": 14,
+        "anomaly_score": 0.607694,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.305744,
+            "formatted_value": "Rp265,729,423,915",
+            "percentile": 0.989,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "59967127",
+        "rank": 15,
+        "anomaly_score": 0.607372,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 8.0,
+            "formatted_value": "8.000000",
+            "percentile": 1.0,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 3.0,
+            "formatted_value": "3.000000",
+            "percentile": 1.0,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 19.466317,
+            "formatted_value": "Rp284,520,741",
+            "percentile": 0.3738,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "61266127",
+        "rank": 16,
+        "anomaly_score": 0.600178,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 5.0,
+            "formatted_value": "5.000000",
+            "percentile": 0.8503,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 21.632993,
+            "formatted_value": "Rp2,483,644,951",
+            "percentile": 0.7923,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10026743000",
+        "rank": 17,
+        "anomaly_score": 0.599268,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.395816,
+            "formatted_value": "Rp290,775,000,008",
+            "percentile": 0.9929,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10091302000",
+        "rank": 18,
+        "anomaly_score": 0.59233,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.647623,
+            "formatted_value": "Rp374,037,895,053",
+            "percentile": 0.9961,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10008064000",
+        "rank": 19,
+        "anomaly_score": 0.59105,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.4773,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.8049,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 22.670949,
+            "formatted_value": "Rp7,012,424,001",
+            "percentile": 0.8793,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "59654127",
+        "rank": 20,
+        "anomaly_score": 0.588725,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 24.181973,
+            "formatted_value": "Rp31,775,862,683",
+            "percentile": 0.9545,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      }
+    ],
+    "50": [
+      {
+        "package_id": "57740127",
+        "rank": 1,
+        "anomaly_score": 0.682397,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.4773,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.8049,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 21.807819,
+            "formatted_value": "Rp2,958,116,701",
+            "percentile": 0.8127,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10087308000",
+        "rank": 2,
+        "anomaly_score": 0.653319,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.093064,
+            "formatted_value": "Rp214,819,411,992",
+            "percentile": 0.9859,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10032258000",
+        "rank": 3,
+        "anomaly_score": 0.646017,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 5.0,
+            "formatted_value": "5.000000",
+            "percentile": 0.8503,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 22.526779,
+            "formatted_value": "Rp6,070,936,088",
+            "percentile": 0.8715,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10087340000",
+        "rank": 4,
+        "anomaly_score": 0.641391,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 25.98906,
+            "formatted_value": "Rp193,599,911,701",
+            "percentile": 0.9828,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "59676127",
+        "rank": 5,
+        "anomaly_score": 0.640945,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.336139,
+            "formatted_value": "Rp273,930,132,187",
+            "percentile": 0.9898,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "57655127",
+        "rank": 6,
+        "anomaly_score": 0.640239,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.4773,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.8049,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 21.97891,
+            "formatted_value": "Rp3,510,097,501",
+            "percentile": 0.8299,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "59863127",
+        "rank": 7,
+        "anomaly_score": 0.636994,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 5.0,
+            "formatted_value": "5.000000",
+            "percentile": 0.8503,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 22.838252,
+            "formatted_value": "Rp8,289,470,844",
+            "percentile": 0.8942,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10097213000",
+        "rank": 8,
+        "anomaly_score": 0.635424,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.803633,
+            "formatted_value": "Rp437,189,859,985",
+            "percentile": 0.9976,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10011478000",
+        "rank": 9,
+        "anomaly_score": 0.628404,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.4773,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.8049,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 23.486296,
+            "formatted_value": "Rp15,847,784,000",
+            "percentile": 0.9263,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10132051000",
+        "rank": 10,
+        "anomaly_score": 0.625676,
+        "split": "evaluation",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 5.0,
+            "formatted_value": "5.000000",
+            "percentile": 0.8503,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 22.802382,
+            "formatted_value": "Rp7,997,398,196",
+            "percentile": 0.8895,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10086485000",
+        "rank": 11,
+        "anomaly_score": 0.622252,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.032492,
+            "formatted_value": "Rp202,193,716,726",
+            "percentile": 0.9835,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "57898127",
+        "rank": 12,
+        "anomaly_score": 0.622034,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 7.0,
+            "formatted_value": "7.000000",
+            "percentile": 0.9976,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 27.893385,
+            "formatted_value": "Rp1,299,999,105,215",
+            "percentile": 1.0,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10065358000",
+        "rank": 13,
+        "anomaly_score": 0.609127,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 25.465597,
+            "formatted_value": "Rp114,701,234,112",
+            "percentile": 0.9765,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10086518000",
+        "rank": 14,
+        "anomaly_score": 0.607694,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.305744,
+            "formatted_value": "Rp265,729,423,915",
+            "percentile": 0.989,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "59967127",
+        "rank": 15,
+        "anomaly_score": 0.607372,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 8.0,
+            "formatted_value": "8.000000",
+            "percentile": 1.0,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 3.0,
+            "formatted_value": "3.000000",
+            "percentile": 1.0,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 19.466317,
+            "formatted_value": "Rp284,520,741",
+            "percentile": 0.3738,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "61266127",
+        "rank": 16,
+        "anomaly_score": 0.600178,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 5.0,
+            "formatted_value": "5.000000",
+            "percentile": 0.8503,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 21.632993,
+            "formatted_value": "Rp2,483,644,951",
+            "percentile": 0.7923,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10026743000",
+        "rank": 17,
+        "anomaly_score": 0.599268,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.395816,
+            "formatted_value": "Rp290,775,000,008",
+            "percentile": 0.9929,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10091302000",
+        "rank": 18,
+        "anomaly_score": 0.59233,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.647623,
+            "formatted_value": "Rp374,037,895,053",
+            "percentile": 0.9961,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10008064000",
+        "rank": 19,
+        "anomaly_score": 0.59105,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.4773,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.8049,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 22.670949,
+            "formatted_value": "Rp7,012,424,001",
+            "percentile": 0.8793,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "59654127",
+        "rank": 20,
+        "anomaly_score": 0.588725,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 24.181973,
+            "formatted_value": "Rp31,775,862,683",
+            "percentile": 0.9545,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "59295127",
+        "rank": 21,
+        "anomaly_score": 0.584714,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.365803,
+            "formatted_value": "Rp282,177,670,690",
+            "percentile": 0.9922,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "57654127",
+        "rank": 22,
+        "anomaly_score": 0.584368,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.4773,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.8049,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 21.97891,
+            "formatted_value": "Rp3,510,097,501",
+            "percentile": 0.8299,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10065368000",
+        "rank": 23,
+        "anomaly_score": 0.584149,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 25.606858,
+            "formatted_value": "Rp132,104,400,103",
+            "percentile": 0.9773,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "60061127",
+        "rank": 24,
+        "anomaly_score": 0.583388,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 7.0,
+            "formatted_value": "7.000000",
+            "percentile": 0.9976,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 24.596512,
+            "formatted_value": "Rp48,098,275,470",
+            "percentile": 0.9663,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10091309000",
+        "rank": 25,
+        "anomaly_score": 0.580487,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.890145,
+            "formatted_value": "Rp476,696,138,146",
+            "percentile": 0.9984,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10063513000",
+        "rank": 26,
+        "anomaly_score": 0.579751,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.447699,
+            "formatted_value": "Rp306,259,590,796",
+            "percentile": 0.9945,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "59335127",
+        "rank": 27,
+        "anomaly_score": 0.575015,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.397214,
+            "formatted_value": "Rp291,182,000,008",
+            "percentile": 0.9937,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10086508000",
+        "rank": 28,
+        "anomaly_score": 0.57439,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.040722,
+            "formatted_value": "Rp203,864,670,774",
+            "percentile": 0.9843,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10059252000",
+        "rank": 29,
+        "anomaly_score": 0.574049,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 7.0,
+            "formatted_value": "7.000000",
+            "percentile": 0.9976,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.340291,
+            "formatted_value": "Rp275,070,000,007",
+            "percentile": 0.9906,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10005226000",
+        "rank": 30,
+        "anomaly_score": 0.573772,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.4773,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.8049,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 19.251623,
+            "formatted_value": "Rp229,548,001",
+            "percentile": 0.3331,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10036464000",
+        "rank": 31,
+        "anomaly_score": 0.571715,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.4773,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.8049,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 19.494303,
+            "formatted_value": "Rp292,596,001",
+            "percentile": 0.3856,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10027953000",
+        "rank": 32,
+        "anomaly_score": 0.567137,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.4773,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.8049,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 19.783644,
+            "formatted_value": "Rp390,775,501",
+            "percentile": 0.4616,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10120522000",
+        "rank": 33,
+        "anomaly_score": 0.564788,
+        "split": "evaluation",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.4773,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.8049,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 19.437012,
+            "formatted_value": "Rp276,304,001",
+            "percentile": 0.3691,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10099896000",
+        "rank": 34,
+        "anomaly_score": 0.564144,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 8.0,
+            "formatted_value": "8.000000",
+            "percentile": 1.0,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 21.636929,
+            "formatted_value": "Rp2,493,440,001",
+            "percentile": 0.7947,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10027501000",
+        "rank": 35,
+        "anomaly_score": 0.563942,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.670039,
+            "formatted_value": "Rp382,517,000,012",
+            "percentile": 0.9969,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10016550000",
+        "rank": 36,
+        "anomaly_score": 0.563465,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.4773,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.8049,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 19.388983,
+            "formatted_value": "Rp263,347,075",
+            "percentile": 0.3582,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10094279000",
+        "rank": 37,
+        "anomaly_score": 0.560855,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 5.0,
+            "formatted_value": "5.000000",
+            "percentile": 0.8503,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 20.978858,
+            "formatted_value": "Rp1,291,225,406",
+            "percentile": 0.7312,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10027665000",
+        "rank": 38,
+        "anomaly_score": 0.558127,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.102569,
+            "formatted_value": "Rp216,871,000,006",
+            "percentile": 0.9867,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10016559000",
+        "rank": 39,
+        "anomaly_score": 0.556551,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.4773,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.8049,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 19.665753,
+            "formatted_value": "Rp347,318,575",
+            "percentile": 0.4326,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "61304127",
+        "rank": 40,
+        "anomaly_score": 0.554582,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 5.0,
+            "formatted_value": "5.000000",
+            "percentile": 0.8503,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 20.524947,
+            "formatted_value": "Rp820,108,701",
+            "percentile": 0.6395,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10027666000",
+        "rank": 41,
+        "anomaly_score": 0.55245,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.568652,
+            "formatted_value": "Rp345,635,999,994",
+            "percentile": 0.9953,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "59337127",
+        "rank": 42,
+        "anomaly_score": 0.549351,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.356207,
+            "formatted_value": "Rp279,483,000,002",
+            "percentile": 0.9914,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "59824127",
+        "rank": 43,
+        "anomaly_score": 0.549238,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.4773,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.8049,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 20.114888,
+            "formatted_value": "Rp544,233,001",
+            "percentile": 0.5509,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10015639000",
+        "rank": 44,
+        "anomaly_score": 0.548557,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.4773,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.8049,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 20.414353,
+            "formatted_value": "Rp734,244,766",
+            "percentile": 0.6105,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "59869127",
+        "rank": 45,
+        "anomaly_score": 0.547746,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.4773,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.8049,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 19.084085,
+            "formatted_value": "Rp194,139,001",
+            "percentile": 0.2915,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "59586127",
+        "rank": 46,
+        "anomaly_score": 0.547512,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 25.444268,
+            "formatted_value": "Rp112,280,713,941",
+            "percentile": 0.9757,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10065336000",
+        "rank": 47,
+        "anomaly_score": 0.547424,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 25.824734,
+            "formatted_value": "Rp164,262,947,679",
+            "percentile": 0.9804,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "59552127",
+        "rank": 48,
+        "anomaly_score": 0.542734,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.4773,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.8049,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 19.618935,
+            "formatted_value": "Rp331,432,681",
+            "percentile": 0.4216,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10013233000",
+        "rank": 49,
+        "anomaly_score": 0.540354,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 25.697623,
+            "formatted_value": "Rp144,655,830,587",
+            "percentile": 0.9788,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10007784000",
+        "rank": 50,
+        "anomaly_score": 0.539358,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.4773,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.8049,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 18.455507,
+            "formatted_value": "Rp103,544,001",
+            "percentile": 0.0611,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      }
+    ],
+    "all": [
+      {
+        "package_id": "57740127",
+        "rank": 1,
+        "anomaly_score": 0.682397,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.4773,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.8049,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 21.807819,
+            "formatted_value": "Rp2,958,116,701",
+            "percentile": 0.8127,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10087308000",
+        "rank": 2,
+        "anomaly_score": 0.653319,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.093064,
+            "formatted_value": "Rp214,819,411,992",
+            "percentile": 0.9859,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10032258000",
+        "rank": 3,
+        "anomaly_score": 0.646017,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 5.0,
+            "formatted_value": "5.000000",
+            "percentile": 0.8503,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 22.526779,
+            "formatted_value": "Rp6,070,936,088",
+            "percentile": 0.8715,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10087340000",
+        "rank": 4,
+        "anomaly_score": 0.641391,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 25.98906,
+            "formatted_value": "Rp193,599,911,701",
+            "percentile": 0.9828,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "59676127",
+        "rank": 5,
+        "anomaly_score": 0.640945,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.336139,
+            "formatted_value": "Rp273,930,132,187",
+            "percentile": 0.9898,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "57655127",
+        "rank": 6,
+        "anomaly_score": 0.640239,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.4773,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.8049,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 21.97891,
+            "formatted_value": "Rp3,510,097,501",
+            "percentile": 0.8299,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "59863127",
+        "rank": 7,
+        "anomaly_score": 0.636994,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 5.0,
+            "formatted_value": "5.000000",
+            "percentile": 0.8503,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 22.838252,
+            "formatted_value": "Rp8,289,470,844",
+            "percentile": 0.8942,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10097213000",
+        "rank": 8,
+        "anomaly_score": 0.635424,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.803633,
+            "formatted_value": "Rp437,189,859,985",
+            "percentile": 0.9976,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10011478000",
+        "rank": 9,
+        "anomaly_score": 0.628404,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.4773,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.8049,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 23.486296,
+            "formatted_value": "Rp15,847,784,000",
+            "percentile": 0.9263,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10132051000",
+        "rank": 10,
+        "anomaly_score": 0.625676,
+        "split": "evaluation",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 5.0,
+            "formatted_value": "5.000000",
+            "percentile": 0.8503,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 22.802382,
+            "formatted_value": "Rp7,997,398,196",
+            "percentile": 0.8895,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10086485000",
+        "rank": 11,
+        "anomaly_score": 0.622252,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.032492,
+            "formatted_value": "Rp202,193,716,726",
+            "percentile": 0.9835,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "57898127",
+        "rank": 12,
+        "anomaly_score": 0.622034,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 7.0,
+            "formatted_value": "7.000000",
+            "percentile": 0.9976,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 27.893385,
+            "formatted_value": "Rp1,299,999,105,215",
+            "percentile": 1.0,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10065358000",
+        "rank": 13,
+        "anomaly_score": 0.609127,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 25.465597,
+            "formatted_value": "Rp114,701,234,112",
+            "percentile": 0.9765,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10086518000",
+        "rank": 14,
+        "anomaly_score": 0.607694,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.305744,
+            "formatted_value": "Rp265,729,423,915",
+            "percentile": 0.989,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "59967127",
+        "rank": 15,
+        "anomaly_score": 0.607372,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 8.0,
+            "formatted_value": "8.000000",
+            "percentile": 1.0,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 3.0,
+            "formatted_value": "3.000000",
+            "percentile": 1.0,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 19.466317,
+            "formatted_value": "Rp284,520,741",
+            "percentile": 0.3738,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "61266127",
+        "rank": 16,
+        "anomaly_score": 0.600178,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 5.0,
+            "formatted_value": "5.000000",
+            "percentile": 0.8503,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 21.632993,
+            "formatted_value": "Rp2,483,644,951",
+            "percentile": 0.7923,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10026743000",
+        "rank": 17,
+        "anomaly_score": 0.599268,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.395816,
+            "formatted_value": "Rp290,775,000,008",
+            "percentile": 0.9929,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10091302000",
+        "rank": 18,
+        "anomaly_score": 0.59233,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.647623,
+            "formatted_value": "Rp374,037,895,053",
+            "percentile": 0.9961,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10008064000",
+        "rank": 19,
+        "anomaly_score": 0.59105,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.4773,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.8049,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 22.670949,
+            "formatted_value": "Rp7,012,424,001",
+            "percentile": 0.8793,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "59654127",
+        "rank": 20,
+        "anomaly_score": 0.588725,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 24.181973,
+            "formatted_value": "Rp31,775,862,683",
+            "percentile": 0.9545,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "57740127",
+        "rank": 1,
+        "anomaly_score": 0.682397,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.4773,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.8049,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 21.807819,
+            "formatted_value": "Rp2,958,116,701",
+            "percentile": 0.8127,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10087308000",
+        "rank": 2,
+        "anomaly_score": 0.653319,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.093064,
+            "formatted_value": "Rp214,819,411,992",
+            "percentile": 0.9859,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10032258000",
+        "rank": 3,
+        "anomaly_score": 0.646017,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 5.0,
+            "formatted_value": "5.000000",
+            "percentile": 0.8503,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 22.526779,
+            "formatted_value": "Rp6,070,936,088",
+            "percentile": 0.8715,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10087340000",
+        "rank": 4,
+        "anomaly_score": 0.641391,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 25.98906,
+            "formatted_value": "Rp193,599,911,701",
+            "percentile": 0.9828,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "59676127",
+        "rank": 5,
+        "anomaly_score": 0.640945,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.336139,
+            "formatted_value": "Rp273,930,132,187",
+            "percentile": 0.9898,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "57655127",
+        "rank": 6,
+        "anomaly_score": 0.640239,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.4773,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.8049,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 21.97891,
+            "formatted_value": "Rp3,510,097,501",
+            "percentile": 0.8299,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "59863127",
+        "rank": 7,
+        "anomaly_score": 0.636994,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 5.0,
+            "formatted_value": "5.000000",
+            "percentile": 0.8503,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 22.838252,
+            "formatted_value": "Rp8,289,470,844",
+            "percentile": 0.8942,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10097213000",
+        "rank": 8,
+        "anomaly_score": 0.635424,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.803633,
+            "formatted_value": "Rp437,189,859,985",
+            "percentile": 0.9976,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10011478000",
+        "rank": 9,
+        "anomaly_score": 0.628404,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.4773,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.8049,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 23.486296,
+            "formatted_value": "Rp15,847,784,000",
+            "percentile": 0.9263,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10132051000",
+        "rank": 10,
+        "anomaly_score": 0.625676,
+        "split": "evaluation",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 5.0,
+            "formatted_value": "5.000000",
+            "percentile": 0.8503,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 22.802382,
+            "formatted_value": "Rp7,997,398,196",
+            "percentile": 0.8895,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10086485000",
+        "rank": 11,
+        "anomaly_score": 0.622252,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.032492,
+            "formatted_value": "Rp202,193,716,726",
+            "percentile": 0.9835,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "57898127",
+        "rank": 12,
+        "anomaly_score": 0.622034,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 7.0,
+            "formatted_value": "7.000000",
+            "percentile": 0.9976,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 27.893385,
+            "formatted_value": "Rp1,299,999,105,215",
+            "percentile": 1.0,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10065358000",
+        "rank": 13,
+        "anomaly_score": 0.609127,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 25.465597,
+            "formatted_value": "Rp114,701,234,112",
+            "percentile": 0.9765,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10086518000",
+        "rank": 14,
+        "anomaly_score": 0.607694,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.305744,
+            "formatted_value": "Rp265,729,423,915",
+            "percentile": 0.989,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "59967127",
+        "rank": 15,
+        "anomaly_score": 0.607372,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 8.0,
+            "formatted_value": "8.000000",
+            "percentile": 1.0,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 3.0,
+            "formatted_value": "3.000000",
+            "percentile": 1.0,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 19.466317,
+            "formatted_value": "Rp284,520,741",
+            "percentile": 0.3738,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "61266127",
+        "rank": 16,
+        "anomaly_score": 0.600178,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 5.0,
+            "formatted_value": "5.000000",
+            "percentile": 0.8503,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 21.632993,
+            "formatted_value": "Rp2,483,644,951",
+            "percentile": 0.7923,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10026743000",
+        "rank": 17,
+        "anomaly_score": 0.599268,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.395816,
+            "formatted_value": "Rp290,775,000,008",
+            "percentile": 0.9929,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10091302000",
+        "rank": 18,
+        "anomaly_score": 0.59233,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.647623,
+            "formatted_value": "Rp374,037,895,053",
+            "percentile": 0.9961,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10008064000",
+        "rank": 19,
+        "anomaly_score": 0.59105,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.4773,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.8049,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 22.670949,
+            "formatted_value": "Rp7,012,424,001",
+            "percentile": 0.8793,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "59654127",
+        "rank": 20,
+        "anomaly_score": 0.588725,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 24.181973,
+            "formatted_value": "Rp31,775,862,683",
+            "percentile": 0.9545,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "59295127",
+        "rank": 21,
+        "anomaly_score": 0.584714,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.365803,
+            "formatted_value": "Rp282,177,670,690",
+            "percentile": 0.9922,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "57654127",
+        "rank": 22,
+        "anomaly_score": 0.584368,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.4773,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.8049,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 21.97891,
+            "formatted_value": "Rp3,510,097,501",
+            "percentile": 0.8299,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10065368000",
+        "rank": 23,
+        "anomaly_score": 0.584149,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 25.606858,
+            "formatted_value": "Rp132,104,400,103",
+            "percentile": 0.9773,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "60061127",
+        "rank": 24,
+        "anomaly_score": 0.583388,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 7.0,
+            "formatted_value": "7.000000",
+            "percentile": 0.9976,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 24.596512,
+            "formatted_value": "Rp48,098,275,470",
+            "percentile": 0.9663,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10091309000",
+        "rank": 25,
+        "anomaly_score": 0.580487,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.890145,
+            "formatted_value": "Rp476,696,138,146",
+            "percentile": 0.9984,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10063513000",
+        "rank": 26,
+        "anomaly_score": 0.579751,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.447699,
+            "formatted_value": "Rp306,259,590,796",
+            "percentile": 0.9945,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "59335127",
+        "rank": 27,
+        "anomaly_score": 0.575015,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.397214,
+            "formatted_value": "Rp291,182,000,008",
+            "percentile": 0.9937,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10086508000",
+        "rank": 28,
+        "anomaly_score": 0.57439,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.040722,
+            "formatted_value": "Rp203,864,670,774",
+            "percentile": 0.9843,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10059252000",
+        "rank": 29,
+        "anomaly_score": 0.574049,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 7.0,
+            "formatted_value": "7.000000",
+            "percentile": 0.9976,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.340291,
+            "formatted_value": "Rp275,070,000,007",
+            "percentile": 0.9906,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10005226000",
+        "rank": 30,
+        "anomaly_score": 0.573772,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.4773,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.8049,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 19.251623,
+            "formatted_value": "Rp229,548,001",
+            "percentile": 0.3331,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10036464000",
+        "rank": 31,
+        "anomaly_score": 0.571715,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.4773,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.8049,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 19.494303,
+            "formatted_value": "Rp292,596,001",
+            "percentile": 0.3856,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10027953000",
+        "rank": 32,
+        "anomaly_score": 0.567137,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.4773,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.8049,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 19.783644,
+            "formatted_value": "Rp390,775,501",
+            "percentile": 0.4616,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10120522000",
+        "rank": 33,
+        "anomaly_score": 0.564788,
+        "split": "evaluation",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.4773,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.8049,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 19.437012,
+            "formatted_value": "Rp276,304,001",
+            "percentile": 0.3691,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10099896000",
+        "rank": 34,
+        "anomaly_score": 0.564144,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 8.0,
+            "formatted_value": "8.000000",
+            "percentile": 1.0,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 21.636929,
+            "formatted_value": "Rp2,493,440,001",
+            "percentile": 0.7947,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10027501000",
+        "rank": 35,
+        "anomaly_score": 0.563942,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.670039,
+            "formatted_value": "Rp382,517,000,012",
+            "percentile": 0.9969,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10016550000",
+        "rank": 36,
+        "anomaly_score": 0.563465,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.4773,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.8049,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 19.388983,
+            "formatted_value": "Rp263,347,075",
+            "percentile": 0.3582,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10094279000",
+        "rank": 37,
+        "anomaly_score": 0.560855,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 5.0,
+            "formatted_value": "5.000000",
+            "percentile": 0.8503,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 20.978858,
+            "formatted_value": "Rp1,291,225,406",
+            "percentile": 0.7312,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10027665000",
+        "rank": 38,
+        "anomaly_score": 0.558127,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.102569,
+            "formatted_value": "Rp216,871,000,006",
+            "percentile": 0.9867,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10016559000",
+        "rank": 39,
+        "anomaly_score": 0.556551,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.4773,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.8049,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 19.665753,
+            "formatted_value": "Rp347,318,575",
+            "percentile": 0.4326,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "61304127",
+        "rank": 40,
+        "anomaly_score": 0.554582,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 5.0,
+            "formatted_value": "5.000000",
+            "percentile": 0.8503,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 20.524947,
+            "formatted_value": "Rp820,108,701",
+            "percentile": 0.6395,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10027666000",
+        "rank": 41,
+        "anomaly_score": 0.55245,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.568652,
+            "formatted_value": "Rp345,635,999,994",
+            "percentile": 0.9953,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "59337127",
+        "rank": 42,
+        "anomaly_score": 0.549351,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 26.356207,
+            "formatted_value": "Rp279,483,000,002",
+            "percentile": 0.9914,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "59824127",
+        "rank": 43,
+        "anomaly_score": 0.549238,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.4773,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.8049,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 20.114888,
+            "formatted_value": "Rp544,233,001",
+            "percentile": 0.5509,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10015639000",
+        "rank": 44,
+        "anomaly_score": 0.548557,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.4773,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.8049,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 20.414353,
+            "formatted_value": "Rp734,244,766",
+            "percentile": 0.6105,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "59869127",
+        "rank": 45,
+        "anomaly_score": 0.547746,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.4773,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.8049,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 19.084085,
+            "formatted_value": "Rp194,139,001",
+            "percentile": 0.2915,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "59586127",
+        "rank": 46,
+        "anomaly_score": 0.547512,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 25.444268,
+            "formatted_value": "Rp112,280,713,941",
+            "percentile": 0.9757,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10065336000",
+        "rank": 47,
+        "anomaly_score": 0.547424,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 25.824734,
+            "formatted_value": "Rp164,262,947,679",
+            "percentile": 0.9804,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "59552127",
+        "rank": 48,
+        "anomaly_score": 0.542734,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.4773,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.8049,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 19.618935,
+            "formatted_value": "Rp331,432,681",
+            "percentile": 0.4216,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10013233000",
+        "rank": 49,
+        "anomaly_score": 0.540354,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 6.0,
+            "formatted_value": "6.000000",
+            "percentile": 0.9953,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 2.0,
+            "formatted_value": "2.000000",
+            "percentile": 0.9992,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 25.697623,
+            "formatted_value": "Rp144,655,830,587",
+            "percentile": 0.9788,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      },
+      {
+        "package_id": "10007784000",
+        "rank": 50,
+        "anomaly_score": 0.539358,
+        "split": "train",
+        "factors": [
+          {
+            "feature": "procurement_type_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.4773,
+            "impact": -0.007317,
+            "absolute_impact": 0.007317
+          },
+          {
+            "feature": "procurement_method_code",
+            "value": 1.0,
+            "formatted_value": "1.000000",
+            "percentile": 0.8049,
+            "impact": -0.005618,
+            "absolute_impact": 0.005618
+          },
+          {
+            "feature": "log_hps",
+            "value": 18.455507,
+            "formatted_value": "Rp103,544,001",
+            "percentile": 0.0611,
+            "impact": -0.005533,
+            "absolute_impact": 0.005533
+          }
+        ]
+      }
+    ]
+  },
+  "outputs": {
+    "json": "reports/model/explanation.json",
+    "markdown": "reports/model/explanation.md",
+    "artifact": "artifacts/ranking_explanations.json"
+  }
+}

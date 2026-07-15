@@ -4,9 +4,9 @@ Sistem berbasis web untuk mengurutkan paket realisasi tender Pemerintah Provinsi
 
 ## Status Project
 
-> **Tahap saat ini: evaluasi model selesai; validasi explanation berikutnya.**
+> **Tahap saat ini: penjelasan model selesai; backend API berikutnya.**
 
-Dataset 2024-2026 telah dikumpulkan, diaudit, digabung, diperkaya, dicanonicalkan menjadi satu record per `kode_paket`, dianalisis melalui EDA reproducible, ditransformasi menjadi feature matrix leakage-safe, dibagi dengan split temporal, diberi baseline ranking transparan, dilatih dengan Isolation Forest, dan dievaluasi tanpa label ground truth. Empat CSV sumber disimpan pada layout raw yang immutable serta dicatat dalam manifest SHA-256 yang dapat diverifikasi. Pipeline audit dan enrichment menghasilkan report JSON/Markdown dari raw sources tanpa memodifikasinya. Full enrichment INAPROC sudah dijalankan untuk 1.277 kode paket unik dengan coverage 100%, lalu pipeline canonical menghasilkan 1.277 paket unik dan menandai satu paket multi-provider sebagai tidak eligible untuk fitur model. EDA menghasilkan ringkasan distribusi nilai, missingness, outlier univariat, kategori, konsentrasi penyedia/satuan kerja, dan catatan snapshot parsial 2026. Feature engineering menghasilkan 1.276 baris eligible dengan 20 fitur eksplisit. Split temporal memakai 838 record 2024-2025 untuk training dan 438 record snapshot 2026 untuk evaluation. Baseline robust z-score menghasilkan ranking deterministik untuk pembanding model. Isolation Forest menghasilkan artefak model CPU-only, konfigurasi, dan ranking untuk 1.276 record eligible. Evaluasi model mencatat stabilitas seed, sensitivitas hyperparameter, distribusi skor, perilaku temporal, baseline comparison, dan keputusan Top-N. Validasi explanation, backend API, antarmuka pengguna, pengujian tambahan, dan deployment belum dibangun.
+Dataset 2024-2026 telah dikumpulkan, diaudit, digabung, diperkaya, dicanonicalkan menjadi satu record per `kode_paket`, dianalisis melalui EDA reproducible, ditransformasi menjadi feature matrix leakage-safe, dibagi dengan split temporal, diberi baseline ranking transparan, dilatih dengan Isolation Forest, dan dievaluasi tanpa label ground truth. Empat CSV sumber disimpan pada layout raw yang immutable serta dicatat dalam manifest SHA-256 yang dapat diverifikasi. Pipeline audit dan enrichment menghasilkan report JSON/Markdown dari raw sources tanpa memodifikasinya. Full enrichment INAPROC sudah dijalankan untuk 1.277 kode paket unik dengan coverage 100%, lalu pipeline canonical menghasilkan 1.277 paket unik dan menandai satu paket multi-provider sebagai tidak eligible untuk fitur model. EDA menghasilkan ringkasan distribusi nilai, missingness, outlier univariat, kategori, konsentrasi penyedia/satuan kerja, dan catatan snapshot parsial 2026. Feature engineering menghasilkan 1.276 baris eligible dengan 20 fitur eksplisit. Split temporal memakai 838 record 2024-2025 untuk training dan 438 record snapshot 2026 untuk evaluation. Baseline robust z-score menghasilkan ranking deterministik untuk pembanding model. Isolation Forest menghasilkan artefak model CPU-only, konfigurasi, dan ranking untuk 1.276 record eligible. Evaluasi model mencatat stabilitas seed, sensitivitas hyperparameter, distribusi skor, perilaku temporal, baseline comparison, dan keputusan Top-N. Explanation permutation sensitivity menjawab OD-5. Backend API, antarmuka pengguna, pengujian tambahan, dan deployment belum dibangun.
 
 | Komponen | Status |
 |---|---|
@@ -24,7 +24,8 @@ Dataset 2024-2026 telah dikumpulkan, diaudit, digabung, diperkaya, dicanonicalka
 | Split temporal model | Selesai; training 2024-2025 = 838 record, evaluation 2026 snapshot = 438 record |
 | Baseline transparan | Selesai; robust z-score ranking di `artifacts/baseline_ranking.csv` |
 | Training Isolation Forest | Selesai; `model_version=414f1691d2bccdd9`, ranking di `artifacts/isolation_forest_ranking.csv` |
-| Evaluasi model | Selesai; report di `reports/model/evaluation.md`, default Top-N = 20 |
+| Evaluasi model | Selesai |
+| Explanation model | Selesai; permutation sensitivity di `reports/model/explanation.md`, OD-5 dijawab |
 | FastAPI backend | Belum dimulai |
 | Docker dan deployment | Belum dimulai |
 
@@ -125,6 +126,8 @@ Baseline transparan tersedia pada `artifacts/baseline_ranking.csv` dengan konfig
 Model Isolation Forest tersedia pada `artifacts/isolation_forest_model.joblib` dengan konfigurasi di `artifacts/isolation_forest_config.json` dan ranking di `artifacts/isolation_forest_ranking.csv`. Model memakai `StandardScaler`, `n_estimators=200`, `random_seed=42`, `n_jobs=1`, dan dilatih hanya pada train split 2024-2025. Skor semakin tinggi berarti paket semakin diprioritaskan untuk pemeriksaan, bukan bukti pelanggaran.
 
 Evaluasi model tersedia pada [`reports/model/evaluation.md`](reports/model/evaluation.md) dan `reports/model/evaluation.json`. Pipeline `modeling/evaluate_anomaly_ranking.py` membandingkan stabilitas antar seed, sensitivitas `contamination`, jumlah estimator, dan subsampling, overlap Top-N dengan baseline transparan, distribusi skor, serta perilaku temporal train/evaluation. Keputusan saat ini mempertahankan konfigurasi Isolation Forest `414f1691d2bccdd9`, memakai Top-20 sebagai default tampilan kapasitas pemeriksaan, dan mempertahankan 20 fitur sampai validasi explanation selesai.
+
+Explanation model tersedia pada [`reports/model/explanation.md`](reports/model/explanation.md) dan `artifacts/ranking_explanations.json`. Pipeline `modeling/explain_anomaly_ranking.py` menggunakan permutation sensitivity sebagai metode primer karena SHAP tidak terinstal. Setiap record Top-20 dan Top-50 memiliki minimal tiga faktor dengan nilai asli, persentil, dan dampak perubahan. Keputusan `OD-5` ditetapkan: permutation sensitivity menjadi fallback transparan jika SHAP tidak tersedia.
 
 ### Kolom Awal
 
@@ -393,7 +396,7 @@ Command backend akan ditambahkan setelah implementasinya tersedia dan sudah dive
 - [x] Membangun baseline ranking transparan.
 - [x] Melatih Isolation Forest reproducible.
 - [x] Mengevaluasi stabilitas, sensitivitas, perilaku temporal, dan baseline.
-- [ ] Memvalidasi feature influence dan explanation.
+- [x] Memvalidasi feature influence dan explanation (permutation sensitivity, OD-5).
 - [ ] Membangun FastAPI backend.
 - [ ] Membangun Next.js frontend.
 - [ ] Menambahkan CSV export dan pengujian.
@@ -422,6 +425,8 @@ Command backend akan ditambahkan setelah implementasinya tersedia dan sudah dive
 - `reports/model/evaluation.md`: evaluasi stabilitas, sensitivitas, distribusi skor, perilaku temporal, baseline comparison, dan keputusan Top-N.
 - `reports/model/tables/`: tabel seed stability, hyperparameter sensitivity, dan baseline comparison.
 - `reports/model/figures/`: visualisasi distribusi skor dan sensitivitas hyperparameter.
+- `reports/model/explanation.md`: penjelasan fitur permutation sensitivity untuk model Isolation Forest.
+- `artifacts/ranking_explanations.json`: faktor per record (Top-20, Top-50, all).
 
 `TASKS.md` menjadi single source of truth status implementasi. Agent hanya boleh mengubah task menjadi `[x]` setelah test, `verify-gate`, dan code review yang diwajibkan lulus.
 
