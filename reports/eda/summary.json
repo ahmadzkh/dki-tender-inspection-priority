@@ -1,0 +1,573 @@
+{
+  "schema_version": 1,
+  "dataset": {
+    "canonical_csv": "datasets/processed/tenders_canonical.csv",
+    "canonical_csv_sha256": "e1787c052ec07feabef4b92f76e5adee84f8ec8c7b575de92552c656b3e8d09c",
+    "row_count": 1277,
+    "unique_package_count": 1277,
+    "eligible_for_model_count": 1276,
+    "multi_provider_count": 1,
+    "partial_snapshot_years": [
+      "2026"
+    ]
+  },
+  "missingness": {
+    "contract_value": {
+      "missing_count": 1,
+      "available_count": 1276,
+      "missing_pct": 0.000783
+    },
+    "pdn_value": {
+      "missing_count": 1,
+      "available_count": 1276,
+      "missing_pct": 0.000783
+    },
+    "hps": {
+      "missing_count": 0,
+      "available_count": 1277,
+      "missing_pct": 0.0
+    },
+    "pagu": {
+      "missing_count": 0,
+      "available_count": 1277,
+      "missing_pct": 0.0
+    },
+    "metode_evaluasi": {
+      "missing_count": 0,
+      "available_count": 1277,
+      "missing_pct": 0.0
+    },
+    "metadata": {
+      "missing_count": 0,
+      "available_count": 1277,
+      "missing_pct": 0.0
+    },
+    "jadwal": {
+      "missing_count": 0,
+      "available_count": 1277,
+      "missing_pct": 0.0
+    },
+    "supplier_name": {
+      "missing_count": 1,
+      "available_count": 1276,
+      "missing_pct": 0.000783
+    },
+    "work_unit": {
+      "missing_count": 0,
+      "available_count": 1277,
+      "missing_pct": 0.0
+    }
+  },
+  "value_summary": {
+    "contract_value": {
+      "count": 1276,
+      "missing_count": 0,
+      "min": 65073750.0,
+      "p25": 158400000.0,
+      "median": 414426825.0,
+      "p75": 1306817430.0,
+      "max": 1284554975461.0,
+      "mean": 9581621945.02116
+    },
+    "pdn_value": {
+      "count": 1276,
+      "missing_count": 0,
+      "min": 65073750.0,
+      "p25": 158400000.0,
+      "median": 414426825.0,
+      "p75": 1306817430.0,
+      "max": 1284554975461.0,
+      "mean": 9581621945.02116
+    },
+    "hps": {
+      "count": 1276,
+      "missing_count": 0,
+      "min": 100650000.0,
+      "p25": 161700000.0,
+      "median": 435565000.0,
+      "p75": 1500030024.0,
+      "max": 1299999105178.86,
+      "mean": 10330916141.612507
+    },
+    "pagu": {
+      "count": 1276,
+      "missing_count": 0,
+      "min": 101200000.0,
+      "p25": 161700000.0,
+      "median": 468607487.5,
+      "p75": 1581231227.75,
+      "max": 1300000006831.0,
+      "mean": 10751153961.449842
+    },
+    "contract_to_hps_ratio": {
+      "count": 1276,
+      "missing_count": 0,
+      "min": 0.08849,
+      "p25": 0.88683,
+      "median": 0.960621,
+      "p75": 0.995627,
+      "max": 1.090362,
+      "mean": 0.924972
+    },
+    "hps_to_pagu_ratio": {
+      "count": 1276,
+      "missing_count": 0,
+      "min": 0.266945,
+      "p25": 0.979549,
+      "median": 0.998418,
+      "p75": 1.0,
+      "max": 1.0,
+      "mean": 0.968957
+    },
+    "savings_to_hps_ratio": {
+      "count": 1276,
+      "missing_count": 0,
+      "min": -0.090362,
+      "p25": 0.004373,
+      "median": 0.039379,
+      "p75": 0.11317,
+      "max": 0.91151,
+      "mean": 0.075028
+    },
+    "pdn_to_contract_ratio": {
+      "count": 1276,
+      "missing_count": 0,
+      "min": 1.0,
+      "p25": 1.0,
+      "median": 1.0,
+      "p75": 1.0,
+      "max": 1.0,
+      "mean": 1.0
+    }
+  },
+  "year_summary": {
+    "2024": {
+      "package_count": 312,
+      "eligible_for_model_count": 312,
+      "total_contract_value": 4164358450263.0,
+      "median_contract_value": 654278400.0,
+      "supplier_count": 192,
+      "work_unit_count": 76,
+      "is_partial_snapshot": false
+    },
+    "2025": {
+      "package_count": 527,
+      "eligible_for_model_count": 526,
+      "total_contract_value": 7723001449232.0,
+      "median_contract_value": 713896400.0,
+      "supplier_count": 282,
+      "work_unit_count": 103,
+      "is_partial_snapshot": false
+    },
+    "2026": {
+      "package_count": 438,
+      "eligible_for_model_count": 438,
+      "total_contract_value": 338789702352.0,
+      "median_contract_value": 141530000.0,
+      "supplier_count": 371,
+      "work_unit_count": 56,
+      "is_partial_snapshot": true
+    }
+  },
+  "outliers": {
+    "contract_value": {
+      "count": 1276,
+      "q1": 158400000.0,
+      "q3": 1306817430.0,
+      "iqr": 1148417430.0,
+      "lower_bound": -1564226145.0,
+      "upper_bound": 3029443575.0,
+      "lower_outlier_count": 0,
+      "upper_outlier_count": 224,
+      "top_upper_outliers": [
+        {
+          "package_id": "57898127",
+          "year": "2024",
+          "work_unit": "UNIT PENGELOLA SAMPAH TERPADU - 2.11.0.00.0.00.01.0008",
+          "value": 1284554975461.0
+        },
+        {
+          "package_id": "10080100000",
+          "year": "2025",
+          "work_unit": "DINAS CIPTA KARYA, TATA RUANG DAN PERTANAHAN - 1.03.0.00.0.00.03.0000",
+          "value": 659189000000.0
+        },
+        {
+          "package_id": "10091309000",
+          "year": "2025",
+          "work_unit": "DINAS PERUMAHAN RAKYAT DAN KAWASAN PERMUKIMAN - 1.04.0.00.0.00.01.0000",
+          "value": 468353960000.0
+        },
+        {
+          "package_id": "10097213000",
+          "year": "2025",
+          "work_unit": "DINAS SUMBER DAYA AIR - 1.03.0.00.0.00.02.0000",
+          "value": 421816804683.0
+        },
+        {
+          "package_id": "10091302000",
+          "year": "2025",
+          "work_unit": "DINAS PERUMAHAN RAKYAT DAN KAWASAN PERMUKIMAN - 1.04.0.00.0.00.01.0000",
+          "value": 367000000000.0
+        },
+        {
+          "package_id": "10027666000",
+          "year": "2025",
+          "work_unit": "UNIT PENGELOLA PRASARANA DAN SARANA PENDIDIKAN - 1.01.0.00.0.00.01.0039",
+          "value": 327328000000.0
+        },
+        {
+          "package_id": "10027501000",
+          "year": "2025",
+          "work_unit": "UNIT PENGELOLA PRASARANA DAN SARANA PENDIDIKAN - 1.01.0.00.0.00.01.0039",
+          "value": 321162000000.0
+        },
+        {
+          "package_id": "10063513000",
+          "year": "2025",
+          "work_unit": "DINAS PERUMAHAN RAKYAT DAN KAWASAN PERMUKIMAN - 1.04.0.00.0.00.01.0000",
+          "value": 294101000000.0
+        },
+        {
+          "package_id": "59335127",
+          "year": "2024",
+          "work_unit": "UNIT PENGELOLA PRASARANA DAN SARANA PENDIDIKAN - 1.01.0.00.0.00.01.0039",
+          "value": 287779779309.0
+        },
+        {
+          "package_id": "59337127",
+          "year": "2024",
+          "work_unit": "UNIT PENGELOLA PRASARANA DAN SARANA PENDIDIKAN - 1.01.0.00.0.00.01.0039",
+          "value": 263423249861.0
+        }
+      ]
+    },
+    "pdn_value": {
+      "count": 1276,
+      "q1": 158400000.0,
+      "q3": 1306817430.0,
+      "iqr": 1148417430.0,
+      "lower_bound": -1564226145.0,
+      "upper_bound": 3029443575.0,
+      "lower_outlier_count": 0,
+      "upper_outlier_count": 224,
+      "top_upper_outliers": [
+        {
+          "package_id": "57898127",
+          "year": "2024",
+          "work_unit": "UNIT PENGELOLA SAMPAH TERPADU - 2.11.0.00.0.00.01.0008",
+          "value": 1284554975461.0
+        },
+        {
+          "package_id": "10080100000",
+          "year": "2025",
+          "work_unit": "DINAS CIPTA KARYA, TATA RUANG DAN PERTANAHAN - 1.03.0.00.0.00.03.0000",
+          "value": 659189000000.0
+        },
+        {
+          "package_id": "10091309000",
+          "year": "2025",
+          "work_unit": "DINAS PERUMAHAN RAKYAT DAN KAWASAN PERMUKIMAN - 1.04.0.00.0.00.01.0000",
+          "value": 468353960000.0
+        },
+        {
+          "package_id": "10097213000",
+          "year": "2025",
+          "work_unit": "DINAS SUMBER DAYA AIR - 1.03.0.00.0.00.02.0000",
+          "value": 421816804683.0
+        },
+        {
+          "package_id": "10091302000",
+          "year": "2025",
+          "work_unit": "DINAS PERUMAHAN RAKYAT DAN KAWASAN PERMUKIMAN - 1.04.0.00.0.00.01.0000",
+          "value": 367000000000.0
+        },
+        {
+          "package_id": "10027666000",
+          "year": "2025",
+          "work_unit": "UNIT PENGELOLA PRASARANA DAN SARANA PENDIDIKAN - 1.01.0.00.0.00.01.0039",
+          "value": 327328000000.0
+        },
+        {
+          "package_id": "10027501000",
+          "year": "2025",
+          "work_unit": "UNIT PENGELOLA PRASARANA DAN SARANA PENDIDIKAN - 1.01.0.00.0.00.01.0039",
+          "value": 321162000000.0
+        },
+        {
+          "package_id": "10063513000",
+          "year": "2025",
+          "work_unit": "DINAS PERUMAHAN RAKYAT DAN KAWASAN PERMUKIMAN - 1.04.0.00.0.00.01.0000",
+          "value": 294101000000.0
+        },
+        {
+          "package_id": "59335127",
+          "year": "2024",
+          "work_unit": "UNIT PENGELOLA PRASARANA DAN SARANA PENDIDIKAN - 1.01.0.00.0.00.01.0039",
+          "value": 287779779309.0
+        },
+        {
+          "package_id": "59337127",
+          "year": "2024",
+          "work_unit": "UNIT PENGELOLA PRASARANA DAN SARANA PENDIDIKAN - 1.01.0.00.0.00.01.0039",
+          "value": 263423249861.0
+        }
+      ]
+    },
+    "hps": {
+      "count": 1276,
+      "q1": 161700000.0,
+      "q3": 1500030024.0,
+      "iqr": 1338330024.0,
+      "lower_bound": -1845795036.0,
+      "upper_bound": 3507525060.0,
+      "lower_outlier_count": 0,
+      "upper_outlier_count": 219,
+      "top_upper_outliers": [
+        {
+          "package_id": "57898127",
+          "year": "2024",
+          "work_unit": "UNIT PENGELOLA SAMPAH TERPADU - 2.11.0.00.0.00.01.0008",
+          "value": 1299999105178.86
+        },
+        {
+          "package_id": "10080100000",
+          "year": "2025",
+          "work_unit": "DINAS CIPTA KARYA, TATA RUANG DAN PERTANAHAN - 1.03.0.00.0.00.03.0000",
+          "value": 695147573279.0
+        },
+        {
+          "package_id": "10091309000",
+          "year": "2025",
+          "work_unit": "DINAS PERUMAHAN RAKYAT DAN KAWASAN PERMUKIMAN - 1.04.0.00.0.00.01.0000",
+          "value": 476696138145.0
+        },
+        {
+          "package_id": "10097213000",
+          "year": "2025",
+          "work_unit": "DINAS SUMBER DAYA AIR - 1.03.0.00.0.00.02.0000",
+          "value": 437189860000.0
+        },
+        {
+          "package_id": "10027501000",
+          "year": "2025",
+          "work_unit": "UNIT PENGELOLA PRASARANA DAN SARANA PENDIDIKAN - 1.01.0.00.0.00.01.0039",
+          "value": 382517000000.0
+        },
+        {
+          "package_id": "10091302000",
+          "year": "2025",
+          "work_unit": "DINAS PERUMAHAN RAKYAT DAN KAWASAN PERMUKIMAN - 1.04.0.00.0.00.01.0000",
+          "value": 374037895058.0
+        },
+        {
+          "package_id": "10027666000",
+          "year": "2025",
+          "work_unit": "UNIT PENGELOLA PRASARANA DAN SARANA PENDIDIKAN - 1.01.0.00.0.00.01.0039",
+          "value": 345636000000.0
+        },
+        {
+          "package_id": "10063513000",
+          "year": "2025",
+          "work_unit": "DINAS PERUMAHAN RAKYAT DAN KAWASAN PERMUKIMAN - 1.04.0.00.0.00.01.0000",
+          "value": 306259590782.0
+        },
+        {
+          "package_id": "59335127",
+          "year": "2024",
+          "work_unit": "UNIT PENGELOLA PRASARANA DAN SARANA PENDIDIKAN - 1.01.0.00.0.00.01.0039",
+          "value": 291182000000.0
+        },
+        {
+          "package_id": "10026743000",
+          "year": "2025",
+          "work_unit": "UNIT PENGELOLA PRASARANA DAN SARANA PENDIDIKAN - 1.01.0.00.0.00.01.0039",
+          "value": 290775000000.0
+        }
+      ]
+    },
+    "pagu": {
+      "count": 1276,
+      "q1": 161700000.0,
+      "q3": 1581231227.75,
+      "iqr": 1419531227.75,
+      "lower_bound": -1967596841.625,
+      "upper_bound": 3710528069.375,
+      "lower_outlier_count": 0,
+      "upper_outlier_count": 219,
+      "top_upper_outliers": [
+        {
+          "package_id": "57898127",
+          "year": "2024",
+          "work_unit": "UNIT PENGELOLA SAMPAH TERPADU - 2.11.0.00.0.00.01.0008",
+          "value": 1300000006831.0
+        },
+        {
+          "package_id": "10080100000",
+          "year": "2025",
+          "work_unit": "DINAS CIPTA KARYA, TATA RUANG DAN PERTANAHAN - 1.03.0.00.0.00.03.0000",
+          "value": 695147574518.0
+        },
+        {
+          "package_id": "10091309000",
+          "year": "2025",
+          "work_unit": "DINAS PERUMAHAN RAKYAT DAN KAWASAN PERMUKIMAN - 1.04.0.00.0.00.01.0000",
+          "value": 516023702000.0
+        },
+        {
+          "package_id": "10097213000",
+          "year": "2025",
+          "work_unit": "DINAS SUMBER DAYA AIR - 1.03.0.00.0.00.02.0000",
+          "value": 472944860000.0
+        },
+        {
+          "package_id": "10091302000",
+          "year": "2025",
+          "work_unit": "DINAS PERUMAHAN RAKYAT DAN KAWASAN PERMUKIMAN - 1.04.0.00.0.00.01.0000",
+          "value": 393001316000.0
+        },
+        {
+          "package_id": "10027501000",
+          "year": "2025",
+          "work_unit": "UNIT PENGELOLA PRASARANA DAN SARANA PENDIDIKAN - 1.01.0.00.0.00.01.0039",
+          "value": 383438516059.0
+        },
+        {
+          "package_id": "59335127",
+          "year": "2024",
+          "work_unit": "UNIT PENGELOLA PRASARANA DAN SARANA PENDIDIKAN - 1.01.0.00.0.00.01.0039",
+          "value": 361956426127.0
+        },
+        {
+          "package_id": "10059252000",
+          "year": "2025",
+          "work_unit": "DINAS BINA MARGA - 1.03.0.00.0.00.01.0000",
+          "value": 349901710115.0
+        },
+        {
+          "package_id": "10027666000",
+          "year": "2025",
+          "work_unit": "UNIT PENGELOLA PRASARANA DAN SARANA PENDIDIKAN - 1.01.0.00.0.00.01.0039",
+          "value": 349035944500.0
+        },
+        {
+          "package_id": "10063513000",
+          "year": "2025",
+          "work_unit": "DINAS PERUMAHAN RAKYAT DAN KAWASAN PERMUKIMAN - 1.04.0.00.0.00.01.0000",
+          "value": 326661283500.0
+        }
+      ]
+    },
+    "contract_to_hps_ratio": {
+      "count": 1276,
+      "q1": 0.88683,
+      "q3": 0.995627,
+      "iqr": 0.108797,
+      "lower_bound": 0.723634,
+      "upper_bound": 1.158823,
+      "lower_outlier_count": 35,
+      "upper_outlier_count": 0,
+      "top_upper_outliers": []
+    },
+    "hps_to_pagu_ratio": {
+      "count": 1276,
+      "q1": 0.979549,
+      "q3": 1.0,
+      "iqr": 0.020451,
+      "lower_bound": 0.948871,
+      "upper_bound": 1.030677,
+      "lower_outlier_count": 184,
+      "upper_outlier_count": 0,
+      "top_upper_outliers": []
+    },
+    "savings_to_hps_ratio": {
+      "count": 1276,
+      "q1": 0.004373,
+      "q3": 0.11317,
+      "iqr": 0.108797,
+      "lower_bound": -0.158823,
+      "upper_bound": 0.276366,
+      "lower_outlier_count": 0,
+      "upper_outlier_count": 35,
+      "top_upper_outliers": [
+        {
+          "package_id": "10011478000",
+          "year": "2025",
+          "work_unit": "DINAS CIPTA KARYA, TATA RUANG DAN PERTANAHAN - 1.03.0.00.0.00.03.0000",
+          "value": 0.91151
+        },
+        {
+          "package_id": "10008064000",
+          "year": "2025",
+          "work_unit": "DINAS CIPTA KARYA, TATA RUANG DAN PERTANAHAN - 1.03.0.00.0.00.03.0000",
+          "value": 0.858408
+        },
+        {
+          "package_id": "10016550000",
+          "year": "2025",
+          "work_unit": "SUKU DINAS PERUMAHAN RAKYAT DAN KAWASAN PERMUKIMAN KOTA ADMINISTRASI JAKARTA SELATAN - 1.04.0.00.0.00.01.0004",
+          "value": 0.752897
+        },
+        {
+          "package_id": "10052012000",
+          "year": "2025",
+          "work_unit": "DINAS SUMBER DAYA AIR - 1.03.0.00.0.00.02.0000",
+          "value": 0.72598
+        },
+        {
+          "package_id": "57740127",
+          "year": "2024",
+          "work_unit": "DINAS CIPTA KARYA, TATA RUANG DAN PERTANAHAN - 1.03.0.00.0.00.03.0000",
+          "value": 0.582458
+        },
+        {
+          "package_id": "10027953000",
+          "year": "2025",
+          "work_unit": "DINAS PERUMAHAN RAKYAT DAN KAWASAN PERMUKIMAN - 1.04.0.00.0.00.01.0000",
+          "value": 0.575913
+        },
+        {
+          "package_id": "10016559000",
+          "year": "2025",
+          "work_unit": "SUKU DINAS PERUMAHAN RAKYAT DAN KAWASAN PERMUKIMAN KOTA ADMINISTRASI JAKARTA SELATAN - 1.04.0.00.0.00.01.0004",
+          "value": 0.572467
+        },
+        {
+          "package_id": "10025924000",
+          "year": "2025",
+          "work_unit": "SUKU DINAS PERUMAHAN RAKYAT DAN KAWASAN PERMUKIMAN KOTA ADMINISTRASI JAKARTA UTARA - 1.04.0.00.0.00.01.0002",
+          "value": 0.511155
+        },
+        {
+          "package_id": "59401127",
+          "year": "2024",
+          "work_unit": "DINAS SOSIAL - 1.06.0.00.0.00.01.0000",
+          "value": 0.498362
+        },
+        {
+          "package_id": "10035305000",
+          "year": "2025",
+          "work_unit": "SUKU DINAS CIPTA KARYA, TATA RUANG DAN PERTANAHAN KOTA ADMINISTRASI JAKARTA TIMUR - 1.03.0.00.0.00.03.0005",
+          "value": 0.458984
+        }
+      ]
+    },
+    "pdn_to_contract_ratio": {
+      "count": 1276,
+      "q1": 1.0,
+      "q3": 1.0,
+      "iqr": 0.0,
+      "lower_bound": 1.0,
+      "upper_bound": 1.0,
+      "lower_outlier_count": 0,
+      "upper_outlier_count": 0,
+      "top_upper_outliers": []
+    }
+  },
+  "concentration": {
+    "supplier_count": 681,
+    "work_unit_count": 131,
+    "supplier_hhi_by_package_count": 0.0052,
+    "supplier_hhi_by_contract_value": 0.065428
+  }
+}

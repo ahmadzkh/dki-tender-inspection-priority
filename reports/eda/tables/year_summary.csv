@@ -1,0 +1,4 @@
+year,package_count,eligible_for_model_count,total_contract_value,median_contract_value,supplier_count,work_unit_count,is_partial_snapshot
+2024,312,312,4164358450263.0,654278400.0,192,76,False
+2025,527,526,7723001449232.0,713896400.0,282,103,False
+2026,438,438,338789702352.0,141530000.0,371,56,True

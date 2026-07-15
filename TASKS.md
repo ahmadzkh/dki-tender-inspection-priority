@@ -118,7 +118,7 @@ Pencarian `/find-skills` menemukan `obra/superpowers@requesting-code-review` seb
 
 ## Analysis and Feature Engineering
 
-### [ ] TASK-ML-007 - Produce reproducible EDA and data-quality analysis
+### [x] TASK-ML-007 - Produce reproducible EDA and data-quality analysis
 
 - **Depends on:** `TASK-ML-006`.
 - **Goal:** memahami distribusi dan menentukan fitur berdasarkan bukti, bukan asumsi.

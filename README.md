@@ -4,9 +4,9 @@ Sistem berbasis web untuk mengurutkan paket realisasi tender Pemerintah Provinsi
 
 ## Status Project
 
-> **Tahap saat ini: fondasi data selesai sampai canonical dataset; feature engineering berikutnya.**
+> **Tahap saat ini: fondasi data dan EDA selesai; feature engineering berikutnya.**
 
-Dataset 2024-2026 telah dikumpulkan, diaudit, digabung, diperkaya, dan dicanonicalkan menjadi satu record per `kode_paket`. Empat CSV sumber disimpan pada layout raw yang immutable serta dicatat dalam manifest SHA-256 yang dapat diverifikasi. Pipeline audit dan enrichment menghasilkan report JSON/Markdown dari raw sources tanpa memodifikasinya. Full enrichment INAPROC sudah dijalankan untuk 1.277 kode paket unik dengan coverage 100%, lalu pipeline canonical menghasilkan 1.277 paket unik dan menandai satu paket multi-provider sebagai tidak eligible untuk fitur model. Feature engineering, model Machine Learning, backend API, antarmuka pengguna, pengujian tambahan, dan deployment belum dibangun.
+Dataset 2024-2026 telah dikumpulkan, diaudit, digabung, diperkaya, dicanonicalkan menjadi satu record per `kode_paket`, dan dianalisis melalui EDA reproducible. Empat CSV sumber disimpan pada layout raw yang immutable serta dicatat dalam manifest SHA-256 yang dapat diverifikasi. Pipeline audit dan enrichment menghasilkan report JSON/Markdown dari raw sources tanpa memodifikasinya. Full enrichment INAPROC sudah dijalankan untuk 1.277 kode paket unik dengan coverage 100%, lalu pipeline canonical menghasilkan 1.277 paket unik dan menandai satu paket multi-provider sebagai tidak eligible untuk fitur model. EDA menghasilkan ringkasan distribusi nilai, missingness, outlier univariat, kategori, konsentrasi penyedia/satuan kerja, dan catatan snapshot parsial 2026. Feature engineering, model Machine Learning, backend API, antarmuka pengguna, pengujian tambahan, dan deployment belum dibangun.
 
 | Komponen | Status |
 |---|---|
@@ -19,6 +19,7 @@ Dataset 2024-2026 telah dikumpulkan, diaudit, digabung, diperkaya, dan dicanonic
 | Folder target terstruktur | Selesai |
 | Enrichment HPS, pagu, dan jadwal | Selesai; coverage report 100% untuk 1.277 paket unik |
 | Dataset canonical | Selesai; 1.277 paket unik, 1 multi-provider ditandai tidak eligible untuk model |
+| EDA dan data-quality analysis | Selesai; report reproducible di `reports/eda/summary.md` |
 | Feature engineering | Belum dimulai |
 | Isolation Forest dan evaluasi | Belum dimulai |
 | FastAPI backend | Belum dimulai |
@@ -110,6 +111,8 @@ Audit yang dapat dijalankan ulang tersedia pada [`reports/data/source_audit.md`]
 
 Dataset canonical tersedia pada `datasets/processed/tenders_canonical.csv`. Report kualitasnya tersedia pada [`reports/data/canonical_data_quality.md`](reports/data/canonical_data_quality.md) dan [`reports/data/canonical_data_quality.json`](reports/data/canonical_data_quality.json).
 
+EDA reproducible tersedia pada [`reports/eda/summary.md`](reports/eda/summary.md) dengan tabel statistik di `reports/eda/tables/` dan visualisasi SVG di `reports/eda/figures/`. Report menyebut row count, checksum canonical dataset, missingness, outlier univariat, distribusi kategori, konsentrasi penyedia/satuan kerja, dan batas interpretasi snapshot parsial 2026.
+
 ### Kolom Awal
 
 ```text
@@ -147,7 +150,7 @@ Full enrichment menghasilkan 1.277 respons sukses dari 1.277 paket unik. Coverag
 
 ## Fitur Machine Learning
 
-Daftar berikut merupakan kandidat. Fitur final ditetapkan setelah enrichment dan Exploratory Data Analysis (EDA).
+Daftar berikut merupakan kandidat. EDA awal sudah tersedia; fitur final ditetapkan pada pipeline feature engineering berikutnya berdasarkan coverage, distribusi, dan risiko leakage.
 
 ### Fitur Finansial
 
@@ -284,11 +287,21 @@ Prinsip arsitektur:
 ├── TASKS.md
 ├── .gitignore
 ├── pipelines/
+│   ├── audit_source_data.py
+│   ├── analyze_tender_data.py
+│   ├── build_canonical_dataset.py
+│   ├── enrich_tender_details.py
+│   ├── report_enrichment_coverage.py
 │   └── verify_source_manifest.py
+├── reports/
+│   ├── data/
+│   └── eda/
+├── frontend/
 └── datasets/
     ├── manifests/
     │   └── source_manifest.json
     ├── processed/
+    │   └── tenders_canonical.csv
     └── raw/
         ├── inaproc_realisasi_tender_dki_jakarta_2024.csv
         ├── inaproc_realisasi_tender_dki_jakarta_2025.csv
@@ -300,7 +313,7 @@ Struktur aplikasi akan dibuat bertahap saat file pertamanya diperlukan. Rancanga
 
 ## Menjalankan Project
 
-Python environment, source-manifest verifier, source-data audit, enrichment runner, canonical dataset builder, dan scaffold frontend sudah tersedia. Backend dan pipeline pemodelan belum tersedia.
+Python environment, source-manifest verifier, source-data audit, enrichment runner, canonical dataset builder, EDA generator, dan scaffold frontend sudah tersedia. Backend dan pipeline pemodelan belum tersedia.
 
 ```bash
 git clone https://github.com/ahmadzkh/dki-tender-inspection-priority.git
@@ -311,6 +324,7 @@ uv run python pipelines/audit_source_data.py
 INAPROC_DETAIL_API_BASE_URL="<detail-api-base-url>" uv run python pipelines/enrich_tender_details.py --limit 10
 uv run python pipelines/report_enrichment_coverage.py
 uv run python pipelines/build_canonical_dataset.py
+uv run python pipelines/analyze_tender_data.py
 uv run pytest
 npm --prefix frontend install
 npm --prefix frontend run lint
@@ -330,7 +344,8 @@ Command model dan backend akan ditambahkan setelah implementasinya tersedia dan 
 - [x] Membangun enrichment pipeline INAPROC yang resumable.
 - [x] Mengukur coverage HPS, pagu, dan jadwal.
 - [x] Membentuk dataset canonical satu paket per record.
-- [ ] Menjalankan EDA dan feature engineering.
+- [x] Menjalankan EDA dan data-quality analysis.
+- [ ] Membangun feature engineering leakage-safe.
 - [ ] Melatih dan mengevaluasi Isolation Forest.
 - [ ] Memvalidasi feature influence dan explanation.
 - [ ] Membangun FastAPI backend.
@@ -349,6 +364,7 @@ Command model dan backend akan ditambahkan setelah implementasinya tersedia dan 
 - [`reports/data/source_audit.md`](reports/data/source_audit.md): ringkasan audit sumber data yang dapat diregenerasi.
 - `reports/data/enrichment_coverage.md`: ringkasan coverage enrichment yang dapat diregenerasi setelah full enrichment.
 - `reports/data/canonical_data_quality.md`: ringkasan kualitas dataset canonical yang dapat diregenerasi.
+- `reports/eda/summary.md`: ringkasan EDA, tabel statistik, dan visualisasi yang dapat diregenerasi dari canonical dataset.
 
 `TASKS.md` menjadi single source of truth status implementasi. Agent hanya boleh mengubah task menjadi `[x]` setelah test, `verify-gate`, dan code review yang diwajibkan lulus.
 

@@ -1,0 +1,15 @@
+field,value,count,share
+procurement_method,Seleksi,1027,0.804229
+procurement_method,Tender,248,0.194205
+procurement_method,Tender Cepat,2,0.001566
+procurement_type,Jasa Konsultansi Badan Usaha Konstruksi,609,0.476899
+procurement_type,Jasa Konsultansi Perorangan Non Konstruksi,322,0.252153
+procurement_type,Pekerjaan Konstruksi,186,0.145654
+procurement_type,Jasa Konsultansi Badan Usaha Non Konstruksi,92,0.072044
+procurement_type,Jasa Lainnya,58,0.045419
+procurement_type,Jasa Konsultansi Perorangan Konstruksi,4,0.003132
+procurement_type,Pekerjaan Konstruksi Terintegrasi,3,0.002349
+procurement_type,Pengadaan Barang,3,0.002349
+year,2025,527,0.412686
+year,2026,438,0.342991
+year,2024,312,0.244323
