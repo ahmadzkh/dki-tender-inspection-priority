@@ -232,7 +232,7 @@ Pencarian `/find-skills` menemukan `obra/superpowers@requesting-code-review` seb
 - **Acceptance:** filter tahun/satker/metode/jenis/supplier/nilai/skor dapat digabung; default urut skor tertinggi; pagination metadata benar; invalid query menghasilkan 4xx.
 - **Verification:** fixture 52-row menguji page terakhir, filter combinations, stable ordering, Top-N, empty result, dan boundary values.
 
-### [ ] TASK-BE-006 - Add package-detail endpoint
+### [x] TASK-BE-006 - Add package-detail endpoint
 
 - **Depends on:** `TASK-BE-005`.
 - **Goal:** mengembalikan source, enrichment, feature, score, explanation, provenance, dan source link satu paket.
@@ -240,7 +240,7 @@ Pencarian `/find-skills` menemukan `obra/superpowers@requesting-code-review` seb
 - **Acceptance:** package tidak ditemukan menghasilkan 404; missing data tetap null; penjelasan memakai bahasa netral dan menyertakan disclaimer.
 - **Verification:** paket normal, Top-N, missing enrichment, dan unknown ID diuji.
 
-### [ ] TASK-BE-007 - Add filter-consistent CSV export
+### [x] TASK-BE-007 - Add filter-consistent CSV export
 
 - **Depends on:** `TASK-BE-005`.
 - **Goal:** mengunduh ranking sesuai filter dan urutan aktif.
@@ -248,7 +248,7 @@ Pencarian `/find-skills` menemukan `obra/superpowers@requesting-code-review` seb
 - **Acceptance:** jumlah, urutan, filter, field, encoding UTF-8, dan nilai null konsisten dengan ranking API.
 - **Verification:** hasil CSV diparse ulang dan dibandingkan record-per-record dengan response ranking untuk query sama.
 
-### [ ] TASK-BE-008 - Harden API errors, CORS, logging, and security boundaries
+### [x] TASK-BE-008 - Harden API errors, CORS, logging, and security boundaries
 
 - **Depends on:** `TASK-BE-003` sampai `TASK-BE-007`.
 - **Goal:** memastikan API aman untuk publikasi read-only.

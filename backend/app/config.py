@@ -46,6 +46,8 @@ PROCESSED_DATA_DIR: Path = Path(
 MANIFEST_PATH: Path = ARTIFACT_DIR / "manifest.json"
 RANKING_PATH: Path = ARTIFACT_DIR / "isolation_forest_ranking.csv"
 EXPLANATIONS_PATH: Path = ARTIFACT_DIR / "ranking_explanations.json"
+CANONICAL_PATH: Path = PROCESSED_DATA_DIR / "tenders_canonical.csv"
+FEATURES_PATH: Path = PROCESSED_DATA_DIR / "model_features.csv"
 
 # ---------------------------------------------------------------------------
 # API interpretation constants

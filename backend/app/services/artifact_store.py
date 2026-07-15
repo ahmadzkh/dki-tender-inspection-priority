@@ -63,6 +63,8 @@ class ArtifactStore:
     manifest: dict
     ranking: pd.DataFrame
     explanations_by_id: dict
+    features_by_id: dict
+    canonical_by_id: dict
     model_version: str
     generated_at: str
     schema_version: int
@@ -78,6 +80,8 @@ class ArtifactStore:
         manifest_path: Path,
         ranking_path: Path,
         explanations_path: Path,
+        canonical_path: Path,
+        features_path: Path,
         project_root: Path,
     ) -> "ArtifactStore":
         """Load and validate all artifacts.
@@ -95,9 +99,14 @@ class ArtifactStore:
 
         _validate_checksum(ranking_path, checksum_index, project_root)
         _validate_checksum(explanations_path, checksum_index, project_root)
+        _validate_checksum(canonical_path, checksum_index, project_root)
+        _validate_checksum(features_path, checksum_index, project_root)
 
         ranking = _load_ranking(ranking_path)
         explanations_by_id = _load_explanations(explanations_path)
+
+        canonical_by_id = _load_csv_as_dict(canonical_path, "package_id")
+        features_by_id = _load_csv_as_dict(features_path, "package_id")
 
         model_version: str = manifest["version"]
         generated_at: str = manifest["generated_at"]
@@ -114,6 +123,8 @@ class ArtifactStore:
             manifest=manifest,
             ranking=ranking,
             explanations_by_id=explanations_by_id,
+            features_by_id=features_by_id,
+            canonical_by_id=canonical_by_id,
             model_version=model_version,
             generated_at=generated_at,
             schema_version=schema_version,
@@ -194,4 +205,16 @@ def _load_explanations(path: Path) -> dict:
     for record in raw["all"]:
         pid = str(record["package_id"])
         indexed[pid] = record
+    return indexed
+
+
+def _load_csv_as_dict(path: Path, index_col: str) -> dict:
+    """Load a CSV and return a dict indexed by index_col (as string)."""
+    df = pd.read_csv(path, dtype={index_col: str}, low_memory=False)
+    # Convert to list of dicts and then index
+    records = df.to_dict(orient="records")
+    indexed = {}
+    for r in records:
+        pid = str(r[index_col])
+        indexed[pid] = r
     return indexed

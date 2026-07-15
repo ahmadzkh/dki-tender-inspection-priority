@@ -10,13 +10,16 @@ import logging
 import os
 from contextlib import asynccontextmanager
 
-from fastapi import FastAPI
+from fastapi import FastAPI, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
 
 from backend.app.api.router import api_router
 from backend.app.config import (
     ARTIFACT_DIR,
+    CANONICAL_PATH,
     EXPLANATIONS_PATH,
+    FEATURES_PATH,
     MANIFEST_PATH,
     PROJECT_ROOT,
     RANKING_PATH,
@@ -37,6 +40,8 @@ async def lifespan(app: FastAPI):
         manifest_path=MANIFEST_PATH,
         ranking_path=RANKING_PATH,
         explanations_path=EXPLANATIONS_PATH,
+        canonical_path=CANONICAL_PATH,
+        features_path=FEATURES_PATH,
         project_root=PROJECT_ROOT,
     )
     app.state.store = store
@@ -84,3 +89,31 @@ app.add_middleware(
     allow_methods=["GET"],
     allow_headers=["*"],
 )
+
+# ---------------------------------------------------------------------------
+# Security Headers Middleware
+# ---------------------------------------------------------------------------
+
+
+@app.middleware("http")
+async def add_security_headers(request: Request, call_next):
+    response: Response = await call_next(request)
+    response.headers["X-Content-Type-Options"] = "nosniff"
+    response.headers["X-Frame-Options"] = "DENY"
+    response.headers["Strict-Transport-Security"] = "max-age=31536000; includeSubDomains"
+    response.headers["X-XSS-Protection"] = "1; mode=block"
+    return response
+
+
+# ---------------------------------------------------------------------------
+# Global Exception Handler
+# ---------------------------------------------------------------------------
+
+
+@app.exception_handler(Exception)
+async def generic_exception_handler(request: Request, exc: Exception):
+    logger.error("Unhandled exception: %s", exc, exc_info=True)
+    return JSONResponse(
+        status_code=500,
+        content={"detail": "An internal server error occurred. Please try again later."},
+    )

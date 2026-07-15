@@ -17,6 +17,7 @@ REQUIRED_ARTIFACTS: dict[str, list[str]] = {
     "datasets": [
         "datasets/manifests/source_manifest.json",
         "datasets/manifests/model_split.json",
+        "datasets/processed/tenders_canonical.csv",
     ],
     "features": [
         "artifacts/feature_schema.json",

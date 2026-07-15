@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-15T10:09:07.305044+00:00",
+  "generated_at": "2026-07-15T12:33:47.249374+00:00",
   "project_name": "dki-tender-inspection-priority",
   "version": "414f1691d2bccdd9",
   "model": {
@@ -172,6 +172,12 @@
         "exists": true,
         "size_bytes": 33004,
         "sha256": "197815d63eccf00dd4112eb9c3cf66f37793fa7f226cd990f802e00ae3f81ed8"
+      },
+      {
+        "path": "datasets\\processed\\tenders_canonical.csv",
+        "exists": true,
+        "size_bytes": 4394470,
+        "sha256": "e1787c052ec07feabef4b92f76e5adee84f8ec8c7b575de92552c656b3e8d09c"
       }
     ],
     "features": [
@@ -240,7 +246,7 @@
     ]
   },
   "integrity": {
-    "artifact_count": 11,
+    "artifact_count": 12,
     "all_artifacts_exist": true
   }
 }

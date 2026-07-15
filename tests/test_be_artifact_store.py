@@ -14,7 +14,9 @@ from pathlib import Path
 import pytest
 
 from backend.app.config import (
+    CANONICAL_PATH,
     EXPLANATIONS_PATH,
+    FEATURES_PATH,
     MANIFEST_PATH,
     PROJECT_ROOT,
     RANKING_PATH,
@@ -32,6 +34,8 @@ def store() -> ArtifactStore:
         manifest_path=MANIFEST_PATH,
         ranking_path=RANKING_PATH,
         explanations_path=EXPLANATIONS_PATH,
+        canonical_path=CANONICAL_PATH,
+        features_path=FEATURES_PATH,
         project_root=PROJECT_ROOT,
     )
 
@@ -105,6 +109,8 @@ def test_should_raise_when_manifest_is_missing(tmp_path: Path) -> None:
             manifest_path=tmp_path / "nonexistent.json",
             ranking_path=RANKING_PATH,
             explanations_path=EXPLANATIONS_PATH,
+            canonical_path=CANONICAL_PATH,
+            features_path=FEATURES_PATH,
             project_root=PROJECT_ROOT,
         )
 
@@ -123,6 +129,8 @@ def test_should_raise_when_manifest_has_wrong_schema_version(tmp_path: Path) -> 
             manifest_path=bad_path,
             ranking_path=RANKING_PATH,
             explanations_path=EXPLANATIONS_PATH,
+            canonical_path=CANONICAL_PATH,
+            features_path=FEATURES_PATH,
             project_root=PROJECT_ROOT,
         )
 
@@ -140,6 +148,8 @@ def test_should_raise_on_corrupt_ranking_checksum(tmp_path: Path) -> None:
             manifest_path=bad_path,
             ranking_path=RANKING_PATH,
             explanations_path=EXPLANATIONS_PATH,
+            canonical_path=CANONICAL_PATH,
+            features_path=FEATURES_PATH,
             project_root=PROJECT_ROOT,
         )
 
@@ -150,6 +160,8 @@ def test_should_raise_when_ranking_file_is_missing(tmp_path: Path) -> None:
             manifest_path=MANIFEST_PATH,
             ranking_path=tmp_path / "nonexistent_ranking.csv",
             explanations_path=EXPLANATIONS_PATH,
+            canonical_path=CANONICAL_PATH,
+            features_path=FEATURES_PATH,
             project_root=PROJECT_ROOT,
         )
 
@@ -160,6 +172,8 @@ def test_should_raise_when_explanations_file_is_missing(tmp_path: Path) -> None:
             manifest_path=MANIFEST_PATH,
             ranking_path=RANKING_PATH,
             explanations_path=tmp_path / "nonexistent_explanations.json",
+            canonical_path=CANONICAL_PATH,
+            features_path=FEATURES_PATH,
             project_root=PROJECT_ROOT,
         )
 
@@ -172,5 +186,7 @@ def test_should_raise_when_manifest_is_not_valid_json(tmp_path: Path) -> None:
             manifest_path=bad_path,
             ranking_path=RANKING_PATH,
             explanations_path=EXPLANATIONS_PATH,
+            canonical_path=CANONICAL_PATH,
+            features_path=FEATURES_PATH,
             project_root=PROJECT_ROOT,
         )
