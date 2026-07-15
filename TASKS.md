@@ -216,7 +216,7 @@ Pencarian `/find-skills` menemukan `obra/superpowers@requesting-code-review` seb
 
 ## Read-only Product API
 
-### [ ] TASK-BE-004 - Add summary and filter-option endpoints
+### [x] TASK-BE-004 - Add summary and filter-option endpoints
 
 - **Depends on:** `TASK-BE-003`.
 - **Goal:** menyediakan statistik dashboard dan pilihan filter dari artifact aktual.

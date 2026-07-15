@@ -200,6 +200,7 @@ procurement_data/
 │   ├── test_audit_source_data.py
 │   ├── test_analyze_tender_data.py
 │   ├── test_be_artifact_store.py
+│   ├── test_be_dashboard.py
 │   ├── test_be_startup.py
 │   ├── test_be_system.py
 │   ├── test_build_baseline_ranking.py
@@ -227,9 +228,11 @@ procurement_data/
 │       │   ├── router.py
 │       │   └── v1/
 │       │       ├── __init__.py
+│       │       ├── dashboard.py
 │       │       └── system.py
 │       ├── schemas/
 │       │   ├── common.py
+│       │   ├── dashboard.py
 │       │   └── system.py
 │       └── services/
 │           └── artifact_store.py
