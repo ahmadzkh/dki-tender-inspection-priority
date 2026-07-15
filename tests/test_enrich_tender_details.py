@@ -112,6 +112,48 @@ def test_should_retry_5xx_response_before_returning_success(tmp_path: Path) -> N
     assert statuses == []
 
 
+def test_should_parse_dashboard_detail_shape_from_inaproc() -> None:
+    parsed = parse_detail_response(
+        package_id="59437127",
+        result=FetchResult(
+            status_code=200,
+            body=json.dumps(
+                {
+                    "detail": {
+                        "nilai_hps": 2665940402.1,
+                        "nilai_pagu": 2938414330,
+                        "metode_evaluasi": "Harga Terendah Sistem Gugur",
+                        "kode_tender": "59437127",
+                        "last_update_ref": "sample-ref",
+                    },
+                    "jadwal": [
+                        {
+                            "tahapan": "Pengumuman Pascakualifikasi",
+                            "mulai": "07 February 2024 22:00",
+                            "akhir": "15 February 2024 22:00",
+                        }
+                    ],
+                }
+            ),
+            url="https://example.test/detail?kode_paket=59437127",
+            attempts=1,
+        ),
+    )
+
+    assert parsed["status"] == "success"
+    assert parsed["detail"]["hps"] == 2665940402.1
+    assert parsed["detail"]["pagu"] == 2938414330
+    assert parsed["detail"]["metode_evaluasi"] == "Harga Terendah Sistem Gugur"
+    assert parsed["detail"]["jadwal"] == [
+        {
+            "tahapan": "Pengumuman Pascakualifikasi",
+            "mulai": "07 February 2024 22:00",
+            "akhir": "15 February 2024 22:00",
+        }
+    ]
+    assert parsed["detail"]["metadata"]["last_update_ref"] == "sample-ref"
+
+
 @pytest.mark.parametrize(
     ("status_code", "body", "expected_status", "expected_error"),
     [

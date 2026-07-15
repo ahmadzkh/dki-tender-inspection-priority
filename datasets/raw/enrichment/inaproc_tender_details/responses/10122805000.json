@@ -1,0 +1,268 @@
+{
+  "schema_version": 1,
+  "package_id": "10122805000",
+  "request": {
+    "parameter": "kode_paket",
+    "package_id": "10122805000"
+  },
+  "http_status": 200,
+  "attempts": 1,
+  "fetched_at_utc": "2026-07-15T03:19:56+00:00",
+  "status": "success",
+  "detail": {
+    "hps": 183150000,
+    "pagu": 183288000,
+    "metode_evaluasi": "Pagu Anggaran",
+    "jadwal": [
+      {
+        "akhir": "07 May 2026 17:00",
+        "mulai": "30 April 2026 17:00",
+        "tahapan": "Pengumuman Prakualifikasi"
+      },
+      {
+        "akhir": "11 May 2026 08:00",
+        "mulai": "30 April 2026 17:00",
+        "tahapan": "Download Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "04 May 2026 10:00",
+        "mulai": "04 May 2026 09:00",
+        "tahapan": "Penjelasan Dokumen Prakualifikasi"
+      },
+      {
+        "akhir": "11 May 2026 08:00",
+        "mulai": "04 May 2026 14:00",
+        "tahapan": "Kirim Persyaratan Kualifikasi"
+      },
+      {
+        "akhir": "21 May 2026 15:30",
+        "mulai": "11 May 2026 08:01",
+        "tahapan": "Evaluasi Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "21 May 2026 15:30",
+        "mulai": "21 May 2026 09:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "21 May 2026 19:00",
+        "mulai": "21 May 2026 15:31",
+        "tahapan": "Penetapan Hasil Kualifikasi"
+      },
+      {
+        "akhir": "21 May 2026 20:00",
+        "mulai": "21 May 2026 19:05",
+        "tahapan": "Pengumuman Hasil Prakualifikasi"
+      },
+      {
+        "akhir": "26 May 2026 16:30",
+        "mulai": "21 May 2026 20:05",
+        "tahapan": "Masa Sanggah Prakualifikasi"
+      },
+      {
+        "akhir": "03 June 2026 08:00",
+        "mulai": "26 May 2026 16:31",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "29 May 2026 10:00",
+        "mulai": "29 May 2026 09:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "03 June 2026 08:00",
+        "mulai": "29 May 2026 15:00",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "15 June 2026 12:00",
+        "mulai": "03 June 2026 08:01",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File I: Administrasi dan Teknis"
+      },
+      {
+        "akhir": "15 June 2026 12:30",
+        "mulai": "15 June 2026 12:01",
+        "tahapan": "Pengumuman Hasil Evaluasi Administrasi dan Teknis"
+      },
+      {
+        "akhir": "15 June 2026 13:00",
+        "mulai": "15 June 2026 12:31",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File II: Harga"
+      },
+      {
+        "akhir": "15 June 2026 13:30",
+        "mulai": "15 June 2026 13:01",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "15 June 2026 14:00",
+        "mulai": "15 June 2026 13:31",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "22 June 2026 08:00",
+        "mulai": "15 June 2026 14:01",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "22 June 2026 16:00",
+        "mulai": "22 June 2026 08:01",
+        "tahapan": "Klarifikasi dan Negosiasi Teknis dan Biaya"
+      },
+      {
+        "akhir": "23 June 2026 15:00",
+        "mulai": "23 June 2026 09:00",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "24 June 2026 16:00",
+        "mulai": "24 June 2026 09:00",
+        "tahapan": "Penandatanganan Kontrak"
+      }
+    ],
+    "metadata": {
+      "cara_pembayaran": "Waktu Penugasan",
+      "kode_tender": "10122805000",
+      "kategori": "Jasa Konsultansi Badan Usaha Konstruksi",
+      "lokasi_pekerjaan": "Jakarta Utara (Kota)-DKI Jakarta",
+      "metode_tender": "Seleksi",
+      "sumber_dana": "APBD",
+      "tahun_anggaran": 2026,
+      "nama_tender": "Pengawasan Pemeliharaan Kawasan Rumah Susun 1 (Rorotan)",
+      "tanggal_tender": "30 Apr 2026 s/d 24 Jun 2026",
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "kualifikasi_usaha": "Kecil",
+      "instansi": "Provinsi DKI Jakarta",
+      "satuan_kerja": "DINAS PERUMAHAN RAKYAT DAN KAWASAN PERMUKIMAN",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.-ordtHZsv3hUjwfv.UhOsJRWYYQkPg_tXP_VExeX7SjvaTmwPQ8cgLYQYFv4"
+    }
+  },
+  "raw_response": {
+    "detail": {
+      "cara_pembayaran": "Waktu Penugasan",
+      "kode_tender": "10122805000",
+      "kategori": "Jasa Konsultansi Badan Usaha Konstruksi",
+      "nilai_hps": 183150000,
+      "lokasi_pekerjaan": "Jakarta Utara (Kota)-DKI Jakarta",
+      "metode_tender": "Seleksi",
+      "sumber_dana": "APBD",
+      "metode_evaluasi": "Pagu Anggaran",
+      "nilai_pagu": 183288000,
+      "tahun_anggaran": 2026,
+      "nama_tender": "Pengawasan Pemeliharaan Kawasan Rumah Susun 1 (Rorotan)",
+      "tanggal_tender": "30 Apr 2026 s/d 24 Jun 2026",
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "kualifikasi_usaha": "Kecil",
+      "instansi": "Provinsi DKI Jakarta",
+      "satuan_kerja": "DINAS PERUMAHAN RAKYAT DAN KAWASAN PERMUKIMAN",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.-ordtHZsv3hUjwfv.UhOsJRWYYQkPg_tXP_VExeX7SjvaTmwPQ8cgLYQYFv4"
+    },
+    "jadwal": [
+      {
+        "akhir": "07 May 2026 17:00",
+        "mulai": "30 April 2026 17:00",
+        "tahapan": "Pengumuman Prakualifikasi"
+      },
+      {
+        "akhir": "11 May 2026 08:00",
+        "mulai": "30 April 2026 17:00",
+        "tahapan": "Download Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "04 May 2026 10:00",
+        "mulai": "04 May 2026 09:00",
+        "tahapan": "Penjelasan Dokumen Prakualifikasi"
+      },
+      {
+        "akhir": "11 May 2026 08:00",
+        "mulai": "04 May 2026 14:00",
+        "tahapan": "Kirim Persyaratan Kualifikasi"
+      },
+      {
+        "akhir": "21 May 2026 15:30",
+        "mulai": "11 May 2026 08:01",
+        "tahapan": "Evaluasi Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "21 May 2026 15:30",
+        "mulai": "21 May 2026 09:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "21 May 2026 19:00",
+        "mulai": "21 May 2026 15:31",
+        "tahapan": "Penetapan Hasil Kualifikasi"
+      },
+      {
+        "akhir": "21 May 2026 20:00",
+        "mulai": "21 May 2026 19:05",
+        "tahapan": "Pengumuman Hasil Prakualifikasi"
+      },
+      {
+        "akhir": "26 May 2026 16:30",
+        "mulai": "21 May 2026 20:05",
+        "tahapan": "Masa Sanggah Prakualifikasi"
+      },
+      {
+        "akhir": "03 June 2026 08:00",
+        "mulai": "26 May 2026 16:31",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "29 May 2026 10:00",
+        "mulai": "29 May 2026 09:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "03 June 2026 08:00",
+        "mulai": "29 May 2026 15:00",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "15 June 2026 12:00",
+        "mulai": "03 June 2026 08:01",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File I: Administrasi dan Teknis"
+      },
+      {
+        "akhir": "15 June 2026 12:30",
+        "mulai": "15 June 2026 12:01",
+        "tahapan": "Pengumuman Hasil Evaluasi Administrasi dan Teknis"
+      },
+      {
+        "akhir": "15 June 2026 13:00",
+        "mulai": "15 June 2026 12:31",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File II: Harga"
+      },
+      {
+        "akhir": "15 June 2026 13:30",
+        "mulai": "15 June 2026 13:01",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "15 June 2026 14:00",
+        "mulai": "15 June 2026 13:31",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "22 June 2026 08:00",
+        "mulai": "15 June 2026 14:01",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "22 June 2026 16:00",
+        "mulai": "22 June 2026 08:01",
+        "tahapan": "Klarifikasi dan Negosiasi Teknis dan Biaya"
+      },
+      {
+        "akhir": "23 June 2026 15:00",
+        "mulai": "23 June 2026 09:00",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "24 June 2026 16:00",
+        "mulai": "24 June 2026 09:00",
+        "tahapan": "Penandatanganan Kontrak"
+      }
+    ]
+  }
+}

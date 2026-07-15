@@ -100,7 +100,7 @@ Pencarian `/find-skills` menemukan `obra/superpowers@requesting-code-review` seb
 - **Acceptance:** request menggunakan `kode_paket`; timeout dan retry terbatas; paket sukses dilewati saat resume; HTTP error dan response invalid dicatat; tidak ada live network dalam unit test.
 - **Verification:** simulasi interrupted run dilanjutkan tanpa duplicate request; parser diuji untuk sukses, null field, response malformed, 4xx, dan 5xx.
 
-### [ ] TASK-ML-005 - Run full enrichment and publish coverage report
+### [x] TASK-ML-005 - Run full enrichment and publish coverage report
 
 - **Depends on:** `TASK-ML-004`.
 - **Goal:** mengukur ketersediaan HPS, pagu, metode, metadata, dan jadwal untuk seluruh kode paket unik.

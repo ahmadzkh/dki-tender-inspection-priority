@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "package_id": "10060212000",
+  "request": {
+    "parameter": "kode_paket",
+    "package_id": "10060212000"
+  },
+  "http_status": 200,
+  "attempts": 1,
+  "fetched_at_utc": "2026-07-15T03:14:28+00:00",
+  "status": "success",
+  "detail": {
+    "hps": 3613340702.34,
+    "pagu": 3615920000,
+    "metode_evaluasi": "Harga Terendah Sistem Gugur",
+    "jadwal": [
+      {
+        "akhir": "28 August 2025 10:00",
+        "mulai": "28 August 2025 09:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "01 September 2025 16:00",
+        "mulai": "28 August 2025 14:01",
+        "tahapan": "Upload Dokumen Penawaran"
+      }
+    ],
+    "metadata": {
+      "lokasi_pekerjaan": "Jakarta Pusat (Kota)-DKI Jakarta",
+      "tahun_anggaran": 2025,
+      "tanggal_tender": "28 Aug 2025 s/d 01 Sep 2025",
+      "satuan_kerja": "PUSAT PELATIHAN DAN PENGEMBANGAN PEMBERDAYAAN, PERLINDUNGAN ANAK DAN PENGENDALIAN PENDUDUK SERTA KELUARGA BERENCANA",
+      "kualifikasi_usaha": "Kecil",
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "nama_tender": "Perbaikan dan Pemeliharaan Gedung",
+      "sumber_dana": "APBD",
+      "instansi": "Provinsi DKI Jakarta",
+      "kategori": "Pekerjaan Konstruksi",
+      "cara_pembayaran": "Gabungan Lumsum dan Harga Satuan",
+      "kode_tender": "10060212000",
+      "metode_tender": "Tender Cepat",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.4mKSBneLdQ-ANMsE.1Id9GI5DrlQZlzbMtIASUT2Xmu_exwAShKT0LdAfVfI"
+    }
+  },
+  "raw_response": {
+    "detail": {
+      "lokasi_pekerjaan": "Jakarta Pusat (Kota)-DKI Jakarta",
+      "tahun_anggaran": 2025,
+      "tanggal_tender": "28 Aug 2025 s/d 01 Sep 2025",
+      "satuan_kerja": "PUSAT PELATIHAN DAN PENGEMBANGAN PEMBERDAYAAN, PERLINDUNGAN ANAK DAN PENGENDALIAN PENDUDUK SERTA KELUARGA BERENCANA",
+      "kualifikasi_usaha": "Kecil",
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "nama_tender": "Perbaikan dan Pemeliharaan Gedung",
+      "nilai_hps": 3613340702.34,
+      "sumber_dana": "APBD",
+      "instansi": "Provinsi DKI Jakarta",
+      "kategori": "Pekerjaan Konstruksi",
+      "nilai_pagu": 3615920000,
+      "cara_pembayaran": "Gabungan Lumsum dan Harga Satuan",
+      "kode_tender": "10060212000",
+      "metode_tender": "Tender Cepat",
+      "metode_evaluasi": "Harga Terendah Sistem Gugur",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.4mKSBneLdQ-ANMsE.1Id9GI5DrlQZlzbMtIASUT2Xmu_exwAShKT0LdAfVfI"
+    },
+    "jadwal": [
+      {
+        "akhir": "28 August 2025 10:00",
+        "mulai": "28 August 2025 09:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "01 September 2025 16:00",
+        "mulai": "28 August 2025 14:01",
+        "tahapan": "Upload Dokumen Penawaran"
+      }
+    ]
+  }
+}

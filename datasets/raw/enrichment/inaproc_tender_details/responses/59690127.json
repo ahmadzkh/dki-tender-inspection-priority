@@ -1,0 +1,268 @@
+{
+  "schema_version": 1,
+  "package_id": "59690127",
+  "request": {
+    "parameter": "kode_paket",
+    "package_id": "59690127"
+  },
+  "http_status": 200,
+  "attempts": 1,
+  "fetched_at_utc": "2026-07-15T03:13:41+00:00",
+  "status": "success",
+  "detail": {
+    "hps": 665998890,
+    "pagu": 667110000,
+    "metode_evaluasi": "Kualitas dan Biaya",
+    "jadwal": [
+      {
+        "akhir": "21 May 2024 12:00",
+        "mulai": "14 May 2024 10:00",
+        "tahapan": "Pengumuman Prakualifikasi"
+      },
+      {
+        "akhir": "22 May 2024 15:00",
+        "mulai": "14 May 2024 10:00",
+        "tahapan": "Download Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "17 May 2024 10:00",
+        "mulai": "17 May 2024 09:00",
+        "tahapan": "Penjelasan Dokumen Prakualifikasi"
+      },
+      {
+        "akhir": "22 May 2024 15:00",
+        "mulai": "17 May 2024 12:00",
+        "tahapan": "Kirim Persyaratan Kualifikasi"
+      },
+      {
+        "akhir": "31 May 2024 19:05",
+        "mulai": "22 May 2024 15:05",
+        "tahapan": "Evaluasi Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "31 May 2024 17:00",
+        "mulai": "31 May 2024 08:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "31 May 2024 19:30",
+        "mulai": "31 May 2024 15:00",
+        "tahapan": "Penetapan Hasil Kualifikasi"
+      },
+      {
+        "akhir": "01 June 2024 03:00",
+        "mulai": "31 May 2024 19:31",
+        "tahapan": "Pengumuman Hasil Prakualifikasi"
+      },
+      {
+        "akhir": "06 June 2024 08:00",
+        "mulai": "01 June 2024 06:00",
+        "tahapan": "Masa Sanggah Prakualifikasi"
+      },
+      {
+        "akhir": "10 June 2024 15:00",
+        "mulai": "06 June 2024 08:05",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "07 June 2024 09:00",
+        "mulai": "07 June 2024 08:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "10 June 2024 15:00",
+        "mulai": "07 June 2024 12:00",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "14 June 2024 16:00",
+        "mulai": "10 June 2024 15:05",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File I: Administrasi dan Teknis"
+      },
+      {
+        "akhir": "14 June 2024 16:15",
+        "mulai": "14 June 2024 16:05",
+        "tahapan": "Pengumuman Hasil Evaluasi Administrasi dan Teknis"
+      },
+      {
+        "akhir": "14 June 2024 16:30",
+        "mulai": "14 June 2024 16:20",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File II: Harga"
+      },
+      {
+        "akhir": "14 June 2024 20:00",
+        "mulai": "14 June 2024 16:35",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "14 June 2024 23:30",
+        "mulai": "14 June 2024 20:05",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "20 June 2024 08:00",
+        "mulai": "15 June 2024 08:00",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "21 June 2024 16:00",
+        "mulai": "21 June 2024 09:00",
+        "tahapan": "Klarifikasi dan Negosiasi Teknis dan Biaya"
+      },
+      {
+        "akhir": "24 June 2024 16:00",
+        "mulai": "24 June 2024 08:00",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "25 June 2024 16:00",
+        "mulai": "25 June 2024 08:00",
+        "tahapan": "Penandatanganan Kontrak"
+      }
+    ],
+    "metadata": {
+      "metode_tender": "Seleksi",
+      "nama_tender": ",Jasa Konsultansi Pengawasan Konstruksi Rehabilitasi Gedung Dinas Lingkungan Hidup",
+      "tahun_anggaran": 2024,
+      "kualifikasi_usaha": "Kecil",
+      "tanggal_tender": "14 May 2024 s/d 25 Jun 2024",
+      "sumber_dana": "APBD",
+      "instansi": "Provinsi DKI Jakarta",
+      "lokasi_pekerjaan": "Jakarta Timur (Kota)-DKI Jakarta",
+      "satuan_kerja": "DINAS LINGKUNGAN HIDUP",
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "cara_pembayaran": "Waktu Penugasan",
+      "kategori": "Jasa Konsultansi Badan Usaha Konstruksi",
+      "kode_tender": "59690127",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.KeZRaBaMoHLKHjMZ.lHbfkIqjxaIiOWTW6E5f4frFMROu5ZHFqoTpQ-VgIq0"
+    }
+  },
+  "raw_response": {
+    "detail": {
+      "metode_tender": "Seleksi",
+      "nama_tender": ",Jasa Konsultansi Pengawasan Konstruksi Rehabilitasi Gedung Dinas Lingkungan Hidup",
+      "tahun_anggaran": 2024,
+      "kualifikasi_usaha": "Kecil",
+      "tanggal_tender": "14 May 2024 s/d 25 Jun 2024",
+      "nilai_hps": 665998890,
+      "sumber_dana": "APBD",
+      "instansi": "Provinsi DKI Jakarta",
+      "lokasi_pekerjaan": "Jakarta Timur (Kota)-DKI Jakarta",
+      "satuan_kerja": "DINAS LINGKUNGAN HIDUP",
+      "metode_evaluasi": "Kualitas dan Biaya",
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "nilai_pagu": 667110000,
+      "cara_pembayaran": "Waktu Penugasan",
+      "kategori": "Jasa Konsultansi Badan Usaha Konstruksi",
+      "kode_tender": "59690127",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.KeZRaBaMoHLKHjMZ.lHbfkIqjxaIiOWTW6E5f4frFMROu5ZHFqoTpQ-VgIq0"
+    },
+    "jadwal": [
+      {
+        "akhir": "21 May 2024 12:00",
+        "mulai": "14 May 2024 10:00",
+        "tahapan": "Pengumuman Prakualifikasi"
+      },
+      {
+        "akhir": "22 May 2024 15:00",
+        "mulai": "14 May 2024 10:00",
+        "tahapan": "Download Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "17 May 2024 10:00",
+        "mulai": "17 May 2024 09:00",
+        "tahapan": "Penjelasan Dokumen Prakualifikasi"
+      },
+      {
+        "akhir": "22 May 2024 15:00",
+        "mulai": "17 May 2024 12:00",
+        "tahapan": "Kirim Persyaratan Kualifikasi"
+      },
+      {
+        "akhir": "31 May 2024 19:05",
+        "mulai": "22 May 2024 15:05",
+        "tahapan": "Evaluasi Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "31 May 2024 17:00",
+        "mulai": "31 May 2024 08:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "31 May 2024 19:30",
+        "mulai": "31 May 2024 15:00",
+        "tahapan": "Penetapan Hasil Kualifikasi"
+      },
+      {
+        "akhir": "01 June 2024 03:00",
+        "mulai": "31 May 2024 19:31",
+        "tahapan": "Pengumuman Hasil Prakualifikasi"
+      },
+      {
+        "akhir": "06 June 2024 08:00",
+        "mulai": "01 June 2024 06:00",
+        "tahapan": "Masa Sanggah Prakualifikasi"
+      },
+      {
+        "akhir": "10 June 2024 15:00",
+        "mulai": "06 June 2024 08:05",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "07 June 2024 09:00",
+        "mulai": "07 June 2024 08:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "10 June 2024 15:00",
+        "mulai": "07 June 2024 12:00",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "14 June 2024 16:00",
+        "mulai": "10 June 2024 15:05",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File I: Administrasi dan Teknis"
+      },
+      {
+        "akhir": "14 June 2024 16:15",
+        "mulai": "14 June 2024 16:05",
+        "tahapan": "Pengumuman Hasil Evaluasi Administrasi dan Teknis"
+      },
+      {
+        "akhir": "14 June 2024 16:30",
+        "mulai": "14 June 2024 16:20",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File II: Harga"
+      },
+      {
+        "akhir": "14 June 2024 20:00",
+        "mulai": "14 June 2024 16:35",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "14 June 2024 23:30",
+        "mulai": "14 June 2024 20:05",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "20 June 2024 08:00",
+        "mulai": "15 June 2024 08:00",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "21 June 2024 16:00",
+        "mulai": "21 June 2024 09:00",
+        "tahapan": "Klarifikasi dan Negosiasi Teknis dan Biaya"
+      },
+      {
+        "akhir": "24 June 2024 16:00",
+        "mulai": "24 June 2024 08:00",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "25 June 2024 16:00",
+        "mulai": "25 June 2024 08:00",
+        "tahapan": "Penandatanganan Kontrak"
+      }
+    ]
+  }
+}

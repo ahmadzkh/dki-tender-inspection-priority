@@ -1,0 +1,178 @@
+{
+  "schema_version": 1,
+  "package_id": "10044459000",
+  "request": {
+    "parameter": "kode_paket",
+    "package_id": "10044459000"
+  },
+  "http_status": 200,
+  "attempts": 1,
+  "fetched_at_utc": "2026-07-15T03:17:32+00:00",
+  "status": "success",
+  "detail": {
+    "hps": 1511686167.02,
+    "pagu": 1514531200,
+    "metode_evaluasi": "Harga Terendah Sistem Gugur",
+    "jadwal": [
+      {
+        "akhir": "17 August 2025 18:00",
+        "mulai": "12 August 2025 18:00",
+        "tahapan": "Pengumuman Pascakualifikasi"
+      },
+      {
+        "akhir": "20 August 2025 08:00",
+        "mulai": "12 August 2025 18:00",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "15 August 2025 21:45",
+        "mulai": "15 August 2025 09:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "20 August 2025 08:00",
+        "mulai": "15 August 2025 13:00",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "20 August 2025 10:00",
+        "mulai": "20 August 2025 08:01",
+        "tahapan": "Pembukaan Dokumen Penawaran"
+      },
+      {
+        "akhir": "29 August 2025 16:00",
+        "mulai": "20 August 2025 10:01",
+        "tahapan": "Evaluasi Administrasi, Kualifikasi, Teknis, dan Harga"
+      },
+      {
+        "akhir": "29 August 2025 16:00",
+        "mulai": "28 August 2025 08:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "29 August 2025 17:00",
+        "mulai": "29 August 2025 16:01",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "29 August 2025 18:00",
+        "mulai": "29 August 2025 17:01",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "04 September 2025 08:00",
+        "mulai": "29 August 2025 18:01",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "04 September 2025 16:00",
+        "mulai": "04 September 2025 09:00",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "08 September 2025 16:00",
+        "mulai": "08 September 2025 08:00",
+        "tahapan": "Penandatanganan Kontrak"
+      }
+    ],
+    "metadata": {
+      "kualifikasi_usaha": "Kecil",
+      "metode_tender": "Tender",
+      "sumber_dana": "APBD",
+      "kode_tender": "10044459000",
+      "tanggal_tender": "12 Aug 2025 s/d 08 Sep 2025",
+      "kategori": "Pekerjaan Konstruksi",
+      "lokasi_pekerjaan": "Jakarta Pusat (Kota)-DKI Jakarta",
+      "cara_pembayaran": "Gabungan Lumsum dan Harga Satuan",
+      "instansi": "Provinsi DKI Jakarta",
+      "tahun_anggaran": 2025,
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "nama_tender": "Pekerjaan Konstruksi Renovasi Mesjid Dinas Kesehatan",
+      "satuan_kerja": "DINAS KESEHATAN",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.ELQpRVPND3z9ObaO.hxT6oJKV-fpPvh2a__bOb3eZFx19qwDVNb5vDlZZoQw"
+    }
+  },
+  "raw_response": {
+    "detail": {
+      "kualifikasi_usaha": "Kecil",
+      "metode_tender": "Tender",
+      "sumber_dana": "APBD",
+      "metode_evaluasi": "Harga Terendah Sistem Gugur",
+      "kode_tender": "10044459000",
+      "nilai_hps": 1511686167.02,
+      "tanggal_tender": "12 Aug 2025 s/d 08 Sep 2025",
+      "kategori": "Pekerjaan Konstruksi",
+      "lokasi_pekerjaan": "Jakarta Pusat (Kota)-DKI Jakarta",
+      "nilai_pagu": 1514531200,
+      "cara_pembayaran": "Gabungan Lumsum dan Harga Satuan",
+      "instansi": "Provinsi DKI Jakarta",
+      "tahun_anggaran": 2025,
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "nama_tender": "Pekerjaan Konstruksi Renovasi Mesjid Dinas Kesehatan",
+      "satuan_kerja": "DINAS KESEHATAN",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.ELQpRVPND3z9ObaO.hxT6oJKV-fpPvh2a__bOb3eZFx19qwDVNb5vDlZZoQw"
+    },
+    "jadwal": [
+      {
+        "akhir": "17 August 2025 18:00",
+        "mulai": "12 August 2025 18:00",
+        "tahapan": "Pengumuman Pascakualifikasi"
+      },
+      {
+        "akhir": "20 August 2025 08:00",
+        "mulai": "12 August 2025 18:00",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "15 August 2025 21:45",
+        "mulai": "15 August 2025 09:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "20 August 2025 08:00",
+        "mulai": "15 August 2025 13:00",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "20 August 2025 10:00",
+        "mulai": "20 August 2025 08:01",
+        "tahapan": "Pembukaan Dokumen Penawaran"
+      },
+      {
+        "akhir": "29 August 2025 16:00",
+        "mulai": "20 August 2025 10:01",
+        "tahapan": "Evaluasi Administrasi, Kualifikasi, Teknis, dan Harga"
+      },
+      {
+        "akhir": "29 August 2025 16:00",
+        "mulai": "28 August 2025 08:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "29 August 2025 17:00",
+        "mulai": "29 August 2025 16:01",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "29 August 2025 18:00",
+        "mulai": "29 August 2025 17:01",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "04 September 2025 08:00",
+        "mulai": "29 August 2025 18:01",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "04 September 2025 16:00",
+        "mulai": "04 September 2025 09:00",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "08 September 2025 16:00",
+        "mulai": "08 September 2025 08:00",
+        "tahapan": "Penandatanganan Kontrak"
+      }
+    ]
+  }
+}

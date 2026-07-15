@@ -1,0 +1,178 @@
+{
+  "schema_version": 1,
+  "package_id": "57809127",
+  "request": {
+    "parameter": "kode_paket",
+    "package_id": "57809127"
+  },
+  "http_status": 200,
+  "attempts": 1,
+  "fetched_at_utc": "2026-07-15T03:13:56+00:00",
+  "status": "success",
+  "detail": {
+    "hps": 25671150187.47,
+    "pagu": 25691741231,
+    "metode_evaluasi": "Harga Terendah Sistem Gugur",
+    "jadwal": [
+      {
+        "akhir": "26 December 2023 16:00",
+        "mulai": "18 December 2023 23:59",
+        "tahapan": "Pengumuman Pascakualifikasi"
+      },
+      {
+        "akhir": "27 December 2023 10:00",
+        "mulai": "18 December 2023 23:59",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "21 December 2023 09:00",
+        "mulai": "21 December 2023 08:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "27 December 2023 10:00",
+        "mulai": "22 December 2023 08:00",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "27 December 2023 23:59",
+        "mulai": "27 December 2023 10:01",
+        "tahapan": "Pembukaan Dokumen Penawaran"
+      },
+      {
+        "akhir": "15 January 2024 16:59",
+        "mulai": "27 December 2023 10:30",
+        "tahapan": "Evaluasi Administrasi, Kualifikasi, Teknis, dan Harga"
+      },
+      {
+        "akhir": "15 January 2024 17:00",
+        "mulai": "15 January 2024 08:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "16 January 2024 16:00",
+        "mulai": "16 January 2024 08:00",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "16 January 2024 23:59",
+        "mulai": "16 January 2024 16:01",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "22 January 2024 08:00",
+        "mulai": "17 January 2024 08:00",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "24 January 2024 16:00",
+        "mulai": "22 January 2024 08:01",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "01 February 2024 08:00",
+        "mulai": "25 January 2024 08:00",
+        "tahapan": "Penandatanganan Kontrak"
+      }
+    ],
+    "metadata": {
+      "tahun_anggaran": 2024,
+      "tanggal_tender": "18 Dec 2023 s/d 01 Feb 2024",
+      "lokasi_pekerjaan": "Jakarta Timur (Kota)-DKI Jakarta",
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "kualifikasi_usaha": "Menengah",
+      "sumber_dana": "BLUD",
+      "kategori": "Pekerjaan Konstruksi",
+      "nama_tender": "Belanja Gedung dan Bangunan - Belanja Modal Gedung Pengembangan",
+      "cara_pembayaran": "Harga Satuan",
+      "satuan_kerja": "RUMAH SAKIT KHUSUS DAERAH DUREN SAWIT",
+      "metode_tender": "Tender",
+      "instansi": "Provinsi DKI Jakarta",
+      "kode_tender": "57809127",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.JB-qZoon6poiuhY5.rgY8NjtCYNLUF6r_KaIn0uPhfZh_UPv7xsTc6ObQr2Y"
+    }
+  },
+  "raw_response": {
+    "detail": {
+      "tahun_anggaran": 2024,
+      "tanggal_tender": "18 Dec 2023 s/d 01 Feb 2024",
+      "lokasi_pekerjaan": "Jakarta Timur (Kota)-DKI Jakarta",
+      "nilai_hps": 25671150187.47,
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "kualifikasi_usaha": "Menengah",
+      "metode_evaluasi": "Harga Terendah Sistem Gugur",
+      "sumber_dana": "BLUD",
+      "kategori": "Pekerjaan Konstruksi",
+      "nama_tender": "Belanja Gedung dan Bangunan - Belanja Modal Gedung Pengembangan",
+      "cara_pembayaran": "Harga Satuan",
+      "satuan_kerja": "RUMAH SAKIT KHUSUS DAERAH DUREN SAWIT",
+      "metode_tender": "Tender",
+      "instansi": "Provinsi DKI Jakarta",
+      "kode_tender": "57809127",
+      "nilai_pagu": 25691741231,
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.JB-qZoon6poiuhY5.rgY8NjtCYNLUF6r_KaIn0uPhfZh_UPv7xsTc6ObQr2Y"
+    },
+    "jadwal": [
+      {
+        "akhir": "26 December 2023 16:00",
+        "mulai": "18 December 2023 23:59",
+        "tahapan": "Pengumuman Pascakualifikasi"
+      },
+      {
+        "akhir": "27 December 2023 10:00",
+        "mulai": "18 December 2023 23:59",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "21 December 2023 09:00",
+        "mulai": "21 December 2023 08:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "27 December 2023 10:00",
+        "mulai": "22 December 2023 08:00",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "27 December 2023 23:59",
+        "mulai": "27 December 2023 10:01",
+        "tahapan": "Pembukaan Dokumen Penawaran"
+      },
+      {
+        "akhir": "15 January 2024 16:59",
+        "mulai": "27 December 2023 10:30",
+        "tahapan": "Evaluasi Administrasi, Kualifikasi, Teknis, dan Harga"
+      },
+      {
+        "akhir": "15 January 2024 17:00",
+        "mulai": "15 January 2024 08:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "16 January 2024 16:00",
+        "mulai": "16 January 2024 08:00",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "16 January 2024 23:59",
+        "mulai": "16 January 2024 16:01",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "22 January 2024 08:00",
+        "mulai": "17 January 2024 08:00",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "24 January 2024 16:00",
+        "mulai": "22 January 2024 08:01",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "01 February 2024 08:00",
+        "mulai": "25 January 2024 08:00",
+        "tahapan": "Penandatanganan Kontrak"
+      }
+    ]
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "package_id": "10098451000",
+  "request": {
+    "parameter": "kode_paket",
+    "package_id": "10098451000"
+  },
+  "http_status": 200,
+  "attempts": 1,
+  "fetched_at_utc": "2026-07-15T03:19:41+00:00",
+  "status": "success",
+  "detail": {
+    "hps": 118800000,
+    "pagu": 122100000,
+    "metode_evaluasi": "Kualitas",
+    "jadwal": [
+      {
+        "akhir": "22 December 2025 09:00",
+        "mulai": "15 December 2025 09:00",
+        "tahapan": "Pengumuman Pascakualifikasi"
+      },
+      {
+        "akhir": "22 December 2025 10:00",
+        "mulai": "15 December 2025 09:01",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "18 December 2025 10:00",
+        "mulai": "18 December 2025 09:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "22 December 2025 10:00",
+        "mulai": "18 December 2025 10:01",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "23 December 2025 19:00",
+        "mulai": "22 December 2025 10:01",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File I: Administrasi, Dokumen Kualifikasi, dan Teknis"
+      },
+      {
+        "akhir": "24 December 2025 15:00",
+        "mulai": "23 December 2025 08:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "24 December 2025 16:00",
+        "mulai": "24 December 2025 15:01",
+        "tahapan": "Pengumuman Hasil Evaluasi Administrasi dan Teknis"
+      },
+      {
+        "akhir": "29 December 2025 16:01",
+        "mulai": "24 December 2025 16:01",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "29 December 2025 23:59",
+        "mulai": "29 December 2025 16:02",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File II: Harga"
+      },
+      {
+        "akhir": "30 December 2025 15:00",
+        "mulai": "30 December 2025 08:00",
+        "tahapan": "Klarifikasi Teknis dan Negosiasi"
+      },
+      {
+        "akhir": "30 December 2025 17:00",
+        "mulai": "30 December 2025 15:01",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "30 December 2025 23:59",
+        "mulai": "30 December 2025 17:01",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "31 December 2025 16:00",
+        "mulai": "31 December 2025 08:00",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "02 January 2026 17:00",
+        "mulai": "02 January 2026 08:00",
+        "tahapan": "Penandatanganan Kontrak"
+      }
+    ],
+    "metadata": {
+      "metode_tender": "Seleksi",
+      "cara_pembayaran": "Waktu Penugasan",
+      "tahun_anggaran": 2026,
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "lokasi_pekerjaan": "Jakarta Pusat (Kota)-DKI Jakarta",
+      "satuan_kerja": "PUSAT DATA DAN INFORMASI CIPTA KARYA, TATA RUANG DAN PERTANAHAN",
+      "nama_tender": "Tim Pembangunan, Pengembangan dan Pengelolaan Sistem Informasi Geografis Jakarta Satu - Junior Spatial Data Engineer and Quality - 2",
+      "tanggal_tender": "15 Dec 2025 s/d 02 Jan 2026",
+      "sumber_dana": "APBD",
+      "instansi": "Provinsi DKI Jakarta",
+      "kategori": "Jasa Konsultansi Perorangan Non Konstruksi",
+      "kode_tender": "10098451000",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.nEY4i8AaIjx1Ad3N.gFj7lrA1P5kyamVgSKoD09vacCi_kEITC4OHorK0WW0"
+    }
+  },
+  "raw_response": {
+    "detail": {
+      "metode_tender": "Seleksi",
+      "nilai_hps": 118800000,
+      "cara_pembayaran": "Waktu Penugasan",
+      "tahun_anggaran": 2026,
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "kualifikasi_usaha": "",
+      "lokasi_pekerjaan": "Jakarta Pusat (Kota)-DKI Jakarta",
+      "satuan_kerja": "PUSAT DATA DAN INFORMASI CIPTA KARYA, TATA RUANG DAN PERTANAHAN",
+      "nama_tender": "Tim Pembangunan, Pengembangan dan Pengelolaan Sistem Informasi Geografis Jakarta Satu - Junior Spatial Data Engineer and Quality - 2",
+      "tanggal_tender": "15 Dec 2025 s/d 02 Jan 2026",
+      "nilai_pagu": 122100000,
+      "sumber_dana": "APBD",
+      "instansi": "Provinsi DKI Jakarta",
+      "kategori": "Jasa Konsultansi Perorangan Non Konstruksi",
+      "kode_tender": "10098451000",
+      "metode_evaluasi": "Kualitas",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.nEY4i8AaIjx1Ad3N.gFj7lrA1P5kyamVgSKoD09vacCi_kEITC4OHorK0WW0"
+    },
+    "jadwal": [
+      {
+        "akhir": "22 December 2025 09:00",
+        "mulai": "15 December 2025 09:00",
+        "tahapan": "Pengumuman Pascakualifikasi"
+      },
+      {
+        "akhir": "22 December 2025 10:00",
+        "mulai": "15 December 2025 09:01",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "18 December 2025 10:00",
+        "mulai": "18 December 2025 09:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "22 December 2025 10:00",
+        "mulai": "18 December 2025 10:01",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "23 December 2025 19:00",
+        "mulai": "22 December 2025 10:01",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File I: Administrasi, Dokumen Kualifikasi, dan Teknis"
+      },
+      {
+        "akhir": "24 December 2025 15:00",
+        "mulai": "23 December 2025 08:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "24 December 2025 16:00",
+        "mulai": "24 December 2025 15:01",
+        "tahapan": "Pengumuman Hasil Evaluasi Administrasi dan Teknis"
+      },
+      {
+        "akhir": "29 December 2025 16:01",
+        "mulai": "24 December 2025 16:01",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "29 December 2025 23:59",
+        "mulai": "29 December 2025 16:02",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File II: Harga"
+      },
+      {
+        "akhir": "30 December 2025 15:00",
+        "mulai": "30 December 2025 08:00",
+        "tahapan": "Klarifikasi Teknis dan Negosiasi"
+      },
+      {
+        "akhir": "30 December 2025 17:00",
+        "mulai": "30 December 2025 15:01",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "30 December 2025 23:59",
+        "mulai": "30 December 2025 17:01",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "31 December 2025 16:00",
+        "mulai": "31 December 2025 08:00",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "02 January 2026 17:00",
+        "mulai": "02 January 2026 08:00",
+        "tahapan": "Penandatanganan Kontrak"
+      }
+    ]
+  }
+}

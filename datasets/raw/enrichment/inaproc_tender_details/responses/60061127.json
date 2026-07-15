@@ -1,0 +1,258 @@
+{
+  "schema_version": 1,
+  "package_id": "60061127",
+  "request": {
+    "parameter": "kode_paket",
+    "package_id": "60061127"
+  },
+  "http_status": 200,
+  "attempts": 1,
+  "fetched_at_utc": "2026-07-15T03:12:32+00:00",
+  "status": "success",
+  "detail": {
+    "hps": 48098275467,
+    "pagu": 50000000000,
+    "metode_evaluasi": "Sistem Nilai",
+    "jadwal": [
+      {
+        "akhir": "09 July 2024 16:00",
+        "mulai": "02 July 2024 16:00",
+        "tahapan": "Pengumuman Prakualifikasi"
+      },
+      {
+        "akhir": "12 July 2024 16:00",
+        "mulai": "02 July 2024 16:00",
+        "tahapan": "Download Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "12 July 2024 16:00",
+        "mulai": "04 July 2024 13:00",
+        "tahapan": "Kirim Persyaratan Kualifikasi"
+      },
+      {
+        "akhir": "16 July 2024 17:00",
+        "mulai": "12 July 2024 16:01",
+        "tahapan": "Evaluasi Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "16 July 2024 17:00",
+        "mulai": "16 July 2024 08:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "16 July 2024 18:00",
+        "mulai": "16 July 2024 17:01",
+        "tahapan": "Penetapan Hasil Kualifikasi"
+      },
+      {
+        "akhir": "16 July 2024 19:00",
+        "mulai": "16 July 2024 18:01",
+        "tahapan": "Pengumuman Hasil Prakualifikasi"
+      },
+      {
+        "akhir": "22 July 2024 08:00",
+        "mulai": "16 July 2024 19:01",
+        "tahapan": "Masa Sanggah Prakualifikasi"
+      },
+      {
+        "akhir": "05 August 2024 08:00",
+        "mulai": "22 July 2024 08:01",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "24 July 2024 10:00",
+        "mulai": "24 July 2024 09:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "05 August 2024 08:00",
+        "mulai": "24 July 2024 15:00",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "16 August 2024 15:00",
+        "mulai": "05 August 2024 08:01",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File I: Administrasi dan Teknis"
+      },
+      {
+        "akhir": "16 August 2024 16:00",
+        "mulai": "16 August 2024 15:01",
+        "tahapan": "Pengumuman Hasil Evaluasi Administrasi dan Teknis"
+      },
+      {
+        "akhir": "16 August 2024 17:00",
+        "mulai": "16 August 2024 16:01",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File II: Harga"
+      },
+      {
+        "akhir": "19 August 2024 13:00",
+        "mulai": "16 August 2024 17:01",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "19 August 2024 14:00",
+        "mulai": "19 August 2024 13:01",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "26 August 2024 08:00",
+        "mulai": "19 August 2024 14:01",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "27 August 2024 16:00",
+        "mulai": "27 August 2024 08:00",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "28 August 2024 16:00",
+        "mulai": "28 August 2024 08:00",
+        "tahapan": "Penandatanganan Kontrak"
+      },
+      {
+        "akhir": "04 July 2024 09:00",
+        "mulai": "04 July 2024 08:00",
+        "tahapan": "Penjelasan Dokumen Prakualifikasi"
+      }
+    ],
+    "metadata": {
+      "sumber_dana": "BLUD",
+      "kualifikasi_usaha": "Non Kecil",
+      "metode_tender": "Tender",
+      "satuan_kerja": "RUMAH SAKIT UMUM DAERAH PASAR MINGGU",
+      "nama_tender": "BELANJA MODAL GEDUNG DAN BANGUNAN BLUD",
+      "tahun_anggaran": 2024,
+      "tanggal_tender": "02 Jul 2024 s/d 28 Aug 2024",
+      "lokasi_pekerjaan": "Jakarta Selatan (Kota)-DKI Jakarta",
+      "kode_tender": "60061127",
+      "cara_pembayaran": "Gabungan Lumsum dan Harga Satuan",
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "instansi": "Provinsi DKI Jakarta",
+      "kategori": "Pekerjaan Konstruksi Terintegrasi",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.S2Ak6Kp_s6pwLbZt.Vsb9AVsxpkzwI72iQaQPAR_X17UtCbFAtwwf68PLGcs"
+    }
+  },
+  "raw_response": {
+    "detail": {
+      "sumber_dana": "BLUD",
+      "kualifikasi_usaha": "Non Kecil",
+      "metode_tender": "Tender",
+      "satuan_kerja": "RUMAH SAKIT UMUM DAERAH PASAR MINGGU",
+      "nilai_pagu": 50000000000,
+      "nama_tender": "BELANJA MODAL GEDUNG DAN BANGUNAN BLUD",
+      "tahun_anggaran": 2024,
+      "tanggal_tender": "02 Jul 2024 s/d 28 Aug 2024",
+      "lokasi_pekerjaan": "Jakarta Selatan (Kota)-DKI Jakarta",
+      "metode_evaluasi": "Sistem Nilai",
+      "nilai_hps": 48098275467,
+      "kode_tender": "60061127",
+      "cara_pembayaran": "Gabungan Lumsum dan Harga Satuan",
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "instansi": "Provinsi DKI Jakarta",
+      "kategori": "Pekerjaan Konstruksi Terintegrasi",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.S2Ak6Kp_s6pwLbZt.Vsb9AVsxpkzwI72iQaQPAR_X17UtCbFAtwwf68PLGcs"
+    },
+    "jadwal": [
+      {
+        "akhir": "09 July 2024 16:00",
+        "mulai": "02 July 2024 16:00",
+        "tahapan": "Pengumuman Prakualifikasi"
+      },
+      {
+        "akhir": "12 July 2024 16:00",
+        "mulai": "02 July 2024 16:00",
+        "tahapan": "Download Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "12 July 2024 16:00",
+        "mulai": "04 July 2024 13:00",
+        "tahapan": "Kirim Persyaratan Kualifikasi"
+      },
+      {
+        "akhir": "16 July 2024 17:00",
+        "mulai": "12 July 2024 16:01",
+        "tahapan": "Evaluasi Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "16 July 2024 17:00",
+        "mulai": "16 July 2024 08:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "16 July 2024 18:00",
+        "mulai": "16 July 2024 17:01",
+        "tahapan": "Penetapan Hasil Kualifikasi"
+      },
+      {
+        "akhir": "16 July 2024 19:00",
+        "mulai": "16 July 2024 18:01",
+        "tahapan": "Pengumuman Hasil Prakualifikasi"
+      },
+      {
+        "akhir": "22 July 2024 08:00",
+        "mulai": "16 July 2024 19:01",
+        "tahapan": "Masa Sanggah Prakualifikasi"
+      },
+      {
+        "akhir": "05 August 2024 08:00",
+        "mulai": "22 July 2024 08:01",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "24 July 2024 10:00",
+        "mulai": "24 July 2024 09:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "05 August 2024 08:00",
+        "mulai": "24 July 2024 15:00",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "16 August 2024 15:00",
+        "mulai": "05 August 2024 08:01",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File I: Administrasi dan Teknis"
+      },
+      {
+        "akhir": "16 August 2024 16:00",
+        "mulai": "16 August 2024 15:01",
+        "tahapan": "Pengumuman Hasil Evaluasi Administrasi dan Teknis"
+      },
+      {
+        "akhir": "16 August 2024 17:00",
+        "mulai": "16 August 2024 16:01",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File II: Harga"
+      },
+      {
+        "akhir": "19 August 2024 13:00",
+        "mulai": "16 August 2024 17:01",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "19 August 2024 14:00",
+        "mulai": "19 August 2024 13:01",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "26 August 2024 08:00",
+        "mulai": "19 August 2024 14:01",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "27 August 2024 16:00",
+        "mulai": "27 August 2024 08:00",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "28 August 2024 16:00",
+        "mulai": "28 August 2024 08:00",
+        "tahapan": "Penandatanganan Kontrak"
+      },
+      {
+        "akhir": "04 July 2024 09:00",
+        "mulai": "04 July 2024 08:00",
+        "tahapan": "Penjelasan Dokumen Prakualifikasi"
+      }
+    ]
+  }
+}

@@ -9,6 +9,7 @@ import time
 from collections.abc import Callable
 from dataclasses import dataclass
 from datetime import UTC, datetime
+from itertools import chain
 from pathlib import Path
 from typing import Any
 from urllib.error import HTTPError, URLError
@@ -30,6 +31,7 @@ DETAIL_FIELD_ALIASES = {
     ),
     "jadwal": ("jadwal", "jadwal_tender", "jadwalTender", "tahapan"),
 }
+CORE_DETAIL_KEYS = set(chain.from_iterable(DETAIL_FIELD_ALIASES.values())) | {"metadata"}
 
 
 @dataclass(frozen=True)
@@ -166,6 +168,31 @@ def _json_or_none(body: str) -> Any:
         return None
 
 
+def _detail_payload(payload: dict[str, Any]) -> tuple[Any, dict[str, Any]]:
+    if "data" in payload:
+        data = payload["data"]
+        if not isinstance(data, dict):
+            return data, payload
+        detail = data.get("detail")
+        return (detail, data) if isinstance(detail, dict) else (data, data)
+
+    detail = payload.get("detail")
+    return (detail, payload) if isinstance(detail, dict) else (payload, payload)
+
+
+def _metadata_from(detail_payload: dict[str, Any]) -> dict[str, Any] | None:
+    metadata = detail_payload.get("metadata")
+    if metadata not in (None, "", [], {}):
+        return metadata if isinstance(metadata, dict) else {"value": metadata}
+
+    metadata = {
+        key: value
+        for key, value in detail_payload.items()
+        if key not in CORE_DETAIL_KEYS and value not in (None, "", [], {})
+    }
+    return metadata or None
+
+
 def parse_detail_response(package_id: str, result: FetchResult) -> dict[str, Any]:
     base_record: dict[str, Any] = {
         "schema_version": 1,
@@ -219,7 +246,7 @@ def parse_detail_response(package_id: str, result: FetchResult) -> dict[str, Any
             "raw_response": payload,
         }
 
-    detail_payload = payload.get("data", payload)
+    detail_payload, response_payload = _detail_payload(payload)
     if not isinstance(detail_payload, dict):
         return {
             **base_record,
@@ -233,7 +260,9 @@ def parse_detail_response(package_id: str, result: FetchResult) -> dict[str, Any
         field_name: _first_present(detail_payload, aliases)
         for field_name, aliases in DETAIL_FIELD_ALIASES.items()
     }
-    detail["metadata"] = detail_payload.get("metadata") if "metadata" in detail_payload else None
+    if detail["jadwal"] is None:
+        detail["jadwal"] = _first_present(response_payload, DETAIL_FIELD_ALIASES["jadwal"])
+    detail["metadata"] = _metadata_from(detail_payload)
 
     return {
         **base_record,
@@ -421,7 +450,7 @@ def _parse_args() -> argparse.Namespace:
         "--delay",
         type=float,
         default=_env_float("INAPROC_REQUEST_DELAY_S", 0.0),
-        help="Delay between retry attempts in seconds",
+        help="Delay between retry attempts and live package requests in seconds",
     )
     parser.add_argument("--limit", type=int, default=None)
     return parser.parse_args()

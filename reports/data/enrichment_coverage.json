@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "source_csv": "datasets/raw/realisasi_dki_jakarta_2024_2026.csv",
+  "cache_dir": "datasets/raw/enrichment/inaproc_tender_details",
+  "eligible_package_count": 1277,
+  "attempted_package_count": 1277,
+  "success_count": 1277,
+  "failure_count": 0,
+  "missing_response_count": 0,
+  "field_coverage": {
+    "hps": {
+      "available_count": 1277,
+      "missing_count": 0,
+      "coverage_pct": 100.0
+    },
+    "pagu": {
+      "available_count": 1277,
+      "missing_count": 0,
+      "coverage_pct": 100.0
+    },
+    "metode_evaluasi": {
+      "available_count": 1277,
+      "missing_count": 0,
+      "coverage_pct": 100.0
+    },
+    "metadata": {
+      "available_count": 1277,
+      "missing_count": 0,
+      "coverage_pct": 100.0
+    },
+    "jadwal": {
+      "available_count": 1277,
+      "missing_count": 0,
+      "coverage_pct": 100.0
+    }
+  },
+  "status_counts": {
+    "success": 1277
+  },
+  "http_status_counts": {
+    "200": 1277
+  },
+  "by_year": {
+    "2024": {
+      "eligible_package_count": 312,
+      "attempted_package_count": 312,
+      "success_count": 312,
+      "failure_count": 0,
+      "missing_response_count": 0,
+      "field_coverage": {
+        "hps": {
+          "available_count": 312,
+          "missing_count": 0,
+          "coverage_pct": 100.0
+        },
+        "pagu": {
+          "available_count": 312,
+          "missing_count": 0,
+          "coverage_pct": 100.0
+        },
+        "metode_evaluasi": {
+          "available_count": 312,
+          "missing_count": 0,
+          "coverage_pct": 100.0
+        },
+        "metadata": {
+          "available_count": 312,
+          "missing_count": 0,
+          "coverage_pct": 100.0
+        },
+        "jadwal": {
+          "available_count": 312,
+          "missing_count": 0,
+          "coverage_pct": 100.0
+        }
+      }
+    },
+    "2025": {
+      "eligible_package_count": 527,
+      "attempted_package_count": 527,
+      "success_count": 527,
+      "failure_count": 0,
+      "missing_response_count": 0,
+      "field_coverage": {
+        "hps": {
+          "available_count": 527,
+          "missing_count": 0,
+          "coverage_pct": 100.0
+        },
+        "pagu": {
+          "available_count": 527,
+          "missing_count": 0,
+          "coverage_pct": 100.0
+        },
+        "metode_evaluasi": {
+          "available_count": 527,
+          "missing_count": 0,
+          "coverage_pct": 100.0
+        },
+        "metadata": {
+          "available_count": 527,
+          "missing_count": 0,
+          "coverage_pct": 100.0
+        },
+        "jadwal": {
+          "available_count": 527,
+          "missing_count": 0,
+          "coverage_pct": 100.0
+        }
+      }
+    },
+    "2026": {
+      "eligible_package_count": 438,
+      "attempted_package_count": 438,
+      "success_count": 438,
+      "failure_count": 0,
+      "missing_response_count": 0,
+      "field_coverage": {
+        "hps": {
+          "available_count": 438,
+          "missing_count": 0,
+          "coverage_pct": 100.0
+        },
+        "pagu": {
+          "available_count": 438,
+          "missing_count": 0,
+          "coverage_pct": 100.0
+        },
+        "metode_evaluasi": {
+          "available_count": 438,
+          "missing_count": 0,
+          "coverage_pct": 100.0
+        },
+        "metadata": {
+          "available_count": 438,
+          "missing_count": 0,
+          "coverage_pct": 100.0
+        },
+        "jadwal": {
+          "available_count": 438,
+          "missing_count": 0,
+          "coverage_pct": 100.0
+        }
+      }
+    }
+  },
+  "missing_package_ids": [],
+  "failed_package_ids": {}
+}

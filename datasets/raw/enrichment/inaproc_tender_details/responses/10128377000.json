@@ -1,0 +1,178 @@
+{
+  "schema_version": 1,
+  "package_id": "10128377000",
+  "request": {
+    "parameter": "kode_paket",
+    "package_id": "10128377000"
+  },
+  "http_status": 200,
+  "attempts": 1,
+  "fetched_at_utc": "2026-07-15T03:19:49+00:00",
+  "status": "success",
+  "detail": {
+    "hps": 947596717.12,
+    "pagu": 968075821,
+    "metode_evaluasi": "Harga Terendah Sistem Gugur",
+    "jadwal": [
+      {
+        "akhir": "22 April 2026 17:00",
+        "mulai": "20 April 2026 16:00",
+        "tahapan": "Pengumuman Pascakualifikasi"
+      },
+      {
+        "akhir": "04 May 2026 08:00",
+        "mulai": "20 April 2026 17:01",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "22 April 2026 14:40",
+        "mulai": "22 April 2026 09:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "04 May 2026 08:00",
+        "mulai": "22 April 2026 14:00",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "04 May 2026 16:00",
+        "mulai": "04 May 2026 08:01",
+        "tahapan": "Pembukaan Dokumen Penawaran"
+      },
+      {
+        "akhir": "12 May 2026 23:59",
+        "mulai": "04 May 2026 08:05",
+        "tahapan": "Evaluasi Administrasi, Kualifikasi, Teknis, dan Harga"
+      },
+      {
+        "akhir": "13 May 2026 15:39",
+        "mulai": "12 May 2026 08:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "13 May 2026 15:55",
+        "mulai": "13 May 2026 15:40",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "13 May 2026 15:59",
+        "mulai": "13 May 2026 15:56",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "18 May 2026 16:00",
+        "mulai": "13 May 2026 16:00",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "19 May 2026 14:00",
+        "mulai": "19 May 2026 08:00",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "20 May 2026 16:00",
+        "mulai": "19 May 2026 14:01",
+        "tahapan": "Penandatanganan Kontrak"
+      }
+    ],
+    "metadata": {
+      "metode_tender": "Tender",
+      "instansi": "Provinsi DKI Jakarta",
+      "nama_tender": "Pemilihan Abang None Jakarta Pusat",
+      "tahun_anggaran": 2026,
+      "cara_pembayaran": "Lumsum",
+      "kategori": "Jasa Lainnya",
+      "kualifikasi_usaha": "Kecil",
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "sumber_dana": "APBD",
+      "tanggal_tender": "20 Apr 2026 s/d 20 May 2026",
+      "lokasi_pekerjaan": "Jakarta Pusat (Kota)-DKI Jakarta",
+      "kode_tender": "10128377000",
+      "satuan_kerja": "SUKU DINAS PARIWISATA DAN EKONOMI KREATIF KOTA - JAKPUS",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.X-kn3nTYChKHro9Y.6aEYb3OzYThDgA-KHyA0LHsxbcUZjcQEOI9SMT7iz-s"
+    }
+  },
+  "raw_response": {
+    "detail": {
+      "metode_tender": "Tender",
+      "nilai_hps": 947596717.12,
+      "instansi": "Provinsi DKI Jakarta",
+      "nama_tender": "Pemilihan Abang None Jakarta Pusat",
+      "tahun_anggaran": 2026,
+      "cara_pembayaran": "Lumsum",
+      "kategori": "Jasa Lainnya",
+      "kualifikasi_usaha": "Kecil",
+      "metode_evaluasi": "Harga Terendah Sistem Gugur",
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "sumber_dana": "APBD",
+      "tanggal_tender": "20 Apr 2026 s/d 20 May 2026",
+      "lokasi_pekerjaan": "Jakarta Pusat (Kota)-DKI Jakarta",
+      "kode_tender": "10128377000",
+      "satuan_kerja": "SUKU DINAS PARIWISATA DAN EKONOMI KREATIF KOTA - JAKPUS",
+      "nilai_pagu": 968075821,
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.X-kn3nTYChKHro9Y.6aEYb3OzYThDgA-KHyA0LHsxbcUZjcQEOI9SMT7iz-s"
+    },
+    "jadwal": [
+      {
+        "akhir": "22 April 2026 17:00",
+        "mulai": "20 April 2026 16:00",
+        "tahapan": "Pengumuman Pascakualifikasi"
+      },
+      {
+        "akhir": "04 May 2026 08:00",
+        "mulai": "20 April 2026 17:01",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "22 April 2026 14:40",
+        "mulai": "22 April 2026 09:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "04 May 2026 08:00",
+        "mulai": "22 April 2026 14:00",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "04 May 2026 16:00",
+        "mulai": "04 May 2026 08:01",
+        "tahapan": "Pembukaan Dokumen Penawaran"
+      },
+      {
+        "akhir": "12 May 2026 23:59",
+        "mulai": "04 May 2026 08:05",
+        "tahapan": "Evaluasi Administrasi, Kualifikasi, Teknis, dan Harga"
+      },
+      {
+        "akhir": "13 May 2026 15:39",
+        "mulai": "12 May 2026 08:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "13 May 2026 15:55",
+        "mulai": "13 May 2026 15:40",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "13 May 2026 15:59",
+        "mulai": "13 May 2026 15:56",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "18 May 2026 16:00",
+        "mulai": "13 May 2026 16:00",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "19 May 2026 14:00",
+        "mulai": "19 May 2026 08:00",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "20 May 2026 16:00",
+        "mulai": "19 May 2026 14:01",
+        "tahapan": "Penandatanganan Kontrak"
+      }
+    ]
+  }
+}

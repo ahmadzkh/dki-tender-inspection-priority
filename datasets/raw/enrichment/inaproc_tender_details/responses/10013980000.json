@@ -1,0 +1,268 @@
+{
+  "schema_version": 1,
+  "package_id": "10013980000",
+  "request": {
+    "parameter": "kode_paket",
+    "package_id": "10013980000"
+  },
+  "http_status": 200,
+  "attempts": 1,
+  "fetched_at_utc": "2026-07-15T03:14:21+00:00",
+  "status": "success",
+  "detail": {
+    "hps": 401744000,
+    "pagu": 403914118,
+    "metode_evaluasi": "Kualitas dan Biaya",
+    "jadwal": [
+      {
+        "akhir": "14 March 2025 23:59",
+        "mulai": "07 March 2025 15:00",
+        "tahapan": "Pengumuman Prakualifikasi"
+      },
+      {
+        "akhir": "13 March 2025 12:00",
+        "mulai": "07 March 2025 15:00",
+        "tahapan": "Download Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "10 March 2025 11:00",
+        "mulai": "10 March 2025 10:00",
+        "tahapan": "Penjelasan Dokumen Prakualifikasi"
+      },
+      {
+        "akhir": "13 March 2025 12:00",
+        "mulai": "10 March 2025 14:01",
+        "tahapan": "Kirim Persyaratan Kualifikasi"
+      },
+      {
+        "akhir": "19 March 2025 14:00",
+        "mulai": "13 March 2025 12:01",
+        "tahapan": "Evaluasi Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "19 March 2025 14:00",
+        "mulai": "18 March 2025 08:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "19 March 2025 15:00",
+        "mulai": "19 March 2025 14:01",
+        "tahapan": "Penetapan Hasil Kualifikasi"
+      },
+      {
+        "akhir": "19 March 2025 16:00",
+        "mulai": "19 March 2025 15:01",
+        "tahapan": "Pengumuman Hasil Prakualifikasi"
+      },
+      {
+        "akhir": "24 March 2025 16:00",
+        "mulai": "19 March 2025 16:00",
+        "tahapan": "Masa Sanggah Prakualifikasi"
+      },
+      {
+        "akhir": "09 April 2025 09:00",
+        "mulai": "24 March 2025 16:01",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "27 March 2025 11:00",
+        "mulai": "27 March 2025 10:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "09 April 2025 09:00",
+        "mulai": "27 March 2025 14:00",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "16 April 2025 10:00",
+        "mulai": "09 April 2025 09:01",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File I: Administrasi dan Teknis"
+      },
+      {
+        "akhir": "16 April 2025 10:30",
+        "mulai": "16 April 2025 10:01",
+        "tahapan": "Pengumuman Hasil Evaluasi Administrasi dan Teknis"
+      },
+      {
+        "akhir": "16 April 2025 11:30",
+        "mulai": "16 April 2025 10:31",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File II: Harga"
+      },
+      {
+        "akhir": "16 April 2025 13:40",
+        "mulai": "16 April 2025 11:31",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "16 April 2025 13:50",
+        "mulai": "16 April 2025 13:41",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "22 April 2025 08:00",
+        "mulai": "16 April 2025 14:00",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "22 April 2025 16:00",
+        "mulai": "22 April 2025 08:00",
+        "tahapan": "Klarifikasi dan Negosiasi Teknis dan Biaya"
+      },
+      {
+        "akhir": "23 April 2025 16:00",
+        "mulai": "23 April 2025 08:00",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "24 April 2025 16:00",
+        "mulai": "24 April 2025 08:00",
+        "tahapan": "Penandatanganan Kontrak"
+      }
+    ],
+    "metadata": {
+      "tahun_anggaran": 2025,
+      "lokasi_pekerjaan": "Adm. Kepulauan Seribu (Kab.)-DKI Jakarta",
+      "tanggal_tender": "07 Mar 2025 s/d 24 Apr 2025",
+      "sumber_dana": "APBD",
+      "kode_tender": "10013980000",
+      "metode_tender": "Seleksi",
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "kategori": "Jasa Konsultansi Badan Usaha Konstruksi",
+      "kualifikasi_usaha": "Kecil",
+      "nama_tender": "Jasa Konsultansi Pengawasan Pembangunan Pos Pemadam Kebakaran di Pulau Lancang Besar",
+      "cara_pembayaran": "Waktu Penugasan",
+      "satuan_kerja": "SUKU DINAS CIPTA KARYA, TATA RUANG DAN PERTANAHAN KABUPATEN ADMINISTRASI KEPULAUAN SERIBU",
+      "instansi": "Provinsi DKI Jakarta",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.KNIWhkjCzCMhtZ09.PM4tjl_nUd74oxIDOO9ScXxmcETtrN6z4w2MXYDHibA"
+    }
+  },
+  "raw_response": {
+    "detail": {
+      "tahun_anggaran": 2025,
+      "lokasi_pekerjaan": "Adm. Kepulauan Seribu (Kab.)-DKI Jakarta",
+      "metode_evaluasi": "Kualitas dan Biaya",
+      "tanggal_tender": "07 Mar 2025 s/d 24 Apr 2025",
+      "sumber_dana": "APBD",
+      "nilai_hps": 401744000,
+      "kode_tender": "10013980000",
+      "metode_tender": "Seleksi",
+      "nilai_pagu": 403914118,
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "kategori": "Jasa Konsultansi Badan Usaha Konstruksi",
+      "kualifikasi_usaha": "Kecil",
+      "nama_tender": "Jasa Konsultansi Pengawasan Pembangunan Pos Pemadam Kebakaran di Pulau Lancang Besar",
+      "cara_pembayaran": "Waktu Penugasan",
+      "satuan_kerja": "SUKU DINAS CIPTA KARYA, TATA RUANG DAN PERTANAHAN KABUPATEN ADMINISTRASI KEPULAUAN SERIBU",
+      "instansi": "Provinsi DKI Jakarta",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.KNIWhkjCzCMhtZ09.PM4tjl_nUd74oxIDOO9ScXxmcETtrN6z4w2MXYDHibA"
+    },
+    "jadwal": [
+      {
+        "akhir": "14 March 2025 23:59",
+        "mulai": "07 March 2025 15:00",
+        "tahapan": "Pengumuman Prakualifikasi"
+      },
+      {
+        "akhir": "13 March 2025 12:00",
+        "mulai": "07 March 2025 15:00",
+        "tahapan": "Download Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "10 March 2025 11:00",
+        "mulai": "10 March 2025 10:00",
+        "tahapan": "Penjelasan Dokumen Prakualifikasi"
+      },
+      {
+        "akhir": "13 March 2025 12:00",
+        "mulai": "10 March 2025 14:01",
+        "tahapan": "Kirim Persyaratan Kualifikasi"
+      },
+      {
+        "akhir": "19 March 2025 14:00",
+        "mulai": "13 March 2025 12:01",
+        "tahapan": "Evaluasi Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "19 March 2025 14:00",
+        "mulai": "18 March 2025 08:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "19 March 2025 15:00",
+        "mulai": "19 March 2025 14:01",
+        "tahapan": "Penetapan Hasil Kualifikasi"
+      },
+      {
+        "akhir": "19 March 2025 16:00",
+        "mulai": "19 March 2025 15:01",
+        "tahapan": "Pengumuman Hasil Prakualifikasi"
+      },
+      {
+        "akhir": "24 March 2025 16:00",
+        "mulai": "19 March 2025 16:00",
+        "tahapan": "Masa Sanggah Prakualifikasi"
+      },
+      {
+        "akhir": "09 April 2025 09:00",
+        "mulai": "24 March 2025 16:01",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "27 March 2025 11:00",
+        "mulai": "27 March 2025 10:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "09 April 2025 09:00",
+        "mulai": "27 March 2025 14:00",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "16 April 2025 10:00",
+        "mulai": "09 April 2025 09:01",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File I: Administrasi dan Teknis"
+      },
+      {
+        "akhir": "16 April 2025 10:30",
+        "mulai": "16 April 2025 10:01",
+        "tahapan": "Pengumuman Hasil Evaluasi Administrasi dan Teknis"
+      },
+      {
+        "akhir": "16 April 2025 11:30",
+        "mulai": "16 April 2025 10:31",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File II: Harga"
+      },
+      {
+        "akhir": "16 April 2025 13:40",
+        "mulai": "16 April 2025 11:31",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "16 April 2025 13:50",
+        "mulai": "16 April 2025 13:41",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "22 April 2025 08:00",
+        "mulai": "16 April 2025 14:00",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "22 April 2025 16:00",
+        "mulai": "22 April 2025 08:00",
+        "tahapan": "Klarifikasi dan Negosiasi Teknis dan Biaya"
+      },
+      {
+        "akhir": "23 April 2025 16:00",
+        "mulai": "23 April 2025 08:00",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "24 April 2025 16:00",
+        "mulai": "24 April 2025 08:00",
+        "tahapan": "Penandatanganan Kontrak"
+      }
+    ]
+  }
+}

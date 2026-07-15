@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "package_id": "10120477000",
+  "request": {
+    "parameter": "kode_paket",
+    "package_id": "10120477000"
+  },
+  "http_status": 200,
+  "attempts": 1,
+  "fetched_at_utc": "2026-07-15T03:18:26+00:00",
+  "status": "success",
+  "detail": {
+    "hps": 173250000,
+    "pagu": 173250000,
+    "metode_evaluasi": "Kualitas",
+    "jadwal": [
+      {
+        "akhir": "17 March 2026 08:00",
+        "mulai": "11 March 2026 13:00",
+        "tahapan": "Pengumuman Pascakualifikasi"
+      },
+      {
+        "akhir": "17 March 2026 08:00",
+        "mulai": "11 March 2026 13:00",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "13 March 2026 10:00",
+        "mulai": "13 March 2026 09:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "17 March 2026 08:00",
+        "mulai": "13 March 2026 12:00",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "17 March 2026 12:00",
+        "mulai": "17 March 2026 08:05",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File I: Administrasi, Dokumen Kualifikasi, dan Teknis"
+      },
+      {
+        "akhir": "17 March 2026 15:00",
+        "mulai": "17 March 2026 13:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "26 March 2026 11:00",
+        "mulai": "17 March 2026 15:05",
+        "tahapan": "Pengumuman Hasil Evaluasi Administrasi dan Teknis"
+      },
+      {
+        "akhir": "30 March 2026 13:00",
+        "mulai": "26 March 2026 12:00",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "30 March 2026 15:00",
+        "mulai": "30 March 2026 13:01",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File II: Harga"
+      },
+      {
+        "akhir": "30 March 2026 16:00",
+        "mulai": "30 March 2026 15:01",
+        "tahapan": "Klarifikasi Teknis dan Negosiasi"
+      },
+      {
+        "akhir": "30 March 2026 17:00",
+        "mulai": "30 March 2026 16:01",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "30 March 2026 23:55",
+        "mulai": "30 March 2026 17:01",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "31 March 2026 12:00",
+        "mulai": "31 March 2026 08:00",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "31 March 2026 16:00",
+        "mulai": "31 March 2026 12:01",
+        "tahapan": "Penandatanganan Kontrak"
+      }
+    ],
+    "metadata": {
+      "cara_pembayaran": "Waktu Penugasan",
+      "tahun_anggaran": 2026,
+      "lokasi_pekerjaan": "Jakarta Pusat (Kota)-DKI Jakarta",
+      "metode_tender": "Seleksi",
+      "satuan_kerja": "UNIT PENGELOLA JAKARTA SMART CITY",
+      "instansi": "Provinsi DKI Jakarta",
+      "kode_tender": "10120477000",
+      "nama_tender": "Pengadaan Tenaga Ahli Development and Operational Pengembangan Produk dan Layanan April - Desember 1 #1",
+      "sumber_dana": "APBD",
+      "tanggal_tender": "11 Mar 2026 s/d 31 Mar 2026",
+      "kategori": "Jasa Konsultansi Perorangan Non Konstruksi",
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.7S7ppg__dT95PyX4.bTxNmWVaAVAXV-wm2NpX6F-0BJORGvAt77C9Pr8tZ5Q"
+    }
+  },
+  "raw_response": {
+    "detail": {
+      "cara_pembayaran": "Waktu Penugasan",
+      "kualifikasi_usaha": "",
+      "tahun_anggaran": 2026,
+      "lokasi_pekerjaan": "Jakarta Pusat (Kota)-DKI Jakarta",
+      "metode_tender": "Seleksi",
+      "satuan_kerja": "UNIT PENGELOLA JAKARTA SMART CITY",
+      "instansi": "Provinsi DKI Jakarta",
+      "kode_tender": "10120477000",
+      "nama_tender": "Pengadaan Tenaga Ahli Development and Operational Pengembangan Produk dan Layanan April - Desember 1 #1",
+      "nilai_pagu": 173250000,
+      "metode_evaluasi": "Kualitas",
+      "nilai_hps": 173250000,
+      "sumber_dana": "APBD",
+      "tanggal_tender": "11 Mar 2026 s/d 31 Mar 2026",
+      "kategori": "Jasa Konsultansi Perorangan Non Konstruksi",
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.7S7ppg__dT95PyX4.bTxNmWVaAVAXV-wm2NpX6F-0BJORGvAt77C9Pr8tZ5Q"
+    },
+    "jadwal": [
+      {
+        "akhir": "17 March 2026 08:00",
+        "mulai": "11 March 2026 13:00",
+        "tahapan": "Pengumuman Pascakualifikasi"
+      },
+      {
+        "akhir": "17 March 2026 08:00",
+        "mulai": "11 March 2026 13:00",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "13 March 2026 10:00",
+        "mulai": "13 March 2026 09:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "17 March 2026 08:00",
+        "mulai": "13 March 2026 12:00",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "17 March 2026 12:00",
+        "mulai": "17 March 2026 08:05",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File I: Administrasi, Dokumen Kualifikasi, dan Teknis"
+      },
+      {
+        "akhir": "17 March 2026 15:00",
+        "mulai": "17 March 2026 13:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "26 March 2026 11:00",
+        "mulai": "17 March 2026 15:05",
+        "tahapan": "Pengumuman Hasil Evaluasi Administrasi dan Teknis"
+      },
+      {
+        "akhir": "30 March 2026 13:00",
+        "mulai": "26 March 2026 12:00",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "30 March 2026 15:00",
+        "mulai": "30 March 2026 13:01",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File II: Harga"
+      },
+      {
+        "akhir": "30 March 2026 16:00",
+        "mulai": "30 March 2026 15:01",
+        "tahapan": "Klarifikasi Teknis dan Negosiasi"
+      },
+      {
+        "akhir": "30 March 2026 17:00",
+        "mulai": "30 March 2026 16:01",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "30 March 2026 23:55",
+        "mulai": "30 March 2026 17:01",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "31 March 2026 12:00",
+        "mulai": "31 March 2026 08:00",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "31 March 2026 16:00",
+        "mulai": "31 March 2026 12:01",
+        "tahapan": "Penandatanganan Kontrak"
+      }
+    ]
+  }
+}

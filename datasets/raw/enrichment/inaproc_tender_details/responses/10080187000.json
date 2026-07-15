@@ -1,0 +1,267 @@
+{
+  "schema_version": 1,
+  "package_id": "10080187000",
+  "request": {
+    "parameter": "kode_paket",
+    "package_id": "10080187000"
+  },
+  "http_status": 200,
+  "attempts": 1,
+  "fetched_at_utc": "2026-07-15T03:15:09+00:00",
+  "status": "success",
+  "detail": {
+    "hps": 2681482000,
+    "pagu": 2822896000,
+    "metode_evaluasi": "Kualitas dan Biaya",
+    "jadwal": [
+      {
+        "akhir": "15 September 2025 18:00",
+        "mulai": "08 September 2025 18:00",
+        "tahapan": "Pengumuman Prakualifikasi"
+      },
+      {
+        "akhir": "18 September 2025 08:00",
+        "mulai": "08 September 2025 18:00",
+        "tahapan": "Download Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "11 September 2025 09:00",
+        "mulai": "11 September 2025 08:00",
+        "tahapan": "Penjelasan Dokumen Prakualifikasi"
+      },
+      {
+        "akhir": "18 September 2025 08:00",
+        "mulai": "11 September 2025 12:00",
+        "tahapan": "Kirim Persyaratan Kualifikasi"
+      },
+      {
+        "akhir": "19 September 2025 18:00",
+        "mulai": "18 September 2025 08:01",
+        "tahapan": "Evaluasi Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "19 September 2025 18:00",
+        "mulai": "19 September 2025 08:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "19 September 2025 19:00",
+        "mulai": "19 September 2025 18:01",
+        "tahapan": "Penetapan Hasil Kualifikasi"
+      },
+      {
+        "akhir": "19 September 2025 20:00",
+        "mulai": "19 September 2025 19:01",
+        "tahapan": "Pengumuman Hasil Prakualifikasi"
+      },
+      {
+        "akhir": "25 September 2025 08:00",
+        "mulai": "19 September 2025 20:01",
+        "tahapan": "Masa Sanggah Prakualifikasi"
+      },
+      {
+        "akhir": "03 October 2025 12:00",
+        "mulai": "25 September 2025 08:01",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "29 September 2025 09:00",
+        "mulai": "29 September 2025 08:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "03 October 2025 12:00",
+        "mulai": "29 September 2025 12:00",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "07 October 2025 12:00",
+        "mulai": "03 October 2025 12:01",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File I: Administrasi dan Teknis"
+      },
+      {
+        "akhir": "07 October 2025 13:00",
+        "mulai": "07 October 2025 12:01",
+        "tahapan": "Pengumuman Hasil Evaluasi Administrasi dan Teknis"
+      },
+      {
+        "akhir": "07 October 2025 15:00",
+        "mulai": "07 October 2025 13:01",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File II: Harga"
+      },
+      {
+        "akhir": "07 October 2025 20:00",
+        "mulai": "07 October 2025 15:01",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "07 October 2025 23:00",
+        "mulai": "07 October 2025 20:01",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "13 October 2025 08:00",
+        "mulai": "08 October 2025 08:01",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "13 October 2025 16:00",
+        "mulai": "13 October 2025 08:01",
+        "tahapan": "Klarifikasi dan Negosiasi Teknis dan Biaya"
+      },
+      {
+        "akhir": "14 October 2025 16:00",
+        "mulai": "14 October 2025 08:00",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "15 October 2025 16:00",
+        "mulai": "15 October 2025 08:00",
+        "tahapan": "Penandatanganan Kontrak"
+      }
+    ],
+    "metadata": {
+      "lokasi_pekerjaan": "Jakarta Utara (Kota)-DKI Jakarta",
+      "metode_tender": "Seleksi",
+      "cara_pembayaran": "Lumsum",
+      "instansi": "Provinsi DKI Jakarta",
+      "tahun_anggaran": 2025,
+      "nama_tender": "Studi Komperhensif untuk Kajian Pemilihan Operator dan Skema Operasional Jakarta Sewerage Development Project (JSDP) Zone 1",
+      "sumber_dana": "APBD",
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "satuan_kerja": "DINAS SUMBER DAYA AIR",
+      "tanggal_tender": "08 Sep 2025 s/d 15 Oct 2025",
+      "kategori": "Jasa Konsultansi Badan Usaha Non Konstruksi",
+      "kode_tender": "10080187000",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.I0K2dm2FtV4ZnMU0.vGPV_lbMHcmc__kng8nPJ9TFtoWtmLeqT0RBVGde48Q"
+    }
+  },
+  "raw_response": {
+    "detail": {
+      "lokasi_pekerjaan": "Jakarta Utara (Kota)-DKI Jakarta",
+      "metode_tender": "Seleksi",
+      "cara_pembayaran": "Lumsum",
+      "instansi": "Provinsi DKI Jakarta",
+      "tahun_anggaran": 2025,
+      "nama_tender": "Studi Komperhensif untuk Kajian Pemilihan Operator dan Skema Operasional Jakarta Sewerage Development Project (JSDP) Zone 1",
+      "nilai_pagu": 2822896000,
+      "sumber_dana": "APBD",
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "nilai_hps": 2681482000,
+      "satuan_kerja": "DINAS SUMBER DAYA AIR",
+      "tanggal_tender": "08 Sep 2025 s/d 15 Oct 2025",
+      "metode_evaluasi": "Kualitas dan Biaya",
+      "kategori": "Jasa Konsultansi Badan Usaha Non Konstruksi",
+      "kode_tender": "10080187000",
+      "kualifikasi_usaha": "",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.I0K2dm2FtV4ZnMU0.vGPV_lbMHcmc__kng8nPJ9TFtoWtmLeqT0RBVGde48Q"
+    },
+    "jadwal": [
+      {
+        "akhir": "15 September 2025 18:00",
+        "mulai": "08 September 2025 18:00",
+        "tahapan": "Pengumuman Prakualifikasi"
+      },
+      {
+        "akhir": "18 September 2025 08:00",
+        "mulai": "08 September 2025 18:00",
+        "tahapan": "Download Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "11 September 2025 09:00",
+        "mulai": "11 September 2025 08:00",
+        "tahapan": "Penjelasan Dokumen Prakualifikasi"
+      },
+      {
+        "akhir": "18 September 2025 08:00",
+        "mulai": "11 September 2025 12:00",
+        "tahapan": "Kirim Persyaratan Kualifikasi"
+      },
+      {
+        "akhir": "19 September 2025 18:00",
+        "mulai": "18 September 2025 08:01",
+        "tahapan": "Evaluasi Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "19 September 2025 18:00",
+        "mulai": "19 September 2025 08:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "19 September 2025 19:00",
+        "mulai": "19 September 2025 18:01",
+        "tahapan": "Penetapan Hasil Kualifikasi"
+      },
+      {
+        "akhir": "19 September 2025 20:00",
+        "mulai": "19 September 2025 19:01",
+        "tahapan": "Pengumuman Hasil Prakualifikasi"
+      },
+      {
+        "akhir": "25 September 2025 08:00",
+        "mulai": "19 September 2025 20:01",
+        "tahapan": "Masa Sanggah Prakualifikasi"
+      },
+      {
+        "akhir": "03 October 2025 12:00",
+        "mulai": "25 September 2025 08:01",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "29 September 2025 09:00",
+        "mulai": "29 September 2025 08:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "03 October 2025 12:00",
+        "mulai": "29 September 2025 12:00",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "07 October 2025 12:00",
+        "mulai": "03 October 2025 12:01",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File I: Administrasi dan Teknis"
+      },
+      {
+        "akhir": "07 October 2025 13:00",
+        "mulai": "07 October 2025 12:01",
+        "tahapan": "Pengumuman Hasil Evaluasi Administrasi dan Teknis"
+      },
+      {
+        "akhir": "07 October 2025 15:00",
+        "mulai": "07 October 2025 13:01",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File II: Harga"
+      },
+      {
+        "akhir": "07 October 2025 20:00",
+        "mulai": "07 October 2025 15:01",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "07 October 2025 23:00",
+        "mulai": "07 October 2025 20:01",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "13 October 2025 08:00",
+        "mulai": "08 October 2025 08:01",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "13 October 2025 16:00",
+        "mulai": "13 October 2025 08:01",
+        "tahapan": "Klarifikasi dan Negosiasi Teknis dan Biaya"
+      },
+      {
+        "akhir": "14 October 2025 16:00",
+        "mulai": "14 October 2025 08:00",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "15 October 2025 16:00",
+        "mulai": "15 October 2025 08:00",
+        "tahapan": "Penandatanganan Kontrak"
+      }
+    ]
+  }
+}

@@ -4,9 +4,9 @@ Sistem berbasis web untuk mengurutkan paket realisasi tender Pemerintah Provinsi
 
 ## Status Project
 
-> **Tahap saat ini: fondasi pengembangan selesai; integritas, audit sumber data, dan kerangka enrichment sudah reproducible.**
+> **Tahap saat ini: fondasi pengembangan selesai; audit sumber data dan full enrichment coverage sudah reproducible.**
 
-Dataset 2024-2026 telah dikumpulkan, diaudit, dan digabung. Empat CSV sumber disimpan pada layout raw yang immutable serta dicatat dalam manifest SHA-256 yang dapat diverifikasi. Pipeline audit menghasilkan report JSON dan Markdown dari raw sources tanpa memodifikasinya. Pipeline enrichment resumable sudah tersedia, tetapi full enrichment dan coverage report belum dijalankan. Feature engineering, model Machine Learning, backend API, antarmuka pengguna, pengujian tambahan, dan deployment belum dibangun.
+Dataset 2024-2026 telah dikumpulkan, diaudit, dan digabung. Empat CSV sumber disimpan pada layout raw yang immutable serta dicatat dalam manifest SHA-256 yang dapat diverifikasi. Pipeline audit menghasilkan report JSON dan Markdown dari raw sources tanpa memodifikasinya. Full enrichment INAPROC sudah dijalankan untuk 1.277 kode paket unik dan coverage report tersedia. Feature engineering, model Machine Learning, backend API, antarmuka pengguna, pengujian tambahan, dan deployment belum dibangun.
 
 | Komponen | Status |
 |---|---|
@@ -17,7 +17,7 @@ Dataset 2024-2026 telah dikumpulkan, diaudit, dan digabung. Empat CSV sumber dis
 | Python environment dan quality tools | Selesai |
 | Next.js frontend scaffold | Selesai |
 | Folder target terstruktur | Selesai |
-| Enrichment HPS, pagu, dan jadwal | Pipeline resumable tersedia; full run belum |
+| Enrichment HPS, pagu, dan jadwal | Selesai; coverage report 100% untuk 1.277 paket unik |
 | Dataset canonical | Belum dimulai |
 | Feature engineering | Belum dimulai |
 | Isolation Forest dan evaluasi | Belum dimulai |
@@ -141,7 +141,7 @@ Data paket diperkaya melalui detail paket INAPROC menggunakan `kode_paket`. Pipe
 | Lokasi pekerjaan | Konteks geografis |
 | Cara pembayaran | Konteks kontrak |
 
-Sampel awal 10 paket berhasil mengembalikan HPS dan pagu. Coverage seluruh paket belum diukur dan tidak boleh diasumsikan 100% sebelum full enrichment dan coverage report selesai.
+Full enrichment menghasilkan 1.277 respons sukses dari 1.277 paket unik. Coverage HPS, pagu, metode evaluasi, metadata, dan jadwal tercatat 100% pada `reports/data/enrichment_coverage.md`.
 
 ## Fitur Machine Learning
 
@@ -307,13 +307,14 @@ uv sync
 uv run python pipelines/verify_source_manifest.py
 uv run python pipelines/audit_source_data.py
 INAPROC_DETAIL_API_BASE_URL="<detail-api-base-url>" uv run python pipelines/enrich_tender_details.py --limit 10
+uv run python pipelines/report_enrichment_coverage.py
 uv run pytest
 npm --prefix frontend install
 npm --prefix frontend run lint
 npm --prefix frontend run build
 ```
 
-Command full coverage enrichment, model, dan backend akan ditambahkan setelah implementasinya tersedia dan sudah diverifikasi.
+Command model dan backend akan ditambahkan setelah implementasinya tersedia dan sudah diverifikasi.
 
 ## Roadmap
 
@@ -324,7 +325,7 @@ Command full coverage enrichment, model, dan backend akan ditambahkan setelah im
 - [x] Membuat layout raw immutable dan source manifest terverifikasi.
 - [x] Membangun audit data reproducible.
 - [x] Membangun enrichment pipeline INAPROC yang resumable.
-- [ ] Mengukur coverage HPS, pagu, dan jadwal.
+- [x] Mengukur coverage HPS, pagu, dan jadwal.
 - [ ] Membentuk dataset canonical satu paket per record.
 - [ ] Menjalankan EDA dan feature engineering.
 - [ ] Melatih dan mengevaluasi Isolation Forest.
@@ -343,6 +344,7 @@ Command full coverage enrichment, model, dan backend akan ditambahkan setelah im
 - [`AGENTS.md`](AGENTS.md): instruksi wajib untuk agent yang bekerja di repository.
 - [`TASKS.md`](TASKS.md): urutan `TASK-ML`, `TASK-BE`, dan `TASK-FE`, dependency, acceptance criteria, verification, serta status checklist.
 - [`reports/data/source_audit.md`](reports/data/source_audit.md): ringkasan audit sumber data yang dapat diregenerasi.
+- `reports/data/enrichment_coverage.md`: ringkasan coverage enrichment yang dapat diregenerasi setelah full enrichment.
 
 `TASKS.md` menjadi single source of truth status implementasi. Agent hanya boleh mengubah task menjadi `[x]` setelah test, `verify-gate`, dan code review yang diwajibkan lulus.
 

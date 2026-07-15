@@ -69,7 +69,7 @@ Tahun 2026 merupakan snapshot tahun berjalan pada waktu pengunduhan, bukan satu 
 
 ## 1.3 Kesenjangan Produk
 
-Belum tersedia artefak enrichment, pipeline feature engineering, model Isolation Forest, evaluasi model, backend API, frontend, laporan yang dapat diunduh, pengujian, atau deployment. Dataset gabungan baru menjadi input awal dan belum boleh dianggap sebagai dataset final pemodelan.
+Artefak enrichment dan coverage report sudah tersedia untuk seluruh 1.277 kode paket unik. Pipeline feature engineering, model Isolation Forest, evaluasi model, backend API, frontend, laporan yang dapat diunduh, pengujian lanjutan, dan deployment belum tersedia. Dataset gabungan plus snapshot enrichment masih menjadi input persiapan dan belum boleh dianggap sebagai dataset final pemodelan sebelum canonicalization selesai.
 
 ## 1.4 Solusi yang Diusulkan
 
@@ -174,7 +174,7 @@ Prioritas: **P1** wajib untuk v1.0, **P2** penting setelah P1 stabil, **P3** nic
 | FR-9 | P1 | Missing enrichment tidak disamarkan | Nilai kosong tetap null dan memiliki flag ketersediaan; imputasi hanya boleh digunakan jika dibuktikan serta dicatat |
 | FR-10 | P1 | Respons API mentah atau snapshot terstruktur dapat diaudit | Paket dapat ditelusuri kembali ke respons detail yang digunakan pada saat enrichment |
 
-> Sampel awal 10 paket berhasil mengembalikan HPS dan pagu. Temuan sampel bukan bukti coverage seluruh 1.277 paket; coverage penuh harus diukur oleh FR-8.
+> Full enrichment terhadap 1.277 kode paket unik menghasilkan 1.277 respons sukses. Coverage HPS, pagu, metode evaluasi, metadata tender, dan jadwal tercatat 100% pada `reports/data/enrichment_coverage.md`; angka ini menjadi dasar task canonicalization berikutnya.
 
 ## 5.3 Feature Engineering
 

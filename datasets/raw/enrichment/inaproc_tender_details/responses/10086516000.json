@@ -1,0 +1,258 @@
+{
+  "schema_version": 1,
+  "package_id": "10086516000",
+  "request": {
+    "parameter": "kode_paket",
+    "package_id": "10086516000"
+  },
+  "http_status": 200,
+  "attempts": 1,
+  "fetched_at_utc": "2026-07-15T03:16:48+00:00",
+  "status": "success",
+  "detail": {
+    "hps": 144954062087.34,
+    "pagu": 144954062100,
+    "metode_evaluasi": "Harga Terendah Ambang Batas",
+    "jadwal": [
+      {
+        "akhir": "07 October 2025 10:00",
+        "mulai": "29 September 2025 22:00",
+        "tahapan": "Pengumuman Prakualifikasi"
+      },
+      {
+        "akhir": "10 October 2025 10:00",
+        "mulai": "29 September 2025 22:00",
+        "tahapan": "Download Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "10 October 2025 10:00",
+        "mulai": "02 October 2025 14:00",
+        "tahapan": "Kirim Persyaratan Kualifikasi"
+      },
+      {
+        "akhir": "22 October 2025 20:00",
+        "mulai": "10 October 2025 11:00",
+        "tahapan": "Evaluasi Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "22 October 2025 21:00",
+        "mulai": "20 October 2025 08:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "22 October 2025 23:00",
+        "mulai": "22 October 2025 08:00",
+        "tahapan": "Penetapan Hasil Kualifikasi"
+      },
+      {
+        "akhir": "23 October 2025 07:00",
+        "mulai": "22 October 2025 23:05",
+        "tahapan": "Pengumuman Hasil Prakualifikasi"
+      },
+      {
+        "akhir": "28 October 2025 09:00",
+        "mulai": "23 October 2025 08:00",
+        "tahapan": "Masa Sanggah Prakualifikasi"
+      },
+      {
+        "akhir": "17 November 2025 12:00",
+        "mulai": "28 October 2025 09:01",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "03 November 2025 16:35",
+        "mulai": "30 October 2025 08:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "17 November 2025 12:00",
+        "mulai": "03 November 2025 17:00",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "02 December 2025 20:15",
+        "mulai": "17 November 2025 13:00",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File I: Administrasi dan Teknis"
+      },
+      {
+        "akhir": "02 December 2025 20:30",
+        "mulai": "02 December 2025 20:16",
+        "tahapan": "Pengumuman Hasil Evaluasi Administrasi dan Teknis"
+      },
+      {
+        "akhir": "03 December 2025 16:00",
+        "mulai": "02 December 2025 20:31",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File II: Harga"
+      },
+      {
+        "akhir": "09 December 2025 21:00",
+        "mulai": "03 December 2025 16:01",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "09 December 2025 23:00",
+        "mulai": "09 December 2025 21:01",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "15 December 2025 08:00",
+        "mulai": "10 December 2025 08:00",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "15 December 2025 16:00",
+        "mulai": "15 December 2025 08:01",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "16 December 2025 16:00",
+        "mulai": "16 December 2025 08:00",
+        "tahapan": "Penandatanganan Kontrak"
+      },
+      {
+        "akhir": "02 October 2025 13:47",
+        "mulai": "02 October 2025 08:00",
+        "tahapan": "Penjelasan Dokumen Prakualifikasi"
+      }
+    ],
+    "metadata": {
+      "cara_pembayaran": "Harga Satuan",
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "kualifikasi_usaha": "Besar",
+      "sumber_dana": "APBD",
+      "satuan_kerja": "DINAS SUMBER DAYA AIR",
+      "instansi": "Provinsi DKI Jakarta",
+      "nama_tender": "Pembangunan Sistem Tata Air Pompa Bulak Cabe (Kelurahan Cilincing) Beserta Kelengkapannya",
+      "kategori": "Pekerjaan Konstruksi",
+      "metode_tender": "Tender",
+      "tahun_anggaran": 2025,
+      "tanggal_tender": "29 Sep 2025 s/d 16 Dec 2025",
+      "kode_tender": "10086516000",
+      "lokasi_pekerjaan": "Jakarta Utara (Kota)-DKI Jakarta",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.SBRZs3gCuK5n-48N.IuhtNJixlCfJhns7E57a7XwGrWqeBMxsKFpAQyw-7Zs"
+    }
+  },
+  "raw_response": {
+    "detail": {
+      "cara_pembayaran": "Harga Satuan",
+      "nilai_pagu": 144954062100,
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "kualifikasi_usaha": "Besar",
+      "sumber_dana": "APBD",
+      "nilai_hps": 144954062087.34,
+      "satuan_kerja": "DINAS SUMBER DAYA AIR",
+      "instansi": "Provinsi DKI Jakarta",
+      "metode_evaluasi": "Harga Terendah Ambang Batas",
+      "nama_tender": "Pembangunan Sistem Tata Air Pompa Bulak Cabe (Kelurahan Cilincing) Beserta Kelengkapannya",
+      "kategori": "Pekerjaan Konstruksi",
+      "metode_tender": "Tender",
+      "tahun_anggaran": 2025,
+      "tanggal_tender": "29 Sep 2025 s/d 16 Dec 2025",
+      "kode_tender": "10086516000",
+      "lokasi_pekerjaan": "Jakarta Utara (Kota)-DKI Jakarta",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.SBRZs3gCuK5n-48N.IuhtNJixlCfJhns7E57a7XwGrWqeBMxsKFpAQyw-7Zs"
+    },
+    "jadwal": [
+      {
+        "akhir": "07 October 2025 10:00",
+        "mulai": "29 September 2025 22:00",
+        "tahapan": "Pengumuman Prakualifikasi"
+      },
+      {
+        "akhir": "10 October 2025 10:00",
+        "mulai": "29 September 2025 22:00",
+        "tahapan": "Download Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "10 October 2025 10:00",
+        "mulai": "02 October 2025 14:00",
+        "tahapan": "Kirim Persyaratan Kualifikasi"
+      },
+      {
+        "akhir": "22 October 2025 20:00",
+        "mulai": "10 October 2025 11:00",
+        "tahapan": "Evaluasi Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "22 October 2025 21:00",
+        "mulai": "20 October 2025 08:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "22 October 2025 23:00",
+        "mulai": "22 October 2025 08:00",
+        "tahapan": "Penetapan Hasil Kualifikasi"
+      },
+      {
+        "akhir": "23 October 2025 07:00",
+        "mulai": "22 October 2025 23:05",
+        "tahapan": "Pengumuman Hasil Prakualifikasi"
+      },
+      {
+        "akhir": "28 October 2025 09:00",
+        "mulai": "23 October 2025 08:00",
+        "tahapan": "Masa Sanggah Prakualifikasi"
+      },
+      {
+        "akhir": "17 November 2025 12:00",
+        "mulai": "28 October 2025 09:01",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "03 November 2025 16:35",
+        "mulai": "30 October 2025 08:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "17 November 2025 12:00",
+        "mulai": "03 November 2025 17:00",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "02 December 2025 20:15",
+        "mulai": "17 November 2025 13:00",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File I: Administrasi dan Teknis"
+      },
+      {
+        "akhir": "02 December 2025 20:30",
+        "mulai": "02 December 2025 20:16",
+        "tahapan": "Pengumuman Hasil Evaluasi Administrasi dan Teknis"
+      },
+      {
+        "akhir": "03 December 2025 16:00",
+        "mulai": "02 December 2025 20:31",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File II: Harga"
+      },
+      {
+        "akhir": "09 December 2025 21:00",
+        "mulai": "03 December 2025 16:01",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "09 December 2025 23:00",
+        "mulai": "09 December 2025 21:01",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "15 December 2025 08:00",
+        "mulai": "10 December 2025 08:00",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "15 December 2025 16:00",
+        "mulai": "15 December 2025 08:01",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "16 December 2025 16:00",
+        "mulai": "16 December 2025 08:00",
+        "tahapan": "Penandatanganan Kontrak"
+      },
+      {
+        "akhir": "02 October 2025 13:47",
+        "mulai": "02 October 2025 08:00",
+        "tahapan": "Penjelasan Dokumen Prakualifikasi"
+      }
+    ]
+  }
+}

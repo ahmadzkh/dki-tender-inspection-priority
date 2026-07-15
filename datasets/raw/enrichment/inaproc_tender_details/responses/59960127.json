@@ -1,0 +1,268 @@
+{
+  "schema_version": 1,
+  "package_id": "59960127",
+  "request": {
+    "parameter": "kode_paket",
+    "package_id": "59960127"
+  },
+  "http_status": 200,
+  "attempts": 1,
+  "fetched_at_utc": "2026-07-15T03:13:40+00:00",
+  "status": "success",
+  "detail": {
+    "hps": 707736000,
+    "pagu": 707736000,
+    "metode_evaluasi": "Kualitas dan Biaya",
+    "jadwal": [
+      {
+        "akhir": "19 June 2024 08:00",
+        "mulai": "07 June 2024 17:00",
+        "tahapan": "Pengumuman Prakualifikasi"
+      },
+      {
+        "akhir": "19 June 2024 08:00",
+        "mulai": "07 June 2024 17:00",
+        "tahapan": "Download Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "10 June 2024 11:00",
+        "mulai": "10 June 2024 10:00",
+        "tahapan": "Penjelasan Dokumen Prakualifikasi"
+      },
+      {
+        "akhir": "19 June 2024 08:00",
+        "mulai": "10 June 2024 14:00",
+        "tahapan": "Kirim Persyaratan Kualifikasi"
+      },
+      {
+        "akhir": "03 July 2024 18:15",
+        "mulai": "19 June 2024 09:00",
+        "tahapan": "Evaluasi Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "03 July 2024 18:15",
+        "mulai": "02 July 2024 09:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "03 July 2024 20:00",
+        "mulai": "03 July 2024 18:20",
+        "tahapan": "Penetapan Hasil Kualifikasi"
+      },
+      {
+        "akhir": "03 July 2024 23:00",
+        "mulai": "03 July 2024 20:10",
+        "tahapan": "Pengumuman Hasil Prakualifikasi"
+      },
+      {
+        "akhir": "09 July 2024 08:00",
+        "mulai": "04 July 2024 08:00",
+        "tahapan": "Masa Sanggah Prakualifikasi"
+      },
+      {
+        "akhir": "15 July 2024 10:00",
+        "mulai": "09 July 2024 08:05",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "11 July 2024 10:00",
+        "mulai": "11 July 2024 09:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "15 July 2024 10:00",
+        "mulai": "11 July 2024 10:00",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "16 July 2024 11:00",
+        "mulai": "15 July 2024 10:05",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File I: Administrasi dan Teknis"
+      },
+      {
+        "akhir": "16 July 2024 12:00",
+        "mulai": "16 July 2024 11:05",
+        "tahapan": "Pengumuman Hasil Evaluasi Administrasi dan Teknis"
+      },
+      {
+        "akhir": "16 July 2024 16:00",
+        "mulai": "16 July 2024 12:30",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File II: Harga"
+      },
+      {
+        "akhir": "16 July 2024 16:30",
+        "mulai": "16 July 2024 15:00",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "16 July 2024 23:00",
+        "mulai": "16 July 2024 17:00",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "22 July 2024 08:00",
+        "mulai": "17 July 2024 08:00",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "24 July 2024 16:00",
+        "mulai": "23 July 2024 09:00",
+        "tahapan": "Klarifikasi dan Negosiasi Teknis dan Biaya"
+      },
+      {
+        "akhir": "29 July 2024 16:00",
+        "mulai": "25 July 2024 08:00",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "06 August 2024 16:00",
+        "mulai": "30 July 2024 08:00",
+        "tahapan": "Penandatanganan Kontrak"
+      }
+    ],
+    "metadata": {
+      "kode_tender": "59960127",
+      "metode_tender": "Seleksi",
+      "cara_pembayaran": "Waktu Penugasan",
+      "kualifikasi_usaha": "Kecil",
+      "tahun_anggaran": 2024,
+      "instansi": "Provinsi DKI Jakarta",
+      "kategori": "Jasa Konsultansi Badan Usaha Konstruksi",
+      "lokasi_pekerjaan": "Jakarta Barat (Kota)-DKI Jakarta",
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "nama_tender": "Pengawasan Konstruksi Rehabilitasi Total Puskesmas di Kelurahan Taman Sari",
+      "satuan_kerja": "SUKU DINAS KESEHATAN KOTA ADMINISTRASI JAKARTA BARAT",
+      "tanggal_tender": "07 Jun 2024 s/d 06 Aug 2024",
+      "sumber_dana": "APBD",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.H9RHskkv0l4Zx6cw.3Brnwh_r7Lo1KhZGw3I2YlOuz1s6roHkpOx27IZjprc"
+    }
+  },
+  "raw_response": {
+    "detail": {
+      "kode_tender": "59960127",
+      "metode_tender": "Seleksi",
+      "cara_pembayaran": "Waktu Penugasan",
+      "kualifikasi_usaha": "Kecil",
+      "nilai_hps": 707736000,
+      "tahun_anggaran": 2024,
+      "instansi": "Provinsi DKI Jakarta",
+      "kategori": "Jasa Konsultansi Badan Usaha Konstruksi",
+      "lokasi_pekerjaan": "Jakarta Barat (Kota)-DKI Jakarta",
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "metode_evaluasi": "Kualitas dan Biaya",
+      "nama_tender": "Pengawasan Konstruksi Rehabilitasi Total Puskesmas di Kelurahan Taman Sari",
+      "satuan_kerja": "SUKU DINAS KESEHATAN KOTA ADMINISTRASI JAKARTA BARAT",
+      "tanggal_tender": "07 Jun 2024 s/d 06 Aug 2024",
+      "nilai_pagu": 707736000,
+      "sumber_dana": "APBD",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.H9RHskkv0l4Zx6cw.3Brnwh_r7Lo1KhZGw3I2YlOuz1s6roHkpOx27IZjprc"
+    },
+    "jadwal": [
+      {
+        "akhir": "19 June 2024 08:00",
+        "mulai": "07 June 2024 17:00",
+        "tahapan": "Pengumuman Prakualifikasi"
+      },
+      {
+        "akhir": "19 June 2024 08:00",
+        "mulai": "07 June 2024 17:00",
+        "tahapan": "Download Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "10 June 2024 11:00",
+        "mulai": "10 June 2024 10:00",
+        "tahapan": "Penjelasan Dokumen Prakualifikasi"
+      },
+      {
+        "akhir": "19 June 2024 08:00",
+        "mulai": "10 June 2024 14:00",
+        "tahapan": "Kirim Persyaratan Kualifikasi"
+      },
+      {
+        "akhir": "03 July 2024 18:15",
+        "mulai": "19 June 2024 09:00",
+        "tahapan": "Evaluasi Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "03 July 2024 18:15",
+        "mulai": "02 July 2024 09:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "03 July 2024 20:00",
+        "mulai": "03 July 2024 18:20",
+        "tahapan": "Penetapan Hasil Kualifikasi"
+      },
+      {
+        "akhir": "03 July 2024 23:00",
+        "mulai": "03 July 2024 20:10",
+        "tahapan": "Pengumuman Hasil Prakualifikasi"
+      },
+      {
+        "akhir": "09 July 2024 08:00",
+        "mulai": "04 July 2024 08:00",
+        "tahapan": "Masa Sanggah Prakualifikasi"
+      },
+      {
+        "akhir": "15 July 2024 10:00",
+        "mulai": "09 July 2024 08:05",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "11 July 2024 10:00",
+        "mulai": "11 July 2024 09:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "15 July 2024 10:00",
+        "mulai": "11 July 2024 10:00",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "16 July 2024 11:00",
+        "mulai": "15 July 2024 10:05",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File I: Administrasi dan Teknis"
+      },
+      {
+        "akhir": "16 July 2024 12:00",
+        "mulai": "16 July 2024 11:05",
+        "tahapan": "Pengumuman Hasil Evaluasi Administrasi dan Teknis"
+      },
+      {
+        "akhir": "16 July 2024 16:00",
+        "mulai": "16 July 2024 12:30",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File II: Harga"
+      },
+      {
+        "akhir": "16 July 2024 16:30",
+        "mulai": "16 July 2024 15:00",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "16 July 2024 23:00",
+        "mulai": "16 July 2024 17:00",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "22 July 2024 08:00",
+        "mulai": "17 July 2024 08:00",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "24 July 2024 16:00",
+        "mulai": "23 July 2024 09:00",
+        "tahapan": "Klarifikasi dan Negosiasi Teknis dan Biaya"
+      },
+      {
+        "akhir": "29 July 2024 16:00",
+        "mulai": "25 July 2024 08:00",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "06 August 2024 16:00",
+        "mulai": "30 July 2024 08:00",
+        "tahapan": "Penandatanganan Kontrak"
+      }
+    ]
+  }
+}

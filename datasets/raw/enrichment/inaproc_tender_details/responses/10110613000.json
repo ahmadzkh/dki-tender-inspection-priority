@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "package_id": "10110613000",
+  "request": {
+    "parameter": "kode_paket",
+    "package_id": "10110613000"
+  },
+  "http_status": 200,
+  "attempts": 1,
+  "fetched_at_utc": "2026-07-15T03:19:50+00:00",
+  "status": "success",
+  "detail": {
+    "hps": 111925000,
+    "pagu": 111925000,
+    "metode_evaluasi": "Kualitas",
+    "jadwal": [
+      {
+        "akhir": "26 January 2026 14:00",
+        "mulai": "21 January 2026 15:00",
+        "tahapan": "Pengumuman Pascakualifikasi"
+      },
+      {
+        "akhir": "29 January 2026 10:00",
+        "mulai": "21 January 2026 15:00",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "23 January 2026 11:00",
+        "mulai": "23 January 2026 10:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "29 January 2026 10:00",
+        "mulai": "24 January 2026 08:00",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "03 February 2026 10:00",
+        "mulai": "29 January 2026 10:01",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File I: Administrasi, Dokumen Kualifikasi, dan Teknis"
+      },
+      {
+        "akhir": "03 February 2026 12:00",
+        "mulai": "30 January 2026 08:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "03 February 2026 16:00",
+        "mulai": "03 February 2026 12:01",
+        "tahapan": "Pengumuman Hasil Evaluasi Administrasi dan Teknis"
+      },
+      {
+        "akhir": "09 February 2026 08:00",
+        "mulai": "04 February 2026 08:00",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "10 February 2026 10:00",
+        "mulai": "09 February 2026 08:01",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File II: Harga"
+      },
+      {
+        "akhir": "10 February 2026 16:00",
+        "mulai": "10 February 2026 10:01",
+        "tahapan": "Klarifikasi Teknis dan Negosiasi"
+      },
+      {
+        "akhir": "11 February 2026 13:00",
+        "mulai": "11 February 2026 08:00",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "11 February 2026 16:00",
+        "mulai": "11 February 2026 13:01",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "12 February 2026 16:00",
+        "mulai": "12 February 2026 08:00",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "13 February 2026 16:00",
+        "mulai": "13 February 2026 08:00",
+        "tahapan": "Penandatanganan Kontrak"
+      }
+    ],
+    "metadata": {
+      "instansi": "Provinsi DKI Jakarta",
+      "kategori": "Jasa Konsultansi Perorangan Non Konstruksi",
+      "lokasi_pekerjaan": "Jakarta Pusat (Kota)-DKI Jakarta",
+      "kode_tender": "10110613000",
+      "metode_tender": "Seleksi",
+      "sumber_dana": "APBD",
+      "tahun_anggaran": 2026,
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "tanggal_tender": "21 Jan 2026 s/d 13 Feb 2026",
+      "nama_tender": "Pemeliharaan dan Pengembangan Sistem Informasi Kebencanaan 7",
+      "satuan_kerja": "PUSAT DATA DAN INFORMASI KEBENCANAAN",
+      "cara_pembayaran": "Waktu Penugasan",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.WU80W6vwgZXv6cHN.2CQJh1btpPskBhKS-1oC2z4hrbwOGRvctvrI_6eUGAo"
+    }
+  },
+  "raw_response": {
+    "detail": {
+      "instansi": "Provinsi DKI Jakarta",
+      "kategori": "Jasa Konsultansi Perorangan Non Konstruksi",
+      "lokasi_pekerjaan": "Jakarta Pusat (Kota)-DKI Jakarta",
+      "kode_tender": "10110613000",
+      "metode_tender": "Seleksi",
+      "sumber_dana": "APBD",
+      "nilai_pagu": 111925000,
+      "tahun_anggaran": 2026,
+      "kualifikasi_usaha": "",
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "metode_evaluasi": "Kualitas",
+      "tanggal_tender": "21 Jan 2026 s/d 13 Feb 2026",
+      "nama_tender": "Pemeliharaan dan Pengembangan Sistem Informasi Kebencanaan 7",
+      "satuan_kerja": "PUSAT DATA DAN INFORMASI KEBENCANAAN",
+      "cara_pembayaran": "Waktu Penugasan",
+      "nilai_hps": 111925000,
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.WU80W6vwgZXv6cHN.2CQJh1btpPskBhKS-1oC2z4hrbwOGRvctvrI_6eUGAo"
+    },
+    "jadwal": [
+      {
+        "akhir": "26 January 2026 14:00",
+        "mulai": "21 January 2026 15:00",
+        "tahapan": "Pengumuman Pascakualifikasi"
+      },
+      {
+        "akhir": "29 January 2026 10:00",
+        "mulai": "21 January 2026 15:00",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "23 January 2026 11:00",
+        "mulai": "23 January 2026 10:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "29 January 2026 10:00",
+        "mulai": "24 January 2026 08:00",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "03 February 2026 10:00",
+        "mulai": "29 January 2026 10:01",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File I: Administrasi, Dokumen Kualifikasi, dan Teknis"
+      },
+      {
+        "akhir": "03 February 2026 12:00",
+        "mulai": "30 January 2026 08:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "03 February 2026 16:00",
+        "mulai": "03 February 2026 12:01",
+        "tahapan": "Pengumuman Hasil Evaluasi Administrasi dan Teknis"
+      },
+      {
+        "akhir": "09 February 2026 08:00",
+        "mulai": "04 February 2026 08:00",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "10 February 2026 10:00",
+        "mulai": "09 February 2026 08:01",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File II: Harga"
+      },
+      {
+        "akhir": "10 February 2026 16:00",
+        "mulai": "10 February 2026 10:01",
+        "tahapan": "Klarifikasi Teknis dan Negosiasi"
+      },
+      {
+        "akhir": "11 February 2026 13:00",
+        "mulai": "11 February 2026 08:00",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "11 February 2026 16:00",
+        "mulai": "11 February 2026 13:01",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "12 February 2026 16:00",
+        "mulai": "12 February 2026 08:00",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "13 February 2026 16:00",
+        "mulai": "13 February 2026 08:00",
+        "tahapan": "Penandatanganan Kontrak"
+      }
+    ]
+  }
+}

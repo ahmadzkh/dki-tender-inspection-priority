@@ -1,0 +1,268 @@
+{
+  "schema_version": 1,
+  "package_id": "10026130000",
+  "request": {
+    "parameter": "kode_paket",
+    "package_id": "10026130000"
+  },
+  "http_status": 200,
+  "attempts": 1,
+  "fetched_at_utc": "2026-07-15T03:16:23+00:00",
+  "status": "success",
+  "detail": {
+    "hps": 1093350000,
+    "pagu": 1102080000,
+    "metode_evaluasi": "Kualitas dan Biaya",
+    "jadwal": [
+      {
+        "akhir": "04 June 2025 18:00",
+        "mulai": "28 May 2025 18:00",
+        "tahapan": "Pengumuman Prakualifikasi"
+      },
+      {
+        "akhir": "09 June 2025 07:59",
+        "mulai": "29 May 2025 08:00",
+        "tahapan": "Download Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "02 June 2025 10:00",
+        "mulai": "02 June 2025 09:00",
+        "tahapan": "Penjelasan Dokumen Prakualifikasi"
+      },
+      {
+        "akhir": "09 June 2025 07:59",
+        "mulai": "02 June 2025 16:00",
+        "tahapan": "Kirim Persyaratan Kualifikasi"
+      },
+      {
+        "akhir": "13 June 2025 12:00",
+        "mulai": "09 June 2025 08:00",
+        "tahapan": "Evaluasi Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "13 June 2025 18:30",
+        "mulai": "12 June 2025 09:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "13 June 2025 18:50",
+        "mulai": "13 June 2025 18:31",
+        "tahapan": "Penetapan Hasil Kualifikasi"
+      },
+      {
+        "akhir": "13 June 2025 19:00",
+        "mulai": "13 June 2025 18:51",
+        "tahapan": "Pengumuman Hasil Prakualifikasi"
+      },
+      {
+        "akhir": "19 June 2025 08:00",
+        "mulai": "13 June 2025 19:01",
+        "tahapan": "Masa Sanggah Prakualifikasi"
+      },
+      {
+        "akhir": "24 June 2025 07:59",
+        "mulai": "19 June 2025 08:01",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "20 June 2025 10:00",
+        "mulai": "20 June 2025 09:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "24 June 2025 07:59",
+        "mulai": "20 June 2025 16:00",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "07 July 2025 13:00",
+        "mulai": "25 June 2025 08:00",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File I: Administrasi dan Teknis"
+      },
+      {
+        "akhir": "07 July 2025 13:18",
+        "mulai": "07 July 2025 13:01",
+        "tahapan": "Pengumuman Hasil Evaluasi Administrasi dan Teknis"
+      },
+      {
+        "akhir": "07 July 2025 14:00",
+        "mulai": "07 July 2025 13:19",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File II: Harga"
+      },
+      {
+        "akhir": "07 July 2025 15:30",
+        "mulai": "07 July 2025 14:01",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "07 July 2025 15:59",
+        "mulai": "07 July 2025 15:31",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "14 July 2025 08:00",
+        "mulai": "07 July 2025 16:00",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "15 July 2025 14:00",
+        "mulai": "14 July 2025 08:01",
+        "tahapan": "Klarifikasi dan Negosiasi Teknis dan Biaya"
+      },
+      {
+        "akhir": "16 July 2025 16:00",
+        "mulai": "16 July 2025 08:00",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "17 July 2025 16:00",
+        "mulai": "17 July 2025 08:00",
+        "tahapan": "Penandatanganan Kontrak"
+      }
+    ],
+    "metadata": {
+      "cara_pembayaran": "Waktu Penugasan",
+      "instansi": "Provinsi DKI Jakarta",
+      "metode_tender": "Seleksi",
+      "tahun_anggaran": 2025,
+      "kualifikasi_usaha": "Besar",
+      "satuan_kerja": "UNIT PENGELOLA MUSEUM KEBAHARIAN JAKARTA",
+      "tanggal_tender": "28 May 2025 s/d 17 Jul 2025",
+      "kategori": "Jasa Konsultansi Badan Usaha Konstruksi",
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "lokasi_pekerjaan": "Jakarta Utara (Kota)-DKI Jakarta",
+      "nama_tender": "Pengawasan Pemeliharaan Atap Gedung A dan C Museum Bahari",
+      "sumber_dana": "APBD",
+      "kode_tender": "10026130000",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.Izb48h5o2zbuVgxv.swQJFi8siDZp0xs1eER7BWG3Gu4GkLlgSWSq3R9T3jg"
+    }
+  },
+  "raw_response": {
+    "detail": {
+      "cara_pembayaran": "Waktu Penugasan",
+      "instansi": "Provinsi DKI Jakarta",
+      "metode_tender": "Seleksi",
+      "tahun_anggaran": 2025,
+      "kualifikasi_usaha": "Besar",
+      "satuan_kerja": "UNIT PENGELOLA MUSEUM KEBAHARIAN JAKARTA",
+      "tanggal_tender": "28 May 2025 s/d 17 Jul 2025",
+      "kategori": "Jasa Konsultansi Badan Usaha Konstruksi",
+      "nilai_hps": 1093350000,
+      "nilai_pagu": 1102080000,
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "lokasi_pekerjaan": "Jakarta Utara (Kota)-DKI Jakarta",
+      "metode_evaluasi": "Kualitas dan Biaya",
+      "nama_tender": "Pengawasan Pemeliharaan Atap Gedung A dan C Museum Bahari",
+      "sumber_dana": "APBD",
+      "kode_tender": "10026130000",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.Izb48h5o2zbuVgxv.swQJFi8siDZp0xs1eER7BWG3Gu4GkLlgSWSq3R9T3jg"
+    },
+    "jadwal": [
+      {
+        "akhir": "04 June 2025 18:00",
+        "mulai": "28 May 2025 18:00",
+        "tahapan": "Pengumuman Prakualifikasi"
+      },
+      {
+        "akhir": "09 June 2025 07:59",
+        "mulai": "29 May 2025 08:00",
+        "tahapan": "Download Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "02 June 2025 10:00",
+        "mulai": "02 June 2025 09:00",
+        "tahapan": "Penjelasan Dokumen Prakualifikasi"
+      },
+      {
+        "akhir": "09 June 2025 07:59",
+        "mulai": "02 June 2025 16:00",
+        "tahapan": "Kirim Persyaratan Kualifikasi"
+      },
+      {
+        "akhir": "13 June 2025 12:00",
+        "mulai": "09 June 2025 08:00",
+        "tahapan": "Evaluasi Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "13 June 2025 18:30",
+        "mulai": "12 June 2025 09:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "13 June 2025 18:50",
+        "mulai": "13 June 2025 18:31",
+        "tahapan": "Penetapan Hasil Kualifikasi"
+      },
+      {
+        "akhir": "13 June 2025 19:00",
+        "mulai": "13 June 2025 18:51",
+        "tahapan": "Pengumuman Hasil Prakualifikasi"
+      },
+      {
+        "akhir": "19 June 2025 08:00",
+        "mulai": "13 June 2025 19:01",
+        "tahapan": "Masa Sanggah Prakualifikasi"
+      },
+      {
+        "akhir": "24 June 2025 07:59",
+        "mulai": "19 June 2025 08:01",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "20 June 2025 10:00",
+        "mulai": "20 June 2025 09:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "24 June 2025 07:59",
+        "mulai": "20 June 2025 16:00",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "07 July 2025 13:00",
+        "mulai": "25 June 2025 08:00",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File I: Administrasi dan Teknis"
+      },
+      {
+        "akhir": "07 July 2025 13:18",
+        "mulai": "07 July 2025 13:01",
+        "tahapan": "Pengumuman Hasil Evaluasi Administrasi dan Teknis"
+      },
+      {
+        "akhir": "07 July 2025 14:00",
+        "mulai": "07 July 2025 13:19",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File II: Harga"
+      },
+      {
+        "akhir": "07 July 2025 15:30",
+        "mulai": "07 July 2025 14:01",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "07 July 2025 15:59",
+        "mulai": "07 July 2025 15:31",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "14 July 2025 08:00",
+        "mulai": "07 July 2025 16:00",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "15 July 2025 14:00",
+        "mulai": "14 July 2025 08:01",
+        "tahapan": "Klarifikasi dan Negosiasi Teknis dan Biaya"
+      },
+      {
+        "akhir": "16 July 2025 16:00",
+        "mulai": "16 July 2025 08:00",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "17 July 2025 16:00",
+        "mulai": "17 July 2025 08:00",
+        "tahapan": "Penandatanganan Kontrak"
+      }
+    ]
+  }
+}

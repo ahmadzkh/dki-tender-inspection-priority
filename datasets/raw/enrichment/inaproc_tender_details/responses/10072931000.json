@@ -1,0 +1,178 @@
+{
+  "schema_version": 1,
+  "package_id": "10072931000",
+  "request": {
+    "parameter": "kode_paket",
+    "package_id": "10072931000"
+  },
+  "http_status": 200,
+  "attempts": 1,
+  "fetched_at_utc": "2026-07-15T03:17:01+00:00",
+  "status": "success",
+  "detail": {
+    "hps": 5561901443.52,
+    "pagu": 5561942400,
+    "metode_evaluasi": "Harga Terendah Sistem Gugur",
+    "jadwal": [
+      {
+        "akhir": "17 September 2025 16:00",
+        "mulai": "12 September 2025 16:00",
+        "tahapan": "Pengumuman Pascakualifikasi"
+      },
+      {
+        "akhir": "19 September 2025 08:00",
+        "mulai": "12 September 2025 16:01",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "15 September 2025 10:00",
+        "mulai": "15 September 2025 09:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "19 September 2025 08:00",
+        "mulai": "15 September 2025 18:00",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "19 September 2025 10:00",
+        "mulai": "19 September 2025 08:01",
+        "tahapan": "Pembukaan Dokumen Penawaran"
+      },
+      {
+        "akhir": "29 September 2025 15:55",
+        "mulai": "19 September 2025 10:01",
+        "tahapan": "Evaluasi Administrasi, Kualifikasi, Teknis, dan Harga"
+      },
+      {
+        "akhir": "29 September 2025 15:55",
+        "mulai": "29 September 2025 08:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "29 September 2025 17:00",
+        "mulai": "29 September 2025 16:00",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "29 September 2025 18:00",
+        "mulai": "29 September 2025 17:01",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "06 October 2025 07:59",
+        "mulai": "30 September 2025 18:00",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "07 October 2025 16:00",
+        "mulai": "06 October 2025 08:00",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "09 October 2025 16:00",
+        "mulai": "08 October 2025 08:00",
+        "tahapan": "Penandatanganan Kontrak"
+      }
+    ],
+    "metadata": {
+      "tahun_anggaran": 2025,
+      "satuan_kerja": "SUKU DINAS  PERINDUSTRIAN, PERDAGANGAN, KOPERASI, USAHA KECIL DAN MENENGAH KOTA - JAKBAR",
+      "tanggal_tender": "12 Sep 2025 s/d 09 Oct 2025",
+      "lokasi_pekerjaan": "Jakarta Barat (Kota)-DKI Jakarta",
+      "metode_tender": "Tender",
+      "instansi": "Provinsi DKI Jakarta",
+      "kode_tender": "10072931000",
+      "nama_tender": "Pelaksanaan Pekerjaan Fisik Rehabilitasi JKB 005 Lokasi Binaan Meruya Ilir - Kel. Meruya Utara Kec. Kembangan",
+      "kualifikasi_usaha": "Kecil",
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "kategori": "Pekerjaan Konstruksi",
+      "sumber_dana": "APBD",
+      "cara_pembayaran": "Gabungan Lumsum dan Harga Satuan",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.WMSmKc37okpoF2mB.cyRZG8DslXAsnd3svHBj040fM-ZsruapkhwJDeihna8"
+    }
+  },
+  "raw_response": {
+    "detail": {
+      "metode_evaluasi": "Harga Terendah Sistem Gugur",
+      "tahun_anggaran": 2025,
+      "satuan_kerja": "SUKU DINAS  PERINDUSTRIAN, PERDAGANGAN, KOPERASI, USAHA KECIL DAN MENENGAH KOTA - JAKBAR",
+      "tanggal_tender": "12 Sep 2025 s/d 09 Oct 2025",
+      "lokasi_pekerjaan": "Jakarta Barat (Kota)-DKI Jakarta",
+      "nilai_hps": 5561901443.52,
+      "metode_tender": "Tender",
+      "nilai_pagu": 5561942400,
+      "instansi": "Provinsi DKI Jakarta",
+      "kode_tender": "10072931000",
+      "nama_tender": "Pelaksanaan Pekerjaan Fisik Rehabilitasi JKB 005 Lokasi Binaan Meruya Ilir - Kel. Meruya Utara Kec. Kembangan",
+      "kualifikasi_usaha": "Kecil",
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "kategori": "Pekerjaan Konstruksi",
+      "sumber_dana": "APBD",
+      "cara_pembayaran": "Gabungan Lumsum dan Harga Satuan",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.WMSmKc37okpoF2mB.cyRZG8DslXAsnd3svHBj040fM-ZsruapkhwJDeihna8"
+    },
+    "jadwal": [
+      {
+        "akhir": "17 September 2025 16:00",
+        "mulai": "12 September 2025 16:00",
+        "tahapan": "Pengumuman Pascakualifikasi"
+      },
+      {
+        "akhir": "19 September 2025 08:00",
+        "mulai": "12 September 2025 16:01",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "15 September 2025 10:00",
+        "mulai": "15 September 2025 09:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "19 September 2025 08:00",
+        "mulai": "15 September 2025 18:00",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "19 September 2025 10:00",
+        "mulai": "19 September 2025 08:01",
+        "tahapan": "Pembukaan Dokumen Penawaran"
+      },
+      {
+        "akhir": "29 September 2025 15:55",
+        "mulai": "19 September 2025 10:01",
+        "tahapan": "Evaluasi Administrasi, Kualifikasi, Teknis, dan Harga"
+      },
+      {
+        "akhir": "29 September 2025 15:55",
+        "mulai": "29 September 2025 08:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "29 September 2025 17:00",
+        "mulai": "29 September 2025 16:00",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "29 September 2025 18:00",
+        "mulai": "29 September 2025 17:01",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "06 October 2025 07:59",
+        "mulai": "30 September 2025 18:00",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "07 October 2025 16:00",
+        "mulai": "06 October 2025 08:00",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "09 October 2025 16:00",
+        "mulai": "08 October 2025 08:00",
+        "tahapan": "Penandatanganan Kontrak"
+      }
+    ]
+  }
+}

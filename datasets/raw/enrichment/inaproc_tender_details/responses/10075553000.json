@@ -1,0 +1,268 @@
+{
+  "schema_version": 1,
+  "package_id": "10075553000",
+  "request": {
+    "parameter": "kode_paket",
+    "package_id": "10075553000"
+  },
+  "http_status": 200,
+  "attempts": 1,
+  "fetched_at_utc": "2026-07-15T03:17:10+00:00",
+  "status": "success",
+  "detail": {
+    "hps": 4296310500,
+    "pagu": 4300000000,
+    "metode_evaluasi": "Pagu Anggaran",
+    "jadwal": [
+      {
+        "akhir": "09 September 2025 23:59",
+        "mulai": "02 September 2025 21:00",
+        "tahapan": "Pengumuman Prakualifikasi"
+      },
+      {
+        "akhir": "12 September 2025 12:00",
+        "mulai": "02 September 2025 21:01",
+        "tahapan": "Download Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "04 September 2025 10:00",
+        "mulai": "04 September 2025 09:00",
+        "tahapan": "Penjelasan Dokumen Prakualifikasi"
+      },
+      {
+        "akhir": "12 September 2025 12:00",
+        "mulai": "04 September 2025 12:00",
+        "tahapan": "Kirim Persyaratan Kualifikasi"
+      },
+      {
+        "akhir": "10 October 2025 15:00",
+        "mulai": "12 September 2025 12:01",
+        "tahapan": "Evaluasi Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "10 October 2025 15:00",
+        "mulai": "17 September 2025 08:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "10 October 2025 16:00",
+        "mulai": "10 October 2025 15:01",
+        "tahapan": "Penetapan Hasil Kualifikasi"
+      },
+      {
+        "akhir": "10 October 2025 17:00",
+        "mulai": "10 October 2025 16:01",
+        "tahapan": "Pengumuman Hasil Prakualifikasi"
+      },
+      {
+        "akhir": "16 October 2025 08:00",
+        "mulai": "10 October 2025 17:01",
+        "tahapan": "Masa Sanggah Prakualifikasi"
+      },
+      {
+        "akhir": "27 October 2025 12:00",
+        "mulai": "16 October 2025 08:00",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "20 October 2025 10:00",
+        "mulai": "20 October 2025 09:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "27 October 2025 12:00",
+        "mulai": "20 October 2025 12:00",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "07 November 2025 12:00",
+        "mulai": "27 October 2025 12:01",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File I: Administrasi dan Teknis"
+      },
+      {
+        "akhir": "07 November 2025 13:00",
+        "mulai": "07 November 2025 12:01",
+        "tahapan": "Pengumuman Hasil Evaluasi Administrasi dan Teknis"
+      },
+      {
+        "akhir": "07 November 2025 15:00",
+        "mulai": "07 November 2025 13:00",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File II: Harga"
+      },
+      {
+        "akhir": "07 November 2025 16:00",
+        "mulai": "07 November 2025 15:01",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "07 November 2025 17:00",
+        "mulai": "07 November 2025 16:01",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "13 November 2025 08:00",
+        "mulai": "07 November 2025 17:01",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "14 November 2025 16:00",
+        "mulai": "13 November 2025 08:00",
+        "tahapan": "Klarifikasi dan Negosiasi Teknis dan Biaya"
+      },
+      {
+        "akhir": "18 November 2025 16:00",
+        "mulai": "17 November 2025 08:00",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "18 November 2025 16:00",
+        "mulai": "18 November 2025 08:00",
+        "tahapan": "Penandatanganan Kontrak"
+      }
+    ],
+    "metadata": {
+      "satuan_kerja": "DINAS SUMBER DAYA AIR",
+      "nama_tender": "Pengawasan Pembangunan Tanggul Pengaman Pantai NCICD Fase A Tahap 3 Paket 2",
+      "tanggal_tender": "02 Sep 2025 s/d 18 Nov 2025",
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "tahun_anggaran": 2025,
+      "sumber_dana": "APBD",
+      "instansi": "Provinsi DKI Jakarta",
+      "kualifikasi_usaha": "Besar",
+      "metode_tender": "Seleksi",
+      "kategori": "Jasa Konsultansi Badan Usaha Konstruksi",
+      "cara_pembayaran": "Waktu Penugasan",
+      "lokasi_pekerjaan": "Jakarta Utara (Kota)-DKI Jakarta",
+      "kode_tender": "10075553000",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.V_ik0-RUMurX_kr4.B9zSQtDKnhOeeOaHhBn68Ox5HALlaJ50RnIgcC9WiiY"
+    }
+  },
+  "raw_response": {
+    "detail": {
+      "satuan_kerja": "DINAS SUMBER DAYA AIR",
+      "nama_tender": "Pengawasan Pembangunan Tanggul Pengaman Pantai NCICD Fase A Tahap 3 Paket 2",
+      "nilai_pagu": 4300000000,
+      "metode_evaluasi": "Pagu Anggaran",
+      "tanggal_tender": "02 Sep 2025 s/d 18 Nov 2025",
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "tahun_anggaran": 2025,
+      "sumber_dana": "APBD",
+      "instansi": "Provinsi DKI Jakarta",
+      "kualifikasi_usaha": "Besar",
+      "metode_tender": "Seleksi",
+      "kategori": "Jasa Konsultansi Badan Usaha Konstruksi",
+      "cara_pembayaran": "Waktu Penugasan",
+      "lokasi_pekerjaan": "Jakarta Utara (Kota)-DKI Jakarta",
+      "nilai_hps": 4296310500,
+      "kode_tender": "10075553000",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.V_ik0-RUMurX_kr4.B9zSQtDKnhOeeOaHhBn68Ox5HALlaJ50RnIgcC9WiiY"
+    },
+    "jadwal": [
+      {
+        "akhir": "09 September 2025 23:59",
+        "mulai": "02 September 2025 21:00",
+        "tahapan": "Pengumuman Prakualifikasi"
+      },
+      {
+        "akhir": "12 September 2025 12:00",
+        "mulai": "02 September 2025 21:01",
+        "tahapan": "Download Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "04 September 2025 10:00",
+        "mulai": "04 September 2025 09:00",
+        "tahapan": "Penjelasan Dokumen Prakualifikasi"
+      },
+      {
+        "akhir": "12 September 2025 12:00",
+        "mulai": "04 September 2025 12:00",
+        "tahapan": "Kirim Persyaratan Kualifikasi"
+      },
+      {
+        "akhir": "10 October 2025 15:00",
+        "mulai": "12 September 2025 12:01",
+        "tahapan": "Evaluasi Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "10 October 2025 15:00",
+        "mulai": "17 September 2025 08:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "10 October 2025 16:00",
+        "mulai": "10 October 2025 15:01",
+        "tahapan": "Penetapan Hasil Kualifikasi"
+      },
+      {
+        "akhir": "10 October 2025 17:00",
+        "mulai": "10 October 2025 16:01",
+        "tahapan": "Pengumuman Hasil Prakualifikasi"
+      },
+      {
+        "akhir": "16 October 2025 08:00",
+        "mulai": "10 October 2025 17:01",
+        "tahapan": "Masa Sanggah Prakualifikasi"
+      },
+      {
+        "akhir": "27 October 2025 12:00",
+        "mulai": "16 October 2025 08:00",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "20 October 2025 10:00",
+        "mulai": "20 October 2025 09:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "27 October 2025 12:00",
+        "mulai": "20 October 2025 12:00",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "07 November 2025 12:00",
+        "mulai": "27 October 2025 12:01",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File I: Administrasi dan Teknis"
+      },
+      {
+        "akhir": "07 November 2025 13:00",
+        "mulai": "07 November 2025 12:01",
+        "tahapan": "Pengumuman Hasil Evaluasi Administrasi dan Teknis"
+      },
+      {
+        "akhir": "07 November 2025 15:00",
+        "mulai": "07 November 2025 13:00",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File II: Harga"
+      },
+      {
+        "akhir": "07 November 2025 16:00",
+        "mulai": "07 November 2025 15:01",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "07 November 2025 17:00",
+        "mulai": "07 November 2025 16:01",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "13 November 2025 08:00",
+        "mulai": "07 November 2025 17:01",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "14 November 2025 16:00",
+        "mulai": "13 November 2025 08:00",
+        "tahapan": "Klarifikasi dan Negosiasi Teknis dan Biaya"
+      },
+      {
+        "akhir": "18 November 2025 16:00",
+        "mulai": "17 November 2025 08:00",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "18 November 2025 16:00",
+        "mulai": "18 November 2025 08:00",
+        "tahapan": "Penandatanganan Kontrak"
+      }
+    ]
+  }
+}

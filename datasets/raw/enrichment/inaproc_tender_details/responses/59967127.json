@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "package_id": "59967127",
+  "request": {
+    "parameter": "kode_paket",
+    "package_id": "59967127"
+  },
+  "http_status": 200,
+  "attempts": 1,
+  "fetched_at_utc": "2026-07-15T03:14:12+00:00",
+  "status": "success",
+  "detail": {
+    "hps": 284520740,
+    "pagu": 284559597,
+    "metode_evaluasi": "Harga Terendah Sistem Gugur",
+    "jadwal": [
+      {
+        "akhir": "08 July 2024 10:00",
+        "mulai": "08 July 2024 09:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "09 July 2024 14:00",
+        "mulai": "08 July 2024 13:00",
+        "tahapan": "Upload Dokumen Penawaran"
+      }
+    ],
+    "metadata": {
+      "kode_tender": "59967127",
+      "satuan_kerja": "UNIT PENGELOLA GELANGGANG JAKARTA BARAT",
+      "cara_pembayaran": "Lumsum",
+      "kategori": "Pengadaan Barang",
+      "nama_tender": "Pemeliharaan Rutin/Berkala Gedung Kantor (Belanja Bahan Kimia Kolam Renang) pada Unit Pengelola Gelanggang Jakarta Barat",
+      "tanggal_tender": "08 Jul 2024 s/d 09 Jul 2024",
+      "sumber_dana": "APBD",
+      "kualifikasi_usaha": "Kecil",
+      "lokasi_pekerjaan": "Jakarta Barat (Kota)-DKI Jakarta",
+      "metode_tender": "Tender Cepat",
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "instansi": "Provinsi DKI Jakarta",
+      "tahun_anggaran": 2024,
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.KvjXBVBZ5kjdnSPa.bCGEzahTfUlvFL_XvGEUlOqDWKZnHGurm_607yG7g8s"
+    }
+  },
+  "raw_response": {
+    "detail": {
+      "kode_tender": "59967127",
+      "satuan_kerja": "UNIT PENGELOLA GELANGGANG JAKARTA BARAT",
+      "nilai_pagu": 284559597,
+      "cara_pembayaran": "Lumsum",
+      "kategori": "Pengadaan Barang",
+      "nama_tender": "Pemeliharaan Rutin/Berkala Gedung Kantor (Belanja Bahan Kimia Kolam Renang) pada Unit Pengelola Gelanggang Jakarta Barat",
+      "tanggal_tender": "08 Jul 2024 s/d 09 Jul 2024",
+      "sumber_dana": "APBD",
+      "kualifikasi_usaha": "Kecil",
+      "lokasi_pekerjaan": "Jakarta Barat (Kota)-DKI Jakarta",
+      "metode_tender": "Tender Cepat",
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "nilai_hps": 284520740,
+      "instansi": "Provinsi DKI Jakarta",
+      "metode_evaluasi": "Harga Terendah Sistem Gugur",
+      "tahun_anggaran": 2024,
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.KvjXBVBZ5kjdnSPa.bCGEzahTfUlvFL_XvGEUlOqDWKZnHGurm_607yG7g8s"
+    },
+    "jadwal": [
+      {
+        "akhir": "08 July 2024 10:00",
+        "mulai": "08 July 2024 09:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "09 July 2024 14:00",
+        "mulai": "08 July 2024 13:00",
+        "tahapan": "Upload Dokumen Penawaran"
+      }
+    ]
+  }
+}

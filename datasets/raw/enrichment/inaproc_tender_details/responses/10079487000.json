@@ -1,0 +1,267 @@
+{
+  "schema_version": 1,
+  "package_id": "10079487000",
+  "request": {
+    "parameter": "kode_paket",
+    "package_id": "10079487000"
+  },
+  "http_status": 200,
+  "attempts": 1,
+  "fetched_at_utc": "2026-07-15T03:16:00+00:00",
+  "status": "success",
+  "detail": {
+    "hps": 2146185000,
+    "pagu": 2165520000,
+    "metode_evaluasi": "Pagu Anggaran",
+    "jadwal": [
+      {
+        "akhir": "25 September 2025 23:59",
+        "mulai": "18 September 2025 21:00",
+        "tahapan": "Pengumuman Prakualifikasi"
+      },
+      {
+        "akhir": "29 September 2025 12:00",
+        "mulai": "18 September 2025 21:01",
+        "tahapan": "Download Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "22 September 2025 10:00",
+        "mulai": "22 September 2025 09:00",
+        "tahapan": "Penjelasan Dokumen Prakualifikasi"
+      },
+      {
+        "akhir": "29 September 2025 12:00",
+        "mulai": "22 September 2025 12:00",
+        "tahapan": "Kirim Persyaratan Kualifikasi"
+      },
+      {
+        "akhir": "10 October 2025 15:00",
+        "mulai": "29 September 2025 12:01",
+        "tahapan": "Evaluasi Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "10 October 2025 15:00",
+        "mulai": "02 October 2025 08:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "10 October 2025 16:00",
+        "mulai": "10 October 2025 15:00",
+        "tahapan": "Penetapan Hasil Kualifikasi"
+      },
+      {
+        "akhir": "10 October 2025 17:00",
+        "mulai": "10 October 2025 16:01",
+        "tahapan": "Pengumuman Hasil Prakualifikasi"
+      },
+      {
+        "akhir": "16 October 2025 08:00",
+        "mulai": "10 October 2025 17:01",
+        "tahapan": "Masa Sanggah Prakualifikasi"
+      },
+      {
+        "akhir": "27 October 2025 12:00",
+        "mulai": "16 October 2025 08:00",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "20 October 2025 14:45",
+        "mulai": "20 October 2025 09:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "27 October 2025 12:00",
+        "mulai": "20 October 2025 15:00",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "31 October 2025 12:00",
+        "mulai": "27 October 2025 12:01",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File I: Administrasi dan Teknis"
+      },
+      {
+        "akhir": "31 October 2025 17:00",
+        "mulai": "31 October 2025 12:01",
+        "tahapan": "Pengumuman Hasil Evaluasi Administrasi dan Teknis"
+      },
+      {
+        "akhir": "31 October 2025 18:00",
+        "mulai": "31 October 2025 17:00",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File II: Harga"
+      },
+      {
+        "akhir": "31 October 2025 20:00",
+        "mulai": "31 October 2025 18:00",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "31 October 2025 21:00",
+        "mulai": "31 October 2025 20:01",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "06 November 2025 08:00",
+        "mulai": "31 October 2025 21:00",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "07 November 2025 16:00",
+        "mulai": "06 November 2025 08:00",
+        "tahapan": "Klarifikasi dan Negosiasi Teknis dan Biaya"
+      },
+      {
+        "akhir": "10 November 2025 16:00",
+        "mulai": "10 November 2025 08:00",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "11 November 2025 16:00",
+        "mulai": "11 November 2025 08:00",
+        "tahapan": "Penandatanganan Kontrak"
+      }
+    ],
+    "metadata": {
+      "lokasi_pekerjaan": "Jakarta Pusat (Kota)-DKI Jakarta",
+      "nama_tender": "Audit Kinerja BUMD (Diagnostic Performance Review) Terhadap Perumda Dharma Jaya",
+      "sumber_dana": "APBDP",
+      "kode_tender": "10079487000",
+      "cara_pembayaran": "Lumsum",
+      "satuan_kerja": "BADAN PEMBINAAN BADAN USAHA MILIK DAERAH",
+      "instansi": "Provinsi DKI Jakarta",
+      "tahun_anggaran": 2025,
+      "tanggal_tender": "18 Sep 2025 s/d 11 Nov 2025",
+      "kategori": "Jasa Konsultansi Badan Usaha Non Konstruksi",
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "metode_tender": "Seleksi",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.M_nNyd2Zf_E21-3G.tEUl5ekrt3XUZ3E_g9yA6NUFwXtYsOjiavzKAYLWrDw"
+    }
+  },
+  "raw_response": {
+    "detail": {
+      "lokasi_pekerjaan": "Jakarta Pusat (Kota)-DKI Jakarta",
+      "nama_tender": "Audit Kinerja BUMD (Diagnostic Performance Review) Terhadap Perumda Dharma Jaya",
+      "kualifikasi_usaha": "",
+      "metode_evaluasi": "Pagu Anggaran",
+      "sumber_dana": "APBDP",
+      "kode_tender": "10079487000",
+      "cara_pembayaran": "Lumsum",
+      "satuan_kerja": "BADAN PEMBINAAN BADAN USAHA MILIK DAERAH",
+      "instansi": "Provinsi DKI Jakarta",
+      "nilai_pagu": 2165520000,
+      "tahun_anggaran": 2025,
+      "tanggal_tender": "18 Sep 2025 s/d 11 Nov 2025",
+      "nilai_hps": 2146185000,
+      "kategori": "Jasa Konsultansi Badan Usaha Non Konstruksi",
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "metode_tender": "Seleksi",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.M_nNyd2Zf_E21-3G.tEUl5ekrt3XUZ3E_g9yA6NUFwXtYsOjiavzKAYLWrDw"
+    },
+    "jadwal": [
+      {
+        "akhir": "25 September 2025 23:59",
+        "mulai": "18 September 2025 21:00",
+        "tahapan": "Pengumuman Prakualifikasi"
+      },
+      {
+        "akhir": "29 September 2025 12:00",
+        "mulai": "18 September 2025 21:01",
+        "tahapan": "Download Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "22 September 2025 10:00",
+        "mulai": "22 September 2025 09:00",
+        "tahapan": "Penjelasan Dokumen Prakualifikasi"
+      },
+      {
+        "akhir": "29 September 2025 12:00",
+        "mulai": "22 September 2025 12:00",
+        "tahapan": "Kirim Persyaratan Kualifikasi"
+      },
+      {
+        "akhir": "10 October 2025 15:00",
+        "mulai": "29 September 2025 12:01",
+        "tahapan": "Evaluasi Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "10 October 2025 15:00",
+        "mulai": "02 October 2025 08:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "10 October 2025 16:00",
+        "mulai": "10 October 2025 15:00",
+        "tahapan": "Penetapan Hasil Kualifikasi"
+      },
+      {
+        "akhir": "10 October 2025 17:00",
+        "mulai": "10 October 2025 16:01",
+        "tahapan": "Pengumuman Hasil Prakualifikasi"
+      },
+      {
+        "akhir": "16 October 2025 08:00",
+        "mulai": "10 October 2025 17:01",
+        "tahapan": "Masa Sanggah Prakualifikasi"
+      },
+      {
+        "akhir": "27 October 2025 12:00",
+        "mulai": "16 October 2025 08:00",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "20 October 2025 14:45",
+        "mulai": "20 October 2025 09:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "27 October 2025 12:00",
+        "mulai": "20 October 2025 15:00",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "31 October 2025 12:00",
+        "mulai": "27 October 2025 12:01",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File I: Administrasi dan Teknis"
+      },
+      {
+        "akhir": "31 October 2025 17:00",
+        "mulai": "31 October 2025 12:01",
+        "tahapan": "Pengumuman Hasil Evaluasi Administrasi dan Teknis"
+      },
+      {
+        "akhir": "31 October 2025 18:00",
+        "mulai": "31 October 2025 17:00",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File II: Harga"
+      },
+      {
+        "akhir": "31 October 2025 20:00",
+        "mulai": "31 October 2025 18:00",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "31 October 2025 21:00",
+        "mulai": "31 October 2025 20:01",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "06 November 2025 08:00",
+        "mulai": "31 October 2025 21:00",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "07 November 2025 16:00",
+        "mulai": "06 November 2025 08:00",
+        "tahapan": "Klarifikasi dan Negosiasi Teknis dan Biaya"
+      },
+      {
+        "akhir": "10 November 2025 16:00",
+        "mulai": "10 November 2025 08:00",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "11 November 2025 16:00",
+        "mulai": "11 November 2025 08:00",
+        "tahapan": "Penandatanganan Kontrak"
+      }
+    ]
+  }
+}

@@ -1,0 +1,258 @@
+{
+  "schema_version": 1,
+  "package_id": "10097213000",
+  "request": {
+    "parameter": "kode_paket",
+    "package_id": "10097213000"
+  },
+  "http_status": 200,
+  "attempts": 1,
+  "fetched_at_utc": "2026-07-15T03:16:26+00:00",
+  "status": "success",
+  "detail": {
+    "hps": 437189860000,
+    "pagu": 472944860000,
+    "metode_evaluasi": "Harga Terendah Ambang Batas",
+    "jadwal": [
+      {
+        "akhir": "14 November 2025 18:00",
+        "mulai": "07 November 2025 18:00",
+        "tahapan": "Pengumuman Prakualifikasi"
+      },
+      {
+        "akhir": "17 November 2025 09:00",
+        "mulai": "07 November 2025 18:01",
+        "tahapan": "Download Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "17 November 2025 09:00",
+        "mulai": "10 November 2025 15:00",
+        "tahapan": "Kirim Persyaratan Kualifikasi"
+      },
+      {
+        "akhir": "19 November 2025 16:00",
+        "mulai": "17 November 2025 09:01",
+        "tahapan": "Evaluasi Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "19 November 2025 16:15",
+        "mulai": "18 November 2025 08:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "19 November 2025 18:00",
+        "mulai": "19 November 2025 16:16",
+        "tahapan": "Penetapan Hasil Kualifikasi"
+      },
+      {
+        "akhir": "19 November 2025 18:00",
+        "mulai": "19 November 2025 17:01",
+        "tahapan": "Pengumuman Hasil Prakualifikasi"
+      },
+      {
+        "akhir": "24 November 2025 18:01",
+        "mulai": "19 November 2025 18:01",
+        "tahapan": "Masa Sanggah Prakualifikasi"
+      },
+      {
+        "akhir": "02 December 2025 14:00",
+        "mulai": "24 November 2025 19:00",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "27 November 2025 18:45",
+        "mulai": "27 November 2025 09:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "02 December 2025 14:00",
+        "mulai": "27 November 2025 18:46",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "10 December 2025 21:15",
+        "mulai": "02 December 2025 14:01",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File I: Administrasi dan Teknis"
+      },
+      {
+        "akhir": "10 December 2025 21:25",
+        "mulai": "10 December 2025 21:16",
+        "tahapan": "Pengumuman Hasil Evaluasi Administrasi dan Teknis"
+      },
+      {
+        "akhir": "12 December 2025 20:15",
+        "mulai": "10 December 2025 21:30",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File II: Harga"
+      },
+      {
+        "akhir": "12 December 2025 20:45",
+        "mulai": "12 December 2025 20:20",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "12 December 2025 20:59",
+        "mulai": "12 December 2025 20:46",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "17 December 2025 21:00",
+        "mulai": "12 December 2025 21:00",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "18 December 2025 16:00",
+        "mulai": "18 December 2025 08:00",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "19 December 2025 16:00",
+        "mulai": "19 December 2025 08:00",
+        "tahapan": "Penandatanganan Kontrak"
+      },
+      {
+        "akhir": "10 November 2025 10:00",
+        "mulai": "10 November 2025 09:00",
+        "tahapan": "Penjelasan Dokumen Prakualifikasi"
+      }
+    ],
+    "metadata": {
+      "nama_tender": "Revitalisasi dan Penataan DAS Polder Kamal Tahap I",
+      "cara_pembayaran": "Gabungan Lumsum dan Harga Satuan",
+      "kualifikasi_usaha": "Besar",
+      "lokasi_pekerjaan": "Jakarta Utara (Kota)-DKI Jakarta",
+      "instansi": "Provinsi DKI Jakarta",
+      "metode_tender": "Tender",
+      "satuan_kerja": "DINAS SUMBER DAYA AIR",
+      "tahun_anggaran": 2025,
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "kategori": "Pekerjaan Konstruksi",
+      "kode_tender": "10097213000",
+      "sumber_dana": "APBD",
+      "tanggal_tender": "07 Nov 2025 s/d 19 Dec 2025",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.b7jAe9ay9NB98Vg7.rkkVF9PRcjd6vx9ea11H8DoM2QurrAuzs2ysYwvQDGo"
+    }
+  },
+  "raw_response": {
+    "detail": {
+      "nama_tender": "Revitalisasi dan Penataan DAS Polder Kamal Tahap I",
+      "cara_pembayaran": "Gabungan Lumsum dan Harga Satuan",
+      "kualifikasi_usaha": "Besar",
+      "lokasi_pekerjaan": "Jakarta Utara (Kota)-DKI Jakarta",
+      "instansi": "Provinsi DKI Jakarta",
+      "metode_tender": "Tender",
+      "satuan_kerja": "DINAS SUMBER DAYA AIR",
+      "tahun_anggaran": 2025,
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "kategori": "Pekerjaan Konstruksi",
+      "kode_tender": "10097213000",
+      "nilai_hps": 437189860000,
+      "sumber_dana": "APBD",
+      "metode_evaluasi": "Harga Terendah Ambang Batas",
+      "nilai_pagu": 472944860000,
+      "tanggal_tender": "07 Nov 2025 s/d 19 Dec 2025",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.b7jAe9ay9NB98Vg7.rkkVF9PRcjd6vx9ea11H8DoM2QurrAuzs2ysYwvQDGo"
+    },
+    "jadwal": [
+      {
+        "akhir": "14 November 2025 18:00",
+        "mulai": "07 November 2025 18:00",
+        "tahapan": "Pengumuman Prakualifikasi"
+      },
+      {
+        "akhir": "17 November 2025 09:00",
+        "mulai": "07 November 2025 18:01",
+        "tahapan": "Download Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "17 November 2025 09:00",
+        "mulai": "10 November 2025 15:00",
+        "tahapan": "Kirim Persyaratan Kualifikasi"
+      },
+      {
+        "akhir": "19 November 2025 16:00",
+        "mulai": "17 November 2025 09:01",
+        "tahapan": "Evaluasi Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "19 November 2025 16:15",
+        "mulai": "18 November 2025 08:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "19 November 2025 18:00",
+        "mulai": "19 November 2025 16:16",
+        "tahapan": "Penetapan Hasil Kualifikasi"
+      },
+      {
+        "akhir": "19 November 2025 18:00",
+        "mulai": "19 November 2025 17:01",
+        "tahapan": "Pengumuman Hasil Prakualifikasi"
+      },
+      {
+        "akhir": "24 November 2025 18:01",
+        "mulai": "19 November 2025 18:01",
+        "tahapan": "Masa Sanggah Prakualifikasi"
+      },
+      {
+        "akhir": "02 December 2025 14:00",
+        "mulai": "24 November 2025 19:00",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "27 November 2025 18:45",
+        "mulai": "27 November 2025 09:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "02 December 2025 14:00",
+        "mulai": "27 November 2025 18:46",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "10 December 2025 21:15",
+        "mulai": "02 December 2025 14:01",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File I: Administrasi dan Teknis"
+      },
+      {
+        "akhir": "10 December 2025 21:25",
+        "mulai": "10 December 2025 21:16",
+        "tahapan": "Pengumuman Hasil Evaluasi Administrasi dan Teknis"
+      },
+      {
+        "akhir": "12 December 2025 20:15",
+        "mulai": "10 December 2025 21:30",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File II: Harga"
+      },
+      {
+        "akhir": "12 December 2025 20:45",
+        "mulai": "12 December 2025 20:20",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "12 December 2025 20:59",
+        "mulai": "12 December 2025 20:46",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "17 December 2025 21:00",
+        "mulai": "12 December 2025 21:00",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "18 December 2025 16:00",
+        "mulai": "18 December 2025 08:00",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "19 December 2025 16:00",
+        "mulai": "19 December 2025 08:00",
+        "tahapan": "Penandatanganan Kontrak"
+      },
+      {
+        "akhir": "10 November 2025 10:00",
+        "mulai": "10 November 2025 09:00",
+        "tahapan": "Penjelasan Dokumen Prakualifikasi"
+      }
+    ]
+  }
+}

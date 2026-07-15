@@ -1,0 +1,268 @@
+{
+  "schema_version": 1,
+  "package_id": "10125922000",
+  "request": {
+    "parameter": "kode_paket",
+    "package_id": "10125922000"
+  },
+  "http_status": 200,
+  "attempts": 1,
+  "fetched_at_utc": "2026-07-15T03:19:06+00:00",
+  "status": "success",
+  "detail": {
+    "hps": 873126000,
+    "pagu": 880992000,
+    "metode_evaluasi": "Pagu Anggaran",
+    "jadwal": [
+      {
+        "akhir": "04 May 2026 12:00",
+        "mulai": "27 April 2026 12:00",
+        "tahapan": "Pengumuman Prakualifikasi"
+      },
+      {
+        "akhir": "07 May 2026 12:00",
+        "mulai": "27 April 2026 12:00",
+        "tahapan": "Download Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "30 April 2026 09:00",
+        "mulai": "30 April 2026 08:00",
+        "tahapan": "Penjelasan Dokumen Prakualifikasi"
+      },
+      {
+        "akhir": "07 May 2026 12:00",
+        "mulai": "30 April 2026 12:00",
+        "tahapan": "Kirim Persyaratan Kualifikasi"
+      },
+      {
+        "akhir": "12 May 2026 16:00",
+        "mulai": "07 May 2026 12:01",
+        "tahapan": "Evaluasi Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "12 May 2026 16:00",
+        "mulai": "11 May 2026 08:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "12 May 2026 17:00",
+        "mulai": "12 May 2026 16:01",
+        "tahapan": "Penetapan Hasil Kualifikasi"
+      },
+      {
+        "akhir": "12 May 2026 18:00",
+        "mulai": "12 May 2026 17:01",
+        "tahapan": "Pengumuman Hasil Prakualifikasi"
+      },
+      {
+        "akhir": "18 May 2026 08:00",
+        "mulai": "12 May 2026 18:01",
+        "tahapan": "Masa Sanggah Prakualifikasi"
+      },
+      {
+        "akhir": "25 May 2026 08:00",
+        "mulai": "18 May 2026 08:01",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "19 May 2026 09:00",
+        "mulai": "19 May 2026 08:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "25 May 2026 08:00",
+        "mulai": "19 May 2026 12:00",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "26 May 2026 15:30",
+        "mulai": "25 May 2026 08:01",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File I: Administrasi dan Teknis"
+      },
+      {
+        "akhir": "26 May 2026 16:00",
+        "mulai": "26 May 2026 15:31",
+        "tahapan": "Pengumuman Hasil Evaluasi Administrasi dan Teknis"
+      },
+      {
+        "akhir": "26 May 2026 17:00",
+        "mulai": "26 May 2026 16:01",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File II: Harga"
+      },
+      {
+        "akhir": "26 May 2026 18:00",
+        "mulai": "26 May 2026 17:01",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "26 May 2026 19:00",
+        "mulai": "26 May 2026 18:01",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "02 June 2026 08:00",
+        "mulai": "26 May 2026 19:01",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "03 June 2026 16:00",
+        "mulai": "02 June 2026 08:01",
+        "tahapan": "Klarifikasi dan Negosiasi Teknis dan Biaya"
+      },
+      {
+        "akhir": "04 June 2026 16:00",
+        "mulai": "04 June 2026 08:00",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "05 June 2026 16:00",
+        "mulai": "05 June 2026 08:00",
+        "tahapan": "Penandatanganan Kontrak"
+      }
+    ],
+    "metadata": {
+      "instansi": "Provinsi DKI Jakarta",
+      "satuan_kerja": "DINAS KESEHATAN",
+      "tahun_anggaran": 2026,
+      "kualifikasi_usaha": "Kecil",
+      "sumber_dana": "APBD",
+      "cara_pembayaran": "Lumsum",
+      "metode_tender": "Seleksi",
+      "nama_tender": "Penyusunan Feasibility Study (FS) Rumah Sakit  di Wilayah Grogol Petamburan",
+      "tanggal_tender": "27 Apr 2026 s/d 05 Jun 2026",
+      "lokasi_pekerjaan": "Jakarta Pusat (Kota)-DKI Jakarta",
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "kategori": "Jasa Konsultansi Badan Usaha Konstruksi",
+      "kode_tender": "10125922000",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.sOaa8V3jDqfSkGNH.iErofMKTBuDAoB2nt2W_o-jQu4s8oAvd25W8fALtMwY"
+    }
+  },
+  "raw_response": {
+    "detail": {
+      "instansi": "Provinsi DKI Jakarta",
+      "satuan_kerja": "DINAS KESEHATAN",
+      "tahun_anggaran": 2026,
+      "kualifikasi_usaha": "Kecil",
+      "metode_evaluasi": "Pagu Anggaran",
+      "nilai_pagu": 880992000,
+      "sumber_dana": "APBD",
+      "cara_pembayaran": "Lumsum",
+      "nilai_hps": 873126000,
+      "metode_tender": "Seleksi",
+      "nama_tender": "Penyusunan Feasibility Study (FS) Rumah Sakit  di Wilayah Grogol Petamburan",
+      "tanggal_tender": "27 Apr 2026 s/d 05 Jun 2026",
+      "lokasi_pekerjaan": "Jakarta Pusat (Kota)-DKI Jakarta",
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "kategori": "Jasa Konsultansi Badan Usaha Konstruksi",
+      "kode_tender": "10125922000",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.sOaa8V3jDqfSkGNH.iErofMKTBuDAoB2nt2W_o-jQu4s8oAvd25W8fALtMwY"
+    },
+    "jadwal": [
+      {
+        "akhir": "04 May 2026 12:00",
+        "mulai": "27 April 2026 12:00",
+        "tahapan": "Pengumuman Prakualifikasi"
+      },
+      {
+        "akhir": "07 May 2026 12:00",
+        "mulai": "27 April 2026 12:00",
+        "tahapan": "Download Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "30 April 2026 09:00",
+        "mulai": "30 April 2026 08:00",
+        "tahapan": "Penjelasan Dokumen Prakualifikasi"
+      },
+      {
+        "akhir": "07 May 2026 12:00",
+        "mulai": "30 April 2026 12:00",
+        "tahapan": "Kirim Persyaratan Kualifikasi"
+      },
+      {
+        "akhir": "12 May 2026 16:00",
+        "mulai": "07 May 2026 12:01",
+        "tahapan": "Evaluasi Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "12 May 2026 16:00",
+        "mulai": "11 May 2026 08:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "12 May 2026 17:00",
+        "mulai": "12 May 2026 16:01",
+        "tahapan": "Penetapan Hasil Kualifikasi"
+      },
+      {
+        "akhir": "12 May 2026 18:00",
+        "mulai": "12 May 2026 17:01",
+        "tahapan": "Pengumuman Hasil Prakualifikasi"
+      },
+      {
+        "akhir": "18 May 2026 08:00",
+        "mulai": "12 May 2026 18:01",
+        "tahapan": "Masa Sanggah Prakualifikasi"
+      },
+      {
+        "akhir": "25 May 2026 08:00",
+        "mulai": "18 May 2026 08:01",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "19 May 2026 09:00",
+        "mulai": "19 May 2026 08:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "25 May 2026 08:00",
+        "mulai": "19 May 2026 12:00",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "26 May 2026 15:30",
+        "mulai": "25 May 2026 08:01",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File I: Administrasi dan Teknis"
+      },
+      {
+        "akhir": "26 May 2026 16:00",
+        "mulai": "26 May 2026 15:31",
+        "tahapan": "Pengumuman Hasil Evaluasi Administrasi dan Teknis"
+      },
+      {
+        "akhir": "26 May 2026 17:00",
+        "mulai": "26 May 2026 16:01",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File II: Harga"
+      },
+      {
+        "akhir": "26 May 2026 18:00",
+        "mulai": "26 May 2026 17:01",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "26 May 2026 19:00",
+        "mulai": "26 May 2026 18:01",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "02 June 2026 08:00",
+        "mulai": "26 May 2026 19:01",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "03 June 2026 16:00",
+        "mulai": "02 June 2026 08:01",
+        "tahapan": "Klarifikasi dan Negosiasi Teknis dan Biaya"
+      },
+      {
+        "akhir": "04 June 2026 16:00",
+        "mulai": "04 June 2026 08:00",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "05 June 2026 16:00",
+        "mulai": "05 June 2026 08:00",
+        "tahapan": "Penandatanganan Kontrak"
+      }
+    ]
+  }
+}

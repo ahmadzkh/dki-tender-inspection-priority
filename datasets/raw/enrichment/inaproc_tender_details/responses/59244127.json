@@ -1,0 +1,268 @@
+{
+  "schema_version": 1,
+  "package_id": "59244127",
+  "request": {
+    "parameter": "kode_paket",
+    "package_id": "59244127"
+  },
+  "http_status": 200,
+  "attempts": 1,
+  "fetched_at_utc": "2026-07-15T03:14:15+00:00",
+  "status": "success",
+  "detail": {
+    "hps": 372769501.8,
+    "pagu": 372769502,
+    "metode_evaluasi": "Pagu Anggaran",
+    "jadwal": [
+      {
+        "akhir": "19 January 2024 23:59",
+        "mulai": "11 January 2024 15:00",
+        "tahapan": "Pengumuman Prakualifikasi"
+      },
+      {
+        "akhir": "22 January 2024 14:00",
+        "mulai": "11 January 2024 16:00",
+        "tahapan": "Download Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "15 January 2024 10:00",
+        "mulai": "15 January 2024 09:00",
+        "tahapan": "Penjelasan Dokumen Prakualifikasi"
+      },
+      {
+        "akhir": "22 January 2024 14:00",
+        "mulai": "15 January 2024 13:00",
+        "tahapan": "Kirim Persyaratan Kualifikasi"
+      },
+      {
+        "akhir": "30 January 2024 23:59",
+        "mulai": "22 January 2024 15:00",
+        "tahapan": "Evaluasi Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "31 January 2024 10:00",
+        "mulai": "29 January 2024 08:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "31 January 2024 15:00",
+        "mulai": "31 January 2024 10:01",
+        "tahapan": "Penetapan Hasil Kualifikasi"
+      },
+      {
+        "akhir": "31 January 2024 23:59",
+        "mulai": "31 January 2024 15:01",
+        "tahapan": "Pengumuman Hasil Prakualifikasi"
+      },
+      {
+        "akhir": "06 February 2024 08:00",
+        "mulai": "01 February 2024 08:00",
+        "tahapan": "Masa Sanggah Prakualifikasi"
+      },
+      {
+        "akhir": "16 February 2024 15:00",
+        "mulai": "07 February 2024 08:00",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "12 February 2024 10:00",
+        "mulai": "12 February 2024 09:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "16 February 2024 15:00",
+        "mulai": "12 February 2024 11:00",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "28 February 2024 14:00",
+        "mulai": "16 February 2024 15:01",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File I: Administrasi dan Teknis"
+      },
+      {
+        "akhir": "28 February 2024 23:59",
+        "mulai": "28 February 2024 15:00",
+        "tahapan": "Pengumuman Hasil Evaluasi Administrasi dan Teknis"
+      },
+      {
+        "akhir": "29 February 2024 23:59",
+        "mulai": "29 February 2024 08:00",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File II: Harga"
+      },
+      {
+        "akhir": "01 March 2024 16:00",
+        "mulai": "01 March 2024 08:01",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "01 March 2024 23:59",
+        "mulai": "01 March 2024 16:01",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "07 March 2024 08:00",
+        "mulai": "02 March 2024 08:00",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "08 March 2024 15:00",
+        "mulai": "08 March 2024 08:00",
+        "tahapan": "Klarifikasi dan Negosiasi Teknis dan Biaya"
+      },
+      {
+        "akhir": "13 March 2024 15:00",
+        "mulai": "11 March 2024 08:00",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "15 March 2024 15:00",
+        "mulai": "14 March 2024 08:00",
+        "tahapan": "Penandatanganan Kontrak"
+      }
+    ],
+    "metadata": {
+      "sumber_dana": "APBD",
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "kategori": "Jasa Konsultansi Badan Usaha Konstruksi",
+      "satuan_kerja": "DINAS PERUMAHAN RAKYAT DAN KAWASAN PERMUKIMAN",
+      "tahun_anggaran": 2024,
+      "kualifikasi_usaha": "Kecil",
+      "cara_pembayaran": "Lumsum",
+      "instansi": "Provinsi DKI Jakarta",
+      "nama_tender": "Jasa Konsultansi Perencanaan Pemeliharaan Berkala Rumah Susun 1 (Pengadegan)",
+      "kode_tender": "59244127",
+      "tanggal_tender": "11 Jan 2024 s/d 15 Mar 2024",
+      "lokasi_pekerjaan": "Jakarta Selatan (Kota)-DKI Jakarta",
+      "metode_tender": "Seleksi",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.w_SkvljQCM5wu1uM.CUHRg4e9HXXWkO6KG0jyiabtPev2bMuRWoBaYgsIP_U"
+    }
+  },
+  "raw_response": {
+    "detail": {
+      "sumber_dana": "APBD",
+      "nilai_pagu": 372769502,
+      "metode_evaluasi": "Pagu Anggaran",
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "kategori": "Jasa Konsultansi Badan Usaha Konstruksi",
+      "satuan_kerja": "DINAS PERUMAHAN RAKYAT DAN KAWASAN PERMUKIMAN",
+      "tahun_anggaran": 2024,
+      "kualifikasi_usaha": "Kecil",
+      "cara_pembayaran": "Lumsum",
+      "instansi": "Provinsi DKI Jakarta",
+      "nama_tender": "Jasa Konsultansi Perencanaan Pemeliharaan Berkala Rumah Susun 1 (Pengadegan)",
+      "kode_tender": "59244127",
+      "tanggal_tender": "11 Jan 2024 s/d 15 Mar 2024",
+      "nilai_hps": 372769501.8,
+      "lokasi_pekerjaan": "Jakarta Selatan (Kota)-DKI Jakarta",
+      "metode_tender": "Seleksi",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.w_SkvljQCM5wu1uM.CUHRg4e9HXXWkO6KG0jyiabtPev2bMuRWoBaYgsIP_U"
+    },
+    "jadwal": [
+      {
+        "akhir": "19 January 2024 23:59",
+        "mulai": "11 January 2024 15:00",
+        "tahapan": "Pengumuman Prakualifikasi"
+      },
+      {
+        "akhir": "22 January 2024 14:00",
+        "mulai": "11 January 2024 16:00",
+        "tahapan": "Download Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "15 January 2024 10:00",
+        "mulai": "15 January 2024 09:00",
+        "tahapan": "Penjelasan Dokumen Prakualifikasi"
+      },
+      {
+        "akhir": "22 January 2024 14:00",
+        "mulai": "15 January 2024 13:00",
+        "tahapan": "Kirim Persyaratan Kualifikasi"
+      },
+      {
+        "akhir": "30 January 2024 23:59",
+        "mulai": "22 January 2024 15:00",
+        "tahapan": "Evaluasi Dokumen Kualifikasi"
+      },
+      {
+        "akhir": "31 January 2024 10:00",
+        "mulai": "29 January 2024 08:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "31 January 2024 15:00",
+        "mulai": "31 January 2024 10:01",
+        "tahapan": "Penetapan Hasil Kualifikasi"
+      },
+      {
+        "akhir": "31 January 2024 23:59",
+        "mulai": "31 January 2024 15:01",
+        "tahapan": "Pengumuman Hasil Prakualifikasi"
+      },
+      {
+        "akhir": "06 February 2024 08:00",
+        "mulai": "01 February 2024 08:00",
+        "tahapan": "Masa Sanggah Prakualifikasi"
+      },
+      {
+        "akhir": "16 February 2024 15:00",
+        "mulai": "07 February 2024 08:00",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "12 February 2024 10:00",
+        "mulai": "12 February 2024 09:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "16 February 2024 15:00",
+        "mulai": "12 February 2024 11:00",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "28 February 2024 14:00",
+        "mulai": "16 February 2024 15:01",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File I: Administrasi dan Teknis"
+      },
+      {
+        "akhir": "28 February 2024 23:59",
+        "mulai": "28 February 2024 15:00",
+        "tahapan": "Pengumuman Hasil Evaluasi Administrasi dan Teknis"
+      },
+      {
+        "akhir": "29 February 2024 23:59",
+        "mulai": "29 February 2024 08:00",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File II: Harga"
+      },
+      {
+        "akhir": "01 March 2024 16:00",
+        "mulai": "01 March 2024 08:01",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "01 March 2024 23:59",
+        "mulai": "01 March 2024 16:01",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "07 March 2024 08:00",
+        "mulai": "02 March 2024 08:00",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "08 March 2024 15:00",
+        "mulai": "08 March 2024 08:00",
+        "tahapan": "Klarifikasi dan Negosiasi Teknis dan Biaya"
+      },
+      {
+        "akhir": "13 March 2024 15:00",
+        "mulai": "11 March 2024 08:00",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "15 March 2024 15:00",
+        "mulai": "14 March 2024 08:00",
+        "tahapan": "Penandatanganan Kontrak"
+      }
+    ]
+  }
+}

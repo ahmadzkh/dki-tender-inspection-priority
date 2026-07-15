@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "source_csv": "datasets/raw/realisasi_dki_jakarta_2024_2026.csv",
+  "cache_dir": "datasets/raw/enrichment/inaproc_tender_details",
+  "package_count": 1277,
+  "attempted_count": 0,
+  "skipped_success_count": 1277,
+  "success_count": 1277,
+  "failure_count": 0,
+  "status_counts": {},
+  "updated_at_utc": "2026-07-15T03:27:25+00:00"
+}

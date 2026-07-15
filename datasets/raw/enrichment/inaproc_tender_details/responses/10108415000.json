@@ -1,0 +1,178 @@
+{
+  "schema_version": 1,
+  "package_id": "10108415000",
+  "request": {
+    "parameter": "kode_paket",
+    "package_id": "10108415000"
+  },
+  "http_status": 200,
+  "attempts": 1,
+  "fetched_at_utc": "2026-07-15T03:20:46+00:00",
+  "status": "success",
+  "detail": {
+    "hps": 19982534849.6,
+    "pagu": 20229057239,
+    "metode_evaluasi": "Harga Terendah Sistem Gugur",
+    "jadwal": [
+      {
+        "akhir": "11 January 2026 18:00",
+        "mulai": "06 January 2026 18:00",
+        "tahapan": "Pengumuman Pascakualifikasi"
+      },
+      {
+        "akhir": "14 January 2026 12:00",
+        "mulai": "06 January 2026 18:00",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "09 January 2026 10:00",
+        "mulai": "09 January 2026 09:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "14 January 2026 12:00",
+        "mulai": "09 January 2026 12:00",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "14 January 2026 13:00",
+        "mulai": "14 January 2026 12:01",
+        "tahapan": "Pembukaan Dokumen Penawaran"
+      },
+      {
+        "akhir": "22 January 2026 16:00",
+        "mulai": "14 January 2026 13:01",
+        "tahapan": "Evaluasi Administrasi, Kualifikasi, Teknis, dan Harga"
+      },
+      {
+        "akhir": "22 January 2026 16:00",
+        "mulai": "21 January 2026 08:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "22 January 2026 17:00",
+        "mulai": "22 January 2026 16:01",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "22 January 2026 18:00",
+        "mulai": "22 January 2026 17:01",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "28 January 2026 08:00",
+        "mulai": "22 January 2026 18:01",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "29 January 2026 16:00",
+        "mulai": "28 January 2026 09:00",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "30 January 2026 16:00",
+        "mulai": "30 January 2026 08:00",
+        "tahapan": "Penandatanganan Kontrak"
+      }
+    ],
+    "metadata": {
+      "cara_pembayaran": "Harga Satuan",
+      "kategori": "Jasa Lainnya",
+      "tahun_anggaran": 2026,
+      "metode_tender": "Tender",
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "kualifikasi_usaha": "Non Kecil",
+      "nama_tender": "Penyelenggaraan Mudik dan Balik Gratis Angkutan Lebaran Provinsi DKI Jakarta Tahun 2026",
+      "sumber_dana": "APBD",
+      "tanggal_tender": "06 Jan 2026 s/d 30 Jan 2026",
+      "instansi": "Provinsi DKI Jakarta",
+      "kode_tender": "10108415000",
+      "satuan_kerja": "DINAS PERHUBUNGAN",
+      "lokasi_pekerjaan": "Jakarta Pusat (Kota)-DKI Jakarta",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.0n0WpdQ0_GgtpFL7.IUrs1uR63T-EhmKJpcRngycm3YrtbZcULXCId276hd8"
+    }
+  },
+  "raw_response": {
+    "detail": {
+      "cara_pembayaran": "Harga Satuan",
+      "kategori": "Jasa Lainnya",
+      "nilai_pagu": 20229057239,
+      "nilai_hps": 19982534849.6,
+      "tahun_anggaran": 2026,
+      "metode_tender": "Tender",
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "metode_evaluasi": "Harga Terendah Sistem Gugur",
+      "kualifikasi_usaha": "Non Kecil",
+      "nama_tender": "Penyelenggaraan Mudik dan Balik Gratis Angkutan Lebaran Provinsi DKI Jakarta Tahun 2026",
+      "sumber_dana": "APBD",
+      "tanggal_tender": "06 Jan 2026 s/d 30 Jan 2026",
+      "instansi": "Provinsi DKI Jakarta",
+      "kode_tender": "10108415000",
+      "satuan_kerja": "DINAS PERHUBUNGAN",
+      "lokasi_pekerjaan": "Jakarta Pusat (Kota)-DKI Jakarta",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.0n0WpdQ0_GgtpFL7.IUrs1uR63T-EhmKJpcRngycm3YrtbZcULXCId276hd8"
+    },
+    "jadwal": [
+      {
+        "akhir": "11 January 2026 18:00",
+        "mulai": "06 January 2026 18:00",
+        "tahapan": "Pengumuman Pascakualifikasi"
+      },
+      {
+        "akhir": "14 January 2026 12:00",
+        "mulai": "06 January 2026 18:00",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "09 January 2026 10:00",
+        "mulai": "09 January 2026 09:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "14 January 2026 12:00",
+        "mulai": "09 January 2026 12:00",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "14 January 2026 13:00",
+        "mulai": "14 January 2026 12:01",
+        "tahapan": "Pembukaan Dokumen Penawaran"
+      },
+      {
+        "akhir": "22 January 2026 16:00",
+        "mulai": "14 January 2026 13:01",
+        "tahapan": "Evaluasi Administrasi, Kualifikasi, Teknis, dan Harga"
+      },
+      {
+        "akhir": "22 January 2026 16:00",
+        "mulai": "21 January 2026 08:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "22 January 2026 17:00",
+        "mulai": "22 January 2026 16:01",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "22 January 2026 18:00",
+        "mulai": "22 January 2026 17:01",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "28 January 2026 08:00",
+        "mulai": "22 January 2026 18:01",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "29 January 2026 16:00",
+        "mulai": "28 January 2026 09:00",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "30 January 2026 16:00",
+        "mulai": "30 January 2026 08:00",
+        "tahapan": "Penandatanganan Kontrak"
+      }
+    ]
+  }
+}

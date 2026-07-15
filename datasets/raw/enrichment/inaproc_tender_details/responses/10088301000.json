@@ -1,0 +1,178 @@
+{
+  "schema_version": 1,
+  "package_id": "10088301000",
+  "request": {
+    "parameter": "kode_paket",
+    "package_id": "10088301000"
+  },
+  "http_status": 200,
+  "attempts": 1,
+  "fetched_at_utc": "2026-07-15T03:14:39+00:00",
+  "status": "success",
+  "detail": {
+    "hps": 485131312.96,
+    "pagu": 485131313,
+    "metode_evaluasi": "Harga Terendah Sistem Gugur",
+    "jadwal": [
+      {
+        "akhir": "13 October 2025 12:00",
+        "mulai": "06 October 2025 17:00",
+        "tahapan": "Pengumuman Pascakualifikasi"
+      },
+      {
+        "akhir": "13 October 2025 12:00",
+        "mulai": "06 October 2025 21:01",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "08 October 2025 10:00",
+        "mulai": "08 October 2025 09:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "13 October 2025 12:00",
+        "mulai": "08 October 2025 12:00",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "13 October 2025 15:00",
+        "mulai": "13 October 2025 12:01",
+        "tahapan": "Pembukaan Dokumen Penawaran"
+      },
+      {
+        "akhir": "17 October 2025 12:00",
+        "mulai": "13 October 2025 15:00",
+        "tahapan": "Evaluasi Administrasi, Kualifikasi, Teknis, dan Harga"
+      },
+      {
+        "akhir": "17 October 2025 12:00",
+        "mulai": "16 October 2025 08:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "17 October 2025 14:00",
+        "mulai": "17 October 2025 12:00",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "17 October 2025 16:00",
+        "mulai": "17 October 2025 14:01",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "23 October 2025 08:00",
+        "mulai": "17 October 2025 16:00",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "24 October 2025 16:00",
+        "mulai": "23 October 2025 08:00",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "28 October 2025 16:00",
+        "mulai": "27 October 2025 08:00",
+        "tahapan": "Penandatanganan Kontrak"
+      }
+    ],
+    "metadata": {
+      "cara_pembayaran": "Lumsum",
+      "kode_tender": "10088301000",
+      "metode_tender": "Tender",
+      "sumber_dana": "APBD",
+      "nama_tender": "Penyelenggaraan Festival Batavia Green Tourism",
+      "satuan_kerja": "SUKU DINAS PARIWISATA DAN EKONOMI KREATIF KOTA - JAKBAR",
+      "instansi": "Provinsi DKI Jakarta",
+      "kategori": "Jasa Lainnya",
+      "lokasi_pekerjaan": "Jakarta Barat (Kota)-DKI Jakarta",
+      "tahun_anggaran": 2025,
+      "tanggal_tender": "06 Oct 2025 s/d 28 Oct 2025",
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "kualifikasi_usaha": "Kecil",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.aqm7J_cA1E1qdAOz.VFfhJrSiBDR7kcKs9_H89rjDbhKglcs8klGQXf5qlLk"
+    }
+  },
+  "raw_response": {
+    "detail": {
+      "metode_evaluasi": "Harga Terendah Sistem Gugur",
+      "nilai_pagu": 485131313,
+      "cara_pembayaran": "Lumsum",
+      "kode_tender": "10088301000",
+      "metode_tender": "Tender",
+      "nilai_hps": 485131312.96,
+      "sumber_dana": "APBD",
+      "nama_tender": "Penyelenggaraan Festival Batavia Green Tourism",
+      "satuan_kerja": "SUKU DINAS PARIWISATA DAN EKONOMI KREATIF KOTA - JAKBAR",
+      "instansi": "Provinsi DKI Jakarta",
+      "kategori": "Jasa Lainnya",
+      "lokasi_pekerjaan": "Jakarta Barat (Kota)-DKI Jakarta",
+      "tahun_anggaran": 2025,
+      "tanggal_tender": "06 Oct 2025 s/d 28 Oct 2025",
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "kualifikasi_usaha": "Kecil",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.aqm7J_cA1E1qdAOz.VFfhJrSiBDR7kcKs9_H89rjDbhKglcs8klGQXf5qlLk"
+    },
+    "jadwal": [
+      {
+        "akhir": "13 October 2025 12:00",
+        "mulai": "06 October 2025 17:00",
+        "tahapan": "Pengumuman Pascakualifikasi"
+      },
+      {
+        "akhir": "13 October 2025 12:00",
+        "mulai": "06 October 2025 21:01",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "08 October 2025 10:00",
+        "mulai": "08 October 2025 09:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "13 October 2025 12:00",
+        "mulai": "08 October 2025 12:00",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "13 October 2025 15:00",
+        "mulai": "13 October 2025 12:01",
+        "tahapan": "Pembukaan Dokumen Penawaran"
+      },
+      {
+        "akhir": "17 October 2025 12:00",
+        "mulai": "13 October 2025 15:00",
+        "tahapan": "Evaluasi Administrasi, Kualifikasi, Teknis, dan Harga"
+      },
+      {
+        "akhir": "17 October 2025 12:00",
+        "mulai": "16 October 2025 08:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "17 October 2025 14:00",
+        "mulai": "17 October 2025 12:00",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "17 October 2025 16:00",
+        "mulai": "17 October 2025 14:01",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "23 October 2025 08:00",
+        "mulai": "17 October 2025 16:00",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "24 October 2025 16:00",
+        "mulai": "23 October 2025 08:00",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "28 October 2025 16:00",
+        "mulai": "27 October 2025 08:00",
+        "tahapan": "Penandatanganan Kontrak"
+      }
+    ]
+  }
+}

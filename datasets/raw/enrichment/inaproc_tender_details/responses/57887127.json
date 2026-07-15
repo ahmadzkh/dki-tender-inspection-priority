@@ -1,0 +1,198 @@
+{
+  "schema_version": 1,
+  "package_id": "57887127",
+  "request": {
+    "parameter": "kode_paket",
+    "package_id": "57887127"
+  },
+  "http_status": 200,
+  "attempts": 1,
+  "fetched_at_utc": "2026-07-15T03:14:06+00:00",
+  "status": "success",
+  "detail": {
+    "hps": 106837500,
+    "pagu": 122100000,
+    "metode_evaluasi": "Kualitas",
+    "jadwal": [
+      {
+        "akhir": "20 December 2023 23:59",
+        "mulai": "15 December 2023 23:00",
+        "tahapan": "Pengumuman Pascakualifikasi"
+      },
+      {
+        "akhir": "21 December 2023 12:59",
+        "mulai": "15 December 2023 23:00",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "18 December 2023 11:00",
+        "mulai": "18 December 2023 10:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "21 December 2023 12:59",
+        "mulai": "18 December 2023 15:00",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "02 January 2024 11:10",
+        "mulai": "21 December 2023 13:00",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File I: Administrasi, Dokumen Kualifikasi, dan Teknis"
+      },
+      {
+        "akhir": "02 January 2024 16:00",
+        "mulai": "27 December 2023 00:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "08 January 2024 17:05",
+        "mulai": "02 January 2024 16:01",
+        "tahapan": "Pengumuman Hasil Evaluasi Administrasi dan Teknis"
+      },
+      {
+        "akhir": "08 January 2024 17:10",
+        "mulai": "08 January 2024 17:06",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "08 January 2024 23:59",
+        "mulai": "08 January 2024 17:11",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File II: Harga"
+      },
+      {
+        "akhir": "09 January 2024 12:00",
+        "mulai": "09 January 2024 08:00",
+        "tahapan": "Klarifikasi Teknis dan Negosiasi"
+      },
+      {
+        "akhir": "09 January 2024 15:00",
+        "mulai": "09 January 2024 12:01",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "09 January 2024 23:59",
+        "mulai": "09 January 2024 15:01",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "10 January 2024 13:00",
+        "mulai": "10 January 2024 08:00",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "10 January 2024 23:59",
+        "mulai": "10 January 2024 13:01",
+        "tahapan": "Penandatanganan Kontrak"
+      }
+    ],
+    "metadata": {
+      "satuan_kerja": "BADAN PELAYANAN PENGADAAN BARANG/JASA",
+      "tahun_anggaran": 2024,
+      "cara_pembayaran": "Waktu Penugasan",
+      "sumber_dana": "APBD",
+      "tanggal_tender": "15 Dec 2023 s/d 10 Jan 2024",
+      "kode_tender": "57887127",
+      "nama_tender": "Penyediaan Tenaga Ahli Software Programmer 4",
+      "kualifikasi_usaha": "Kecil",
+      "metode_tender": "Seleksi",
+      "lokasi_pekerjaan": "Jakarta Pusat (Kota)-DKI Jakarta",
+      "instansi": "Provinsi DKI Jakarta",
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "kategori": "Jasa Konsultansi Perorangan Non Konstruksi",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.3-F3YB4UGTPXBkR7.GsXlZlemSfTxfe2JTz4J7WgpQYbvXjIEWydc4VccTsQ"
+    }
+  },
+  "raw_response": {
+    "detail": {
+      "nilai_pagu": 122100000,
+      "metode_evaluasi": "Kualitas",
+      "satuan_kerja": "BADAN PELAYANAN PENGADAAN BARANG/JASA",
+      "tahun_anggaran": 2024,
+      "cara_pembayaran": "Waktu Penugasan",
+      "nilai_hps": 106837500,
+      "sumber_dana": "APBD",
+      "tanggal_tender": "15 Dec 2023 s/d 10 Jan 2024",
+      "kode_tender": "57887127",
+      "nama_tender": "Penyediaan Tenaga Ahli Software Programmer 4",
+      "kualifikasi_usaha": "Kecil",
+      "metode_tender": "Seleksi",
+      "lokasi_pekerjaan": "Jakarta Pusat (Kota)-DKI Jakarta",
+      "instansi": "Provinsi DKI Jakarta",
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "kategori": "Jasa Konsultansi Perorangan Non Konstruksi",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.3-F3YB4UGTPXBkR7.GsXlZlemSfTxfe2JTz4J7WgpQYbvXjIEWydc4VccTsQ"
+    },
+    "jadwal": [
+      {
+        "akhir": "20 December 2023 23:59",
+        "mulai": "15 December 2023 23:00",
+        "tahapan": "Pengumuman Pascakualifikasi"
+      },
+      {
+        "akhir": "21 December 2023 12:59",
+        "mulai": "15 December 2023 23:00",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "18 December 2023 11:00",
+        "mulai": "18 December 2023 10:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "21 December 2023 12:59",
+        "mulai": "18 December 2023 15:00",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "02 January 2024 11:10",
+        "mulai": "21 December 2023 13:00",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File I: Administrasi, Dokumen Kualifikasi, dan Teknis"
+      },
+      {
+        "akhir": "02 January 2024 16:00",
+        "mulai": "27 December 2023 00:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "08 January 2024 17:05",
+        "mulai": "02 January 2024 16:01",
+        "tahapan": "Pengumuman Hasil Evaluasi Administrasi dan Teknis"
+      },
+      {
+        "akhir": "08 January 2024 17:10",
+        "mulai": "08 January 2024 17:06",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "08 January 2024 23:59",
+        "mulai": "08 January 2024 17:11",
+        "tahapan": "Pembukaan dan Evaluasi Penawaran File II: Harga"
+      },
+      {
+        "akhir": "09 January 2024 12:00",
+        "mulai": "09 January 2024 08:00",
+        "tahapan": "Klarifikasi Teknis dan Negosiasi"
+      },
+      {
+        "akhir": "09 January 2024 15:00",
+        "mulai": "09 January 2024 12:01",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "09 January 2024 23:59",
+        "mulai": "09 January 2024 15:01",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "10 January 2024 13:00",
+        "mulai": "10 January 2024 08:00",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "10 January 2024 23:59",
+        "mulai": "10 January 2024 13:01",
+        "tahapan": "Penandatanganan Kontrak"
+      }
+    ]
+  }
+}

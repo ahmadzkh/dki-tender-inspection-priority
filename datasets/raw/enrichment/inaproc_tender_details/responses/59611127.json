@@ -1,0 +1,178 @@
+{
+  "schema_version": 1,
+  "package_id": "59611127",
+  "request": {
+    "parameter": "kode_paket",
+    "package_id": "59611127"
+  },
+  "http_status": 200,
+  "attempts": 1,
+  "fetched_at_utc": "2026-07-15T03:13:06+00:00",
+  "status": "success",
+  "detail": {
+    "hps": 40110600400,
+    "pagu": 40110602600,
+    "metode_evaluasi": "Harga Terendah Sistem Gugur",
+    "jadwal": [
+      {
+        "akhir": "22 March 2024 14:00",
+        "mulai": "14 March 2024 20:00",
+        "tahapan": "Pengumuman Pascakualifikasi"
+      },
+      {
+        "akhir": "22 March 2024 14:00",
+        "mulai": "14 March 2024 20:05",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "18 March 2024 14:15",
+        "mulai": "18 March 2024 10:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "22 March 2024 14:00",
+        "mulai": "18 March 2024 14:20",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "22 March 2024 16:00",
+        "mulai": "22 March 2024 14:05",
+        "tahapan": "Pembukaan Dokumen Penawaran"
+      },
+      {
+        "akhir": "07 June 2024 20:45",
+        "mulai": "22 March 2024 14:05",
+        "tahapan": "Evaluasi Administrasi, Kualifikasi, Teknis, dan Harga"
+      },
+      {
+        "akhir": "07 June 2024 18:00",
+        "mulai": "29 May 2024 09:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "07 June 2024 21:05",
+        "mulai": "07 June 2024 20:46",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "07 June 2024 21:30",
+        "mulai": "07 June 2024 21:10",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "13 June 2024 09:00",
+        "mulai": "07 June 2024 21:35",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "14 June 2024 16:00",
+        "mulai": "14 June 2024 08:00",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "20 June 2024 16:00",
+        "mulai": "19 June 2024 08:00",
+        "tahapan": "Penandatanganan Kontrak"
+      }
+    ],
+    "metadata": {
+      "tahun_anggaran": 2024,
+      "nama_tender": "Pembangunan Waduk Marunda Tahap III",
+      "lokasi_pekerjaan": "Jakarta Utara (Kota)-DKI Jakarta",
+      "satuan_kerja": "DINAS SUMBER DAYA AIR",
+      "sumber_dana": "APBD",
+      "cara_pembayaran": "Harga Satuan",
+      "kualifikasi_usaha": "Menengah",
+      "metode_tender": "Tender",
+      "instansi": "Provinsi DKI Jakarta",
+      "kategori": "Pekerjaan Konstruksi",
+      "tanggal_tender": "14 Mar 2024 s/d 20 Jun 2024",
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "kode_tender": "59611127",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.VlQvcXqx_boCN2yt.nTWrVRFkTXAsghHimHHTbDGxmuCf8luKlerUYIsx9RQ"
+    }
+  },
+  "raw_response": {
+    "detail": {
+      "tahun_anggaran": 2024,
+      "nama_tender": "Pembangunan Waduk Marunda Tahap III",
+      "lokasi_pekerjaan": "Jakarta Utara (Kota)-DKI Jakarta",
+      "satuan_kerja": "DINAS SUMBER DAYA AIR",
+      "sumber_dana": "APBD",
+      "cara_pembayaran": "Harga Satuan",
+      "metode_evaluasi": "Harga Terendah Sistem Gugur",
+      "kualifikasi_usaha": "Menengah",
+      "metode_tender": "Tender",
+      "nilai_hps": 40110600400,
+      "instansi": "Provinsi DKI Jakarta",
+      "kategori": "Pekerjaan Konstruksi",
+      "nilai_pagu": 40110602600,
+      "tanggal_tender": "14 Mar 2024 s/d 20 Jun 2024",
+      "tautan_detail_tender": "https://spse.inaproc.id/",
+      "kode_tender": "59611127",
+      "last_update_ref": "b5a39040-8e0b-5ed1-bd55-46f222014506.VlQvcXqx_boCN2yt.nTWrVRFkTXAsghHimHHTbDGxmuCf8luKlerUYIsx9RQ"
+    },
+    "jadwal": [
+      {
+        "akhir": "22 March 2024 14:00",
+        "mulai": "14 March 2024 20:00",
+        "tahapan": "Pengumuman Pascakualifikasi"
+      },
+      {
+        "akhir": "22 March 2024 14:00",
+        "mulai": "14 March 2024 20:05",
+        "tahapan": "Download Dokumen Pemilihan"
+      },
+      {
+        "akhir": "18 March 2024 14:15",
+        "mulai": "18 March 2024 10:00",
+        "tahapan": "Pemberian Penjelasan"
+      },
+      {
+        "akhir": "22 March 2024 14:00",
+        "mulai": "18 March 2024 14:20",
+        "tahapan": "Upload Dokumen Penawaran"
+      },
+      {
+        "akhir": "22 March 2024 16:00",
+        "mulai": "22 March 2024 14:05",
+        "tahapan": "Pembukaan Dokumen Penawaran"
+      },
+      {
+        "akhir": "07 June 2024 20:45",
+        "mulai": "22 March 2024 14:05",
+        "tahapan": "Evaluasi Administrasi, Kualifikasi, Teknis, dan Harga"
+      },
+      {
+        "akhir": "07 June 2024 18:00",
+        "mulai": "29 May 2024 09:00",
+        "tahapan": "Pembuktian Kualifikasi"
+      },
+      {
+        "akhir": "07 June 2024 21:05",
+        "mulai": "07 June 2024 20:46",
+        "tahapan": "Penetapan Pemenang"
+      },
+      {
+        "akhir": "07 June 2024 21:30",
+        "mulai": "07 June 2024 21:10",
+        "tahapan": "Pengumuman Pemenang"
+      },
+      {
+        "akhir": "13 June 2024 09:00",
+        "mulai": "07 June 2024 21:35",
+        "tahapan": "Masa Sanggah"
+      },
+      {
+        "akhir": "14 June 2024 16:00",
+        "mulai": "14 June 2024 08:00",
+        "tahapan": "Surat Penunjukan Penyedia Barang/Jasa"
+      },
+      {
+        "akhir": "20 June 2024 16:00",
+        "mulai": "19 June 2024 08:00",
+        "tahapan": "Penandatanganan Kontrak"
+      }
+    ]
+  }
+}
