@@ -92,7 +92,7 @@ Pencarian `/find-skills` menemukan `obra/superpowers@requesting-code-review` seb
 - **Acceptance:** validasi 14 kolom, identifier string, tahun, status `SELESAI`, sumber `Tender`, missing values, duplikasi, multi-provider, distribusi per tahun, penyedia, dan satuan kerja.
 - **Verification:** fixture invalid wajib gagal dengan pesan spesifik; data aktual menghasilkan angka yang konsisten dengan audit awal atau perubahan dijelaskan.
 
-### [ ] TASK-ML-004 - Build resumable INAPROC enrichment pipeline
+### [x] TASK-ML-004 - Build resumable INAPROC enrichment pipeline
 
 - **Depends on:** `TASK-ML-003`.
 - **Goal:** mengambil detail paket tanpa mengulang request sukses atau kehilangan progres.

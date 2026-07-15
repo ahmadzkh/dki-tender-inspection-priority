@@ -26,7 +26,7 @@ Before any task:
 - **Goal**: Help auditors or procurement analysts decide which completed tender packages to inspect first using traceable data, reproducible anomaly scoring, and neutral explanations.
 - **Target Users**: Government internal auditors/inspectorate staff, procurement analysts, thesis supervisors/examiners, and researchers.
 - **Version**: `0.1.0` foundation/data-preparation stage
-- **Status**: Active development; Python and Next.js foundations plus immutable source-data layout and reproducible source-data audit exist, while enrichment, model, backend API, product UI, containers, and deployment remain unimplemented.
+- **Status**: Active development; Python and Next.js foundations plus immutable source-data layout, reproducible source-data audit, and resumable enrichment runner exist, while full enrichment coverage, model, backend API, product UI, containers, and deployment remain unimplemented.
 - **Research Methods**:
   - CRISP-DM for data understanding, preparation, modeling, evaluation, and deployment.
   - RAD for web requirements planning, user design, construction, and cutover.
@@ -93,7 +93,7 @@ Before any task:
 
 ### Current State
 
-Python and frontend foundations, source-manifest verification, and source-data audit are available. Enrichment, model, backend, frontend test, E2E, and Docker commands remain planned until their corresponding tasks create and verify them.
+Python and frontend foundations, source-manifest verification, source-data audit, and resumable enrichment runner are available. Full enrichment coverage, model, backend, frontend test, E2E, and Docker commands remain planned until their corresponding tasks create and verify them.
 
 ```bash
 # Python environment
@@ -109,8 +109,10 @@ uv run python pipelines/verify_source_manifest.py
 # Source-data audit — available now
 uv run python pipelines/audit_source_data.py
 
-# Data pipeline — planned stable command interface
-uv run python pipelines/enrich_tender_details.py
+# Enrichment runner — available now; requires configured INAPROC detail base URL
+INAPROC_DETAIL_API_BASE_URL="<detail-api-base-url>" uv run python pipelines/enrich_tender_details.py --limit 10
+
+# Data pipeline — planned stable command interface after enrichment coverage/canonicalization tasks
 uv run python pipelines/build_canonical_dataset.py
 uv run python pipelines/build_model_features.py
 
@@ -858,7 +860,7 @@ Only variables prefixed with `NEXT_PUBLIC_` may be referenced by browser code. N
 ### Server-Only Backend/Pipeline Variables
 
 ```text
-INAPROC_DETAIL_API_BASE_URL  # Default official package-detail API base URL
+INAPROC_DETAIL_API_BASE_URL  # Package-detail API base URL; may contain {kode_paket} or accept kode_paket query
 INAPROC_REQUEST_TIMEOUT_S    # Per-request timeout for enrichment
 INAPROC_MAX_RETRIES          # Bounded retry count
 INAPROC_REQUEST_DELAY_S      # Polite delay/rate control between requests

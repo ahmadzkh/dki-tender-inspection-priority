@@ -4,9 +4,9 @@ Sistem berbasis web untuk mengurutkan paket realisasi tender Pemerintah Provinsi
 
 ## Status Project
 
-> **Tahap saat ini: fondasi pengembangan selesai; integritas dan audit sumber data sudah reproducible.**
+> **Tahap saat ini: fondasi pengembangan selesai; integritas, audit sumber data, dan kerangka enrichment sudah reproducible.**
 
-Dataset 2024-2026 telah dikumpulkan, diaudit, dan digabung. Empat CSV sumber disimpan pada layout raw yang immutable serta dicatat dalam manifest SHA-256 yang dapat diverifikasi. Pipeline audit menghasilkan report JSON dan Markdown dari raw sources tanpa memodifikasinya. Enrichment, feature engineering, model Machine Learning, backend API, antarmuka pengguna, pengujian tambahan, dan deployment belum dibangun.
+Dataset 2024-2026 telah dikumpulkan, diaudit, dan digabung. Empat CSV sumber disimpan pada layout raw yang immutable serta dicatat dalam manifest SHA-256 yang dapat diverifikasi. Pipeline audit menghasilkan report JSON dan Markdown dari raw sources tanpa memodifikasinya. Pipeline enrichment resumable sudah tersedia, tetapi full enrichment dan coverage report belum dijalankan. Feature engineering, model Machine Learning, backend API, antarmuka pengguna, pengujian tambahan, dan deployment belum dibangun.
 
 | Komponen | Status |
 |---|---|
@@ -17,7 +17,7 @@ Dataset 2024-2026 telah dikumpulkan, diaudit, dan digabung. Empat CSV sumber dis
 | Python environment dan quality tools | Selesai |
 | Next.js frontend scaffold | Selesai |
 | Folder target terstruktur | Selesai |
-| Enrichment HPS, pagu, dan jadwal | Belum dimulai |
+| Enrichment HPS, pagu, dan jadwal | Pipeline resumable tersedia; full run belum |
 | Dataset canonical | Belum dimulai |
 | Feature engineering | Belum dimulai |
 | Isolation Forest dan evaluasi | Belum dimulai |
@@ -127,9 +127,9 @@ total_nilai
 nilai_pdn
 ```
 
-### Enrichment yang Direncanakan
+### Enrichment INAPROC
 
-Data paket akan diperkaya melalui detail paket INAPROC menggunakan `kode_paket`.
+Data paket diperkaya melalui detail paket INAPROC menggunakan `kode_paket`. Pipeline `pipelines/enrich_tender_details.py` menyimpan respons per paket, checkpoint, failure log, dan ringkasan run agar proses yang terputus dapat dilanjutkan tanpa mengulang paket yang sudah sukses.
 
 | Field | Fungsi analitik |
 |---|---|
@@ -141,7 +141,7 @@ Data paket akan diperkaya melalui detail paket INAPROC menggunakan `kode_paket`.
 | Lokasi pekerjaan | Konteks geografis |
 | Cara pembayaran | Konteks kontrak |
 
-Sampel awal 10 paket berhasil mengembalikan HPS dan pagu. Coverage seluruh paket belum diukur dan tidak boleh diasumsikan 100% sebelum pipeline enrichment selesai.
+Sampel awal 10 paket berhasil mengembalikan HPS dan pagu. Coverage seluruh paket belum diukur dan tidak boleh diasumsikan 100% sebelum full enrichment dan coverage report selesai.
 
 ## Fitur Machine Learning
 
@@ -298,7 +298,7 @@ Struktur aplikasi akan dibuat bertahap saat file pertamanya diperlukan. Rancanga
 
 ## Menjalankan Project
 
-Python environment, source-manifest verifier, source-data audit, dan scaffold frontend sudah tersedia. Backend dan pipeline pemodelan belum tersedia.
+Python environment, source-manifest verifier, source-data audit, enrichment runner, dan scaffold frontend sudah tersedia. Backend dan pipeline pemodelan belum tersedia.
 
 ```bash
 git clone https://github.com/ahmadzkh/dki-tender-inspection-priority.git
@@ -306,13 +306,14 @@ cd dki-tender-inspection-priority
 uv sync
 uv run python pipelines/verify_source_manifest.py
 uv run python pipelines/audit_source_data.py
+INAPROC_DETAIL_API_BASE_URL="<detail-api-base-url>" uv run python pipelines/enrich_tender_details.py --limit 10
 uv run pytest
 npm --prefix frontend install
 npm --prefix frontend run lint
 npm --prefix frontend run build
 ```
 
-Command enrichment pipeline, model, dan backend akan ditambahkan setelah implementasinya tersedia dan sudah diverifikasi.
+Command full coverage enrichment, model, dan backend akan ditambahkan setelah implementasinya tersedia dan sudah diverifikasi.
 
 ## Roadmap
 
@@ -322,7 +323,7 @@ Command enrichment pipeline, model, dan backend akan ditambahkan setelah impleme
 - [x] Menyusun PRD dan engineering contract.
 - [x] Membuat layout raw immutable dan source manifest terverifikasi.
 - [x] Membangun audit data reproducible.
-- [ ] Membangun enrichment pipeline INAPROC yang resumable.
+- [x] Membangun enrichment pipeline INAPROC yang resumable.
 - [ ] Mengukur coverage HPS, pagu, dan jadwal.
 - [ ] Membentuk dataset canonical satu paket per record.
 - [ ] Menjalankan EDA dan feature engineering.
