@@ -176,7 +176,7 @@ Pencarian `/find-skills` menemukan `obra/superpowers@requesting-code-review` seb
 - **Acceptance:** setiap Top-N memiliki minimal tiga faktor dengan nilai asli dan konteks; hubungan explanation-score diuji; fallback transparan dipakai jika SHAP tidak valid.
 - **Verification:** perturbasi fitur fixture mengubah skor/penjelasan pada arah yang dapat dijelaskan; keputusan menjawab `OD-5`.
 
-### [ ] TASK-ML-014 - Freeze versioned backend-ready artifacts
+### [x] TASK-ML-014 - Freeze versioned backend-ready artifacts
 
 - **Depends on:** `TASK-ML-013`.
 - **Goal:** menyediakan kontrak artefak read-only yang stabil untuk backend.

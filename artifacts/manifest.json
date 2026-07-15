@@ -1,0 +1,246 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-07-15T10:09:07.305044+00:00",
+  "project_name": "dki-tender-inspection-priority",
+  "version": "414f1691d2bccdd9",
+  "model": {
+    "model_version": "414f1691d2bccdd9",
+    "model_type": "sklearn.ensemble.IsolationForest",
+    "feature_columns": [
+      "year_value",
+      "partial_snapshot_year_flag",
+      "procurement_method_code",
+      "procurement_type_code",
+      "log_contract_value",
+      "log_hps",
+      "log_pagu",
+      "contract_to_hps_ratio",
+      "hps_to_pagu_ratio",
+      "savings_to_hps_ratio",
+      "pdn_to_contract_ratio",
+      "tender_duration_days",
+      "bid_submission_duration_days",
+      "evaluation_duration_days",
+      "schedule_invalid_timestamp_count",
+      "supplier_prior_package_count_year",
+      "supplier_prior_work_unit_package_count_year",
+      "supplier_prior_contract_share_year",
+      "supplier_prior_work_unit_contract_share_year",
+      "work_unit_supplier_hhi_prior_package_count_year"
+    ],
+    "scored_row_count": 1276,
+    "library_versions": {
+      "scikit_learn": "1.9.0",
+      "numpy": "2.4.6",
+      "joblib": "1.5.3"
+    }
+  },
+  "feature_schema": {
+    "row_count": 1276,
+    "feature_count": 20,
+    "feature_columns": [
+      "year_value",
+      "partial_snapshot_year_flag",
+      "procurement_method_code",
+      "procurement_type_code",
+      "log_contract_value",
+      "log_hps",
+      "log_pagu",
+      "contract_to_hps_ratio",
+      "hps_to_pagu_ratio",
+      "savings_to_hps_ratio",
+      "pdn_to_contract_ratio",
+      "tender_duration_days",
+      "bid_submission_duration_days",
+      "evaluation_duration_days",
+      "schedule_invalid_timestamp_count",
+      "supplier_prior_package_count_year",
+      "supplier_prior_work_unit_package_count_year",
+      "supplier_prior_contract_share_year",
+      "supplier_prior_work_unit_contract_share_year",
+      "work_unit_supplier_hhi_prior_package_count_year"
+    ],
+    "metadata_columns": [
+      "package_id",
+      "year",
+      "supplier_name",
+      "work_unit",
+      "procurement_method",
+      "procurement_type",
+      "is_partial_snapshot_year"
+    ],
+    "canonical_csv_sha256": "e1787c052ec07feabef4b92f76e5adee84f8ec8c7b575de92552c656b3e8d09c"
+  },
+  "summary": {
+    "total_record_count": 1276,
+    "eligible_record_count": 1276,
+    "feature_count": 20,
+    "top_20_package_ids": [
+      "57740127",
+      "10087308000",
+      "10032258000",
+      "10087340000",
+      "59676127",
+      "57655127",
+      "59863127",
+      "10097213000",
+      "10011478000",
+      "10132051000",
+      "10086485000",
+      "57898127",
+      "10065358000",
+      "10086518000",
+      "59967127",
+      "61266127",
+      "10026743000",
+      "10091302000",
+      "10008064000",
+      "59654127"
+    ],
+    "top_50_package_ids": [
+      "57740127",
+      "10087308000",
+      "10032258000",
+      "10087340000",
+      "59676127",
+      "57655127",
+      "59863127",
+      "10097213000",
+      "10011478000",
+      "10132051000",
+      "10086485000",
+      "57898127",
+      "10065358000",
+      "10086518000",
+      "59967127",
+      "61266127",
+      "10026743000",
+      "10091302000",
+      "10008064000",
+      "59654127",
+      "59295127",
+      "57654127",
+      "10065368000",
+      "60061127",
+      "10091309000",
+      "10063513000",
+      "59335127",
+      "10086508000",
+      "10059252000",
+      "10005226000",
+      "10036464000",
+      "10027953000",
+      "10120522000",
+      "10099896000",
+      "10027501000",
+      "10016550000",
+      "10094279000",
+      "10027665000",
+      "10016559000",
+      "61304127",
+      "10027666000",
+      "59337127",
+      "59824127",
+      "10015639000",
+      "59869127",
+      "59586127",
+      "10065336000",
+      "59552127",
+      "10013233000",
+      "10007784000"
+    ],
+    "year_counts": {
+      "2024": 312,
+      "2025": 526,
+      "2026": 438
+    },
+    "split_counts": {
+      "train": 838,
+      "evaluation": 438
+    }
+  },
+  "artifacts": {
+    "datasets": [
+      {
+        "path": "datasets\\manifests\\source_manifest.json",
+        "exists": true,
+        "size_bytes": 4875,
+        "sha256": "7a25d109846c17b0d09ddbfd2ae52f98b2d06976f9d879192ab8716cfd9f0bdd"
+      },
+      {
+        "path": "datasets\\manifests\\model_split.json",
+        "exists": true,
+        "size_bytes": 33004,
+        "sha256": "197815d63eccf00dd4112eb9c3cf66f37793fa7f226cd990f802e00ae3f81ed8"
+      }
+    ],
+    "features": [
+      {
+        "path": "artifacts\\feature_schema.json",
+        "exists": true,
+        "size_bytes": 1952,
+        "sha256": "0465058080c7dbcb23e3c9a991c95a41be8dd19469ebc45449a6b642dd0ad538"
+      },
+      {
+        "path": "datasets\\processed\\model_features.csv",
+        "exists": true,
+        "size_bytes": 398626,
+        "sha256": "21531506de73cc96c24529497a2d3fd5d609461cbd33e62ca1c32529db0e4bdd"
+      }
+    ],
+    "model": [
+      {
+        "path": "artifacts\\isolation_forest_config.json",
+        "exists": true,
+        "size_bytes": 1788,
+        "sha256": "cb893841923de0742f09af9a15d6f45269460e7b7572d52c67f531a1acd4979e"
+      },
+      {
+        "path": "artifacts\\isolation_forest_model.joblib",
+        "exists": true,
+        "size_bytes": 2215396,
+        "sha256": "64c7e8511bd9d54bdd483f4193cbfd397313d712c2940dcf4867ac153a3fd217"
+      },
+      {
+        "path": "artifacts\\isolation_forest_ranking.csv",
+        "exists": true,
+        "size_bytes": 238362,
+        "sha256": "b70c549022306e586183dca0ef616cf2862b8137275fc08b9e09c7bd1867546c"
+      }
+    ],
+    "evaluation": [
+      {
+        "path": "reports\\model\\evaluation.json",
+        "exists": true,
+        "size_bytes": 9989,
+        "sha256": "6fcbe391d238dadc79efad7038d946c5223a1853acdc652257ebc6ff683d024f"
+      }
+    ],
+    "explanation": [
+      {
+        "path": "artifacts\\ranking_explanations.json",
+        "exists": true,
+        "size_bytes": 123262,
+        "sha256": "52336c29badcda12e68988d8cee516f806a734e13a7beb2d68f9fbe9359c7e81"
+      }
+    ],
+    "baseline": [
+      {
+        "path": "artifacts\\baseline_config.json",
+        "exists": true,
+        "size_bytes": 3601,
+        "sha256": "703bdf924740297545acebacccf0d3b0a566c4834aa0bb39873a40124bc46a93"
+      },
+      {
+        "path": "artifacts\\baseline_ranking.csv",
+        "exists": true,
+        "size_bytes": 376326,
+        "sha256": "9b1334cb515495b96767d7422f7a8c91b806bd74c39c63f465bed30c0644f154"
+      }
+    ]
+  },
+  "integrity": {
+    "artifact_count": 11,
+    "all_artifacts_exist": true
+  }
+}

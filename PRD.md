@@ -7,7 +7,7 @@
 | Judul skripsi | Rancang Bangun Sistem Prioritas Pemeriksaan Realisasi Tender Pemerintah Provinsi DKI Jakarta Menggunakan Isolation Forest Berbasis Web |
 | Versi PRD | 1.0-draft |
 | Tanggal pembaruan | 12 Juli 2026 |
-| Status produk | Perencanaan dan persiapan data |
+| Status produk | Persiapan data dan pembekuan artefak selesai |
 | Metode penelitian | CRISP-DM untuk analisis Machine Learning; RAD untuk pengembangan website |
 | Pemilik produk | Julius |
 | Root project | `C:\Data Central\Documents\Code\julius\Skripsi\procurement_data` |
@@ -69,7 +69,7 @@ Tahun 2026 merupakan snapshot tahun berjalan pada waktu pengunduhan, bukan satu 
 
 ## 1.3 Kesenjangan Produk
 
-Artefak enrichment, coverage report, dataset canonical satu-record-per-paket, EDA reproducible, feature matrix leakage-safe, split temporal, baseline ranking transparan, artefak Isolation Forest reproducible, evaluasi model, dan explanation permutation sensitivity sudah tersedia. Feature matrix berisi 1.276 record eligible dengan 20 fitur eksplisit. Split temporal: training 2024-2025 (838), evaluation 2026 snapshot (438). Baseline robust z-score deterministik. Isolation Forest `414f1691d2bccdd9`. Evaluasi model pada `reports/model/evaluation.md` tanpa metrik supervised. Explanation pada `reports/model/explanation.md` menjawab OD-5: permutation sensitivity primer (SHAP tidak terinstal). Backend API, frontend, laporan yang dapat diunduh, pengujian lanjutan, dan deployment belum tersedia.
+Artefak enrichment, coverage report, dataset canonical satu-record-per-paket, EDA reproducible, feature matrix leakage-safe, split temporal, baseline ranking transparan, artefak Isolation Forest reproducible, evaluasi model, explanation permutation sensitivity, dan pembekuan artefak (artifact freeze) sudah tersedia. Feature matrix berisi 1.276 record eligible dengan 20 fitur eksplisit. Split temporal: training 2024-2025 (838), evaluation 2026 snapshot (438). Baseline robust z-score deterministik. Isolation Forest `414f1691d2bccdd9`. Evaluasi model pada `reports/model/evaluation.md` tanpa metrik supervised. Explanation pada `reports/model/explanation.md` menjawab OD-5: permutation sensitivity primer (SHAP tidak terinstal). Seluruh artefak telah dibekukan di `artifacts/manifest.json`. Backend API, frontend, laporan yang dapat diunduh, pengujian lanjutan, dan deployment belum tersedia.
 
 ## 1.4 Solusi yang Diusulkan
 
@@ -342,10 +342,10 @@ Report `reports/model/evaluation.md` menetapkan keputusan awal berdasarkan bukti
 
 v1.0 dinyatakan siap untuk penulisan BAB 4 apabila:
 
-- [ ] Audit dan enrichment selesai dengan coverage report.
-- [ ] Dataset canonical dan feature matrix memiliki manifest versi.
-- [ ] Eksperimen model final dan baseline dapat dijalankan ulang.
-- [ ] Ranking, Top-N, dan penjelasan fitur tervalidasi.
+- [x] Audit dan enrichment selesai dengan coverage report.
+- [x] Dataset canonical dan feature matrix memiliki manifest versi.
+- [x] Eksperimen model final dan baseline dapat dijalankan ulang.
+- [x] Ranking, Top-N, dan penjelasan fitur tervalidasi.
 - [ ] Backend API, frontend, export CSV, dan seluruh halaman P1 selesai.
 - [ ] Unit, integration, black-box, build, dan smoke test deployment lulus.
 - [ ] Tidak ada secret dalam repository.

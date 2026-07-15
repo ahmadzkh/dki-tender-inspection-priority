@@ -26,7 +26,7 @@ Before any task:
 - **Goal**: Help auditors or procurement analysts decide which completed tender packages to inspect first using traceable data, reproducible anomaly scoring, and neutral explanations.
 - **Target Users**: Government internal auditors/inspectorate staff, procurement analysts, thesis supervisors/examiners, and researchers.
 - **Version**: `0.1.0` foundation/data-preparation stage
-- **Status**: Active development; Python and Next.js foundations plus immutable source-data layout, reproducible source-data audit, resumable enrichment runner, full enrichment coverage report, one-package-per-record canonical dataset, EDA/data-quality report, leakage-safe feature matrix, temporal split, transparent baseline ranking, reproducible Isolation Forest artifacts, model evaluation report, and permutation-sensitivity explanation exist. Backend API, product UI, containers, and deployment are still planned.
+- **Status**: Active development; Python and Next.js foundations plus immutable source-data layout, reproducible source-data audit, resumable enrichment runner, full enrichment coverage report, one-package-per-record canonical dataset, EDA/data-quality report, leakage-safe feature matrix, temporal split, transparent baseline ranking, reproducible Isolation Forest artifacts, model evaluation report, permutation-sensitivity explanation, and frozen backend-ready artifacts manifest exist. Backend API, product UI, containers, and deployment are still planned.
 - **Research Methods**:
   - CRISP-DM for data understanding, preparation, modeling, evaluation, and deployment.
   - RAD for web requirements planning, user design, construction, and cutover.
@@ -128,6 +128,7 @@ uv run python modeling/build_baseline_ranking.py
 uv run python modeling/train_isolation_forest.py
 uv run python modeling/evaluate_anomaly_ranking.py
 uv run python modeling/explain_anomaly_ranking.py
+uv run python modeling/freeze_artifacts.py
 
 # Backend development — planned after TASK-BE-001
 uv run fastapi dev backend/app/main.py
@@ -230,6 +231,7 @@ procurement_data/
 │   ├── isolation_forest_config.json
 │   ├── isolation_forest_model.joblib
 │   ├── isolation_forest_ranking.csv
+│   ├── manifest.json
 │   └── model_experiment_config.json
 ├── reports/
 │   ├── data/
@@ -761,6 +763,7 @@ Before every requested commit:
 - Initial manual audit identified five missing-supplier source rows and one multi-provider package code; canonicalization documents the five exclusions and marks package `10060212000` as `eligible_for_model=false`.
 - `README.md`, `PRD.md`, `CLAUDE.md`, `AGENTS.md`, and `TASKS.md` define project, engineering, and execution rules.
 - Git and the public GitHub repository are configured on `main`.
+- Model artifacts are frozen and integrity verified via `artifacts/manifest.json`.
 - Application, model, API, frontend, tests, containers, and deployment are not complete until their corresponding `TASKS.md` entries are checked.
 
 ### Task Completion Contract
