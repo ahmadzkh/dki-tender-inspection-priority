@@ -69,7 +69,7 @@ Tahun 2026 merupakan snapshot tahun berjalan pada waktu pengunduhan, bukan satu 
 
 ## 1.3 Kesenjangan Produk
 
-Artefak enrichment, coverage report, dataset canonical satu-record-per-paket, EDA reproducible, feature matrix leakage-safe, split temporal, baseline ranking transparan, dan artefak Isolation Forest reproducible sudah tersedia. Feature matrix berisi 1.276 record eligible dengan 20 fitur eksplisit dan schema versi di `artifacts/feature_schema.json`. Split temporal memakai 838 record 2024-2025 untuk training dan 438 record snapshot 2026 untuk evaluation, dengan satu record canonical tidak eligible tetap tercatat sebagai excluded. Baseline robust z-score tersedia sebagai pembanding deterministik. Isolation Forest menghasilkan model version `414f1691d2bccdd9`, konfigurasi, preprocessor, dan ranking skor untuk seluruh record eligible. Evaluasi stabilitas/sensitivitas model, backend API, frontend, laporan yang dapat diunduh, pengujian lanjutan, dan deployment belum tersedia.
+Artefak enrichment, coverage report, dataset canonical satu-record-per-paket, EDA reproducible, feature matrix leakage-safe, split temporal, baseline ranking transparan, artefak Isolation Forest reproducible, dan evaluasi model sudah tersedia. Feature matrix berisi 1.276 record eligible dengan 20 fitur eksplisit dan schema versi di `artifacts/feature_schema.json`. Split temporal memakai 838 record 2024-2025 untuk training dan 438 record snapshot 2026 untuk evaluation, dengan satu record canonical tidak eligible tetap tercatat sebagai excluded. Baseline robust z-score tersedia sebagai pembanding deterministik. Isolation Forest menghasilkan model version `414f1691d2bccdd9`, konfigurasi, preprocessor, dan ranking skor untuk seluruh record eligible. Evaluasi model pada `reports/model/evaluation.md` membandingkan stabilitas seed, sensitivitas hyperparameter, distribusi skor, perilaku temporal, dan baseline comparison tanpa mengklaim metrik supervised. Validasi explanation, backend API, frontend, laporan yang dapat diunduh, pengujian lanjutan, dan deployment belum tersedia.
 
 ## 1.4 Solusi yang Diusulkan
 
@@ -336,6 +336,8 @@ Accuracy, precision, recall, F1-score, dan confusion matrix tidak dapat menjadi 
 7. perbandingan dengan baseline transparan;
 8. validasi ahli hanya jika responden dan protokol benar-benar tersedia.
 
+Report `reports/model/evaluation.md` menetapkan keputusan awal berdasarkan bukti unsupervised: konfigurasi Isolation Forest `414f1691d2bccdd9` dipertahankan, Top-20 dipakai sebagai default tampilan kapasitas pemeriksaan, dan 20 fitur model dipertahankan sampai validasi explanation selesai. Top-20 bukan label pelanggaran, melainkan batas kapasitas pemeriksaan untuk demo dan analisis awal.
+
 # 10. Release Acceptance Criteria
 
 v1.0 dinyatakan siap untuk penulisan BAB 4 apabila:
@@ -367,12 +369,12 @@ v1.0 dinyatakan siap untuk penulisan BAB 4 apabila:
 
 # 12. Open Decisions
 
-| ID | Keputusan yang masih perlu dibuktikan | Waktu keputusan |
+| ID | Keputusan atau status | Waktu keputusan |
 |---|---|---|
-| OD-1 | Konfigurasi Isolation Forest final, termasuk `contamination` | Setelah eksperimen sensitivitas |
-| OD-2 | Nilai default Top-N | Setelah melihat distribusi skor dan kebutuhan demo |
+| OD-1 | Konfigurasi Isolation Forest `414f1691d2bccdd9` dipertahankan untuk tahap berikutnya | Diputuskan pada evaluasi stabilitas/sensitivitas |
+| OD-2 | Default Top-N untuk tampilan kapasitas pemeriksaan adalah 20 | Diputuskan pada evaluasi model |
 | OD-3 | Perlakuan final paket multi-provider: satu record canonical dengan daftar nilai sumber dan `eligible_for_model=false` | Diputuskan pada canonicalization, sebelum feature engineering |
-| OD-4 | Fitur final berdasarkan coverage enrichment, EDA, multikolinearitas, dan leakage policy | Setelah feature engineering awal |
+| OD-4 | 20 fitur saat ini dipertahankan; status masih parsial sampai explanation validation selesai | Sebagian diputuskan pada evaluasi model |
 | OD-5 | SHAP dipakai sebagai penjelasan utama atau sekunder | Setelah validasi konsistensi explanation-score |
 | OD-6 | PDF export masuk v1.0 final | Setelah P1 dashboard dan CSV stabil |
 

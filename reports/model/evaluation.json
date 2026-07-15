@@ -1,0 +1,352 @@
+{
+  "schema_version": 1,
+  "artifact_versions": {
+    "model_version": "414f1691d2bccdd9",
+    "model_config": "artifacts/isolation_forest_config.json",
+    "model_config_sha256": "cb893841923de0742f09af9a15d6f45269460e7b7572d52c67f531a1acd4979e",
+    "model_ranking": "artifacts/isolation_forest_ranking.csv",
+    "model_ranking_sha256": "b70c549022306e586183dca0ef616cf2862b8137275fc08b9e09c7bd1867546c",
+    "baseline_config": "artifacts/baseline_config.json",
+    "baseline_config_sha256": "703bdf924740297545acebacccf0d3b0a566c4834aa0bb39873a40124bc46a93",
+    "baseline_ranking": "artifacts/baseline_ranking.csv",
+    "baseline_ranking_sha256": "9b1334cb515495b96767d7422f7a8c91b806bd74c39c63f465bed30c0644f154",
+    "feature_matrix_sha256": "21531506de73cc96c24529497a2d3fd5d609461cbd33e62ca1c32529db0e4bdd",
+    "split_manifest_sha256": "197815d63eccf00dd4112eb9c3cf66f37793fa7f226cd990f802e00ae3f81ed8",
+    "canonical_dataset_sha256": "e1787c052ec07feabef4b92f76e5adee84f8ec8c7b575de92552c656b3e8d09c"
+  },
+  "row_count": 1276,
+  "feature_count": 20,
+  "top_n_values": [
+    20,
+    50
+  ],
+  "score_direction": "higher score means higher inspection priority",
+  "score_distribution": {
+    "all": {
+      "count": 1276,
+      "min": 0.358783765129,
+      "p25": 0.401551325944,
+      "median": 0.428111669767,
+      "p75": 0.454929361771,
+      "p90": 0.487516669706,
+      "p95": 0.522006249797,
+      "max": 0.682396669604,
+      "mean": 0.434284388608,
+      "std": 0.047938926469
+    },
+    "train": {
+      "count": 838,
+      "min": 0.358783765129,
+      "p25": 0.397053538921,
+      "median": 0.429698858938,
+      "p75": 0.461472864273,
+      "p90": 0.503248848917,
+      "p95": 0.547867267066,
+      "max": 0.682396669604,
+      "mean": 0.436732573081,
+      "std": 0.053932483914
+    },
+    "evaluation": {
+      "count": 438,
+      "min": 0.360404340069,
+      "p25": 0.416654588523,
+      "median": 0.427652610252,
+      "p75": 0.445157723209,
+      "p90": 0.472049693546,
+      "p95": 0.483488032977,
+      "max": 0.625675690266,
+      "mean": 0.429600419229,
+      "std": 0.033114371405
+    }
+  },
+  "temporal_behavior": {
+    "train": {
+      "count": 838,
+      "min": 0.358783765129,
+      "p25": 0.397053538921,
+      "median": 0.429698858938,
+      "p75": 0.461472864273,
+      "p90": 0.503248848917,
+      "p95": 0.547867267066,
+      "max": 0.682396669604,
+      "mean": 0.436732573081,
+      "std": 0.053932483914
+    },
+    "evaluation": {
+      "count": 438,
+      "min": 0.360404340069,
+      "p25": 0.416654588523,
+      "median": 0.427652610252,
+      "p75": 0.445157723209,
+      "p90": 0.472049693546,
+      "p95": 0.483488032977,
+      "max": 0.625675690266,
+      "mean": 0.429600419229,
+      "std": 0.033114371405
+    },
+    "top_n_evaluation_share": {
+      "20": {
+        "evaluation_count": 1,
+        "evaluation_share": 0.05
+      },
+      "50": {
+        "evaluation_count": 2,
+        "evaluation_share": 0.04
+      }
+    }
+  },
+  "seed_stability": [
+    {
+      "variant": "seed=7",
+      "seed": 7,
+      "n_estimators": 200,
+      "contamination": "auto",
+      "max_samples": "auto",
+      "top_n": 20,
+      "top_n_overlap": 17,
+      "top_n_overlap_ratio": 0.85,
+      "rank_correlation": 0.968824
+    },
+    {
+      "variant": "seed=7",
+      "seed": 7,
+      "n_estimators": 200,
+      "contamination": "auto",
+      "max_samples": "auto",
+      "top_n": 50,
+      "top_n_overlap": 47,
+      "top_n_overlap_ratio": 0.94,
+      "rank_correlation": 0.968824
+    },
+    {
+      "variant": "seed=42",
+      "seed": 42,
+      "n_estimators": 200,
+      "contamination": "auto",
+      "max_samples": "auto",
+      "top_n": 20,
+      "top_n_overlap": 20,
+      "top_n_overlap_ratio": 1.0,
+      "rank_correlation": 1.0
+    },
+    {
+      "variant": "seed=42",
+      "seed": 42,
+      "n_estimators": 200,
+      "contamination": "auto",
+      "max_samples": "auto",
+      "top_n": 50,
+      "top_n_overlap": 50,
+      "top_n_overlap_ratio": 1.0,
+      "rank_correlation": 1.0
+    },
+    {
+      "variant": "seed=99",
+      "seed": 99,
+      "n_estimators": 200,
+      "contamination": "auto",
+      "max_samples": "auto",
+      "top_n": 20,
+      "top_n_overlap": 16,
+      "top_n_overlap_ratio": 0.8,
+      "rank_correlation": 0.974625
+    },
+    {
+      "variant": "seed=99",
+      "seed": 99,
+      "n_estimators": 200,
+      "contamination": "auto",
+      "max_samples": "auto",
+      "top_n": 50,
+      "top_n_overlap": 44,
+      "top_n_overlap_ratio": 0.88,
+      "rank_correlation": 0.974625
+    }
+  ],
+  "hyperparameter_sensitivity": [
+    {
+      "variant": "n_estimators=100",
+      "seed": 42,
+      "n_estimators": 100,
+      "contamination": "auto",
+      "max_samples": "auto",
+      "top_n": 20,
+      "top_n_overlap": 19,
+      "top_n_overlap_ratio": 0.95,
+      "rank_correlation": 0.991452
+    },
+    {
+      "variant": "n_estimators=100",
+      "seed": 42,
+      "n_estimators": 100,
+      "contamination": "auto",
+      "max_samples": "auto",
+      "top_n": 50,
+      "top_n_overlap": 46,
+      "top_n_overlap_ratio": 0.92,
+      "rank_correlation": 0.991452
+    },
+    {
+      "variant": "n_estimators=200",
+      "seed": 42,
+      "n_estimators": 200,
+      "contamination": "auto",
+      "max_samples": "auto",
+      "top_n": 20,
+      "top_n_overlap": 20,
+      "top_n_overlap_ratio": 1.0,
+      "rank_correlation": 1.0
+    },
+    {
+      "variant": "n_estimators=200",
+      "seed": 42,
+      "n_estimators": 200,
+      "contamination": "auto",
+      "max_samples": "auto",
+      "top_n": 50,
+      "top_n_overlap": 50,
+      "top_n_overlap_ratio": 1.0,
+      "rank_correlation": 1.0
+    },
+    {
+      "variant": "n_estimators=300",
+      "seed": 42,
+      "n_estimators": 300,
+      "contamination": "auto",
+      "max_samples": "auto",
+      "top_n": 20,
+      "top_n_overlap": 18,
+      "top_n_overlap_ratio": 0.9,
+      "rank_correlation": 0.996955
+    },
+    {
+      "variant": "n_estimators=300",
+      "seed": 42,
+      "n_estimators": 300,
+      "contamination": "auto",
+      "max_samples": "auto",
+      "top_n": 50,
+      "top_n_overlap": 48,
+      "top_n_overlap_ratio": 0.96,
+      "rank_correlation": 0.996955
+    },
+    {
+      "variant": "contamination=0.05",
+      "seed": 42,
+      "n_estimators": 200,
+      "contamination": 0.05,
+      "max_samples": "auto",
+      "top_n": 20,
+      "top_n_overlap": 20,
+      "top_n_overlap_ratio": 1.0,
+      "rank_correlation": 1.0
+    },
+    {
+      "variant": "contamination=0.05",
+      "seed": 42,
+      "n_estimators": 200,
+      "contamination": 0.05,
+      "max_samples": "auto",
+      "top_n": 50,
+      "top_n_overlap": 50,
+      "top_n_overlap_ratio": 1.0,
+      "rank_correlation": 1.0
+    },
+    {
+      "variant": "contamination=0.1",
+      "seed": 42,
+      "n_estimators": 200,
+      "contamination": 0.1,
+      "max_samples": "auto",
+      "top_n": 20,
+      "top_n_overlap": 20,
+      "top_n_overlap_ratio": 1.0,
+      "rank_correlation": 1.0
+    },
+    {
+      "variant": "contamination=0.1",
+      "seed": 42,
+      "n_estimators": 200,
+      "contamination": 0.1,
+      "max_samples": "auto",
+      "top_n": 50,
+      "top_n_overlap": 50,
+      "top_n_overlap_ratio": 1.0,
+      "rank_correlation": 1.0
+    },
+    {
+      "variant": "max_samples=0.7",
+      "seed": 42,
+      "n_estimators": 200,
+      "contamination": "auto",
+      "max_samples": 0.7,
+      "top_n": 20,
+      "top_n_overlap": 16,
+      "top_n_overlap_ratio": 0.8,
+      "rank_correlation": 0.986776
+    },
+    {
+      "variant": "max_samples=0.7",
+      "seed": 42,
+      "n_estimators": 200,
+      "contamination": "auto",
+      "max_samples": 0.7,
+      "top_n": 50,
+      "top_n_overlap": 44,
+      "top_n_overlap_ratio": 0.88,
+      "rank_correlation": 0.986776
+    }
+  ],
+  "baseline_comparison": {
+    "top_n_overlap": {
+      "20": {
+        "top_n": 20,
+        "overlap_count": 9,
+        "overlap_ratio": 0.45
+      },
+      "50": {
+        "top_n": 50,
+        "overlap_count": 26,
+        "overlap_ratio": 0.52
+      }
+    },
+    "rank_correlation": 0.485049
+  },
+  "decisions": {
+    "OD-1": {
+      "decision": "retain current Isolation Forest configuration for the next evaluation stage",
+      "model_version": "414f1691d2bccdd9",
+      "hyperparameters": {
+        "n_estimators": 200,
+        "contamination": "auto",
+        "max_samples": "auto",
+        "n_jobs": 1
+      },
+      "minimum_seed_top_n_overlap_ratio": 0.8,
+      "minimum_sensitivity_top_n_overlap_ratio": 0.8
+    },
+    "OD-2": {
+      "decision": "use Top-20 as the default inspection-capacity view for reports",
+      "default_top_n": 20,
+      "rationale": "compact enough for manual review while preserving sensitivity tables for larger N"
+    },
+    "OD-4": {
+      "decision": "retain the current 20-feature set through explanation validation",
+      "status": "partial",
+      "feature_count": 20,
+      "rationale": "coverage and leakage policy are satisfied; feature influence validation remains next"
+    }
+  },
+  "limitations": [
+    "No validated anomaly labels are available; evaluation uses stability and sensitivity evidence.",
+    "The 2026 evaluation split is a partial snapshot, not a full calendar year.",
+    "Scores are inspection-priority signals, not legal conclusions."
+  ],
+  "outputs": {
+    "json": "reports/model/evaluation.json",
+    "markdown": "reports/model/evaluation.md",
+    "tables_dir": "reports/model/tables",
+    "score_distribution_svg": "reports/model/figures/score_distribution.svg",
+    "hyperparameter_sensitivity_svg": "reports/model/figures/hyperparameter_sensitivity.svg"
+  }
+}

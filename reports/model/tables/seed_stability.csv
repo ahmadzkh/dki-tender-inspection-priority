@@ -1,0 +1,7 @@
+variant,seed,n_estimators,contamination,max_samples,top_n,top_n_overlap,top_n_overlap_ratio,rank_correlation
+seed=7,7,200,auto,auto,20,17,0.85,0.968824
+seed=7,7,200,auto,auto,50,47,0.94,0.968824
+seed=42,42,200,auto,auto,20,20,1.0,1.0
+seed=42,42,200,auto,auto,50,50,1.0,1.0
+seed=99,99,200,auto,auto,20,16,0.8,0.974625
+seed=99,99,200,auto,auto,50,44,0.88,0.974625
