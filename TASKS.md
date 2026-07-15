@@ -160,7 +160,7 @@ Pencarian `/find-skills` menemukan `obra/superpowers@requesting-code-review` seb
 - **Acceptance:** random seed, hyperparameters, library versions, dataset manifest, preprocessing, arah anomaly score, dan model version tersimpan; CPU-only.
 - **Verification:** dua run dengan konfigurasi sama menghasilkan skor dalam toleransi dan ranking yang sama; seluruh eligible record memiliki finite score.
 
-### [ ] TASK-ML-012 - Evaluate stability, sensitivity, temporal behavior, and baseline
+### [x] TASK-ML-012 - Evaluate stability, sensitivity, temporal behavior, and baseline
 
 - **Depends on:** `TASK-ML-011`.
 - **Goal:** memilih konfigurasi model menggunakan evaluasi yang sesuai untuk data tanpa label.
