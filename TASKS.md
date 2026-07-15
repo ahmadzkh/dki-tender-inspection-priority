@@ -168,7 +168,7 @@ Pencarian `/find-skills` menemukan `obra/superpowers@requesting-code-review` seb
 - **Acceptance:** evaluasi antar seed, Top-N overlap, contamination/estimator/subsample sensitivity, score distribution, temporal behavior, dan baseline comparison; accuracy/F1 tidak diklaim.
 - **Verification:** report dapat diregenerasi; semua angka ditelusuri ke config dan artifact version; keputusan final menjawab `OD-1`, `OD-2`, dan sebagian `OD-4`.
 
-### [ ] TASK-ML-013 - Validate model explanations
+### [x] TASK-ML-013 - Validate model explanations
 
 - **Depends on:** `TASK-ML-012`.
 - **Goal:** menghasilkan alasan ranking yang konsisten dengan anomaly score.
