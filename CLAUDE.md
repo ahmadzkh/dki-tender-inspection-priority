@@ -79,10 +79,11 @@ Before any task:
 
 - **Python**: 3.11.15, managed through `.python-version` and `uv.lock`
 - **Python Runtime**: NumPy 2.4.6, pandas 3.0.3, scikit-learn 1.9.0, joblib 1.5.3
-- **Python Development**: pytest 9.1.1, Ruff 0.15.21
+- **Python Runtime (backend)**: FastAPI 0.139.0, uvicorn 0.51.0, pydantic 2.13.4, starlette 1.3.1
+- **Python Development**: pytest 9.1.1, Ruff 0.15.21, httpx 0.28.1
 - **Frontend**: Next.js 16.2.10, React 19.2.4, TypeScript 5.9.3, Tailwind CSS 4.3.2
 - **Frontend Security Override**: PostCSS 8.5.17 replaces Next.js nested PostCSS 8.4.31; `npm audit` must remain at zero known vulnerabilities
-- **Not Installed Yet**: FastAPI/uvicorn, SHAP, chart library, frontend test framework, Playwright, Docker runtime files
+- **Not Installed Yet**: SHAP, chart library, frontend test framework, Playwright, Docker runtime files
 
 ### Deliberately Not Selected
 
@@ -198,6 +199,7 @@ procurement_data/
 ├── tests/
 │   ├── test_audit_source_data.py
 │   ├── test_analyze_tender_data.py
+│   ├── test_be_startup.py
 │   ├── test_build_baseline_ranking.py
 │   ├── test_build_model_features.py
 │   ├── test_build_canonical_dataset.py
@@ -205,15 +207,26 @@ procurement_data/
 │   ├── test_enrichment_coverage.py
 │   ├── test_environment.py
 │   ├── test_evaluate_anomaly_ranking.py
+│   ├── test_explain_anomaly_ranking.py
+│   ├── test_freeze_artifacts.py
 │   ├── test_train_isolation_forest.py
 │   └── test_source_manifest.py
 ├── frontend/
 │   ├── package.json
 │   ├── package-lock.json
 │   └── src/app/
+├── backend/
+│   └── app/
+│       ├── __init__.py
+│       ├── main.py
+│       ├── api/
+│       ├── schemas/
+│       └── services/
 ├── modeling/
 │   ├── build_baseline_ranking.py
 │   ├── evaluate_anomaly_ranking.py
+│   ├── explain_anomaly_ranking.py
+│   ├── freeze_artifacts.py
 │   └── train_isolation_forest.py
 ├── pipelines/
 │   ├── audit_source_data.py

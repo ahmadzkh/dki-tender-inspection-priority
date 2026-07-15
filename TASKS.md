@@ -190,7 +190,7 @@ Pencarian `/find-skills` menemukan `obra/superpowers@requesting-code-review` seb
 
 ## Foundation and Contracts
 
-### [ ] TASK-BE-001 - Scaffold minimal FastAPI backend
+### [x] TASK-BE-001 - Scaffold minimal FastAPI backend
 
 - **Depends on:** `TASK-ML-001`.
 - **Goal:** menyediakan satu aplikasi FastAPI tanpa database, auth, atau service tambahan.

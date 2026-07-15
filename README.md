@@ -4,7 +4,7 @@ Sistem berbasis web untuk mengurutkan paket realisasi tender Pemerintah Provinsi
 
 ## Status Project
 
-> **Tahap saat ini: pembekuan artefak (artifact freeze) selesai; backend API berikutnya.**
+> **Tahap saat ini: FastAPI backend scaffold selesai; artifact loader dan endpoints berikutnya.**
 
 Dataset 2024-2026 telah dikumpulkan, diaudit, digabung, diperkaya, dicanonicalkan menjadi satu record per `kode_paket`, dianalisis melalui EDA reproducible, ditransformasi menjadi feature matrix leakage-safe, dibagi dengan split temporal, diberi baseline ranking transparan, dilatih dengan Isolation Forest, dan dievaluasi tanpa label ground truth. Empat CSV sumber disimpan pada layout raw yang immutable serta dicatat dalam manifest SHA-256 yang dapat diverifikasi. Pipeline audit dan enrichment menghasilkan report JSON/Markdown dari raw sources tanpa memodifikasinya. Full enrichment INAPROC sudah dijalankan untuk 1.277 kode paket unik dengan coverage 100%, lalu pipeline canonical menghasilkan 1.277 paket unik dan menandai satu paket multi-provider sebagai tidak eligible untuk fitur model. EDA menghasilkan ringkasan distribusi nilai, missingness, outlier univariat, kategori, konsentrasi penyedia/satuan kerja, dan catatan snapshot parsial 2026. Feature engineering menghasilkan 1.276 baris eligible dengan 20 fitur eksplisit. Split temporal memakai 838 record 2024-2025 untuk training dan 438 record snapshot 2026 untuk evaluation. Baseline robust z-score menghasilkan ranking deterministik untuk pembanding model. Isolation Forest menghasilkan artefak model CPU-only, konfigurasi, dan ranking untuk 1.276 record eligible. Evaluasi model mencatat stabilitas seed, sensitivitas hyperparameter, distribusi skor, perilaku temporal, baseline comparison, dan keputusan Top-N. Explanation permutation sensitivity menjawab OD-5. Seluruh artefak model, baseline, fitur, dan dokumentasi penjelasan telah dibekukan dalam manifest integrity check untuk backend. Backend API, antarmuka pengguna, pengujian tambahan, dan deployment belum dibangun.
 
@@ -27,7 +27,8 @@ Dataset 2024-2026 telah dikumpulkan, diaudit, digabung, diperkaya, dicanonicalka
 | Evaluasi model | Selesai |
 | Explanation model | Selesai; permutation sensitivity di `reports/model/explanation.md`, OD-5 dijawab |
 | Freeze artifacts | Selesai; `artifacts/manifest.json`, 11 artifacts, integrity check |
-| FastAPI backend | Belum dimulai |
+| FastAPI backend scaffold | Selesai; `backend/app/main.py`, 9 tests pass |
+| FastAPI backend API | Belum dimulai |
 | Docker dan deployment | Belum dimulai |
 
 ## Judul Penelitian
@@ -355,7 +356,7 @@ Struktur aplikasi akan dibuat bertahap saat file pertamanya diperlukan. Rancanga
 
 ## Menjalankan Project
 
-Python environment, source-manifest verifier, source-data audit, enrichment runner, canonical dataset builder, EDA generator, training Isolation Forest, evaluasi model, dan scaffold frontend sudah tersedia. Backend dan validasi explanation lanjutan belum tersedia.
+Python environment, source-manifest verifier, source-data audit, enrichment runner, canonical dataset builder, EDA generator, training Isolation Forest, evaluasi model, scaffold frontend, dan scaffold FastAPI backend sudah tersedia. Artifact loader dan route API belum tersedia.
 
 ```bash
 git clone https://github.com/ahmadzkh/dki-tender-inspection-priority.git
@@ -372,13 +373,16 @@ uv run python pipelines/define_model_split.py
 uv run python modeling/build_baseline_ranking.py
 uv run python modeling/train_isolation_forest.py
 uv run python modeling/evaluate_anomaly_ranking.py
+uv run python modeling/explain_anomaly_ranking.py
+uv run python modeling/freeze_artifacts.py
 uv run pytest
 npm --prefix frontend install
 npm --prefix frontend run lint
 npm --prefix frontend run build
-```
 
-Command backend akan ditambahkan setelah implementasinya tersedia dan sudah diverifikasi.
+# Backend (FastAPI scaffold)
+uv run uvicorn backend.app.main:app --reload --port 8000
+```
 
 ## Roadmap
 
@@ -399,7 +403,8 @@ Command backend akan ditambahkan setelah implementasinya tersedia dan sudah dive
 - [x] Mengevaluasi stabilitas, sensitivitas, perilaku temporal, dan baseline.
 - [x] Memvalidasi feature influence dan explanation (permutation sensitivity, OD-5).
 - [x] Membekukan artefak backend-ready dengan manifest integrity check.
-- [ ] Membangun FastAPI backend.
+- [x] Scaffold FastAPI backend (main.py, CORS, OpenAPI, 9 tests).
+- [ ] Implementasi artifact loader dan typed API contracts.
 - [ ] Membangun Next.js frontend.
 - [ ] Menambahkan CSV export dan pengujian.
 - [ ] Membuat Docker runtime.
