@@ -84,7 +84,7 @@ Pencarian `/find-skills` menemukan `obra/superpowers@requesting-code-review` seb
 - **Acceptance:** empat CSV saat ini dipindahkan atau disalin secara terverifikasi; SHA-256, byte size, row count, schema, source year, dan provenance tercatat; hash raw sebelum dan setelah migrasi sama.
 - **Verification:** script/check manifest membandingkan seluruh hash dan row count; `git diff` memastikan tidak ada modifikasi isi raw yang tidak disengaja.
 
-### [ ] TASK-ML-003 - Build reproducible source-data audit pipeline
+### [x] TASK-ML-003 - Build reproducible source-data audit pipeline
 
 - **Depends on:** `TASK-ML-002`.
 - **Goal:** mengganti audit manual dengan pipeline yang dapat dijalankan ulang.
