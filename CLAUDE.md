@@ -26,7 +26,7 @@ Before any task:
 - **Goal**: Help auditors or procurement analysts decide which completed tender packages to inspect first using traceable data, reproducible anomaly scoring, and neutral explanations.
 - **Target Users**: Government internal auditors/inspectorate staff, procurement analysts, thesis supervisors/examiners, and researchers.
 - **Version**: `0.1.0` foundation/data-preparation stage
-- **Status**: Active development; Python and Next.js foundations plus immutable source-data layout, reproducible source-data audit, resumable enrichment runner, full enrichment coverage report, one-package-per-record canonical dataset, EDA/data-quality report, and leakage-safe feature matrix exist. Temporal split, model, backend API, product UI, containers, and deployment are still planned.
+- **Status**: Active development; Python and Next.js foundations plus immutable source-data layout, reproducible source-data audit, resumable enrichment runner, full enrichment coverage report, one-package-per-record canonical dataset, EDA/data-quality report, leakage-safe feature matrix, and temporal split exist. Baseline, model, backend API, product UI, containers, and deployment are still planned.
 - **Research Methods**:
   - CRISP-DM for data understanding, preparation, modeling, evaluation, and deployment.
   - RAD for web requirements planning, user design, construction, and cutover.
@@ -43,6 +43,8 @@ Before any task:
 - 2026 is a partial-year snapshot as of July 2026, not a complete calendar year.
 - Package `10060212000` occurs three times with different suppliers and is retained as one canonical row with `eligible_for_model=false`.
 - Five 2026 source rows with missing supplier names were excluded from the current merged file and are documented in the canonical data-quality report.
+- Feature matrix has 1,276 eligible rows and 20 explicit features.
+- Temporal split uses 838 training rows from 2024-2025 and 438 evaluation rows from the 2026 partial snapshot.
 
 ---
 
@@ -93,7 +95,7 @@ Before any task:
 
 ### Current State
 
-Python and frontend foundations, source-manifest verification, source-data audit, resumable enrichment runner, full enrichment coverage report, canonical dataset builder, EDA report generator, and feature matrix builder are available. Model, backend, frontend test, E2E, and Docker commands remain planned until their corresponding tasks create and verify them.
+Python and frontend foundations, source-manifest verification, source-data audit, resumable enrichment runner, full enrichment coverage report, canonical dataset builder, EDA report generator, feature matrix builder, and temporal split generator are available. Model, backend, frontend test, E2E, and Docker commands remain planned until their corresponding tasks create and verify them.
 
 ```bash
 # Python environment
@@ -117,6 +119,7 @@ uv run python pipelines/report_enrichment_coverage.py
 uv run python pipelines/build_canonical_dataset.py
 uv run python pipelines/analyze_tender_data.py
 uv run python pipelines/build_model_features.py
+uv run python pipelines/define_model_split.py
 
 # Model — planned stable command interface
 uv run python modeling/train_isolation_forest.py
@@ -192,6 +195,7 @@ procurement_data/
 │   ├── test_analyze_tender_data.py
 │   ├── test_build_model_features.py
 │   ├── test_build_canonical_dataset.py
+│   ├── test_define_model_split.py
 │   ├── test_enrichment_coverage.py
 │   ├── test_environment.py
 │   └── test_source_manifest.py
@@ -204,11 +208,13 @@ procurement_data/
 │   ├── analyze_tender_data.py
 │   ├── build_canonical_dataset.py
 │   ├── build_model_features.py
+│   ├── define_model_split.py
 │   ├── enrich_tender_details.py
 │   ├── report_enrichment_coverage.py
 │   └── verify_source_manifest.py
 ├── artifacts/
-│   └── feature_schema.json
+│   ├── feature_schema.json
+│   └── model_experiment_config.json
 ├── reports/
 │   ├── data/
 │   │   ├── canonical_data_quality.json
@@ -217,13 +223,16 @@ procurement_data/
 │   │   ├── enrichment_coverage.md
 │   │   ├── source_audit.json
 │   │   └── source_audit.md
-│   └── eda/
-│       ├── summary.json
-│       ├── summary.md
-│       ├── figures/
-│       └── tables/
+│   ├── eda/
+│   │   ├── summary.json
+│   │   ├── summary.md
+│   │   ├── figures/
+│   │   └── tables/
+│   └── model/
+│       └── split_decision.md
 └── datasets/
     ├── manifests/
+    │   ├── model_split.json
     │   └── source_manifest.json
     ├── processed/
     │   ├── model_features.csv

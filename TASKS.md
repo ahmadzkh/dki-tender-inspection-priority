@@ -134,7 +134,7 @@ Pencarian `/find-skills` menemukan `obra/superpowers@requesting-code-review` seb
 - **Acceptance:** log nilai, rasio kontrak/HPS, rasio HPS/pagu, savings ratio, PDN ratio, durasi, frekuensi, supplier share, dan HHI dihitung jika didukung data; zero/null division aman; kategori unseen dapat ditangani.
 - **Verification:** test menggunakan contoh kecil dengan hasil manual; tidak ada infinite value; feature order eksplisit; aggregate features tidak memakai informasi masa depan.
 
-### [ ] TASK-ML-009 - Define temporal evaluation protocol and model split
+### [x] TASK-ML-009 - Define temporal evaluation protocol and model split
 
 - **Depends on:** `TASK-ML-008`.
 - **Goal:** menetapkan penggunaan 2024-2025 dan snapshot 2026 tanpa menganggap 2026 tahun penuh.

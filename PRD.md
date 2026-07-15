@@ -69,7 +69,7 @@ Tahun 2026 merupakan snapshot tahun berjalan pada waktu pengunduhan, bukan satu 
 
 ## 1.3 Kesenjangan Produk
 
-Artefak enrichment, coverage report, dataset canonical satu-record-per-paket, EDA reproducible, dan feature matrix leakage-safe sudah tersedia. Feature matrix berisi 1.276 record eligible dengan 20 fitur eksplisit dan schema versi di `artifacts/feature_schema.json`. Split temporal, model Isolation Forest, evaluasi model, backend API, frontend, laporan yang dapat diunduh, pengujian lanjutan, dan deployment belum tersedia.
+Artefak enrichment, coverage report, dataset canonical satu-record-per-paket, EDA reproducible, feature matrix leakage-safe, dan split temporal sudah tersedia. Feature matrix berisi 1.276 record eligible dengan 20 fitur eksplisit dan schema versi di `artifacts/feature_schema.json`. Split temporal memakai 838 record 2024-2025 untuk training dan 438 record snapshot 2026 untuk evaluation, dengan satu record canonical tidak eligible tetap tercatat sebagai excluded. Baseline, model Isolation Forest, evaluasi model, backend API, frontend, laporan yang dapat diunduh, pengujian lanjutan, dan deployment belum tersedia.
 
 ## 1.4 Solusi yang Diusulkan
 
@@ -187,7 +187,7 @@ Prioritas: **P1** wajib untuk v1.0, **P2** penting setelah P1 stabil, **P3** nic
 | FR-15 | P1 | Transformasi kategori ditentukan dari data training | Kategori baru saat scoring ditangani tanpa crash atau perubahan diam-diam pada urutan fitur |
 | FR-16 | P1 | Data leakage dicegah pada fitur agregat | Fitur paket tidak boleh menggunakan informasi masa depan yang tidak tersedia pada skenario evaluasi temporal |
 
-> Pipeline `pipelines/build_model_features.py` menghasilkan `datasets/processed/model_features.csv` dan `artifacts/feature_schema.json`. Fitur agregat penyedia/satuan kerja memakai record sebelumnya dalam tahun yang sama setelah sorting jadwal dan `package_id`; split temporal final ditetapkan pada task berikutnya.
+> Pipeline `pipelines/build_model_features.py` menghasilkan `datasets/processed/model_features.csv` dan `artifacts/feature_schema.json`. Fitur agregat penyedia/satuan kerja memakai record sebelumnya dalam tahun yang sama setelah sorting jadwal dan `package_id`. Split temporal final dicatat pada `datasets/manifests/model_split.json`, `artifacts/model_experiment_config.json`, dan `reports/model/split_decision.md`: training 2024-2025, evaluation snapshot 2026, tanpa menganggap 2026 sebagai tahun penuh.
 
 ## 5.4 Modeling and Evaluation
 
