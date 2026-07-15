@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "model_version": "414f1691d2bccdd9",
+  "model_type": "sklearn.ensemble.IsolationForest",
+  "model_artifact": "artifacts/isolation_forest_model.joblib",
+  "ranking_csv": "artifacts/isolation_forest_ranking.csv",
+  "feature_matrix": "datasets/processed/model_features.csv",
+  "feature_matrix_sha256": "21531506de73cc96c24529497a2d3fd5d609461cbd33e62ca1c32529db0e4bdd",
+  "split_manifest": "datasets/manifests/model_split.json",
+  "split_manifest_sha256": "197815d63eccf00dd4112eb9c3cf66f37793fa7f226cd990f802e00ae3f81ed8",
+  "feature_columns": [
+    "year_value",
+    "partial_snapshot_year_flag",
+    "procurement_method_code",
+    "procurement_type_code",
+    "log_contract_value",
+    "log_hps",
+    "log_pagu",
+    "contract_to_hps_ratio",
+    "hps_to_pagu_ratio",
+    "savings_to_hps_ratio",
+    "pdn_to_contract_ratio",
+    "tender_duration_days",
+    "bid_submission_duration_days",
+    "evaluation_duration_days",
+    "schedule_invalid_timestamp_count",
+    "supplier_prior_package_count_year",
+    "supplier_prior_work_unit_package_count_year",
+    "supplier_prior_contract_share_year",
+    "supplier_prior_work_unit_contract_share_year",
+    "work_unit_supplier_hhi_prior_package_count_year"
+  ],
+  "preprocessing": {
+    "scaler": "sklearn.preprocessing.StandardScaler"
+  },
+  "hyperparameters": {
+    "n_estimators": 200,
+    "contamination": "auto",
+    "max_samples": "auto",
+    "n_jobs": 1
+  },
+  "random_seed": 42,
+  "score_direction": "higher score means higher inspection priority",
+  "cpu_only": true,
+  "train_row_count": 838,
+  "evaluation_row_count": 438,
+  "scored_row_count": 1276,
+  "library_versions": {
+    "scikit_learn": "1.9.0",
+    "numpy": "2.4.6",
+    "joblib": "1.5.3"
+  }
+}

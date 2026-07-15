@@ -152,7 +152,7 @@ Pencarian `/find-skills` menemukan `obra/superpowers@requesting-code-review` seb
 
 ## Modeling and Evaluation
 
-### [ ] TASK-ML-011 - Train reproducible Isolation Forest artifacts
+### [x] TASK-ML-011 - Train reproducible Isolation Forest artifacts
 
 - **Depends on:** `TASK-ML-010`.
 - **Goal:** melatih model dan menyimpan seluruh metadata yang diperlukan untuk scoring ulang.

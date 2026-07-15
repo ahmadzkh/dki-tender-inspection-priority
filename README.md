@@ -4,9 +4,9 @@ Sistem berbasis web untuk mengurutkan paket realisasi tender Pemerintah Provinsi
 
 ## Status Project
 
-> **Tahap saat ini: baseline transparan selesai; Isolation Forest berikutnya.**
+> **Tahap saat ini: training Isolation Forest selesai; evaluasi model berikutnya.**
 
-Dataset 2024-2026 telah dikumpulkan, diaudit, digabung, diperkaya, dicanonicalkan menjadi satu record per `kode_paket`, dianalisis melalui EDA reproducible, ditransformasi menjadi feature matrix leakage-safe, dibagi dengan split temporal, dan diberi baseline ranking transparan. Empat CSV sumber disimpan pada layout raw yang immutable serta dicatat dalam manifest SHA-256 yang dapat diverifikasi. Pipeline audit dan enrichment menghasilkan report JSON/Markdown dari raw sources tanpa memodifikasinya. Full enrichment INAPROC sudah dijalankan untuk 1.277 kode paket unik dengan coverage 100%, lalu pipeline canonical menghasilkan 1.277 paket unik dan menandai satu paket multi-provider sebagai tidak eligible untuk fitur model. EDA menghasilkan ringkasan distribusi nilai, missingness, outlier univariat, kategori, konsentrasi penyedia/satuan kerja, dan catatan snapshot parsial 2026. Feature engineering menghasilkan 1.276 baris eligible dengan 20 fitur eksplisit. Split temporal memakai 838 record 2024-2025 untuk training dan 438 record snapshot 2026 untuk evaluation. Baseline robust z-score menghasilkan ranking deterministik untuk pembanding model. Model Isolation Forest, backend API, antarmuka pengguna, pengujian tambahan, dan deployment belum dibangun.
+Dataset 2024-2026 telah dikumpulkan, diaudit, digabung, diperkaya, dicanonicalkan menjadi satu record per `kode_paket`, dianalisis melalui EDA reproducible, ditransformasi menjadi feature matrix leakage-safe, dibagi dengan split temporal, diberi baseline ranking transparan, dan dilatih dengan Isolation Forest. Empat CSV sumber disimpan pada layout raw yang immutable serta dicatat dalam manifest SHA-256 yang dapat diverifikasi. Pipeline audit dan enrichment menghasilkan report JSON/Markdown dari raw sources tanpa memodifikasinya. Full enrichment INAPROC sudah dijalankan untuk 1.277 kode paket unik dengan coverage 100%, lalu pipeline canonical menghasilkan 1.277 paket unik dan menandai satu paket multi-provider sebagai tidak eligible untuk fitur model. EDA menghasilkan ringkasan distribusi nilai, missingness, outlier univariat, kategori, konsentrasi penyedia/satuan kerja, dan catatan snapshot parsial 2026. Feature engineering menghasilkan 1.276 baris eligible dengan 20 fitur eksplisit. Split temporal memakai 838 record 2024-2025 untuk training dan 438 record snapshot 2026 untuk evaluation. Baseline robust z-score menghasilkan ranking deterministik untuk pembanding model. Isolation Forest menghasilkan artefak model CPU-only, konfigurasi, dan ranking untuk 1.276 record eligible. Evaluasi stabilitas/sensitivitas, backend API, antarmuka pengguna, pengujian tambahan, dan deployment belum dibangun.
 
 | Komponen | Status |
 |---|---|
@@ -23,7 +23,8 @@ Dataset 2024-2026 telah dikumpulkan, diaudit, digabung, diperkaya, dicanonicalka
 | Feature engineering | Selesai; `datasets/processed/model_features.csv` berisi 1.276 baris dan 20 fitur |
 | Split temporal model | Selesai; training 2024-2025 = 838 record, evaluation 2026 snapshot = 438 record |
 | Baseline transparan | Selesai; robust z-score ranking di `artifacts/baseline_ranking.csv` |
-| Isolation Forest dan evaluasi | Belum dimulai |
+| Training Isolation Forest | Selesai; `model_version=414f1691d2bccdd9`, ranking di `artifacts/isolation_forest_ranking.csv` |
+| Evaluasi model | Belum dimulai |
 | FastAPI backend | Belum dimulai |
 | Docker dan deployment | Belum dimulai |
 
@@ -120,6 +121,8 @@ Feature matrix tersedia pada `datasets/processed/model_features.csv` dengan sche
 Split temporal tersedia pada `datasets/manifests/model_split.json` dengan konfigurasi eksperimen di `artifacts/model_experiment_config.json` dan catatan keputusan di [`reports/model/split_decision.md`](reports/model/split_decision.md). Training memakai 838 record eligible dari 2024-2025. Evaluation memakai 438 record eligible dari snapshot 2026 dan tidak diperlakukan sebagai tahun kalender penuh.
 
 Baseline transparan tersedia pada `artifacts/baseline_ranking.csv` dengan konfigurasi di `artifacts/baseline_config.json` dan report di [`reports/model/baseline.md`](reports/model/baseline.md). Baseline memakai median dan skala robust dari train split 2024-2025, lalu memberi skor deviasi fitur. Skor ini adalah pembanding prioritas pemeriksaan, bukan label pelanggaran.
+
+Model Isolation Forest tersedia pada `artifacts/isolation_forest_model.joblib` dengan konfigurasi di `artifacts/isolation_forest_config.json` dan ranking di `artifacts/isolation_forest_ranking.csv`. Model memakai `StandardScaler`, `n_estimators=200`, `random_seed=42`, `n_jobs=1`, dan dilatih hanya pada train split 2024-2025. Skor semakin tinggi berarti paket semakin diprioritaskan untuk pemeriksaan, bukan bukti pelanggaran.
 
 ### Kolom Awal
 
@@ -297,9 +300,13 @@ Prinsip arsitektur:
 │   ├── baseline_config.json
 │   ├── baseline_ranking.csv
 │   ├── feature_schema.json
+│   ├── isolation_forest_config.json
+│   ├── isolation_forest_model.joblib
+│   ├── isolation_forest_ranking.csv
 │   └── model_experiment_config.json
 ├── modeling/
-│   └── build_baseline_ranking.py
+│   ├── build_baseline_ranking.py
+│   └── train_isolation_forest.py
 ├── pipelines/
 │   ├── audit_source_data.py
 │   ├── analyze_tender_data.py
@@ -315,6 +322,7 @@ Prinsip arsitektur:
 │   ├── test_build_model_features.py
 │   ├── test_build_baseline_ranking.py
 │   ├── test_define_model_split.py
+│   ├── test_train_isolation_forest.py
 │   └── ...
 ├── reports/
 │   ├── data/
@@ -339,7 +347,7 @@ Struktur aplikasi akan dibuat bertahap saat file pertamanya diperlukan. Rancanga
 
 ## Menjalankan Project
 
-Python environment, source-manifest verifier, source-data audit, enrichment runner, canonical dataset builder, EDA generator, dan scaffold frontend sudah tersedia. Backend dan pipeline pemodelan belum tersedia.
+Python environment, source-manifest verifier, source-data audit, enrichment runner, canonical dataset builder, EDA generator, training Isolation Forest, dan scaffold frontend sudah tersedia. Backend dan evaluasi model lanjutan belum tersedia.
 
 ```bash
 git clone https://github.com/ahmadzkh/dki-tender-inspection-priority.git
@@ -354,13 +362,14 @@ uv run python pipelines/analyze_tender_data.py
 uv run python pipelines/build_model_features.py
 uv run python pipelines/define_model_split.py
 uv run python modeling/build_baseline_ranking.py
+uv run python modeling/train_isolation_forest.py
 uv run pytest
 npm --prefix frontend install
 npm --prefix frontend run lint
 npm --prefix frontend run build
 ```
 
-Command training model dan backend akan ditambahkan setelah implementasinya tersedia dan sudah diverifikasi.
+Command evaluasi model dan backend akan ditambahkan setelah implementasinya tersedia dan sudah diverifikasi.
 
 ## Roadmap
 
@@ -377,7 +386,8 @@ Command training model dan backend akan ditambahkan setelah implementasinya ters
 - [x] Membangun feature engineering leakage-safe.
 - [x] Menetapkan split temporal training/evaluation.
 - [x] Membangun baseline ranking transparan.
-- [ ] Melatih dan mengevaluasi Isolation Forest.
+- [x] Melatih Isolation Forest reproducible.
+- [ ] Mengevaluasi stabilitas, sensitivitas, perilaku temporal, dan baseline.
 - [ ] Memvalidasi feature influence dan explanation.
 - [ ] Membangun FastAPI backend.
 - [ ] Membangun Next.js frontend.
@@ -401,6 +411,9 @@ Command training model dan backend akan ditambahkan setelah implementasinya ters
 - `reports/model/split_decision.md`: catatan keputusan split temporal dan leakage policy modeling.
 - `artifacts/baseline_ranking.csv`: ranking baseline transparan yang deterministik.
 - `reports/model/baseline.md`: metode, keterbatasan, dan batas interpretasi baseline.
+- `artifacts/isolation_forest_config.json`: konfigurasi, versi dataset, preprocessing, hyperparameter, dan versi library model.
+- `artifacts/isolation_forest_ranking.csv`: ranking Isolation Forest untuk 1.276 record eligible.
+- `artifacts/isolation_forest_model.joblib`: artefak model dan preprocessor untuk scoring ulang.
 
 `TASKS.md` menjadi single source of truth status implementasi. Agent hanya boleh mengubah task menjadi `[x]` setelah test, `verify-gate`, dan code review yang diwajibkan lulus.
 
