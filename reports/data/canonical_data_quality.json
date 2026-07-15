@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "source_manifest": {
+    "path": "datasets/manifests/source_manifest.json",
+    "sha256": "d1ceb9363c177cfa73be30ca6419bc8548e8c34fec72c8a8f390272cb1c3c07f"
+  },
+  "source_csv": "datasets/raw/realisasi_dki_jakarta_2024_2026.csv",
+  "output_csv": "datasets/processed/tenders_canonical.csv",
+  "enrichment_cache_dir": "datasets/raw/enrichment/inaproc_tender_details",
+  "input": {
+    "annual_source_row_count": 1284,
+    "merged_row_count": 1279,
+    "annual_minus_merged_row_count": 5,
+    "annual_missing_supplier_row_count": 5,
+    "unique_package_count": 1277
+  },
+  "output": {
+    "canonical_row_count": 1277,
+    "eligible_for_model_count": 1276,
+    "multi_provider_package_count": 1
+  },
+  "enrichment": {
+    "status_counts": {
+      "success": 1277
+    },
+    "missing_response_count": 0
+  },
+  "missing_supplier_exclusions": [
+    {
+      "package_id": "10114278000",
+      "source_file": "datasets/raw/inaproc_realisasi_tender_dki_jakarta_2026.csv",
+      "source_row_number": 91,
+      "year": "2026",
+      "package_name": "Pengadaan Tenaga Ahli Data Analyst Pengembangan Produk dan Layanan Maret - Desember 2 #3"
+    },
+    {
+      "package_id": "10120490000",
+      "source_file": "datasets/raw/inaproc_realisasi_tender_dki_jakarta_2026.csv",
+      "source_row_number": 316,
+      "year": "2026",
+      "package_name": "Pengadaan Tenaga Ahli Programmer Medior - Back End Developer Pengembangan Produk dan Layanan April - Desember 2 #2"
+    },
+    {
+      "package_id": "10128352000",
+      "source_file": "datasets/raw/inaproc_realisasi_tender_dki_jakarta_2026.csv",
+      "source_row_number": 365,
+      "year": "2026",
+      "package_name": "Pengawasan Pemeliharaan Kolam Renang"
+    },
+    {
+      "package_id": "10127852000",
+      "source_file": "datasets/raw/inaproc_realisasi_tender_dki_jakarta_2026.csv",
+      "source_row_number": 415,
+      "year": "2026",
+      "package_name": "Pengawasan Pemeliharaan Gedung Kelas Baru"
+    },
+    {
+      "package_id": "10127870000",
+      "source_file": "datasets/raw/inaproc_realisasi_tender_dki_jakarta_2026.csv",
+      "source_row_number": 441,
+      "year": "2026",
+      "package_name": "Pengawasan Pemeliharaan Barak Pattimura"
+    }
+  ],
+  "multi_provider_packages": {
+    "10060212000": {
+      "source_row_count": 3,
+      "supplier_names": [
+        "PT. TUAKARTA DAYA CIPTA",
+        "cv.pillar buana",
+        "PT. ADONIA PUTRI MANDIRI"
+      ],
+      "source_row_numbers": [
+        340,
+        467,
+        807
+      ]
+    }
+  }
+}

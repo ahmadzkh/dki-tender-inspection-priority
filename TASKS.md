@@ -108,7 +108,7 @@ Pencarian `/find-skills` menemukan `obra/superpowers@requesting-code-review` seb
 - **Acceptance:** total sukses, gagal, missing, HTTP status, serta coverage per field dan tahun dilaporkan; seluruh kegagalan dapat di-resume; klaim 10-sampel diganti dengan hasil penuh.
 - **Verification:** jumlah paket attempted sama dengan jumlah kode paket unik yang eligible; rerun tidak mengulang request sukses; spot-check paket terhadap respons raw.
 
-### [ ] TASK-ML-006 - Build canonical one-package-per-record dataset
+### [x] TASK-ML-006 - Build canonical one-package-per-record dataset
 
 - **Depends on:** `TASK-ML-005`.
 - **Goal:** menghasilkan unit analisis satu `kode_paket` per record secara transparan.

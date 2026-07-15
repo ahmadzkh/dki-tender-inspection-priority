@@ -69,7 +69,7 @@ Tahun 2026 merupakan snapshot tahun berjalan pada waktu pengunduhan, bukan satu 
 
 ## 1.3 Kesenjangan Produk
 
-Artefak enrichment dan coverage report sudah tersedia untuk seluruh 1.277 kode paket unik. Pipeline feature engineering, model Isolation Forest, evaluasi model, backend API, frontend, laporan yang dapat diunduh, pengujian lanjutan, dan deployment belum tersedia. Dataset gabungan plus snapshot enrichment masih menjadi input persiapan dan belum boleh dianggap sebagai dataset final pemodelan sebelum canonicalization selesai.
+Artefak enrichment, coverage report, dan dataset canonical satu-record-per-paket sudah tersedia untuk seluruh 1.277 kode paket unik. Pipeline feature engineering, model Isolation Forest, evaluasi model, backend API, frontend, laporan yang dapat diunduh, pengujian lanjutan, dan deployment belum tersedia. Dataset canonical menjadi dasar data preparation berikutnya, tetapi belum boleh dianggap sebagai feature matrix final sebelum EDA dan feature engineering selesai.
 
 ## 1.4 Solusi yang Diusulkan
 
@@ -306,7 +306,7 @@ Prioritas: **P1** wajib untuk v1.0, **P2** penting setelah P1 stabil, **P3** nic
 
 ## 9.1 Unit Analisis
 
-Unit target adalah satu paket tender (`kode_paket`). Kasus `10060212000` yang memiliki tiga penyedia tidak boleh diam-diam menjadi tiga skor paket. Pipeline harus memilih perlakuan yang dapat dipertanggungjawabkan, misalnya menandai sebagai multi-provider dan mengecualikannya dari fitur penyedia, atau mengeluarkannya dari canonical package dataset dengan audit record.
+Unit target adalah satu paket tender (`kode_paket`). Kasus `10060212000` yang memiliki tiga penyedia tidak boleh diam-diam menjadi tiga skor paket. Pipeline canonical mempertahankan satu record untuk paket tersebut, menyimpan daftar penyedia dan nilai sumber, serta menandainya `eligible_for_model=false` sampai feature engineering menetapkan aturan eksplisit untuk paket multi-provider.
 
 ## 9.2 Interpretasi Fitur HPS
 
@@ -367,7 +367,7 @@ v1.0 dinyatakan siap untuk penulisan BAB 4 apabila:
 |---|---|---|
 | OD-1 | Konfigurasi Isolation Forest final, termasuk `contamination` | Setelah eksperimen sensitivitas |
 | OD-2 | Nilai default Top-N | Setelah melihat distribusi skor dan kebutuhan demo |
-| OD-3 | Perlakuan final paket multi-provider | Saat canonicalization, sebelum feature engineering |
+| OD-3 | Perlakuan final paket multi-provider: satu record canonical dengan daftar nilai sumber dan `eligible_for_model=false` | Diputuskan pada canonicalization, sebelum feature engineering |
 | OD-4 | Fitur final berdasarkan coverage enrichment dan multikolinearitas | Setelah EDA/enrichment |
 | OD-5 | SHAP dipakai sebagai penjelasan utama atau sekunder | Setelah validasi konsistensi explanation-score |
 | OD-6 | PDF export masuk v1.0 final | Setelah P1 dashboard dan CSV stabil |

@@ -4,9 +4,9 @@ Sistem berbasis web untuk mengurutkan paket realisasi tender Pemerintah Provinsi
 
 ## Status Project
 
-> **Tahap saat ini: fondasi pengembangan selesai; audit sumber data dan full enrichment coverage sudah reproducible.**
+> **Tahap saat ini: fondasi data selesai sampai canonical dataset; feature engineering berikutnya.**
 
-Dataset 2024-2026 telah dikumpulkan, diaudit, dan digabung. Empat CSV sumber disimpan pada layout raw yang immutable serta dicatat dalam manifest SHA-256 yang dapat diverifikasi. Pipeline audit menghasilkan report JSON dan Markdown dari raw sources tanpa memodifikasinya. Full enrichment INAPROC sudah dijalankan untuk 1.277 kode paket unik dan coverage report tersedia. Feature engineering, model Machine Learning, backend API, antarmuka pengguna, pengujian tambahan, dan deployment belum dibangun.
+Dataset 2024-2026 telah dikumpulkan, diaudit, digabung, diperkaya, dan dicanonicalkan menjadi satu record per `kode_paket`. Empat CSV sumber disimpan pada layout raw yang immutable serta dicatat dalam manifest SHA-256 yang dapat diverifikasi. Pipeline audit dan enrichment menghasilkan report JSON/Markdown dari raw sources tanpa memodifikasinya. Full enrichment INAPROC sudah dijalankan untuk 1.277 kode paket unik dengan coverage 100%, lalu pipeline canonical menghasilkan 1.277 paket unik dan menandai satu paket multi-provider sebagai tidak eligible untuk fitur model. Feature engineering, model Machine Learning, backend API, antarmuka pengguna, pengujian tambahan, dan deployment belum dibangun.
 
 | Komponen | Status |
 |---|---|
@@ -18,7 +18,7 @@ Dataset 2024-2026 telah dikumpulkan, diaudit, dan digabung. Empat CSV sumber dis
 | Next.js frontend scaffold | Selesai |
 | Folder target terstruktur | Selesai |
 | Enrichment HPS, pagu, dan jadwal | Selesai; coverage report 100% untuk 1.277 paket unik |
-| Dataset canonical | Belum dimulai |
+| Dataset canonical | Selesai; 1.277 paket unik, 1 multi-provider ditandai tidak eligible untuk model |
 | Feature engineering | Belum dimulai |
 | Isolation Forest dan evaluasi | Belum dimulai |
 | FastAPI backend | Belum dimulai |
@@ -104,9 +104,11 @@ datasets/raw/realisasi_dki_jakarta_2024_2026.csv
 
 Tahun 2026 merupakan snapshot tahun berjalan per Juli 2026, bukan satu tahun kalender penuh. Total tahun 2026 tidak boleh dibandingkan langsung dengan total tahunan 2024 atau 2025 tanpa penanda dan normalisasi.
 
-Lima baris pada file raw 2026 tidak memiliki nama penyedia dan tidak masuk ke dataset gabungan saat ini. Kode paket `10060212000` muncul tiga kali dengan penyedia berbeda. Perlakuan canonical untuk kasus tersebut harus ditetapkan sebelum feature engineering.
+Lima baris pada file raw 2026 tidak memiliki nama penyedia dan tidak masuk ke dataset gabungan saat ini. Kode paket `10060212000` muncul tiga kali dengan penyedia berbeda. Pipeline canonical mempertahankan satu record untuk paket tersebut, menyimpan daftar penyedia/nilai sumber, dan menandainya `eligible_for_model=false` agar tidak diam-diam masuk fitur penyedia atau finansial.
 
 Audit yang dapat dijalankan ulang tersedia pada [`reports/data/source_audit.md`](reports/data/source_audit.md) dan [`reports/data/source_audit.json`](reports/data/source_audit.json). Report membedakan 1.284 baris annual raw dari 1.279 baris merged input agar lima supplier kosong tetap terlihat dalam data-quality trail.
+
+Dataset canonical tersedia pada `datasets/processed/tenders_canonical.csv`. Report kualitasnya tersedia pada [`reports/data/canonical_data_quality.md`](reports/data/canonical_data_quality.md) dan [`reports/data/canonical_data_quality.json`](reports/data/canonical_data_quality.json).
 
 ### Kolom Awal
 
@@ -298,7 +300,7 @@ Struktur aplikasi akan dibuat bertahap saat file pertamanya diperlukan. Rancanga
 
 ## Menjalankan Project
 
-Python environment, source-manifest verifier, source-data audit, enrichment runner, dan scaffold frontend sudah tersedia. Backend dan pipeline pemodelan belum tersedia.
+Python environment, source-manifest verifier, source-data audit, enrichment runner, canonical dataset builder, dan scaffold frontend sudah tersedia. Backend dan pipeline pemodelan belum tersedia.
 
 ```bash
 git clone https://github.com/ahmadzkh/dki-tender-inspection-priority.git
@@ -308,6 +310,7 @@ uv run python pipelines/verify_source_manifest.py
 uv run python pipelines/audit_source_data.py
 INAPROC_DETAIL_API_BASE_URL="<detail-api-base-url>" uv run python pipelines/enrich_tender_details.py --limit 10
 uv run python pipelines/report_enrichment_coverage.py
+uv run python pipelines/build_canonical_dataset.py
 uv run pytest
 npm --prefix frontend install
 npm --prefix frontend run lint
@@ -326,7 +329,7 @@ Command model dan backend akan ditambahkan setelah implementasinya tersedia dan 
 - [x] Membangun audit data reproducible.
 - [x] Membangun enrichment pipeline INAPROC yang resumable.
 - [x] Mengukur coverage HPS, pagu, dan jadwal.
-- [ ] Membentuk dataset canonical satu paket per record.
+- [x] Membentuk dataset canonical satu paket per record.
 - [ ] Menjalankan EDA dan feature engineering.
 - [ ] Melatih dan mengevaluasi Isolation Forest.
 - [ ] Memvalidasi feature influence dan explanation.
@@ -345,6 +348,7 @@ Command model dan backend akan ditambahkan setelah implementasinya tersedia dan 
 - [`TASKS.md`](TASKS.md): urutan `TASK-ML`, `TASK-BE`, dan `TASK-FE`, dependency, acceptance criteria, verification, serta status checklist.
 - [`reports/data/source_audit.md`](reports/data/source_audit.md): ringkasan audit sumber data yang dapat diregenerasi.
 - `reports/data/enrichment_coverage.md`: ringkasan coverage enrichment yang dapat diregenerasi setelah full enrichment.
+- `reports/data/canonical_data_quality.md`: ringkasan kualitas dataset canonical yang dapat diregenerasi.
 
 `TASKS.md` menjadi single source of truth status implementasi. Agent hanya boleh mengubah task menjadi `[x]` setelah test, `verify-gate`, dan code review yang diwajibkan lulus.
 

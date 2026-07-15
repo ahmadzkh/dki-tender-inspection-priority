@@ -26,7 +26,7 @@ Before any task:
 - **Goal**: Help auditors or procurement analysts decide which completed tender packages to inspect first using traceable data, reproducible anomaly scoring, and neutral explanations.
 - **Target Users**: Government internal auditors/inspectorate staff, procurement analysts, thesis supervisors/examiners, and researchers.
 - **Version**: `0.1.0` foundation/data-preparation stage
-- **Status**: Active development; Python and Next.js foundations plus immutable source-data layout, reproducible source-data audit, resumable enrichment runner, and full enrichment coverage report exist. Model, backend API, product UI, containers, and deployment are still planned.
+- **Status**: Active development; Python and Next.js foundations plus immutable source-data layout, reproducible source-data audit, resumable enrichment runner, full enrichment coverage report, and one-package-per-record canonical dataset exist. Feature engineering, model, backend API, product UI, containers, and deployment are still planned.
 - **Research Methods**:
   - CRISP-DM for data understanding, preparation, modeling, evaluation, and deployment.
   - RAD for web requirements planning, user design, construction, and cutover.
@@ -41,8 +41,8 @@ Before any task:
 - Years: 2024 = 312, 2025 = 529, 2026 = 438
 - All merged records: Province of DKI Jakarta, source transaction `Tender`, status `SELESAI`
 - 2026 is a partial-year snapshot as of July 2026, not a complete calendar year.
-- Package `10060212000` occurs three times with different suppliers and requires explicit canonicalization.
-- Five 2026 source rows with missing supplier names were excluded from the current merged file and must remain documented in the data-quality report.
+- Package `10060212000` occurs three times with different suppliers and is retained as one canonical row with `eligible_for_model=false`.
+- Five 2026 source rows with missing supplier names were excluded from the current merged file and are documented in the canonical data-quality report.
 
 ---
 
@@ -93,7 +93,7 @@ Before any task:
 
 ### Current State
 
-Python and frontend foundations, source-manifest verification, source-data audit, resumable enrichment runner, and full enrichment coverage report are available. Model, backend, frontend test, E2E, and Docker commands remain planned until their corresponding tasks create and verify them.
+Python and frontend foundations, source-manifest verification, source-data audit, resumable enrichment runner, full enrichment coverage report, and canonical dataset builder are available. Feature engineering, model, backend, frontend test, E2E, and Docker commands remain planned until their corresponding tasks create and verify them.
 
 ```bash
 # Python environment
@@ -113,7 +113,7 @@ uv run python pipelines/audit_source_data.py
 INAPROC_DETAIL_API_BASE_URL="<detail-api-base-url>" uv run python pipelines/enrich_tender_details.py --limit 10
 uv run python pipelines/report_enrichment_coverage.py
 
-# Data pipeline — planned stable command interface after canonicalization tasks
+# Data pipeline — canonicalization available; later feature commands remain planned
 uv run python pipelines/build_canonical_dataset.py
 uv run python pipelines/build_model_features.py
 
@@ -188,6 +188,8 @@ procurement_data/
 │   └── procurement_priority/
 ├── tests/
 │   ├── test_audit_source_data.py
+│   ├── test_build_canonical_dataset.py
+│   ├── test_enrichment_coverage.py
 │   ├── test_environment.py
 │   └── test_source_manifest.py
 ├── frontend/
@@ -196,15 +198,23 @@ procurement_data/
 │   └── src/app/
 ├── pipelines/
 │   ├── audit_source_data.py
+│   ├── build_canonical_dataset.py
+│   ├── enrich_tender_details.py
+│   ├── report_enrichment_coverage.py
 │   └── verify_source_manifest.py
 ├── reports/
 │   └── data/
+│       ├── canonical_data_quality.json
+│       ├── canonical_data_quality.md
+│       ├── enrichment_coverage.json
+│       ├── enrichment_coverage.md
 │       ├── source_audit.json
 │       └── source_audit.md
 └── datasets/
     ├── manifests/
     │   └── source_manifest.json
     ├── processed/
+    │   └── tenders_canonical.csv
     └── raw/
         ├── inaproc_realisasi_tender_dki_jakarta_2024.csv
         ├── inaproc_realisasi_tender_dki_jakarta_2025.csv
@@ -704,7 +714,8 @@ Before every requested commit:
 - Thesis topic, v1.0 scope, and interpretation boundary are defined.
 - DKI Jakarta completed-tender source datasets for 2024, 2025, and the partial 2026 snapshot are tracked.
 - The merged dataset contains 1,279 rows and 1,277 unique package codes.
-- Initial manual audit identified five missing-supplier source rows and one multi-provider package code.
+- The canonical dataset contains 1,277 package rows, one row per `kode_paket`.
+- Initial manual audit identified five missing-supplier source rows and one multi-provider package code; canonicalization documents the five exclusions and marks package `10060212000` as `eligible_for_model=false`.
 - `README.md`, `PRD.md`, `CLAUDE.md`, `AGENTS.md`, and `TASKS.md` define project, engineering, and execution rules.
 - Git and the public GitHub repository are configured on `main`.
 - Application, model, API, frontend, tests, containers, and deployment are not complete until their corresponding `TASKS.md` entries are checked.
