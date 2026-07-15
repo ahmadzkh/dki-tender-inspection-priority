@@ -224,7 +224,7 @@ Pencarian `/find-skills` menemukan `obra/superpowers@requesting-code-review` seb
 - **Acceptance:** statistik paket, nilai, supplier, satker, tahun, score distribution, serta filter options konsisten dengan artifact; 2026 berlabel snapshot parsial.
 - **Verification:** nilai endpoint dibandingkan dengan artifact fixture dan production artifact.
 
-### [ ] TASK-BE-005 - Add ranking endpoint with filters and pagination
+### [x] TASK-BE-005 - Add ranking endpoint with filters and pagination
 
 - **Depends on:** `TASK-BE-004`.
 - **Goal:** menyediakan ranking yang dapat difilter, diurutkan, dipaginasi, dan dibatasi Top-N.
