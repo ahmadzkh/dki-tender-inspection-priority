@@ -206,7 +206,7 @@ Pencarian `/find-skills` menemukan `obra/superpowers@requesting-code-review` seb
 - **Acceptance:** checksum/schema/version incompatibility gagal jelas; null tidak diubah menjadi nol; score direction dan disclaimer tersedia pada contract.
 - **Verification:** valid artifact load sekali; missing/corrupt/incompatible artifact menghasilkan failure terkontrol.
 
-### [ ] TASK-BE-003 - Add health and metadata endpoints
+### [x] TASK-BE-003 - Add health and metadata endpoints
 
 - **Depends on:** `TASK-BE-002`.
 - **Goal:** menyediakan readiness serta versi dataset/model untuk deployment dan frontend.

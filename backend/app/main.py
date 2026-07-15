@@ -13,6 +13,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from backend.app.api.router import api_router
 from backend.app.config import (
     ARTIFACT_DIR,
     EXPLANATIONS_PATH,
@@ -66,6 +67,8 @@ app = FastAPI(
     openapi_url="/openapi.json",
     lifespan=lifespan,
 )
+
+app.include_router(api_router)
 
 # ---------------------------------------------------------------------------
 # CORS — allowlist driven entirely by environment; no hardcoded origin
