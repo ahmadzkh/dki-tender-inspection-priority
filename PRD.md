@@ -69,7 +69,7 @@ Tahun 2026 merupakan snapshot tahun berjalan pada waktu pengunduhan, bukan satu 
 
 ## 1.3 Kesenjangan Produk
 
-Artefak enrichment, coverage report, dataset canonical satu-record-per-paket, dan EDA reproducible sudah tersedia untuk seluruh 1.277 kode paket unik. Pipeline feature engineering, model Isolation Forest, evaluasi model, backend API, frontend, laporan yang dapat diunduh, pengujian lanjutan, dan deployment belum tersedia. Dataset canonical dan EDA menjadi dasar data preparation berikutnya, tetapi belum boleh dianggap sebagai feature matrix final sebelum feature engineering selesai.
+Artefak enrichment, coverage report, dataset canonical satu-record-per-paket, EDA reproducible, dan feature matrix leakage-safe sudah tersedia. Feature matrix berisi 1.276 record eligible dengan 20 fitur eksplisit dan schema versi di `artifacts/feature_schema.json`. Split temporal, model Isolation Forest, evaluasi model, backend API, frontend, laporan yang dapat diunduh, pengujian lanjutan, dan deployment belum tersedia.
 
 ## 1.4 Solusi yang Diusulkan
 
@@ -186,6 +186,8 @@ Prioritas: **P1** wajib untuk v1.0, **P2** penting setelah P1 stabil, **P3** nic
 | FR-14 | P1 | Fitur tahun berjalan tidak menyesatkan | Fitur frekuensi/konsentrasi 2026 dihitung pada konteks periode observasi dan diberi penanda snapshot parsial |
 | FR-15 | P1 | Transformasi kategori ditentukan dari data training | Kategori baru saat scoring ditangani tanpa crash atau perubahan diam-diam pada urutan fitur |
 | FR-16 | P1 | Data leakage dicegah pada fitur agregat | Fitur paket tidak boleh menggunakan informasi masa depan yang tidak tersedia pada skenario evaluasi temporal |
+
+> Pipeline `pipelines/build_model_features.py` menghasilkan `datasets/processed/model_features.csv` dan `artifacts/feature_schema.json`. Fitur agregat penyedia/satuan kerja memakai record sebelumnya dalam tahun yang sama setelah sorting jadwal dan `package_id`; split temporal final ditetapkan pada task berikutnya.
 
 ## 5.4 Modeling and Evaluation
 

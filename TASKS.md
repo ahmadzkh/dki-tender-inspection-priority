@@ -126,7 +126,7 @@ Pencarian `/find-skills` menemukan `obra/superpowers@requesting-code-review` seb
 - **Acceptance:** analisis nilai, HPS/pagu, missingness, outlier univariat, kategori, supplier/work-unit concentration, tahun, dan dampak snapshot parsial 2026; chart tidak menduplikasi informasi tanpa alasan.
 - **Verification:** report dapat diregenerasi dari canonical dataset dan menyebut row count serta versi dataset yang benar.
 
-### [ ] TASK-ML-008 - Build leakage-safe model features
+### [x] TASK-ML-008 - Build leakage-safe model features
 
 - **Depends on:** `TASK-ML-007`.
 - **Goal:** membentuk fitur finansial, temporal, dan konsentrasi secara deterministik.

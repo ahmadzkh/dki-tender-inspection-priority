@@ -26,7 +26,7 @@ Before any task:
 - **Goal**: Help auditors or procurement analysts decide which completed tender packages to inspect first using traceable data, reproducible anomaly scoring, and neutral explanations.
 - **Target Users**: Government internal auditors/inspectorate staff, procurement analysts, thesis supervisors/examiners, and researchers.
 - **Version**: `0.1.0` foundation/data-preparation stage
-- **Status**: Active development; Python and Next.js foundations plus immutable source-data layout, reproducible source-data audit, resumable enrichment runner, full enrichment coverage report, one-package-per-record canonical dataset, and EDA/data-quality report exist. Feature engineering, model, backend API, product UI, containers, and deployment are still planned.
+- **Status**: Active development; Python and Next.js foundations plus immutable source-data layout, reproducible source-data audit, resumable enrichment runner, full enrichment coverage report, one-package-per-record canonical dataset, EDA/data-quality report, and leakage-safe feature matrix exist. Temporal split, model, backend API, product UI, containers, and deployment are still planned.
 - **Research Methods**:
   - CRISP-DM for data understanding, preparation, modeling, evaluation, and deployment.
   - RAD for web requirements planning, user design, construction, and cutover.
@@ -93,7 +93,7 @@ Before any task:
 
 ### Current State
 
-Python and frontend foundations, source-manifest verification, source-data audit, resumable enrichment runner, full enrichment coverage report, canonical dataset builder, and EDA report generator are available. Feature engineering, model, backend, frontend test, E2E, and Docker commands remain planned until their corresponding tasks create and verify them.
+Python and frontend foundations, source-manifest verification, source-data audit, resumable enrichment runner, full enrichment coverage report, canonical dataset builder, EDA report generator, and feature matrix builder are available. Model, backend, frontend test, E2E, and Docker commands remain planned until their corresponding tasks create and verify them.
 
 ```bash
 # Python environment
@@ -113,7 +113,7 @@ uv run python pipelines/audit_source_data.py
 INAPROC_DETAIL_API_BASE_URL="<detail-api-base-url>" uv run python pipelines/enrich_tender_details.py --limit 10
 uv run python pipelines/report_enrichment_coverage.py
 
-# Data pipeline — canonicalization available; later feature commands remain planned
+# Data pipeline — available now
 uv run python pipelines/build_canonical_dataset.py
 uv run python pipelines/analyze_tender_data.py
 uv run python pipelines/build_model_features.py
@@ -190,6 +190,7 @@ procurement_data/
 ├── tests/
 │   ├── test_audit_source_data.py
 │   ├── test_analyze_tender_data.py
+│   ├── test_build_model_features.py
 │   ├── test_build_canonical_dataset.py
 │   ├── test_enrichment_coverage.py
 │   ├── test_environment.py
@@ -202,9 +203,12 @@ procurement_data/
 │   ├── audit_source_data.py
 │   ├── analyze_tender_data.py
 │   ├── build_canonical_dataset.py
+│   ├── build_model_features.py
 │   ├── enrich_tender_details.py
 │   ├── report_enrichment_coverage.py
 │   └── verify_source_manifest.py
+├── artifacts/
+│   └── feature_schema.json
 ├── reports/
 │   ├── data/
 │   │   ├── canonical_data_quality.json
@@ -222,6 +226,7 @@ procurement_data/
     ├── manifests/
     │   └── source_manifest.json
     ├── processed/
+    │   ├── model_features.csv
     │   └── tenders_canonical.csv
     └── raw/
         ├── inaproc_realisasi_tender_dki_jakarta_2024.csv

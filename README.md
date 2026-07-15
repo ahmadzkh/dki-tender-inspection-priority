@@ -4,9 +4,9 @@ Sistem berbasis web untuk mengurutkan paket realisasi tender Pemerintah Provinsi
 
 ## Status Project
 
-> **Tahap saat ini: fondasi data dan EDA selesai; feature engineering berikutnya.**
+> **Tahap saat ini: feature engineering selesai; split temporal dan modeling berikutnya.**
 
-Dataset 2024-2026 telah dikumpulkan, diaudit, digabung, diperkaya, dicanonicalkan menjadi satu record per `kode_paket`, dan dianalisis melalui EDA reproducible. Empat CSV sumber disimpan pada layout raw yang immutable serta dicatat dalam manifest SHA-256 yang dapat diverifikasi. Pipeline audit dan enrichment menghasilkan report JSON/Markdown dari raw sources tanpa memodifikasinya. Full enrichment INAPROC sudah dijalankan untuk 1.277 kode paket unik dengan coverage 100%, lalu pipeline canonical menghasilkan 1.277 paket unik dan menandai satu paket multi-provider sebagai tidak eligible untuk fitur model. EDA menghasilkan ringkasan distribusi nilai, missingness, outlier univariat, kategori, konsentrasi penyedia/satuan kerja, dan catatan snapshot parsial 2026. Feature engineering, model Machine Learning, backend API, antarmuka pengguna, pengujian tambahan, dan deployment belum dibangun.
+Dataset 2024-2026 telah dikumpulkan, diaudit, digabung, diperkaya, dicanonicalkan menjadi satu record per `kode_paket`, dianalisis melalui EDA reproducible, dan ditransformasi menjadi feature matrix leakage-safe. Empat CSV sumber disimpan pada layout raw yang immutable serta dicatat dalam manifest SHA-256 yang dapat diverifikasi. Pipeline audit dan enrichment menghasilkan report JSON/Markdown dari raw sources tanpa memodifikasinya. Full enrichment INAPROC sudah dijalankan untuk 1.277 kode paket unik dengan coverage 100%, lalu pipeline canonical menghasilkan 1.277 paket unik dan menandai satu paket multi-provider sebagai tidak eligible untuk fitur model. EDA menghasilkan ringkasan distribusi nilai, missingness, outlier univariat, kategori, konsentrasi penyedia/satuan kerja, dan catatan snapshot parsial 2026. Feature engineering menghasilkan 1.276 baris eligible dengan 20 fitur eksplisit. Split temporal, model Machine Learning, backend API, antarmuka pengguna, pengujian tambahan, dan deployment belum dibangun.
 
 | Komponen | Status |
 |---|---|
@@ -20,7 +20,7 @@ Dataset 2024-2026 telah dikumpulkan, diaudit, digabung, diperkaya, dicanonicalka
 | Enrichment HPS, pagu, dan jadwal | Selesai; coverage report 100% untuk 1.277 paket unik |
 | Dataset canonical | Selesai; 1.277 paket unik, 1 multi-provider ditandai tidak eligible untuk model |
 | EDA dan data-quality analysis | Selesai; report reproducible di `reports/eda/summary.md` |
-| Feature engineering | Belum dimulai |
+| Feature engineering | Selesai; `datasets/processed/model_features.csv` berisi 1.276 baris dan 20 fitur |
 | Isolation Forest dan evaluasi | Belum dimulai |
 | FastAPI backend | Belum dimulai |
 | Docker dan deployment | Belum dimulai |
@@ -113,6 +113,8 @@ Dataset canonical tersedia pada `datasets/processed/tenders_canonical.csv`. Repo
 
 EDA reproducible tersedia pada [`reports/eda/summary.md`](reports/eda/summary.md) dengan tabel statistik di `reports/eda/tables/` dan visualisasi SVG di `reports/eda/figures/`. Report menyebut row count, checksum canonical dataset, missingness, outlier univariat, distribusi kategori, konsentrasi penyedia/satuan kerja, dan batas interpretasi snapshot parsial 2026.
 
+Feature matrix tersedia pada `datasets/processed/model_features.csv` dengan schema eksplisit di `artifacts/feature_schema.json`. Pipeline `pipelines/build_model_features.py` membentuk 20 fitur finansial, temporal, kategori, dan agregat prior-year/prior-observation untuk 1.276 record eligible. Fitur agregat penyedia/satuan kerja hanya memakai record sebelumnya dalam tahun yang sama setelah sorting jadwal dan `package_id`, sehingga tidak memakai informasi masa depan.
+
 ### Kolom Awal
 
 ```text
@@ -150,7 +152,7 @@ Full enrichment menghasilkan 1.277 respons sukses dari 1.277 paket unik. Coverag
 
 ## Fitur Machine Learning
 
-Daftar berikut merupakan kandidat. EDA awal sudah tersedia; fitur final ditetapkan pada pipeline feature engineering berikutnya berdasarkan coverage, distribusi, dan risiko leakage.
+Daftar berikut sudah dibentuk oleh `pipelines/build_model_features.py` untuk record yang `eligible_for_model=true`. Urutan fitur dan encoder kategori disimpan pada `artifacts/feature_schema.json` agar training dan scoring memakai kontrak yang sama.
 
 ### Fitur Finansial
 
@@ -165,7 +167,6 @@ Daftar berikut merupakan kandidat. EDA awal sudah tersedia; fitur final ditetapk
 - durasi tender keseluruhan;
 - durasi tahapan penawaran;
 - durasi evaluasi;
-- durasi masa sanggah;
 - penanda snapshot tahun berjalan.
 
 ### Fitur Konsentrasi Penyedia
@@ -286,13 +287,21 @@ Prinsip arsitektur:
 ├── README.md
 ├── TASKS.md
 ├── .gitignore
+├── artifacts/
+│   └── feature_schema.json
 ├── pipelines/
 │   ├── audit_source_data.py
 │   ├── analyze_tender_data.py
 │   ├── build_canonical_dataset.py
+│   ├── build_model_features.py
 │   ├── enrich_tender_details.py
 │   ├── report_enrichment_coverage.py
 │   └── verify_source_manifest.py
+├── tests/
+│   ├── test_analyze_tender_data.py
+│   ├── test_build_canonical_dataset.py
+│   ├── test_build_model_features.py
+│   └── ...
 ├── reports/
 │   ├── data/
 │   └── eda/
@@ -301,6 +310,7 @@ Prinsip arsitektur:
     ├── manifests/
     │   └── source_manifest.json
     ├── processed/
+    │   ├── model_features.csv
     │   └── tenders_canonical.csv
     └── raw/
         ├── inaproc_realisasi_tender_dki_jakarta_2024.csv
@@ -325,13 +335,14 @@ INAPROC_DETAIL_API_BASE_URL="<detail-api-base-url>" uv run python pipelines/enri
 uv run python pipelines/report_enrichment_coverage.py
 uv run python pipelines/build_canonical_dataset.py
 uv run python pipelines/analyze_tender_data.py
+uv run python pipelines/build_model_features.py
 uv run pytest
 npm --prefix frontend install
 npm --prefix frontend run lint
 npm --prefix frontend run build
 ```
 
-Command model dan backend akan ditambahkan setelah implementasinya tersedia dan sudah diverifikasi.
+Command training model dan backend akan ditambahkan setelah implementasinya tersedia dan sudah diverifikasi.
 
 ## Roadmap
 
@@ -345,7 +356,7 @@ Command model dan backend akan ditambahkan setelah implementasinya tersedia dan 
 - [x] Mengukur coverage HPS, pagu, dan jadwal.
 - [x] Membentuk dataset canonical satu paket per record.
 - [x] Menjalankan EDA dan data-quality analysis.
-- [ ] Membangun feature engineering leakage-safe.
+- [x] Membangun feature engineering leakage-safe.
 - [ ] Melatih dan mengevaluasi Isolation Forest.
 - [ ] Memvalidasi feature influence dan explanation.
 - [ ] Membangun FastAPI backend.
@@ -365,6 +376,7 @@ Command model dan backend akan ditambahkan setelah implementasinya tersedia dan 
 - `reports/data/enrichment_coverage.md`: ringkasan coverage enrichment yang dapat diregenerasi setelah full enrichment.
 - `reports/data/canonical_data_quality.md`: ringkasan kualitas dataset canonical yang dapat diregenerasi.
 - `reports/eda/summary.md`: ringkasan EDA, tabel statistik, dan visualisasi yang dapat diregenerasi dari canonical dataset.
+- `artifacts/feature_schema.json`: urutan fitur, encoder kategori, checksum canonical dataset, dan leakage policy feature matrix.
 
 `TASKS.md` menjadi single source of truth status implementasi. Agent hanya boleh mengubah task menjadi `[x]` setelah test, `verify-gate`, dan code review yang diwajibkan lulus.
 

@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "canonical_csv": "datasets/processed/tenders_canonical.csv",
+  "canonical_csv_sha256": "e1787c052ec07feabef4b92f76e5adee84f8ec8c7b575de92552c656b3e8d09c",
+  "output_csv": "datasets/processed/model_features.csv",
+  "row_count": 1276,
+  "excluded_row_count": 1,
+  "metadata_columns": [
+    "package_id",
+    "year",
+    "supplier_name",
+    "work_unit",
+    "procurement_method",
+    "procurement_type",
+    "is_partial_snapshot_year"
+  ],
+  "feature_columns": [
+    "year_value",
+    "partial_snapshot_year_flag",
+    "procurement_method_code",
+    "procurement_type_code",
+    "log_contract_value",
+    "log_hps",
+    "log_pagu",
+    "contract_to_hps_ratio",
+    "hps_to_pagu_ratio",
+    "savings_to_hps_ratio",
+    "pdn_to_contract_ratio",
+    "tender_duration_days",
+    "bid_submission_duration_days",
+    "evaluation_duration_days",
+    "schedule_invalid_timestamp_count",
+    "supplier_prior_package_count_year",
+    "supplier_prior_work_unit_package_count_year",
+    "supplier_prior_contract_share_year",
+    "supplier_prior_work_unit_contract_share_year",
+    "work_unit_supplier_hhi_prior_package_count_year"
+  ],
+  "categorical_encoders": {
+    "procurement_method": {
+      "Seleksi": 1,
+      "Tender": 2,
+      "Tender Cepat": 3
+    },
+    "procurement_type": {
+      "Jasa Konsultansi Badan Usaha Konstruksi": 1,
+      "Jasa Konsultansi Badan Usaha Non Konstruksi": 2,
+      "Jasa Konsultansi Perorangan Konstruksi": 3,
+      "Jasa Konsultansi Perorangan Non Konstruksi": 4,
+      "Jasa Lainnya": 5,
+      "Pekerjaan Konstruksi": 6,
+      "Pekerjaan Konstruksi Terintegrasi": 7,
+      "Pengadaan Barang": 8
+    },
+    "unknown_category_code": 0
+  },
+  "leakage_policy": "Supplier and work-unit aggregate features use only prior rows within the same year after sorting by schedule start and package_id.",
+  "partial_snapshot_years": [
+    "2026"
+  ]
+}
