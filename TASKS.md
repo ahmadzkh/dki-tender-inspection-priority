@@ -198,7 +198,7 @@ Pencarian `/find-skills` menemukan `obra/superpowers@requesting-code-review` seb
 - **Acceptance:** aplikasi start, OpenAPI tersedia, tidak ada hardcoded machine path, dan dependency hanya yang diperlukan.
 - **Verification:** `uv run fastapi dev backend/app/main.py` start; smoke request berhasil; process dihentikan setelah test.
 
-### [ ] TASK-BE-002 - Implement artifact loader and typed API contracts
+### [x] TASK-BE-002 - Implement artifact loader and typed API contracts
 
 - **Depends on:** `TASK-BE-001`, `TASK-ML-014`.
 - **Goal:** memvalidasi artifact sekali saat startup dan menetapkan kontrak response stabil.

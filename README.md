@@ -404,7 +404,7 @@ uv run uvicorn backend.app.main:app --reload --port 8000
 - [x] Memvalidasi feature influence dan explanation (permutation sensitivity, OD-5).
 - [x] Membekukan artefak backend-ready dengan manifest integrity check.
 - [x] Scaffold FastAPI backend (main.py, CORS, OpenAPI, 9 tests).
-- [ ] Implementasi artifact loader dan typed API contracts.
+- [x] Implementasi artifact loader dan typed API contracts.
 - [ ] Membangun Next.js frontend.
 - [ ] Menambahkan CSV export dan pengujian.
 - [ ] Membuat Docker runtime.

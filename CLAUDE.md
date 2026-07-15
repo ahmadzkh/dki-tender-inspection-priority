@@ -199,6 +199,7 @@ procurement_data/
 ├── tests/
 │   ├── test_audit_source_data.py
 │   ├── test_analyze_tender_data.py
+│   ├── test_be_artifact_store.py
 │   ├── test_be_startup.py
 │   ├── test_build_baseline_ranking.py
 │   ├── test_build_model_features.py
@@ -219,9 +220,12 @@ procurement_data/
 │   └── app/
 │       ├── __init__.py
 │       ├── main.py
+│       ├── config.py
 │       ├── api/
 │       ├── schemas/
+│       │   └── common.py
 │       └── services/
+│           └── artifact_store.py
 ├── modeling/
 │   ├── build_baseline_ranking.py
 │   ├── evaluate_anomaly_ranking.py

@@ -6,10 +6,44 @@ anomaly detection. A high score means a package warrants earlier review, not tha
 fraud, corruption, collusion, bid-rigging, or legal wrongdoing has occurred.
 """
 
+import logging
 import os
+from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+
+from backend.app.config import (
+    ARTIFACT_DIR,
+    EXPLANATIONS_PATH,
+    MANIFEST_PATH,
+    PROJECT_ROOT,
+    RANKING_PATH,
+)
+from backend.app.services.artifact_store import ArtifactStore
+
+logger = logging.getLogger(__name__)
+
+# ---------------------------------------------------------------------------
+# Lifespan — load and validate artifacts once at startup
+# ---------------------------------------------------------------------------
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    """Load artifacts at startup; yield to serve; no teardown needed (read-only)."""
+    store = ArtifactStore.load(
+        manifest_path=MANIFEST_PATH,
+        ranking_path=RANKING_PATH,
+        explanations_path=EXPLANATIONS_PATH,
+        project_root=PROJECT_ROOT,
+    )
+    app.state.store = store
+    app.state.artifact_dir = ARTIFACT_DIR
+    logger.info("Application startup complete; model_version=%s", store.model_version)
+    yield
+    # Nothing to clean up — artifacts are read-only
+
 
 # ---------------------------------------------------------------------------
 # Application metadata
@@ -30,6 +64,7 @@ app = FastAPI(
     docs_url="/docs",
     redoc_url="/redoc",
     openapi_url="/openapi.json",
+    lifespan=lifespan,
 )
 
 # ---------------------------------------------------------------------------
