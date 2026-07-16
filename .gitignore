@@ -20,6 +20,16 @@ out/
 coverage/
 *.tsbuildinfo
 
+# Agent/tooling folders outside this project
+.agents/
+skills-lock.json
+
+# Generated frontend test artifacts
+frontend/playwright-report/
+frontend/test-results/
+frontend/.vercel/
+.vercel/
+
 # Logs and temporary files
 *.log
 *.tmp
