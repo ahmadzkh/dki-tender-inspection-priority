@@ -64,8 +64,8 @@ export function DashboardCharts({ packagesByYear, scoreDistribution }: Dashboard
       </ChartCard>
 
       <ChartCard
-        title="Distribusi Skor Anomali"
-        description="Sebaran skor model untuk memahami rentang prioritas pemeriksaan. Skor bukan label fraud."
+        title="Distribusi Skor Prioritas"
+        description="Sebaran skor untuk memahami rentang prioritas pemeriksaan. Skor bukan label fraud atau pelanggaran hukum."
       >
         <ResponsiveContainer width="100%" height={280}>
           <BarChart data={scoreRows} margin={{ top: 8, right: 12, left: 0, bottom: 48 }}>

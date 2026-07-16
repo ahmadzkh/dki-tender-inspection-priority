@@ -26,11 +26,12 @@ Dataset 2024-2026 telah dikumpulkan, diaudit, digabung, diperkaya, dicanonicalka
 | Training Isolation Forest | Selesai; `model_version=414f1691d2bccdd9`, ranking di `artifacts/isolation_forest_ranking.csv` |
 | Evaluasi model | Selesai |
 | Explanation model | Selesai; permutation sensitivity di `reports/model/explanation.md`, OD-5 dijawab |
-| Freeze artifacts | Selesai; `artifacts/manifest.json`, 11 artifacts, integrity check |
-| FastAPI backend scaffold | Selesai; `backend/app/main.py`, 9 tests pass |
+| Freeze artifacts | Selesai; `artifacts/manifest.json`, 12 artifacts, integrity check |
+| FastAPI backend scaffold | Selesai; `backend/app/main.py`, termasuk dalam suite 110 test Python |
 | FastAPI backend API | Selesai; health/meta/summary/filters/ranking/detail/export/evaluation |
 | Frontend product UI | Selesai lokal; landing, dashboard, detail, dataset, methodology, evaluation |
 | Docker runtime | Selesai lokal; image healthy dan restart verified |
+| Local quality gate | Selesai; 110 test Python, 24 Playwright lintas Chrome/Edge/Firefox, npm audit 0 vulnerability |
 | Public deployment | Pending; butuh Cloudflare named tunnel dan Vercel smoke |
 
 ## Judul Penelitian
@@ -288,8 +289,8 @@ Prinsip arsitektur:
 | Backend | FastAPI, Pydantic |
 | Frontend | Next.js App Router, TypeScript, Tailwind CSS |
 | Testing Python | pytest |
-| Testing frontend | Vitest/Testing Library setelah frontend tersedia |
-| End-to-end | Playwright setelah alur utama stabil |
+| Testing frontend | ESLint, TypeScript, dan Next.js production build |
+| End-to-end | Playwright pada Chrome, Edge, dan Firefox |
 | Container | Docker Compose |
 | Frontend hosting | Vercel |
 | Backend hosting | VPS/server melalui Cloudflare Tunnel |
@@ -354,7 +355,7 @@ Prinsip arsitektur:
         └── realisasi_dki_jakarta_2024_2026.csv
 ```
 
-Struktur aplikasi akan dibuat bertahap saat file pertamanya diperlukan. Rancangan target tercantum dalam [`CLAUDE.md`](CLAUDE.md).
+Struktur utama aplikasi sudah tersedia. Kontrak engineering dan batas deployment tercantum dalam [`CLAUDE.md`](CLAUDE.md).
 
 ## Menjalankan Project
 
@@ -413,13 +414,14 @@ docker compose down
 - [x] Mengevaluasi stabilitas, sensitivitas, perilaku temporal, dan baseline.
 - [x] Memvalidasi feature influence dan explanation (permutation sensitivity, OD-5).
 - [x] Membekukan artefak backend-ready dengan manifest integrity check.
-- [x] Scaffold FastAPI backend (main.py, CORS, OpenAPI, 9 tests).
+- [x] Scaffold dan finalisasi FastAPI backend (main.py, CORS, OpenAPI, bagian dari 110 test Python).
 - [x] Implementasi artifact loader dan typed API contracts.
 - [x] Membangun Next.js frontend.
 - [x] Menambahkan CSV export dan pengujian.
 - [x] Membuat Docker runtime.
 - [ ] Deploy backend dan frontend.
-- [ ] Menyelesaikan release acceptance criteria sebelum penulisan BAB 4.
+- [x] Menyelesaikan local release acceptance criteria untuk penulisan implementasi dan pengujian BAB 4.
+- [ ] Menyelesaikan public deployment acceptance sebelum finalisasi subsection cutover/deployment.
 
 ## Dokumentasi
 

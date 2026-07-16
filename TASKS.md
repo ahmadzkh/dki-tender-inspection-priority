@@ -392,7 +392,7 @@ Pencarian `/find-skills` menemukan `obra/superpowers@requesting-code-review` seb
 
 # Release Gate v1.0
 
-Seluruh task berikut wajib `[x]` sebelum project dinyatakan siap untuk dokumentasi BAB 4:
+Seluruh task berikut wajib `[x]` sebelum project dinyatakan siap untuk finalisasi subsection cutover/deployment BAB 4 dan public release:
 
 - Semua `TASK-ML-*` P1.
 - Semua `TASK-BE-*`.

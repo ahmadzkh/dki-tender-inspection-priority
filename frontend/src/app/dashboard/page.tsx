@@ -44,7 +44,7 @@ export default async function DashboardPage(props: { searchParams: SearchParams 
             Dashboard Analitik
           </h1>
           <p className="text-surface-600 dark:text-surface-400">
-            Daftar prioritas pemeriksaan tender berdasarkan anomali statistik.
+            Daftar paket tender yang disarankan untuk ditinjau lebih awal berdasarkan pola ketidaklaziman data.
           </p>
         </div>
 

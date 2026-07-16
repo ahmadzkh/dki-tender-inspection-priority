@@ -12,18 +12,18 @@ export function Footer() {
               <span>Batas Interpretasi & Penafian (Disclaimer)</span>
             </div>
             <p className="text-sm text-surface-600 dark:text-surface-400 leading-relaxed">
-              Sistem ini murni berbasis analisis statistik anomali pada fitur-fitur yang dirancang secara mandiri.
-              Skor kejanggalan yang tinggi <strong>hanya</strong> merepresentasikan prioritas pemeriksaan,
+              Sistem ini berbasis analisis ketidaklaziman statistik pada aspek data tender yang dapat ditelusuri.
+              Skor tinggi <strong>hanya</strong> merepresentasikan prioritas pemeriksaan,
               <strong>bukan</strong> vonis hukum, korupsi, fraud, atau bentuk kecurangan lainnya.
             </p>
           </div>
 
           <div className="flex flex-col gap-2 text-sm text-surface-500 dark:text-surface-400">
             <p className="font-medium text-surface-700 dark:text-surface-300">Tautan Terkait</p>
-            <Link href="https://lpse.jakarta.go.id/eproc4" target="_blank" rel="noopener noreferrer" className="hover:text-primary-600 transition-colors">
+            <Link href="https://spse.inaproc.id/jakarta/lelang" target="_blank" rel="noopener noreferrer" className="hover:text-primary-600 transition-colors">
               LPSE DKI Jakarta
             </Link>
-            <Link href="https://inaproc.id/cari-paket" target="_blank" rel="noopener noreferrer" className="hover:text-primary-600 transition-colors">
+            <Link href="https://data.inaproc.id/realisasi" target="_blank" rel="noopener noreferrer" className="hover:text-primary-600 transition-colors">
               INAPROC
             </Link>
           </div>

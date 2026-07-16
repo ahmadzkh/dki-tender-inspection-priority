@@ -27,12 +27,12 @@ export function RankingTable({ items }: RankingTableProps) {
       <table className="w-full text-left text-sm whitespace-nowrap">
         <thead className="bg-surface-50/50 dark:bg-surface-900/50 text-surface-500 dark:text-surface-400 uppercase text-xs font-semibold tracking-wider">
           <tr>
-            <th className="px-6 py-4 rounded-tl-2xl">Rank</th>
+            <th className="px-6 py-4 rounded-tl-2xl">Prioritas</th>
             <th className="px-6 py-4">Tahun</th>
             <th className="px-6 py-4">Satuan Kerja</th>
             <th className="px-6 py-4">Penyedia</th>
             <th className="px-6 py-4 text-right">Nilai Kontrak</th>
-            <th className="px-6 py-4 text-right">Skor Anomali</th>
+            <th className="px-6 py-4 text-right">Skor Prioritas</th>
             <th className="px-6 py-4 text-center rounded-tr-2xl">Aksi</th>
           </tr>
         </thead>

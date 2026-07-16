@@ -14,7 +14,7 @@ export default function MethodologyPage() {
             Metodologi
           </h1>
           <p className="text-lg text-surface-600 dark:text-surface-400">
-            Penjelasan teknis tentang siklus pengembangan, algoritma, dan batas klaim pada sistem ini.
+            Penjelasan tentang alur data, metode pemeringkatan, dan batas klaim pada sistem ini.
           </p>
         </div>
 
@@ -59,16 +59,16 @@ export default function MethodologyPage() {
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-surface-900 dark:text-white mb-6 flex items-center gap-2">
             <Target className="h-6 w-6 text-primary-500" />
-            Pemodelan Pendeteksi Anomali
+            Pemodelan Ketidaklaziman Paket
           </h2>
           <div className="space-y-6">
             <div className="glass-card p-6 rounded-2xl">
               <h3 className="font-bold text-surface-900 dark:text-white mb-3">Mengapa Isolation Forest?</h3>
               <p className="text-surface-600 dark:text-surface-400 text-sm leading-relaxed mb-4">
-                Domain pengadaan publik jarang memiliki label pasti mengenai &quot;paket yang terbukti fraud&quot; (seringkali membutuhkan proses hukum bertahun-tahun). Ketiadaan label kepastian ini menghalangi penggunaan metode deteksi standar. Oleh karena itu, digunakan pendekatan <strong>Pembelajaran Mesin Tanpa Pengawasan (Unsupervised Machine Learning)</strong>.
+                Domain pengadaan publik jarang memiliki label pelanggaran yang sudah tervalidasi karena pembuktian substantif membutuhkan pemeriksaan dokumen, klarifikasi, dan proses hukum. Ketiadaan label membatasi penggunaan supervised learning dan metrik klasifikasi. Sistem ini karena itu memakai <strong>Pembelajaran Mesin Tanpa Pengawasan (Unsupervised Machine Learning)</strong>.
               </p>
               <p className="text-surface-600 dark:text-surface-400 text-sm leading-relaxed">
-                Algoritma statistik <em>Isolation Forest</em> bekerja dengan memetakan seluruh data. Logikanya, data paket yang memiliki pola sangat ekstrem dan menyimpang akan jauh lebih mudah untuk &quot;diisolasi&quot; (dipisahkan dari kelompoknya) dibandingkan dengan paket wajar pada umumnya.
+                Algoritma statistik <em>Isolation Forest</em> memetakan pola umum paket tender. Paket dengan kombinasi nilai, waktu, metode, atau riwayat penyedia yang berbeda dari mayoritas data akan memperoleh skor prioritas lebih tinggi.
               </p>
             </div>
           </div>
@@ -76,18 +76,18 @@ export default function MethodologyPage() {
 
         {/* Rekayasa Fitur */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-surface-900 dark:text-white mb-6">Fokus Rekayasa Fitur</h2>
+          <h2 className="text-2xl font-bold text-surface-900 dark:text-white mb-6">Aspek Pemeriksaan yang Dihitung</h2>
           <div className="grid sm:grid-cols-2 gap-4">
             <div className="bg-white dark:bg-surface-900 p-5 rounded-xl border border-surface-200 dark:border-surface-800">
-              <h3 className="font-semibold text-surface-900 dark:text-white mb-2">Anomali Temporal (Waktu)</h3>
+              <h3 className="font-semibold text-surface-900 dark:text-white mb-2">Aspek Waktu</h3>
               <p className="text-sm text-surface-600 dark:text-surface-400">
-                Waktu sangat sulit dimanipulasi secara sempurna. Fitur difokuskan pada durasi agregat proses evaluasi, sanggah, dan kecepatan penandatanganan kontrak yang mungkin terlampau cepat atau lambat dibandingkan baseline kompetisi wajar.
+                Durasi proses tender dihitung untuk melihat paket yang terlalu cepat atau terlalu lama dibandingkan pola umum pada data pembanding.
               </p>
             </div>
             <div className="bg-white dark:bg-surface-900 p-5 rounded-xl border border-surface-200 dark:border-surface-800">
-              <h3 className="font-semibold text-surface-900 dark:text-white mb-2">Anomali Finansial</h3>
+              <h3 className="font-semibold text-surface-900 dark:text-white mb-2">Aspek Keuangan</h3>
               <p className="text-sm text-surface-600 dark:text-surface-400">
-                Mengekstrak rasio HPS terhadap Pagu, serta proporsi nilai kontrak final terhadap HPS. Harga yang menempel persis dengan batas HPS (tanpa efisiensi anggaran) secara statistik seringkali mendandakan sinyal red flag.
+                Rasio HPS terhadap pagu dan nilai kontrak terhadap HPS dihitung untuk melihat kedekatan nilai realisasi terhadap batas pembanding anggaran.
               </p>
             </div>
           </div>
@@ -105,10 +105,10 @@ export default function MethodologyPage() {
                 Sistem ini <strong>TIDAK mendeteksi fraud, korupsi, atau bid-rigging</strong>. Model mesin tidak memiliki kapasitas untuk menuduh intensi kriminal.
               </li>
               <li>
-                Sistem murni memetakan <strong>anomali statistik terluar (outliers)</strong> berdasarkan fitur waktu dan finansial yang tampak menyimpang dari distribusi mayoritas tender lain.
+                Sistem murni memetakan <strong>ketidaklaziman statistik</strong> berdasarkan aspek waktu, keuangan, dan konsentrasi penyedia yang berbeda dari distribusi mayoritas tender lain.
               </li>
               <li>
-                Daftar Top-N pada tabel <strong>bukan daftar vonis korupsi</strong>, melainkan daftar <strong>Prioritas Inspeksi (Inspection Priority)</strong> yang disarankan untuk ditinjau lebih awal oleh unit kepatuhan (auditor internal) untuk mengoptimasi sumber daya pengawasan yang terbatas.
+                Daftar Top-N pada tabel <strong>bukan daftar vonis korupsi</strong>, melainkan daftar <strong>prioritas pemeriksaan</strong> yang disarankan untuk ditinjau lebih awal oleh auditor atau analis pengadaan.
               </li>
             </ul>
           </div>

@@ -98,7 +98,7 @@ export default async function DatasetPage() {
           </h2>
           <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-relaxed text-orange-800 dark:text-orange-300">
             <li>Snapshot 2026 bersifat parsial sehingga tidak boleh dibandingkan sebagai total tahunan final.</li>
-            <li>Enrichment 100% tidak berarti data bebas kesalahan; angka hanya mengukur field yang tersedia untuk paket eligible.</li>
+            <li>Enrichment 100% tidak berarti data bebas kesalahan; angka hanya mengukur field yang tersedia untuk paket canonical.</li>
             <li>Record prioritas adalah ketidaklaziman statistik, bukan label fraud atau pelanggaran hukum.</li>
           </ul>
           <a href="https://data.go.id" target="_blank" rel="noreferrer" className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-primary-700 hover:underline dark:text-primary-400">

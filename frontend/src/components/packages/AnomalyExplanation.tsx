@@ -1,5 +1,6 @@
 import { PackageDetail } from "@/lib/types";
 import { formatScore } from "@/lib/formatters";
+import { getFeatureLabel } from "@/lib/feature-labels";
 import { AlertCircle, Target, TrendingDown, TrendingUp } from "lucide-react";
 
 interface AnomalyExplanationProps {
@@ -17,7 +18,7 @@ export function AnomalyExplanation({ data }: AnomalyExplanationProps) {
       <div className="md:col-span-1 glass-card rounded-2xl p-6 relative overflow-hidden bg-linear-to-br from-surface-50 to-primary-50/50 dark:from-surface-900/50 dark:to-primary-950/30">
         <h3 className="text-lg font-semibold text-surface-900 dark:text-white mb-6 flex items-center gap-2">
           <Target className="h-5 w-5 text-primary-500" />
-          Indeks Anomali
+          Prioritas Pemeriksaan
         </h3>
 
         <div className="flex flex-col gap-4">
@@ -29,7 +30,7 @@ export function AnomalyExplanation({ data }: AnomalyExplanationProps) {
               #{score.anomaly_rank}
             </div>
             <p className="text-xs text-surface-500 mt-1">
-              Berdasarkan keseluruhan populasi
+              Urutan dari seluruh paket eligible
             </p>
           </div>
 
@@ -37,7 +38,7 @@ export function AnomalyExplanation({ data }: AnomalyExplanationProps) {
 
           <div>
             <p className="text-sm font-medium text-surface-500 dark:text-surface-400 mb-1">
-              Skor Model
+              Skor Prioritas
             </p>
             <div className="text-2xl font-mono font-medium text-primary-600 dark:text-primary-400">
               {formatScore(score.anomaly_score)}
@@ -49,10 +50,10 @@ export function AnomalyExplanation({ data }: AnomalyExplanationProps) {
       {/* Explanation Features */}
       <div className="md:col-span-2 glass-card rounded-2xl p-6">
         <h3 className="text-lg font-semibold text-surface-900 dark:text-white mb-2">
-          Faktor Utama (Indikator Anomali)
+          Aspek dengan Sensitivitas Tertinggi
         </h3>
         <p className="text-sm text-surface-500 dark:text-surface-400 mb-6">
-          Fitur dengan perubahan skor terbesar pada uji perturbasi lokal. Nilai ini adalah sensitivitas, bukan bukti sebab-akibat.
+          Aspek data dengan perubahan skor terbesar pada uji perturbasi lokal. Nilai ini menunjukkan sensitivitas, bukan bukti sebab-akibat.
         </p>
 
         {topFeatures && topFeatures.length > 0 ? (
@@ -64,11 +65,11 @@ export function AnomalyExplanation({ data }: AnomalyExplanationProps) {
                     {i + 1}
                   </div>
                   <div>
-                    <p className="font-semibold text-sm text-surface-900 dark:text-white mb-1 font-mono tracking-tight">
-                      {f.feature}
+                    <p className="font-semibold text-sm text-surface-900 dark:text-white mb-1 tracking-tight" title={f.feature}>
+                      {getFeatureLabel(f.feature)}
                     </p>
                     <p className="text-xs text-surface-500">
-                      Nilai Aktual: <span className="font-medium text-surface-700 dark:text-surface-300">
+                      Nilai paket: <span className="font-medium text-surface-700 dark:text-surface-300">
                         {f.formatted_value || (f.value !== null ? f.value : "Tidak tersedia")}
                       </span>
                     </p>
@@ -88,27 +89,27 @@ export function AnomalyExplanation({ data }: AnomalyExplanationProps) {
         ) : (
           <div className="flex flex-col items-center justify-center h-48 bg-surface-50 dark:bg-surface-900/30 rounded-xl border border-dashed border-surface-300 dark:border-surface-700 text-surface-500 text-center px-4">
             <AlertCircle className="h-8 w-8 mb-2 opacity-50" />
-            <p className="font-medium">Faktor Utama Tidak Tersedia</p>
-            <p className="text-sm mt-1 max-w-sm">Penjelasan model statistik tidak ditemukan untuk paket ini di dataset saat ini.</p>
+            <p className="font-medium">Faktor prioritas tidak tersedia</p>
+            <p className="text-sm mt-1 max-w-sm">Penjelasan aspek pemeriksaan belum tersedia untuk paket ini pada dataset saat ini.</p>
           </div>
         )}
       </div>
 
-      {/* RAW Features view (collapsible or scrollable if needed) */}
+      {/* Supporting inspection attributes */}
       <div className="md:col-span-3 glass-card rounded-2xl p-6 mt-4">
         <details className="group">
           <summary className="flex items-center justify-between cursor-pointer list-none">
             <h3 className="text-base font-medium text-surface-700 dark:text-surface-300">
-              Lihat Seluruh Atribut Data ({Object.keys(features).length})
+              Lihat aspek data pendukung ({Object.keys(features).length})
             </h3>
             <span className="text-primary-600 group-open:rotate-180 transition-transform">▼</span>
           </summary>
           <div className="mt-4 pt-4 border-t border-surface-200 dark:border-surface-800 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
             {Object.entries(features).map(([key, val]) => (
               <div key={key} className="p-3 bg-surface-50 dark:bg-surface-900/50 rounded-lg">
-                <p className="text-xs text-surface-500 mb-1 truncate" title={key}>{key}</p>
+                <p className="text-xs text-surface-500 mb-1 truncate" title={key}>{getFeatureLabel(key)}</p>
                 <p className="font-mono text-sm font-medium text-surface-900 dark:text-white truncate">
-                  {val !== null ? val : "N/A"}
+                  {val !== null ? val : "Tidak tersedia"}
                 </p>
               </div>
             ))}

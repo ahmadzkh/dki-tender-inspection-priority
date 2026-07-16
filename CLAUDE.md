@@ -994,7 +994,3 @@ Authentication is out of scope. These placeholders remain documented because the
 ---
 
 _This file remains a living engineering contract. Update it only when code, dependencies, commands, architecture, or verified project status changes. Product scope changes belong in `PRD.md` first._
-│   ├── explain_anomaly_ranking.py
-│   ├── test_explain_anomaly_ranking.py
-│       ├── explanation.json
-│       ├── explanation.md

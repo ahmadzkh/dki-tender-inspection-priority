@@ -13,6 +13,7 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
+import { getFeatureLabel } from "@/lib/feature-labels";
 
 const COLORS = {
   primary: "#4f46e5",
@@ -137,8 +138,8 @@ function ScoreDistributionChart({ data }: { data: ScoreDistribution }) {
 
   return (
     <ChartCard
-      title="Distribusi Skor Anomali"
-      description="Perbandingan distribusi skor antara data pelatihan (Train) dan data evaluasi (Evaluation). Distribusi yang serupa menunjukkan model stabil lintas waktu."
+      title="Distribusi Skor Prioritas"
+      description="Perbandingan lokasi dan sebaran skor antara data pelatihan dan evaluasi. Grafik ini tidak membuktikan kestabilan urutan paket lintas waktu."
     >
       <ResponsiveContainer width="100%" height={320}>
         <AreaChart data={chartData}>
@@ -180,12 +181,12 @@ function StabilityBarChart({ chartData, height }: { chartData: ChartRow[]; heigh
         <YAxis tick={{ fill: "#94a3b8", fontSize: 12 }} domain={[0, 100]} unit="%" />
         <Tooltip contentStyle={tooltipStyle} formatter={tooltipFormatter} />
         <Legend wrapperStyle={{ fontSize: 12 }} />
-        <Bar dataKey="overlap" name="Overlap Ratio" radius={[6, 6, 0, 0]}>
+        <Bar dataKey="overlap" name="Kesesuaian Top-N" radius={[6, 6, 0, 0]}>
           {chartData.map((entry) => (
             <Cell key={entry.name} fill={entry.overlap >= 90 ? COLORS.success : entry.overlap >= 80 ? COLORS.warning : COLORS.danger} />
           ))}
         </Bar>
-        <Bar dataKey="correlation" name="Rank Correlation" fill={COLORS.primary} radius={[6, 6, 0, 0]} />
+        <Bar dataKey="correlation" name="Korelasi Peringkat" fill={COLORS.primary} radius={[6, 6, 0, 0]} />
       </BarChart>
     </ResponsiveContainer>
   );
@@ -201,7 +202,7 @@ function SeedStabilityChart({ data }: { data: SeedRow[] }) {
   return (
     <ChartCard
       title="Stabilitas Seed (Random State)"
-      description="Mengukur seberapa konsisten daftar prioritas jika model dilatih ulang dengan seed acak berbeda. Overlap > 80% menandakan model sangat stabil."
+      description="Mengukur konsistensi daftar prioritas ketika model dijalankan ulang dengan seed acak berbeda. Kesesuaian ≥ 80% memenuhi batas stabilitas yang ditetapkan."
     >
       <StabilityBarChart chartData={chartData} height={320} />
     </ChartCard>
@@ -218,7 +219,7 @@ function SensitivityChart({ data }: { data: SensitivityRow[] }) {
   return (
     <ChartCard
       title="Sensitivitas Hyperparameter"
-      description="Mengukur dampak perubahan jumlah pohon (n_estimators), contamination, dan max_samples terhadap stabilitas peringkat. Overlap tinggi = model robust."
+      description="Mengukur dampak perubahan konfigurasi model terhadap stabilitas peringkat. Kesesuaian tinggi berarti daftar prioritas tidak mudah berubah."
     >
       <StabilityBarChart chartData={chartData} height={400} />
     </ChartCard>
@@ -234,8 +235,8 @@ function BaselineChart({ data }: { data: BaselineData }) {
 
   return (
     <ChartCard
-      title="Perbandingan dengan Baseline (Metode Tradisional)"
-      description="Isolation Forest dibandingkan dengan baseline penyortiran sederhana. Overlap rendah (< 60%) menunjukkan bahwa AI mendeteksi pola anomali yang tidak tertangkap oleh metode tradisional."
+      title="Perbandingan dengan Baseline Sederhana"
+      description="Isolation Forest dibandingkan dengan penyortiran statistik sederhana. Kesesuaian sedang menunjukkan model memberi sudut pandang tambahan, bukan menggantikan pemeriksaan ahli."
     >
       <ResponsiveContainer width="100%" height={240}>
         <BarChart data={items} layout="vertical" barGap={4}>
@@ -244,58 +245,33 @@ function BaselineChart({ data }: { data: BaselineData }) {
           <YAxis dataKey="name" type="category" tick={{ fill: "#94a3b8", fontSize: 12 }} width={70} />
           <Tooltip contentStyle={tooltipStyle} formatter={tooltipFormatter} />
           <Legend wrapperStyle={{ fontSize: 12 }} />
-          <Bar dataKey="overlap" name="Overlap Ratio" fill={COLORS.warning} radius={[0, 6, 6, 0]} barSize={24} />
-          <Bar dataKey="correlation" name="Rank Correlation" fill={COLORS.muted} radius={[0, 6, 6, 0]} barSize={24} />
+          <Bar dataKey="overlap" name="Kesesuaian Top-N" fill={COLORS.warning} radius={[0, 6, 6, 0]} barSize={24} />
+          <Bar dataKey="correlation" name="Korelasi Peringkat" fill={COLORS.muted} radius={[0, 6, 6, 0]} barSize={24} />
         </BarChart>
       </ResponsiveContainer>
     </ChartCard>
   );
 }
 
-const FEATURE_LABELS: Record<string, string> = {
-  year_value: "Tahun",
-  partial_snapshot_year_flag: "Tahun Snapshot Parsial",
-  procurement_method_code: "Kode Metode Pengadaan",
-  procurement_type_code: "Kode Jenis Pengadaan",
-  log_contract_value: "Log Nilai Kontrak",
-  log_hps: "Log HPS",
-  log_pagu: "Log Pagu Anggaran",
-  contract_to_hps_ratio: "Rasio Kontrak/HPS",
-  hps_to_pagu_ratio: "Rasio HPS/Pagu",
-  savings_to_hps_ratio: "Rasio Penghematan/HPS",
-  pdn_to_contract_ratio: "Rasio PDN/Kontrak",
-  tender_duration_days: "Durasi Tender (Hari)",
-  bid_submission_duration_days: "Durasi Pengajuan Penawaran (Hari)",
-  evaluation_duration_days: "Durasi Evaluasi (Hari)",
-  schedule_invalid_timestamp_count: "Jumlah Timestamp Tidak Valid",
-  supplier_prior_package_count_year: "Jumlah Paket Supplier (Tahun Sebelumnya)",
-  supplier_prior_work_unit_package_count_year: "Jumlah Paket Supplier per Satker (Tahun Sebelumnya)",
-  supplier_prior_contract_share_year: "Pangsa Kontrak Supplier (Tahun Sebelumnya)",
-  supplier_prior_work_unit_contract_share_year: "Pangsa Kontrak Supplier per Satker (Tahun Sebelumnya)",
-  work_unit_supplier_hhi_prior_package_count_year: "Indeks Konsentrasi Supplier (HHI) per Satker",
-};
-
 function FeatureTable({ columns }: { columns: string[] }) {
   return (
     <ChartCard
-      title="20 Atribut (Feature) yang Digunakan Model"
-      description="Seluruh fitur diekstrak dari data pengadaan publik DKI Jakarta. Tidak ada fitur yang berisi informasi bocoran (data leakage)."
+      title="Aspek Data yang Dipakai untuk Prioritas"
+      description="Seluruh aspek dihitung dari data pengadaan publik DKI Jakarta. Tidak ada informasi masa depan yang dipakai untuk menyusun peringkat."
     >
       <div className="overflow-x-auto">
         <table className="w-full text-sm">
           <thead>
             <tr className="border-b border-surface-200 dark:border-surface-800">
               <th className="text-left py-2 pr-4 text-surface-500 font-medium">#</th>
-              <th className="text-left py-2 pr-4 text-surface-500 font-medium">Nama Teknis</th>
-              <th className="text-left py-2 text-surface-500 font-medium">Deskripsi</th>
+              <th className="text-left py-2 text-surface-500 font-medium">Aspek Pemeriksaan</th>
             </tr>
           </thead>
           <tbody>
             {columns.map((col, i) => (
               <tr key={col} className="border-b border-surface-100 dark:border-surface-800/50 hover:bg-surface-50 dark:hover:bg-surface-900/30 transition-colors">
                 <td className="py-2 pr-4 text-surface-400 font-mono text-xs">{i + 1}</td>
-                <td className="py-2 pr-4 font-mono text-xs text-primary-600 dark:text-primary-400">{col}</td>
-                <td className="py-2 text-surface-600 dark:text-surface-300">{FEATURE_LABELS[col] ?? col}</td>
+                <td className="py-2 text-surface-600 dark:text-surface-300" title={col}>{getFeatureLabel(col)}</td>
               </tr>
             ))}
           </tbody>
@@ -321,17 +297,17 @@ export function EvaluationCharts({ evaluation, modelConfig }: EvaluationChartsPr
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
         <StatCard label="Versi Model" value={modelConfig.model_version.slice(0, 8)} sub="SHA-256 hash" />
         <StatCard label="Total Data" value={evaluation.row_count.toLocaleString("id-ID")} sub="paket tender" />
-        <StatCard label="Jumlah Fitur" value={evaluation.feature_count} sub="atribut input" />
+        <StatCard label="Aspek Data" value={evaluation.feature_count} sub="dipakai model" />
         <StatCard label="Data Latih" value={modelConfig.train_row_count.toLocaleString("id-ID")} sub="2024-2025" />
         <StatCard label="Data Evaluasi" value={modelConfig.evaluation_row_count.toLocaleString("id-ID")} sub="2026 (parsial)" />
         <StatCard label="Jumlah Pohon" value={modelConfig.hyperparameters.n_estimators} sub="n_estimators" />
       </div>
 
-      <SectionTitle>Distribusi Skor Anomali</SectionTitle>
+      <SectionTitle>Distribusi Skor Prioritas</SectionTitle>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-6">
         <StatCard label="Skor Rata-rata (Semua)" value={dist.all.mean.toFixed(4)} sub={`Std: ${dist.all.std.toFixed(4)}`} />
         <StatCard label="Skor Median (Semua)" value={dist.all.median.toFixed(4)} sub={`P95: ${dist.all.p95.toFixed(4)}`} />
-        <StatCard label="Skor Maksimum" value={dist.all.max.toFixed(4)} sub="Paket paling anomali" />
+        <StatCard label="Skor Maksimum" value={dist.all.max.toFixed(4)} sub="prioritas tertinggi" />
       </div>
       <ScoreDistributionChart data={dist} />
 
@@ -344,7 +320,7 @@ export function EvaluationCharts({ evaluation, modelConfig }: EvaluationChartsPr
       <SectionTitle>Perbandingan dengan Baseline</SectionTitle>
       <BaselineChart data={evaluation.baseline_comparison} />
 
-      <SectionTitle>Atribut Model</SectionTitle>
+      <SectionTitle>Aspek Data Pemeriksaan</SectionTitle>
       <FeatureTable columns={modelConfig.feature_columns} />
 
       <SectionTitle>Batasan Evaluasi</SectionTitle>

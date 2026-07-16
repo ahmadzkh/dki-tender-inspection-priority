@@ -85,7 +85,7 @@ export function DashboardClient({
       if (v) params.set(k, v);
     }
     const queryString = params.toString();
-    router.replace(queryString ? `?${queryString}` : "/dashboard", { scroll: false });
+    router.replace(queryString ? `/dashboard?${queryString}` : "/dashboard", { scroll: false });
   };
 
   const handleFilterChange = (key: string, value: string) => {

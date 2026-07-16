@@ -11,7 +11,7 @@ test.describe('Primary Flow', () => {
     await expect(page.getByText('Total Paket')).toBeVisible();
     await expect(page.getByText('Total Satuan Kerja')).toBeVisible();
     await expect(page.getByRole('heading', { name: /Distribusi Paket per Tahun/i })).toBeVisible();
-    await expect(page.getByRole('heading', { name: /Distribusi Skor Anomali/i })).toBeVisible();
+    await expect(page.getByRole('heading', { name: /Distribusi Skor Prioritas/i })).toBeVisible();
 
     // 2. Interact with Filters
     const yearSelect = page.locator('select[name="year"]');
@@ -39,8 +39,8 @@ test.describe('Primary Flow', () => {
     await expect(page.getByRole('heading', { name: /Identitas Paket/i })).toBeVisible();
     await expect(page.getByText(packageId as string)).toBeVisible();
 
-    // Verify Anomaly Explanation section
-    await expect(page.getByRole('heading', { name: /Analisis Anomali/i })).toBeVisible();
-    await expect(page.getByText('Skor Model')).toBeVisible();
+    // Verify inspection-priority explanation section
+    await expect(page.getByRole('heading', { name: /Analisis Prioritas Pemeriksaan/i })).toBeVisible();
+    await expect(page.getByText('Skor Prioritas')).toBeVisible();
   });
 });

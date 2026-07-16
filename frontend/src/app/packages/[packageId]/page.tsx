@@ -67,7 +67,7 @@ export default async function PackageDetailPage(props: { params: Params }) {
 
         <div className="mt-12 mb-6">
           <h2 className="text-2xl font-bold text-surface-900 dark:text-white tracking-tight">
-            Analisis Anomali
+            Analisis Prioritas Pemeriksaan
           </h2>
         </div>
 

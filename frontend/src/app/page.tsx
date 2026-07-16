@@ -23,8 +23,8 @@ export default function Home() {
           </h1>
 
           <p className="text-lg sm:text-xl text-surface-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Menemukan pola anomali pada data pengadaan menggunakan Isolation Forest.
-            Dirancang khusus untuk mendukung Inspektorat dalam menentukan prioritas pemeriksaan paket tender.
+            Mengurutkan paket tender berdasarkan pola ketidaklaziman data.
+            Dirancang untuk membantu Inspektorat menentukan paket yang perlu ditinjau lebih awal.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -54,9 +54,9 @@ export default function Home() {
               <div className="h-12 w-12 bg-primary-100 dark:bg-primary-900/50 text-primary-600 dark:text-primary-400 rounded-xl flex items-center justify-center mb-6">
                 <BarChart3 className="h-6 w-6" />
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-surface-900 dark:text-white">Machine Learning</h3>
+              <h3 className="text-xl font-semibold mb-3 text-surface-900 dark:text-white">Pemeriksaan Berbasis Data</h3>
               <p className="text-surface-600 dark:text-surface-400 leading-relaxed">
-                Menggunakan algoritma Isolation Forest untuk mendeteksi paket tender yang paling menyimpang dari tren pengadaan standar.
+                Menggunakan Isolation Forest untuk menemukan paket yang paling berbeda dari pola umum pengadaan DKI Jakarta.
               </p>
             </div>
 
@@ -78,7 +78,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-semibold mb-3 text-surface-900 dark:text-white">Batas Klaim</h3>
               <p className="text-surface-600 dark:text-surface-400 leading-relaxed">
-                Peringkat anomali adalah indikator kejanggalan statistik, bukan vonis korupsi, fraud, atau kolusi. Bukti hukum tetap bersandar pada temuan lapangan.
+                Peringkat hanya menunjukkan prioritas peninjauan awal, bukan vonis korupsi, fraud, atau kolusi. Kesimpulan tetap memerlukan pemeriksaan dokumen dan lapangan.
               </p>
             </div>
           </div>
@@ -103,9 +103,9 @@ export default function Home() {
                 1
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2 text-surface-900 dark:text-white">Data Integration</h3>
+                <h3 className="text-xl font-semibold mb-2 text-surface-900 dark:text-white">Integrasi Data Tender</h3>
                 <p className="text-surface-600 dark:text-surface-400">
-                  Data realisasi tender ditarik dari INAPROC yang mencakup ratusan paket Pemprov DKI Jakarta (2024-2025). Data kemudian diperkaya dengan menarik riwayat jadwal terperinci dari portal LPSE terkait.
+                  Data realisasi tender ditarik dari INAPROC untuk paket Pemprov DKI Jakarta tahun 2024-2026. Data kemudian diperkaya dengan HPS, pagu, metode evaluasi, dan jadwal tender.
                 </p>
               </div>
             </div>
@@ -115,9 +115,9 @@ export default function Home() {
                 2
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2 text-surface-900 dark:text-white">Feature Extraction</h3>
+                <h3 className="text-xl font-semibold mb-2 text-surface-900 dark:text-white">Pembentukan Aspek Pemeriksaan</h3>
                 <p className="text-surface-600 dark:text-surface-400">
-                  Dari data mentah, sistem menghitung berbagai metrik krusial seperti persentase penurunan penawaran terhadap HPS, durasi evaluasi dokumen, dan rasio nilai kontrak terhadap pagu anggaran (financial & temporal anomalies).
+                  Sistem menghitung aspek keuangan, waktu, dan konsentrasi penyedia seperti kedekatan nilai kontrak terhadap HPS, durasi evaluasi, dan riwayat kemenangan penyedia.
                 </p>
               </div>
             </div>
@@ -127,9 +127,9 @@ export default function Home() {
                 3
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2 text-surface-900 dark:text-white">Isolation Forest Scoring</h3>
+                <h3 className="text-xl font-semibold mb-2 text-surface-900 dark:text-white">Skor Prioritas Pemeriksaan</h3>
                 <p className="text-surface-600 dark:text-surface-400">
-                  Fitur-fitur tersebut diumpankan ke model Isolation Forest (Unsupervised Learning). Model ini mencari paket yang secara statistik &quot;terisolasi&quot; dari mayoritas data normal, kemudian menghasilkan skor anomali.
+                  Aspek tersebut diproses oleh Isolation Forest untuk menghasilkan skor prioritas. Skor tinggi berarti paket lebih layak ditinjau lebih awal, bukan bukti pelanggaran.
                 </p>
               </div>
             </div>

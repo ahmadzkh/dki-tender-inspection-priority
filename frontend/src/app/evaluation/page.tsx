@@ -30,10 +30,10 @@ export default async function EvaluationPage() {
             Evaluasi Model
           </h1>
           <p className="text-surface-600 dark:text-surface-400 max-w-3xl">
-            Halaman ini menyajikan bukti empiris bahwa model Isolation Forest yang digunakan
-            sistem ini cukup <strong>stabil</strong>, <strong>robust</strong>, dan menghasilkan
-            peringkat anomali yang konsisten. Evaluasi menggunakan metrik khusus
-            <em> unsupervised learning</em> karena tidak tersedia label kepastian fraud.
+            Halaman ini menyajikan pengujian <strong>stabilitas</strong>, sensitivitas
+            konfigurasi, dan perbandingan baseline untuk daftar prioritas Isolation Forest.
+            Evaluasi memakai metrik khusus
+            <em> unsupervised learning</em> karena tidak tersedia label pelanggaran tervalidasi.
           </p>
         </div>
 

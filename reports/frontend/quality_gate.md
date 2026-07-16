@@ -22,10 +22,12 @@ cd frontend && npm exec playwright test
 
 ## Playwright Coverage
 
-- latest local run: 18 tests passed across Chrome, Edge, and Firefox
+- latest local run: 24 tests passed across Chrome, Edge, and Firefox
 - browser matrix: Chrome, Edge, and Firefox projects run sequentially
 - primary dashboard-to-detail flow
-- dataset and methodology pages
+- landing, dataset, methodology, and evaluation pages
+- frozen population checks: 1,284 source rows, 1,279 merged rows, 1,277 canonical packages, 1,276 scored packages
+- frozen dataset/model version checks
 - dashboard console error guard
 - dashboard LCP budget under 2.5 seconds where the browser exposes LCP entries
 - keyboard focus smoke

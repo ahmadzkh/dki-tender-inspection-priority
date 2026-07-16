@@ -340,7 +340,7 @@ Report `reports/model/evaluation.md` menetapkan keputusan awal berdasarkan bukti
 
 # 10. Release Acceptance Criteria
 
-v1.0 dinyatakan siap untuk penulisan BAB 4 apabila:
+v1.0 final dinyatakan siap untuk finalisasi BAB 4 apabila:
 
 - [x] Audit dan enrichment selesai dengan coverage report.
 - [x] Dataset canonical dan feature matrix memiliki manifest versi.
@@ -352,6 +352,8 @@ v1.0 dinyatakan siap untuk penulisan BAB 4 apabila:
 - [x] Disclaimer tampil pada dashboard, detail, dan hasil ekspor.
 - [x] Dokumentasi metode konsisten dengan kode dan output aktual.
 - [ ] Frontend Vercel dan backend Docker melalui Cloudflare Tunnel dapat diakses.
+
+Implementasi, hasil model, pengujian lokal, dan local Docker smoke dapat mulai didokumentasikan pada BAB 4. Status v1.0 final dan subsection cutover/deployment tetap pending sampai acceptance deployment publik di atas lulus.
 
 # 11. Risks and Mitigations
 

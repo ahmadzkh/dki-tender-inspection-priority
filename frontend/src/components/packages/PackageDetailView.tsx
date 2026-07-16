@@ -70,7 +70,7 @@ export function PackageDetailView({ data }: PackageDetailViewProps) {
             </div>
             <div className="flex justify-between">
               <span className="text-surface-500">Sumber:</span>
-              <span>LPSE DKI Jakarta</span>
+              <span>INAPROC / SPSE</span>
             </div>
 
             {source.url ? (
@@ -81,7 +81,7 @@ export function PackageDetailView({ data }: PackageDetailViewProps) {
                 className="mt-4 flex items-center justify-center gap-2 w-full py-2 bg-white dark:bg-surface-800 border border-surface-200 dark:border-surface-700 hover:border-primary-500 hover:text-primary-600 dark:hover:text-primary-400 transition-colors rounded-lg font-medium text-surface-700 dark:text-surface-300"
               >
                 <LinkIcon className="h-4 w-4" />
-                Buka di LPSE Asli
+                Buka sumber INAPROC
               </Link>
             ) : (
               <div className="mt-4 flex items-center gap-2 p-2 text-xs text-surface-500 bg-surface-100 dark:bg-surface-800 rounded-lg">
@@ -90,11 +90,6 @@ export function PackageDetailView({ data }: PackageDetailViewProps) {
               </div>
             )}
 
-            {source.url && (
-              <p className="text-[11px] text-surface-500 leading-tight mt-2 opacity-80">
-                *Catatan: Server LPSE DKI Jakarta kerap mengalami gangguan akses (DNS error) secara publik.
-              </p>
-            )}
           </div>
         </div>
       </div>
