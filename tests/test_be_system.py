@@ -47,6 +47,15 @@ def test_meta_endpoint_success() -> None:
         assert "generated_at" in payload
         assert payload["artifact_count"] > 0
         assert payload["total_records"] == 1276
+        assert payload["annual_source_row_count"] == 1284
+        assert payload["merged_row_count"] == 1279
+        assert payload["canonical_record_count"] == 1277
+        assert payload["eligible_record_count"] == 1276
+        assert payload["missing_supplier_row_count"] == 5
+        assert payload["multi_provider_package_count"] == 1
+        assert payload["enrichment_success_count"] == 1277
+        assert payload["enrichment_coverage_pct"] == 100.0
+        assert payload["dataset_version"] == data["meta"]["dataset_version"]
 
         # Ensure no local machine paths are leaked in the stringified response
         response_text = response.text

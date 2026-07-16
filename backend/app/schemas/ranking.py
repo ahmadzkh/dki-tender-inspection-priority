@@ -18,6 +18,7 @@ class RankingRecord(BaseModel):
     procurement_type: str
     is_partial_snapshot_year: bool
     split: str
+    contract_value: float
     anomaly_score: float
     anomaly_rank: int
 

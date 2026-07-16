@@ -19,6 +19,7 @@ def test_ranking_endpoint_default() -> None:
         assert payload["pagination"]["page"] == 1
         assert payload["pagination"]["size"] == 20
         assert payload["pagination"]["total_items"] == 1276
+        assert all(item["contract_value"] > 0 for item in payload["items"])
 
         # Check sorting by score desc
         scores = [item["anomaly_score"] for item in payload["items"]]
@@ -80,6 +81,16 @@ def test_ranking_endpoint_score_filters() -> None:
 
         for item in payload["items"]:
             assert 0.60 <= item["anomaly_score"] <= 0.65
+
+
+def test_ranking_endpoint_contract_value_filters() -> None:
+    with TestClient(app) as client:
+        response = client.get(
+            "/api/v1/rankings?min_contract_value=1000000000&max_contract_value=2000000000"
+        )
+        assert response.status_code == 200
+        for item in response.json()["data"]["items"]:
+            assert 1_000_000_000 <= item["contract_value"] <= 2_000_000_000
 
 
 def test_ranking_endpoint_top_n() -> None:

@@ -17,6 +17,7 @@ class SummaryResponse(BaseModel):
     model_config = ConfigDict(frozen=True)
 
     total_packages: int
+    total_contract_value: float
     unique_suppliers: int
     unique_work_units: int
     packages_by_year: dict[str, int]

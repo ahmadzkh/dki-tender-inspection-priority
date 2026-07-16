@@ -80,14 +80,14 @@ def get_package_detail(
     package_name = canonical_row.get("package_name")
     if pd.isna(package_name):
         package_name = None
-    if package_id.endswith("127"):
-        url = f"https://lpse.jakarta.go.id/eproc4/lelang/{package_id}/pengumumanlelang"
-    else:
-        url = None
+    metadata = _parse_json(canonical_row.get("metadata_json"))
+    source_url = metadata.get("tautan_detail_tender") if isinstance(metadata, dict) else None
+    if not isinstance(source_url, str) or not source_url.startswith("https://"):
+        source_url = None
 
     source_detail = SourceDetail(
         package_name=str(package_name) if package_name else None,
-        url=url,
+        url=source_url,
         contract_value=_safe_float(canonical_row.get("contract_value")),
         hps=_safe_float(canonical_row.get("hps")),
         pagu=_safe_float(canonical_row.get("pagu")),
@@ -96,7 +96,7 @@ def get_package_detail(
     # Construct EnrichmentDetail
     enrichment_detail = EnrichmentDetail(
         jadwal=_parse_json(canonical_row.get("jadwal_json")),
-        metadata=_parse_json(canonical_row.get("metadata_json")),
+        metadata=metadata,
     )
 
     # Construct ScoreDetail
@@ -127,6 +127,7 @@ def get_package_detail(
         data=data,
         meta=Meta(
             model_version=store.model_version,
+            dataset_version=store.dataset_version,
             generated_at=store.generated_at,
             disclaimer=DISCLAIMER,
         ),

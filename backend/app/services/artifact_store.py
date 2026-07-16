@@ -65,7 +65,10 @@ class ArtifactStore:
     explanations_by_id: dict
     features_by_id: dict
     canonical_by_id: dict
+    evaluation: dict
+    model_config: dict
     model_version: str
+    dataset_version: str
     generated_at: str
     schema_version: int
 
@@ -82,6 +85,8 @@ class ArtifactStore:
         explanations_path: Path,
         canonical_path: Path,
         features_path: Path,
+        evaluation_path: Path,
+        model_config_path: Path,
         project_root: Path,
     ) -> "ArtifactStore":
         """Load and validate all artifacts.
@@ -101,14 +106,24 @@ class ArtifactStore:
         _validate_checksum(explanations_path, checksum_index, project_root)
         _validate_checksum(canonical_path, checksum_index, project_root)
         _validate_checksum(features_path, checksum_index, project_root)
+        _validate_checksum(evaluation_path, checksum_index, project_root)
+        _validate_checksum(model_config_path, checksum_index, project_root)
 
-        ranking = _load_ranking(ranking_path)
         explanations_by_id = _load_explanations(explanations_path)
-
         canonical_by_id = _load_csv_as_dict(canonical_path, "package_id")
         features_by_id = _load_csv_as_dict(features_path, "package_id")
+        ranking = _load_ranking(ranking_path)
+        contract_values = {
+            package_id: row.get("contract_value") for package_id, row in canonical_by_id.items()
+        }
+        ranking["contract_value"] = pd.to_numeric(
+            ranking["package_id"].map(contract_values), errors="coerce"
+        )
+        evaluation = _load_json_object(evaluation_path, "Evaluation")
+        model_config = _load_json_object(model_config_path, "Model config")
 
         model_version: str = manifest["version"]
+        dataset_version: str = manifest["dataset_version"]
         generated_at: str = manifest["generated_at"]
         schema_version: int = manifest["schema_version"]
 
@@ -125,7 +140,10 @@ class ArtifactStore:
             explanations_by_id=explanations_by_id,
             features_by_id=features_by_id,
             canonical_by_id=canonical_by_id,
+            evaluation=evaluation,
+            model_config=model_config,
             model_version=model_version,
+            dataset_version=dataset_version,
             generated_at=generated_at,
             schema_version=schema_version,
         )
@@ -159,7 +177,7 @@ def _build_checksum_index(manifest: dict, _project_root: Path) -> dict[str, str]
     index: dict[str, str] = {}
     for category_items in manifest.get("artifacts", {}).values():
         for item in category_items:
-            posix_key = Path(item["path"]).as_posix()
+            posix_key = str(item["path"]).replace("\\", "/")
             index[posix_key] = item["sha256"]
     return index
 
@@ -206,6 +224,16 @@ def _load_explanations(path: Path) -> dict:
         pid = str(record["package_id"])
         indexed[pid] = record
     return indexed
+
+
+def _load_json_object(path: Path, label: str) -> dict:
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        raise ValueError(f"{label} is not valid JSON: {exc}") from exc
+    if not isinstance(payload, dict):
+        raise ValueError(f"{label} root must be a JSON object")
+    return payload
 
 
 def _load_csv_as_dict(path: Path, index_col: str) -> dict:

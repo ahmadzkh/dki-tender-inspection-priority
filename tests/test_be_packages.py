@@ -35,6 +35,7 @@ def test_get_package_detail_success() -> None:
         # Check source
         assert "package_name" in payload["source"]
         assert "contract_value" in payload["source"]
+        assert payload["source"]["url"] == "https://spse.inaproc.id/"
 
         # Check score
         assert payload["score"]["anomaly_rank"] >= 1

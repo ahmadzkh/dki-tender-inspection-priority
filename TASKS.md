@@ -256,7 +256,7 @@ Pencarian `/find-skills` menemukan `obra/superpowers@requesting-code-review` seb
 - **Acceptance:** tidak ada stack trace/local path/secret pada response; unexpected error menjadi safe 500; allowed origin configurable; logs memuat artifact version tanpa payload sensitif.
 - **Verification:** test invalid origin/parameter/artifact/error; secret scan lulus.
 
-### [ ] TASK-BE-009 - Complete backend integration, performance, and OpenAPI verification
+### [x] TASK-BE-009 - Complete backend integration, performance, and OpenAPI verification
 
 - **Depends on:** `TASK-BE-008`.
 - **Goal:** membekukan kontrak backend yang siap dipakai frontend dan deployment.
@@ -266,7 +266,7 @@ Pencarian `/find-skills` menemukan `obra/superpowers@requesting-code-review` seb
 
 ## Deployment
 
-### [ ] TASK-BE-010 - Containerize backend with health check
+### [x] TASK-BE-010 - Containerize backend with health check
 
 - **Depends on:** `TASK-BE-009`.
 - **Goal:** menjalankan FastAPI dan artifact read-only melalui Docker.
@@ -296,7 +296,7 @@ Pencarian `/find-skills` menemukan `obra/superpowers@requesting-code-review` seb
 - **Acceptance:** npm menjadi satu-satunya package manager frontend; tidak ada `any`; tidak ada auth/state manager/database client.
 - **Verification:** `npm --prefix frontend run lint` dan `npm --prefix frontend run build` exit 0.
 
-### [ ] TASK-FE-002 - Build application shell and visual foundation
+### [x] TASK-FE-002 - Build application shell and visual foundation
 
 - **Depends on:** `TASK-FE-001`.
 - **Goal:** menetapkan navigation, typography, color tokens, content width, footer, dan disclaimer global.
@@ -304,7 +304,7 @@ Pencarian `/find-skills` menemukan `obra/superpowers@requesting-code-review` seb
 - **Acceptance:** semantic layout, keyboard focus, neutral analytical colors, mobile navigation, tanpa accusatory language.
 - **Verification:** component test minimum, responsive visual inspection, dan accessibility smoke check.
 
-### [ ] TASK-FE-003 - Implement typed backend client and URL filter model
+### [x] TASK-FE-003 - Implement typed backend client and URL filter model
 
 - **Depends on:** `TASK-FE-002`, `TASK-BE-003`.
 - **Goal:** menyediakan satu trust boundary untuk API dan shareable state lewat URL.
@@ -314,7 +314,7 @@ Pencarian `/find-skills` menemukan `obra/superpowers@requesting-code-review` seb
 
 ## Pages and Interactions
 
-### [ ] TASK-FE-004 - Build landing page
+### [x] TASK-FE-004 - Build landing page
 
 - **Depends on:** `TASK-FE-002`.
 - **Goal:** menjelaskan tujuan, data, cara kerja, batas klaim, dan akses ke dashboard.
@@ -322,7 +322,7 @@ Pencarian `/find-skills` menemukan `obra/superpowers@requesting-code-review` seb
 - **Acceptance:** tidak mengklaim fraud detection; 2026 disebut snapshot parsial; CTA jelas; konten ringkas dan tidak menduplikasi metodologi penuh.
 - **Verification:** semantic heading/link tests, mobile/desktop inspection, no broken internal links.
 
-### [ ] TASK-FE-005 - Build dashboard summary and charts
+### [x] TASK-FE-005 - Build dashboard summary and charts
 
 - **Depends on:** `TASK-FE-003`, `TASK-BE-004`.
 - **Goal:** menampilkan statistik utama dan visualisasi yang tidak redundan.
@@ -330,7 +330,7 @@ Pencarian `/find-skills` menemukan `obra/superpowers@requesting-code-review` seb
 - **Acceptance:** nilai berasal dari API; label satuan dan periode jelas; 2026 ditandai parsial; satu chart library saja; chart di atas tabel full-width.
 - **Verification:** API-to-UI mapping test, representative values match backend, browser console bersih.
 
-### [ ] TASK-FE-006 - Build ranking table, combined filters, Top-N, and pagination
+### [x] TASK-FE-006 - Build ranking table, combined filters, Top-N, and pagination
 
 - **Depends on:** `TASK-FE-005`, `TASK-BE-005`.
 - **Goal:** menyediakan alur utama pemilihan paket prioritas.
@@ -338,7 +338,7 @@ Pencarian `/find-skills` menemukan `obra/superpowers@requesting-code-review` seb
 - **Acceptance:** score direction jelas; filter dapat digabung; URL shareable; tabel tidak ditempatkan dalam half-width grid; mobile tidak menyembunyikan package ID/score.
 - **Verification:** tests filter/query/pagination/Top-N; E2E dashboard-to-page navigation; values match API.
 
-### [ ] TASK-FE-007 - Build package-detail page
+### [x] TASK-FE-007 - Build package-detail page
 
 - **Depends on:** `TASK-FE-006`, `TASK-BE-006`.
 - **Goal:** menjelaskan alasan prioritas tanpa menuduh kecurangan.
@@ -346,7 +346,7 @@ Pencarian `/find-skills` menemukan `obra/superpowers@requesting-code-review` seb
 - **Acceptance:** missing data tampil `Tidak tersedia`; minimal tiga faktor untuk Top-N jika artifact tersedia; disclaimer terlihat; 404 state jelas.
 - **Verification:** tests normal/missing/404; representative detail matches backend; keyboard and mobile inspection.
 
-### [ ] TASK-FE-008 - Build dataset transparency page
+### [x] TASK-FE-008 - Build dataset transparency page
 
 - **Depends on:** `TASK-FE-003`, `TASK-BE-004`.
 - **Goal:** menampilkan provenance, distribusi, kualitas, enrichment coverage, dan snapshot note.
@@ -354,7 +354,7 @@ Pencarian `/find-skills` menemukan `obra/superpowers@requesting-code-review` seb
 - **Acceptance:** angka tidak di-hardcode jika API/artifact menyediakannya; raw limitation dijelaskan; no fake coverage.
 - **Verification:** values match metadata/summary endpoint; links valid; static/revalidation behavior diuji.
 
-### [ ] TASK-FE-009 - Build methodology and evaluation page
+### [x] TASK-FE-009 - Build methodology and evaluation page
 
 - **Depends on:** `TASK-FE-003`, `TASK-ML-013`.
 - **Goal:** menjelaskan CRISP-DM, RAD, features, Isolation Forest, evaluation, explanation, dan batasan.
@@ -362,7 +362,7 @@ Pencarian `/find-skills` menemukan `obra/superpowers@requesting-code-review` seb
 - **Acceptance:** tidak memakai accuracy/F1 tanpa label; Top-N bukan fraud label; SHAP hanya diklaim sesuai hasil validasi aktual.
 - **Verification:** documentation consistency check terhadap report model dan PRD; internal links valid.
 
-### [ ] TASK-FE-010 - Add CSV export and complete UI feedback states
+### [x] TASK-FE-010 - Add CSV export and complete UI feedback states
 
 - **Depends on:** `TASK-FE-006`, `TASK-BE-007`.
 - **Goal:** mengunduh hasil aktif dan memastikan seluruh state pengguna selesai.
@@ -372,7 +372,7 @@ Pencarian `/find-skills` menemukan `obra/superpowers@requesting-code-review` seb
 
 ## Quality and Deployment
 
-### [ ] TASK-FE-011 - Complete responsive, accessibility, integration, and build gates
+### [x] TASK-FE-011 - Complete responsive, accessibility, integration, and build gates
 
 - **Depends on:** `TASK-FE-004` sampai `TASK-FE-010`, `TASK-BE-009`.
 - **Goal:** membekukan frontend P1 sebelum deployment.

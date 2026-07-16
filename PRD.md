@@ -69,7 +69,7 @@ Tahun 2026 merupakan snapshot tahun berjalan pada waktu pengunduhan, bukan satu 
 
 ## 1.3 Kesenjangan Produk
 
-Artefak enrichment, coverage report, dataset canonical satu-record-per-paket, EDA reproducible, feature matrix leakage-safe, split temporal, baseline ranking transparan, artefak Isolation Forest reproducible, evaluasi model, explanation permutation sensitivity, dan pembekuan artefak (artifact freeze) sudah tersedia. Feature matrix berisi 1.276 record eligible dengan 20 fitur eksplisit. Split temporal: training 2024-2025 (838), evaluation 2026 snapshot (438). Baseline robust z-score deterministik. Isolation Forest `414f1691d2bccdd9`. Evaluasi model pada `reports/model/evaluation.md` tanpa metrik supervised. Explanation pada `reports/model/explanation.md` menjawab OD-5: permutation sensitivity primer (SHAP tidak terinstal). Seluruh artefak telah dibekukan di `artifacts/manifest.json`. Backend API, frontend, laporan yang dapat diunduh, pengujian lanjutan, dan deployment belum tersedia.
+Artefak enrichment, coverage report, dataset canonical satu-record-per-paket, EDA reproducible, feature matrix leakage-safe, split temporal, baseline ranking transparan, artefak Isolation Forest reproducible, evaluasi model, explanation permutation sensitivity, dan pembekuan artefak (artifact freeze) sudah tersedia. Feature matrix berisi 1.276 record eligible dengan 20 fitur eksplisit. Split temporal: training 2024-2025 (838), evaluation 2026 snapshot (438). Baseline robust z-score deterministik. Isolation Forest `414f1691d2bccdd9`. Evaluasi model pada `reports/model/evaluation.md` tanpa metrik supervised. Explanation pada `reports/model/explanation.md` menjawab OD-5: permutation sensitivity primer (SHAP tidak terinstal). Backend API, frontend, CSV export, integration contract, Playwright E2E, dan Docker runtime tersedia untuk verifikasi lokal. Deployment publik durable masih pending sampai Cloudflare named tunnel dan Vercel production smoke selesai.
 
 ## 1.4 Solusi yang Diusulkan
 
@@ -346,11 +346,11 @@ v1.0 dinyatakan siap untuk penulisan BAB 4 apabila:
 - [x] Dataset canonical dan feature matrix memiliki manifest versi.
 - [x] Eksperimen model final dan baseline dapat dijalankan ulang.
 - [x] Ranking, Top-N, dan penjelasan fitur tervalidasi.
-- [ ] Backend API, frontend, export CSV, dan seluruh halaman P1 selesai.
-- [ ] Unit, integration, black-box, build, dan smoke test deployment lulus.
-- [ ] Tidak ada secret dalam repository.
-- [ ] Disclaimer tampil pada dashboard, detail, dan hasil ekspor.
-- [ ] Dokumentasi metode konsisten dengan kode dan output aktual.
+- [x] Backend API, frontend, export CSV, dan seluruh halaman P1 selesai.
+- [x] Unit, integration, black-box, build, dan local Docker smoke test lulus.
+- [x] Tidak ada secret dalam repository.
+- [x] Disclaimer tampil pada dashboard, detail, dan hasil ekspor.
+- [x] Dokumentasi metode konsisten dengan kode dan output aktual.
 - [ ] Frontend Vercel dan backend Docker melalui Cloudflare Tunnel dapat diakses.
 
 # 11. Risks and Mitigations

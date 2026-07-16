@@ -45,13 +45,13 @@ def _file_info(path: Path, project_root: Path) -> dict[str, str | int | None]:
     real = path if path.is_absolute() else project_root / path
     if not real.exists():
         return {
-            "path": str(path),
+            "path": path.as_posix(),
             "exists": False,
             "size_bytes": None,
             "sha256": None,
         }
     return {
-        "path": str(path),
+        "path": path.as_posix(),
         "exists": True,
         "size_bytes": real.stat().st_size,
         "sha256": hashlib.sha256(real.read_bytes()).hexdigest(),
@@ -83,6 +83,15 @@ def freeze_artifacts(
     if feature_schema_path.exists():
         feature_schema = json.loads(feature_schema_path.read_text(encoding="utf-8"))
 
+    data_quality = json.loads(
+        (project_root / "reports" / "data" / "canonical_data_quality.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    enrichment_coverage = json.loads(
+        (project_root / "reports" / "data" / "enrichment_coverage.json").read_text(encoding="utf-8")
+    )
+
     ranking_path = project_root / "artifacts" / "isolation_forest_ranking.csv"
     ranking_rows: list[dict[str, str]] = []
     if ranking_path.exists():
@@ -101,6 +110,13 @@ def freeze_artifacts(
     summary: dict[str, Any] = {
         "total_record_count": len(ranking_rows),
         "eligible_record_count": feature_schema.get("row_count", len(ranking_rows)),
+        "annual_source_row_count": data_quality["input"]["annual_source_row_count"],
+        "merged_row_count": data_quality["input"]["merged_row_count"],
+        "canonical_record_count": data_quality["output"]["canonical_row_count"],
+        "missing_supplier_row_count": data_quality["input"]["annual_missing_supplier_row_count"],
+        "multi_provider_package_count": data_quality["output"]["multi_provider_package_count"],
+        "enrichment_success_count": enrichment_coverage["success_count"],
+        "enrichment_coverage_pct": enrichment_coverage["field_coverage"]["hps"]["coverage_pct"],
         "feature_count": feature_schema.get(
             "feature_count",
             len(feature_schema.get("feature_columns", [])),
@@ -116,6 +132,13 @@ def freeze_artifacts(
         summary["year_counts"][year] = summary["year_counts"].get(year, 0) + 1
         summary["split_counts"][split] = summary["split_counts"].get(split, 0) + 1
 
+    filter_options = {
+        "years": sorted({int(row["year"]) for row in ranking_rows}, reverse=True),
+        "procurement_methods": sorted({row["procurement_method"] for row in ranking_rows}),
+        "procurement_types": sorted({row["procurement_type"] for row in ranking_rows}),
+        "work_units": sorted({row["work_unit"] for row in ranking_rows}),
+    }
+
     filtered_artifacts: dict[str, list[dict[str, str | int | None]]] = {}
     for category, paths in REQUIRED_ARTIFACTS.items():
         filtered_artifacts[category] = [_file_info(Path(p), project_root) for p in paths]
@@ -125,6 +148,7 @@ def freeze_artifacts(
         "generated_at": datetime.now(UTC).isoformat(),
         "project_name": "dki-tender-inspection-priority",
         "version": model_config.get("model_version", "unknown"),
+        "dataset_version": str(feature_schema.get("canonical_csv_sha256", "unknown"))[:16],
         "model": {
             "model_version": model_config.get("model_version"),
             "model_type": model_config.get("model_type"),
@@ -140,6 +164,7 @@ def freeze_artifacts(
             "canonical_csv_sha256": feature_schema.get("canonical_csv_sha256"),
         },
         "summary": summary,
+        "filter_options": filter_options,
         "artifacts": filtered_artifacts,
         "integrity": {
             "artifact_count": sum(len(v) for v in filtered_artifacts.values()),

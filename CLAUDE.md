@@ -25,8 +25,8 @@ Before any task:
 - **Description**: A web application that enriches official DKI Jakarta completed-tender data, builds financial, temporal, and supplier-concentration features, and ranks procurement packages using Isolation Forest. The result is an inspection-priority score, not a fraud verdict.
 - **Goal**: Help auditors or procurement analysts decide which completed tender packages to inspect first using traceable data, reproducible anomaly scoring, and neutral explanations.
 - **Target Users**: Government internal auditors/inspectorate staff, procurement analysts, thesis supervisors/examiners, and researchers.
-- **Version**: `0.1.0` foundation/data-preparation stage
-- **Status**: Active development; Python and Next.js foundations plus immutable source-data layout, reproducible source-data audit, resumable enrichment runner, full enrichment coverage report, one-package-per-record canonical dataset, EDA/data-quality report, leakage-safe feature matrix, temporal split, transparent baseline ranking, reproducible Isolation Forest artifacts, model evaluation report, permutation-sensitivity explanation, and frozen backend-ready artifacts manifest exist. Backend API, product UI, containers, and deployment are still planned.
+- **Version**: `0.1.0` backend/frontend local verification stage
+- **Status**: Active development; data/model artifacts, FastAPI read-only API, Next.js product UI, integration/OpenAPI/performance checks, Playwright E2E, and Docker runtime exist and pass local verification. Durable public Cloudflare Tunnel backend deployment and Vercel production smoke remain pending.
 - **Research Methods**:
   - CRISP-DM for data understanding, preparation, modeling, evaluation, and deployment.
   - RAD for web requirements planning, user design, construction, and cutover.
@@ -83,7 +83,7 @@ Before any task:
 - **Python Development**: pytest 9.1.1, Ruff 0.15.21, httpx 0.28.1
 - **Frontend**: Next.js 16.2.10, React 19.2.4, TypeScript 5.9.3, Tailwind CSS 4.3.2
 - **Frontend Security Override**: PostCSS 8.5.17 replaces Next.js nested PostCSS 8.4.31; `npm audit` must remain at zero known vulnerabilities
-- **Not Installed Yet**: SHAP, chart library, frontend test framework, Playwright, Docker runtime files
+- **Not Installed Yet**: SHAP and a durable named Cloudflare Tunnel configuration on the target VPS/server
 
 ### Deliberately Not Selected
 
@@ -100,7 +100,7 @@ Before any task:
 
 ### Current State
 
-Python and frontend foundations, source-manifest verification, source-data audit, resumable enrichment runner, full enrichment coverage report, canonical dataset builder, EDA report generator, feature matrix builder, temporal split generator, transparent baseline builder, Isolation Forest trainer, model evaluation report generator, and explanation report generator are available. Backend, frontend test, E2E, and Docker commands remain planned until their corresponding tasks create and verify them.
+Python/data pipelines, model artifacts, FastAPI backend API, Next.js frontend, Playwright E2E, backend integration contract tests, and Docker runtime are available. Durable public deployment remains pending until a named Cloudflare Tunnel exists on the target VPS/server.
 
 ```bash
 # Python environment
@@ -131,9 +131,9 @@ uv run python modeling/evaluate_anomaly_ranking.py
 uv run python modeling/explain_anomaly_ranking.py
 uv run python modeling/freeze_artifacts.py
 
-# Backend development — planned after TASK-BE-001
-uv run fastapi dev backend/app/main.py
-uv run fastapi run backend/app/main.py
+# Backend development and smoke
+uv run uvicorn backend.app.main:app --host 127.0.0.1 --port 8000
+curl -fsS http://127.0.0.1:8000/api/v1/health
 
 # Scoped Python tests — available when those folders contain tests
 uv run pytest tests/unit
@@ -147,11 +147,10 @@ npm --prefix frontend run start
 npm --prefix frontend run lint
 npm --prefix frontend audit
 
-# Frontend tests — planned after the first real frontend behavior requires them
-# npm --prefix frontend run test
-# npm --prefix frontend run test:e2e
+# Frontend E2E
+cd frontend && npm exec playwright test
 
-# Docker — after compose configuration exists
+# Docker backend runtime
 docker compose build
 docker compose up -d
 docker compose ps

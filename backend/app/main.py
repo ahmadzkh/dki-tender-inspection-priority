@@ -18,9 +18,11 @@ from backend.app.api.router import api_router
 from backend.app.config import (
     ARTIFACT_DIR,
     CANONICAL_PATH,
+    EVALUATION_PATH,
     EXPLANATIONS_PATH,
     FEATURES_PATH,
     MANIFEST_PATH,
+    MODEL_CONFIG_PATH,
     PROJECT_ROOT,
     RANKING_PATH,
 )
@@ -42,6 +44,8 @@ async def lifespan(app: FastAPI):
         explanations_path=EXPLANATIONS_PATH,
         canonical_path=CANONICAL_PATH,
         features_path=FEATURES_PATH,
+        evaluation_path=EVALUATION_PATH,
+        model_config_path=MODEL_CONFIG_PATH,
         project_root=PROJECT_ROOT,
     )
     app.state.store = store

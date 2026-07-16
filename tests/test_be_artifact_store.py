@@ -15,13 +15,15 @@ import pytest
 
 from backend.app.config import (
     CANONICAL_PATH,
+    EVALUATION_PATH,
     EXPLANATIONS_PATH,
     FEATURES_PATH,
     MANIFEST_PATH,
+    MODEL_CONFIG_PATH,
     PROJECT_ROOT,
     RANKING_PATH,
 )
-from backend.app.services.artifact_store import ArtifactStore
+from backend.app.services.artifact_store import ArtifactStore, _build_checksum_index
 
 # ---------------------------------------------------------------------------
 # Fixture — load real artifact store once for integration tests
@@ -36,6 +38,8 @@ def store() -> ArtifactStore:
         explanations_path=EXPLANATIONS_PATH,
         canonical_path=CANONICAL_PATH,
         features_path=FEATURES_PATH,
+        evaluation_path=EVALUATION_PATH,
+        model_config_path=MODEL_CONFIG_PATH,
         project_root=PROJECT_ROOT,
     )
 
@@ -73,6 +77,10 @@ def test_should_index_explanations_by_package_id(store: ArtifactStore) -> None:
 def test_should_expose_model_version_matching_manifest(store: ArtifactStore) -> None:
     """model_version must equal the manifest 'version' field."""
     assert store.model_version == store.manifest["version"]
+    assert store.dataset_version == store.manifest["dataset_version"]
+    assert store.evaluation["artifact_versions"]["model_version"] == store.model_version
+    assert store.model_config["model_version"] == store.model_version
+    assert store.ranking["contract_value"].notna().all()
 
 
 def test_should_preserve_package_id_as_string(store: ArtifactStore) -> None:
@@ -98,6 +106,24 @@ def test_should_surface_score_direction_in_manifest(store: ArtifactStore) -> Non
     assert "higher" in config["score_direction"].lower()
 
 
+def test_should_normalize_manifest_paths_for_linux_container() -> None:
+    """Windows-style manifest paths must match POSIX paths inside Docker."""
+    manifest = {
+        "artifacts": {
+            "model": [
+                {
+                    "path": "artifacts\\isolation_forest_ranking.csv",
+                    "sha256": "abc",
+                }
+            ]
+        }
+    }
+
+    index = _build_checksum_index(manifest, PROJECT_ROOT)
+
+    assert index["artifacts/isolation_forest_ranking.csv"] == "abc"
+
+
 # ---------------------------------------------------------------------------
 # Failure-path tests (synthetic fixtures via tmp_path)
 # ---------------------------------------------------------------------------
@@ -111,6 +137,8 @@ def test_should_raise_when_manifest_is_missing(tmp_path: Path) -> None:
             explanations_path=EXPLANATIONS_PATH,
             canonical_path=CANONICAL_PATH,
             features_path=FEATURES_PATH,
+            evaluation_path=EVALUATION_PATH,
+            model_config_path=MODEL_CONFIG_PATH,
             project_root=PROJECT_ROOT,
         )
 
@@ -131,6 +159,8 @@ def test_should_raise_when_manifest_has_wrong_schema_version(tmp_path: Path) -> 
             explanations_path=EXPLANATIONS_PATH,
             canonical_path=CANONICAL_PATH,
             features_path=FEATURES_PATH,
+            evaluation_path=EVALUATION_PATH,
+            model_config_path=MODEL_CONFIG_PATH,
             project_root=PROJECT_ROOT,
         )
 
@@ -150,6 +180,8 @@ def test_should_raise_on_corrupt_ranking_checksum(tmp_path: Path) -> None:
             explanations_path=EXPLANATIONS_PATH,
             canonical_path=CANONICAL_PATH,
             features_path=FEATURES_PATH,
+            evaluation_path=EVALUATION_PATH,
+            model_config_path=MODEL_CONFIG_PATH,
             project_root=PROJECT_ROOT,
         )
 
@@ -162,6 +194,8 @@ def test_should_raise_when_ranking_file_is_missing(tmp_path: Path) -> None:
             explanations_path=EXPLANATIONS_PATH,
             canonical_path=CANONICAL_PATH,
             features_path=FEATURES_PATH,
+            evaluation_path=EVALUATION_PATH,
+            model_config_path=MODEL_CONFIG_PATH,
             project_root=PROJECT_ROOT,
         )
 
@@ -174,6 +208,8 @@ def test_should_raise_when_explanations_file_is_missing(tmp_path: Path) -> None:
             explanations_path=tmp_path / "nonexistent_explanations.json",
             canonical_path=CANONICAL_PATH,
             features_path=FEATURES_PATH,
+            evaluation_path=EVALUATION_PATH,
+            model_config_path=MODEL_CONFIG_PATH,
             project_root=PROJECT_ROOT,
         )
 
@@ -188,5 +224,7 @@ def test_should_raise_when_manifest_is_not_valid_json(tmp_path: Path) -> None:
             explanations_path=EXPLANATIONS_PATH,
             canonical_path=CANONICAL_PATH,
             features_path=FEATURES_PATH,
+            evaluation_path=EVALUATION_PATH,
+            model_config_path=MODEL_CONFIG_PATH,
             project_root=PROJECT_ROOT,
         )

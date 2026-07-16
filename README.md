@@ -4,9 +4,9 @@ Sistem berbasis web untuk mengurutkan paket realisasi tender Pemerintah Provinsi
 
 ## Status Project
 
-> **Tahap saat ini: FastAPI backend scaffold selesai; artifact loader dan endpoints berikutnya.**
+> **Tahap saat ini: backend/frontend lokal dan Docker runtime terverifikasi; deployment publik durable masih pending.**
 
-Dataset 2024-2026 telah dikumpulkan, diaudit, digabung, diperkaya, dicanonicalkan menjadi satu record per `kode_paket`, dianalisis melalui EDA reproducible, ditransformasi menjadi feature matrix leakage-safe, dibagi dengan split temporal, diberi baseline ranking transparan, dilatih dengan Isolation Forest, dan dievaluasi tanpa label ground truth. Empat CSV sumber disimpan pada layout raw yang immutable serta dicatat dalam manifest SHA-256 yang dapat diverifikasi. Pipeline audit dan enrichment menghasilkan report JSON/Markdown dari raw sources tanpa memodifikasinya. Full enrichment INAPROC sudah dijalankan untuk 1.277 kode paket unik dengan coverage 100%, lalu pipeline canonical menghasilkan 1.277 paket unik dan menandai satu paket multi-provider sebagai tidak eligible untuk fitur model. EDA menghasilkan ringkasan distribusi nilai, missingness, outlier univariat, kategori, konsentrasi penyedia/satuan kerja, dan catatan snapshot parsial 2026. Feature engineering menghasilkan 1.276 baris eligible dengan 20 fitur eksplisit. Split temporal memakai 838 record 2024-2025 untuk training dan 438 record snapshot 2026 untuk evaluation. Baseline robust z-score menghasilkan ranking deterministik untuk pembanding model. Isolation Forest menghasilkan artefak model CPU-only, konfigurasi, dan ranking untuk 1.276 record eligible. Evaluasi model mencatat stabilitas seed, sensitivitas hyperparameter, distribusi skor, perilaku temporal, baseline comparison, dan keputusan Top-N. Explanation permutation sensitivity menjawab OD-5. Seluruh artefak model, baseline, fitur, dan dokumentasi penjelasan telah dibekukan dalam manifest integrity check untuk backend. Backend API, antarmuka pengguna, pengujian tambahan, dan deployment belum dibangun.
+Dataset 2024-2026 telah dikumpulkan, diaudit, digabung, diperkaya, dicanonicalkan menjadi satu record per `kode_paket`, dianalisis melalui EDA reproducible, ditransformasi menjadi feature matrix leakage-safe, dibagi dengan split temporal, diberi baseline ranking transparan, dilatih dengan Isolation Forest, dan dievaluasi tanpa label ground truth. Empat CSV sumber disimpan pada layout raw yang immutable serta dicatat dalam manifest SHA-256 yang dapat diverifikasi. Pipeline audit dan enrichment menghasilkan report JSON/Markdown dari raw sources tanpa memodifikasinya. Full enrichment INAPROC sudah dijalankan untuk 1.277 kode paket unik dengan coverage 100%. Backend FastAPI read-only, frontend Next.js, Playwright E2E, integration contract, dan Docker runtime sudah tersedia untuk verifikasi lokal. Deployment publik durable masih menunggu Cloudflare named tunnel pada VPS/server target dan Vercel production smoke.
 
 | Komponen | Status |
 |---|---|
@@ -28,8 +28,10 @@ Dataset 2024-2026 telah dikumpulkan, diaudit, digabung, diperkaya, dicanonicalka
 | Explanation model | Selesai; permutation sensitivity di `reports/model/explanation.md`, OD-5 dijawab |
 | Freeze artifacts | Selesai; `artifacts/manifest.json`, 11 artifacts, integrity check |
 | FastAPI backend scaffold | Selesai; `backend/app/main.py`, 9 tests pass |
-| FastAPI backend API | Belum dimulai |
-| Docker dan deployment | Belum dimulai |
+| FastAPI backend API | Selesai; health/meta/summary/filters/ranking/detail/export/evaluation |
+| Frontend product UI | Selesai lokal; landing, dashboard, detail, dataset, methodology, evaluation |
+| Docker runtime | Selesai lokal; image healthy dan restart verified |
+| Public deployment | Pending; butuh Cloudflare named tunnel dan Vercel smoke |
 
 ## Judul Penelitian
 
@@ -356,7 +358,7 @@ Struktur aplikasi akan dibuat bertahap saat file pertamanya diperlukan. Rancanga
 
 ## Menjalankan Project
 
-Python environment, source-manifest verifier, source-data audit, enrichment runner, canonical dataset builder, EDA generator, training Isolation Forest, evaluasi model, scaffold frontend, dan scaffold FastAPI backend sudah tersedia. Artifact loader dan route API belum tersedia.
+Python environment, source-manifest verifier, source-data audit, enrichment runner, canonical dataset builder, EDA generator, training Isolation Forest, evaluasi model, FastAPI backend, Next.js frontend, Playwright E2E, dan Docker runtime sudah tersedia.
 
 ```bash
 git clone https://github.com/ahmadzkh/dki-tender-inspection-priority.git
@@ -380,8 +382,16 @@ npm --prefix frontend install
 npm --prefix frontend run lint
 npm --prefix frontend run build
 
-# Backend (FastAPI scaffold)
-uv run uvicorn backend.app.main:app --reload --port 8000
+# Backend API
+uv run uvicorn backend.app.main:app --host 127.0.0.1 --port 8000
+
+# Frontend E2E
+cd frontend && npm exec playwright test
+
+# Docker backend runtime
+docker compose build
+docker compose up -d
+docker compose down
 ```
 
 ## Roadmap
@@ -405,9 +415,9 @@ uv run uvicorn backend.app.main:app --reload --port 8000
 - [x] Membekukan artefak backend-ready dengan manifest integrity check.
 - [x] Scaffold FastAPI backend (main.py, CORS, OpenAPI, 9 tests).
 - [x] Implementasi artifact loader dan typed API contracts.
-- [ ] Membangun Next.js frontend.
-- [ ] Menambahkan CSV export dan pengujian.
-- [ ] Membuat Docker runtime.
+- [x] Membangun Next.js frontend.
+- [x] Menambahkan CSV export dan pengujian.
+- [x] Membuat Docker runtime.
 - [ ] Deploy backend dan frontend.
 - [ ] Menyelesaikan release acceptance criteria sebelum penulisan BAB 4.
 

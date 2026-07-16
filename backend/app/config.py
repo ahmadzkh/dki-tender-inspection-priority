@@ -9,6 +9,7 @@ Environment variables:
     PROJECT_ROOT       – override the inferred project root directory.
     ARTIFACT_DIR       – override the default <root>/artifacts directory.
     PROCESSED_DATA_DIR – override the default <root>/datasets/processed.
+    EVALUATION_PATH    – override the precomputed evaluation report path.
 """
 
 import os
@@ -48,6 +49,13 @@ RANKING_PATH: Path = ARTIFACT_DIR / "isolation_forest_ranking.csv"
 EXPLANATIONS_PATH: Path = ARTIFACT_DIR / "ranking_explanations.json"
 CANONICAL_PATH: Path = PROCESSED_DATA_DIR / "tenders_canonical.csv"
 FEATURES_PATH: Path = PROCESSED_DATA_DIR / "model_features.csv"
+MODEL_CONFIG_PATH: Path = ARTIFACT_DIR / "isolation_forest_config.json"
+EVALUATION_PATH: Path = Path(
+    os.environ.get(
+        "EVALUATION_PATH",
+        str(PROJECT_ROOT / "reports" / "model" / "evaluation.json"),
+    )
+)
 
 # ---------------------------------------------------------------------------
 # API interpretation constants

@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "target": "combined p95 for /api/v1/summary and /api/v1/rankings?top_n=20&size=20 below 1 second after warm-up",
+  "verification": "tests/test_be_integration_contract.py::test_summary_and_ranking_p95_should_stay_under_one_second",
+  "status": "verified by pytest gate"
+}

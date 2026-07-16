@@ -47,6 +47,7 @@ class Meta(BaseModel):
     model_config = ConfigDict(frozen=True)
 
     model_version: str
+    dataset_version: str
     generated_at: str
     score_direction: str = SCORE_DIRECTION
     disclaimer: str = DISCLAIMER

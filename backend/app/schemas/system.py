@@ -21,9 +21,18 @@ class MetaResponse(BaseModel):
     model_config = ConfigDict(frozen=True)
 
     project_name: str
+    dataset_version: str
     model_version: str
     schema_version: int
     generated_at: str
     artifact_count: int
     total_records: int
+    annual_source_row_count: int
+    merged_row_count: int
+    canonical_record_count: int
+    eligible_record_count: int
+    missing_supplier_row_count: int
+    multi_provider_package_count: int
+    enrichment_success_count: int
+    enrichment_coverage_pct: float
     library_versions: dict[str, str]

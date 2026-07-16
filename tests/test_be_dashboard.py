@@ -16,6 +16,7 @@ def test_summary_endpoint_success() -> None:
         payload = data["data"]
 
         assert payload["total_packages"] == 1276
+        assert payload["total_contract_value"] > 0
         assert payload["unique_suppliers"] > 0
         assert payload["unique_work_units"] > 0
 
@@ -42,6 +43,7 @@ def test_filters_endpoint_success() -> None:
         payload = data["data"]
 
         assert 2026 in payload["years"]
+        assert payload["years"] == [2026, 2025, 2024]
         assert 2024 in payload["years"]
         assert len(payload["years"]) == 3
 

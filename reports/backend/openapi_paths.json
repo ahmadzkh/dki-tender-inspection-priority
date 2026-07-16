@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "generated_from": "FastAPI /openapi.json",
+  "paths": {
+    "/api/v1/health": ["get"],
+    "/api/v1/meta": ["get"],
+    "/api/v1/summary": ["get"],
+    "/api/v1/filters": ["get"],
+    "/api/v1/rankings": ["get"],
+    "/api/v1/packages/{package_id}": ["get"],
+    "/api/v1/export.csv": ["get"],
+    "/api/v1/evaluation": ["get"]
+  }
+}
